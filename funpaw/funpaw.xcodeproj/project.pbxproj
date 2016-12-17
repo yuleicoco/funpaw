@@ -356,7 +356,7 @@
 				DEVELOPMENT_TEAM = 4UKEB375ND;
 				INFOPLIST_FILE = funpaw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.rimi.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -369,7 +369,7 @@
 				DEVELOPMENT_TEAM = 4UKEB375ND;
 				INFOPLIST_FILE = funpaw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.rimi.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
