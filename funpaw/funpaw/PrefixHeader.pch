@@ -31,7 +31,7 @@
 #import "MBProgressHUD.h"
 
 #import "AFHttpClient.h"
-
+#import "Masonry.h"
 #import "AppDelegate.h"
 #import "AccountManager.h"
 #import "AFNetWorking.h"

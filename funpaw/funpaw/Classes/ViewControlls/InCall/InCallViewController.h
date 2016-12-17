@@ -7,35 +7,28 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface InCallViewController : UIViewController
+@interface InCallViewController :BaseViewController
 
 - (void)setCall:(SephoneCall *)acall;
-@property (strong, nonatomic) IBOutlet UIView *videoView;
-@property (strong, nonatomic) IBOutlet UIButton *backBtn;
-@property (strong, nonatomic) IBOutlet UIImageView *backImageView;
-@property (strong, nonatomic) IBOutlet UISlider *penSd;
-@property (strong, nonatomic) IBOutlet UIView *statsView;
-@property (strong, nonatomic) IBOutlet UILabel *timeText;
-@property (strong, nonatomic) IBOutlet UIImageView *pointView;
-@property (strong, nonatomic) IBOutlet UIView *waitView;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *flowerUI;
-
-
 // 别人
+@property (nonatomic,strong)UIView * videoView;
+// 返回
+@property (nonatomic,strong)UIButton * btnBack;
+//等待
+@property (nonatomic,strong)UIActivityIndicatorView * flowUI;
+//激光笔
+@property (nonatomic,strong)UISlider * penSl;
+// 激光笔背景
+@property (nonatomic,strong)UIImageView * pesnBack;
+// 5个button背景
+@property (nonatomic,strong)UIImageView * FiveView;
 
+@property (nonatomic,strong)UIImageView * pointTouch;
+@property (nonatomic,strong)UILabel * timeLable;
+@property (nonatomic,strong)UIButton * pullBtn;
+@property(nonatomic,assign)BOOL isOth;
 @property(nonatomic,strong)NSString * deviceoOth;
 @property(nonatomic,strong)NSString * termidOth;
-@property(nonatomic,assign)BOOL isOth;
-
-
-
-@property (strong, nonatomic) IBOutlet UIButton *up_btn;
-@property (strong, nonatomic) IBOutlet UIButton *left_btn;
-@property (strong, nonatomic) IBOutlet UIButton *down_btn;
-@property (strong, nonatomic) IBOutlet UIButton *right_btn;
-@property (strong, nonatomic) IBOutlet UIButton *left_up_btn;
-@property (strong, nonatomic) IBOutlet UIButton *left_down_btn;
-
-
 @end

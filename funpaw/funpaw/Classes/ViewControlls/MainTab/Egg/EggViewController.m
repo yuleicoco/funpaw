@@ -188,7 +188,7 @@
     switch (state) {
         case SephoneCallOutgoingInit:{
             // 成功
-            _incallVC =[[InCallViewController alloc]initWithNibName:@"InCallViewController" bundle:nil];
+            _incallVC =[[InCallViewController alloc]init];
             [_incallVC setCall:call];
             [self presentViewController:_incallVC animated:YES completion:nil];
             break;
@@ -399,6 +399,10 @@
             [dic setValue:devicLg forKey:@"deviceno"];
 
         }
+        
+//        _incallVC =[[InCallViewController alloc]initWithNibName:@"InCallViewController" bundle:nil];
+//        [self presentViewController:_incallVC animated:YES completion:nil];
+        
         [dic setValue:mid forKey:@"belong"];
         [dic setValue:mid forKey:@"mid"];
         [dic setValue:locationString forKey:@"starttime"];
