@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  petegg
+
+  Created by ldp on 16/3/14.
+  Copyright © 2016年 ldp. All rights reserved.
+*/
+
+//tab
+"tabEgg" = "Egg";
+"tabPersonal" = "Personal Center";
+
+//egg
+"openButton" = "Open";
+
+// set
+"setTitle" = "Setting";
+
+// wifi
+"wifiTitle" = "Set networ";
+"bindDevice" = "Binding device";
+
+// setting
+"settingViewTitle" = "Setting";
+"wifiViewTitle" = "Set Network";
+"INFO_NetNoReachable" = "The current network is not available";
+"INFO_ReachableViaWWAN"= "Current non WIFI environment";
+"bindDeviceViewTitle" = "Binding Device";
+
+"photograph" = "Photograph";
+"photoalbum" = "Photoalbum";
+"videoTitle" = "Video";
+"hadupdata" = "Already uploaded";
+"willupdata" = "Not uploaded";
+
+"EquipmentNo" = "  Device No:";
+"AccessCode" = "  Access Code:";
+
+// 登录 注册
+"regist" = "Register";
+"completion" = "Complete information";
+"repaceWD" = "Modify password";
+
+"of" = "/";
+

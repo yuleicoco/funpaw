@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WifiViewController">
+            <connections>
+                <outlet property="encryptionListTab" destination="eDQ-VQ-KHb" id="OBo-nb-K8v"/>
+                <outlet property="okButton" destination="fUU-mr-Gs1" id="T1k-DI-Gbb"/>
+                <outlet property="passwordEdit" destination="WWR-aS-BWf" id="5wz-CB-ZJh"/>
+                <outlet property="selectEncryptionButton" destination="ZCR-qU-Tp7" id="Dm7-mt-Ylt"/>
+                <outlet property="showPasswordBtn" destination="mwl-U1-76R" id="Np5-Yi-tiK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wifiNameEdit" destination="Kdf-oS-i5T" id="CjN-9V-t0X"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUU-mr-Gs1" userLabel="Select Button">
+                    <rect key="frame" x="40" y="411" width="241" height="40"/>
+                    <color key="backgroundColor" red="0.4039215686" green="0.64313725489999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="hCB-QG-7EW"/>
+                    </constraints>
+                    <state key="normal" title="Confirm"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onOkButtonClicked:" destination="-1" eventType="touchUpInside" id="sVB-nC-UfR"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6B-Ti-8PX">
+                    <rect key="frame" x="40" y="169" width="241" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  WIFI Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8g-MM-lon">
+                            <rect key="frame" x="0.0" y="0.0" width="89" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="89" id="W7X-7V-IsK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-oS-i5T" userLabel="Wifi Name Edit">
+                            <rect key="frame" x="89" y="0.0" width="152" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="C8g-MM-lon" secondAttribute="bottom" id="0wH-vG-joX"/>
+                        <constraint firstItem="C8g-MM-lon" firstAttribute="top" secondItem="a6B-Ti-8PX" secondAttribute="top" id="3cq-BD-lWB"/>
+                        <constraint firstAttribute="trailing" secondItem="Kdf-oS-i5T" secondAttribute="trailing" id="7fR-FJ-m0c"/>
+                        <constraint firstItem="Kdf-oS-i5T" firstAttribute="top" secondItem="C8g-MM-lon" secondAttribute="top" id="RR4-85-DxD"/>
+                        <constraint firstItem="C8g-MM-lon" firstAttribute="bottom" secondItem="Kdf-oS-i5T" secondAttribute="bottom" id="caD-re-X1U"/>
+                        <constraint firstItem="C8g-MM-lon" firstAttribute="leading" secondItem="a6B-Ti-8PX" secondAttribute="leading" id="rKo-Pg-9Mv"/>
+                        <constraint firstItem="Kdf-oS-i5T" firstAttribute="leading" secondItem="C8g-MM-lon" secondAttribute="trailing" id="vMv-Ji-2lg"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRx-6A-wU0">
+                    <rect key="frame" x="40" y="229" width="241" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT1-al-qjk">
+                            <rect key="frame" x="8" y="-1" width="122" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="122" id="VbO-nJ-haE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWR-aS-BWf" userLabel="Password Edit">
+                            <rect key="frame" x="129" y="5" width="119" height="27"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tT1-al-qjk" secondAttribute="bottom" constant="1" id="9aw-AA-Yn1"/>
+                        <constraint firstItem="WWR-aS-BWf" firstAttribute="top" secondItem="sRx-6A-wU0" secondAttribute="top" constant="5" id="LOO-1T-u0E"/>
+                        <constraint firstItem="tT1-al-qjk" firstAttribute="top" secondItem="sRx-6A-wU0" secondAttribute="top" constant="-1" id="MDX-1w-lB3"/>
+                        <constraint firstAttribute="trailing" secondItem="WWR-aS-BWf" secondAttribute="trailing" constant="-7" id="UM7-CI-cqD"/>
+                        <constraint firstItem="tT1-al-qjk" firstAttribute="leading" secondItem="sRx-6A-wU0" secondAttribute="leading" constant="8" id="gYC-zY-b0H"/>
+                        <constraint firstItem="WWR-aS-BWf" firstAttribute="leading" secondItem="tT1-al-qjk" secondAttribute="trailing" constant="-1" id="mNK-VG-gfV"/>
+                        <constraint firstAttribute="bottom" secondItem="WWR-aS-BWf" secondAttribute="bottom" constant="8" id="wfe-oE-luq"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwl-U1-76R" userLabel="Show Password Button">
+                    <rect key="frame" x="40" y="289" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="hnh-Vj-865"/>
+                        <constraint firstAttribute="height" constant="22" id="rB0-ig-N7L"/>
+                    </constraints>
+                    <state key="normal" image="kuang_on.png"/>
+                    <state key="selected" image="kuang_off.png"/>
+                    <state key="highlighted" image="kuang_off.png"/>
+                    <connections>
+                        <action selector="onShowPasswordButtonClicked:" destination="-1" eventType="touchUpInside" id="0xh-vD-Sox"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCR-qU-Tp7" userLabel="Selet Encryption Combox">
+                    <rect key="frame" x="131" y="331" width="150" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="MLa-pg-t8p"/>
+                        <constraint firstAttribute="width" constant="150" id="xuf-E9-pbu"/>
+                    </constraints>
+                    <state key="normal" title="WPA/WPA2" backgroundImage="downList.png">
+                        <color key="titleColor" red="0.054125463589999999" green="0.060724431820000001" blue="0.059614748199999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.83137254901960789" green="0.83137254901960789" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="selectEncryptionClicked:" destination="-1" eventType="touchUpInside" id="7Sl-0K-8bk"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="eDQ-VQ-KHb">
+                    <rect key="frame" x="131" y="358" width="150" height="130"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="7Br-Az-PSO"/>
+                        <constraint firstAttribute="height" constant="130" id="Uaa-0o-nyj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                            <color key="value" red="0.83137254901960789" green="0.83137254901960789" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
+                    </userDefinedRuntimeAttributes>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siG-El-cD0">
+                    <rect key="frame" x="40" y="331" width="116" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="116" id="ljK-gu-79K"/>
+                        <constraint firstAttribute="height" constant="25" id="nsS-yj-CzZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Encryption Mode:">
+                        <color key="titleColor" red="0.054125463589999999" green="0.060724431820000001" blue="0.059614748199999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8y-eI-eiq">
+                    <rect key="frame" x="70" y="290" width="144" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Es1-kv-Dgr"/>
+                        <constraint firstAttribute="width" constant="144" id="FAp-IH-Hdb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ZCR-qU-Tp7" firstAttribute="trailing" secondItem="sRx-6A-wU0" secondAttribute="trailing" id="1SI-3D-3eD"/>
+                <constraint firstItem="eDQ-VQ-KHb" firstAttribute="trailing" secondItem="fUU-mr-Gs1" secondAttribute="trailing" id="3Na-Vb-b5w"/>
+                <constraint firstItem="h8y-eI-eiq" firstAttribute="bottom" secondItem="mwl-U1-76R" secondAttribute="bottom" id="5yE-41-p6H"/>
+                <constraint firstItem="h8y-eI-eiq" firstAttribute="centerY" secondItem="mwl-U1-76R" secondAttribute="centerY" id="6Da-1P-n8s"/>
+                <constraint firstItem="mwl-U1-76R" firstAttribute="top" secondItem="sRx-6A-wU0" secondAttribute="bottom" constant="20" id="99I-jo-aiT"/>
+                <constraint firstItem="eDQ-VQ-KHb" firstAttribute="leading" secondItem="ZCR-qU-Tp7" secondAttribute="leading" id="Cxh-q4-W2B"/>
+                <constraint firstItem="sRx-6A-wU0" firstAttribute="width" secondItem="a6B-Ti-8PX" secondAttribute="width" id="DmG-yF-OtH"/>
+                <constraint firstItem="ZCR-qU-Tp7" firstAttribute="top" secondItem="siG-El-cD0" secondAttribute="top" id="Ib9-YA-JCx"/>
+                <constraint firstItem="a6B-Ti-8PX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="JbN-eY-4KG"/>
+                <constraint firstItem="sRx-6A-wU0" firstAttribute="leading" secondItem="mwl-U1-76R" secondAttribute="leading" id="Ndm-8T-SOG"/>
+                <constraint firstItem="eDQ-VQ-KHb" firstAttribute="top" secondItem="ZCR-qU-Tp7" secondAttribute="bottom" constant="2" id="QIh-gc-yUm"/>
+                <constraint firstItem="a6B-Ti-8PX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-95" id="RKw-KM-8CT"/>
+                <constraint firstItem="ZCR-qU-Tp7" firstAttribute="top" secondItem="h8y-eI-eiq" secondAttribute="bottom" constant="20" id="a9B-j6-EGp"/>
+                <constraint firstItem="sRx-6A-wU0" firstAttribute="height" secondItem="a6B-Ti-8PX" secondAttribute="height" id="eJC-hF-V5u"/>
+                <constraint firstItem="siG-El-cD0" firstAttribute="leading" secondItem="mwl-U1-76R" secondAttribute="leading" id="hCc-0q-2Uk"/>
+                <constraint firstItem="h8y-eI-eiq" firstAttribute="leading" secondItem="mwl-U1-76R" secondAttribute="trailing" constant="8" symbolic="YES" id="hVD-zY-TOI"/>
+                <constraint firstItem="a6B-Ti-8PX" firstAttribute="leading" secondItem="sRx-6A-wU0" secondAttribute="leading" id="ifm-cQ-fdN"/>
+                <constraint firstItem="fUU-mr-Gs1" firstAttribute="leading" secondItem="mwl-U1-76R" secondAttribute="leading" id="keR-mm-kRo"/>
+                <constraint firstItem="fUU-mr-Gs1" firstAttribute="height" secondItem="a6B-Ti-8PX" secondAttribute="height" id="klD-RB-AP8"/>
+                <constraint firstItem="fUU-mr-Gs1" firstAttribute="width" secondItem="a6B-Ti-8PX" secondAttribute="width" id="pIg-9X-BKj"/>
+                <constraint firstItem="fUU-mr-Gs1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="siD-zS-Fnj"/>
+                <constraint firstItem="siG-El-cD0" firstAttribute="top" secondItem="mwl-U1-76R" secondAttribute="bottom" constant="20" id="vju-Pw-RG2"/>
+                <constraint firstItem="fUU-mr-Gs1" firstAttribute="top" secondItem="mwl-U1-76R" secondAttribute="bottom" constant="100" id="yeY-QK-o31"/>
+                <constraint firstItem="sRx-6A-wU0" firstAttribute="top" secondItem="a6B-Ti-8PX" secondAttribute="bottom" constant="20" id="z8g-4j-YTJ"/>
+            </constraints>
+            <point key="canvasLocation" x="253" y="292"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="downList.png" width="258" height="44"/>
+        <image name="kuang_off.png" width="35" height="33"/>
+        <image name="kuang_on.png" width="34" height="30"/>
+    </resources>
+</document>
