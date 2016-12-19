@@ -22,6 +22,7 @@
 #import "AFHttpClient+InformationChange.h"
 
 #import "UIButton+WebCache.h"
+#import "ThrowMachineViewcontrol.h"
 
 @interface PersonalViewController()
 
@@ -38,7 +39,6 @@
     
     InformationModel * informationModel;
     
-//    BOOL isJiazai;
 }
 
 @end
@@ -58,10 +58,10 @@
     self.dataSource =[NSMutableArray array];
     self.dataSourceImage =[NSMutableArray array];
     
-    NSArray * arrName =@[@"Video Recording",@"Snapshot",@"Set Feeding Times",@"Change Password"];
+    NSArray * arrName =@[@"Video Recording",@"Snapshot",@"Throw the ball machine",@"Set Feeding Times",@"Change Password"];
     [self.dataSource addObjectsFromArray:arrName];
     
-    NSArray * arrImage =@[@"person_photograph.png.png",@"person_balance.png.png", @"person_weishi.png" ,@"person_pw.png"];
+    NSArray * arrImage =@[@"person_photograph.png.png",@"person_balance.png.png",@"person_balance.png.png", @"person_weishi.png" ,@"person_pw.png"];
     [self.dataSourceImage addObjectsFromArray:arrImage];
 }
 
@@ -96,51 +96,6 @@
     _nameLabel.text = informationModel.nickname;
 }
 
-/**
- *  数据 头像实时
- *
- *  @param nsnotifition nil
- */
-
-
-//- (void)selfDataHand
-//{
-// 
-//    [self showHudInView:self.view hint:@"Loading..."];
-//    NSString * str =@"clientAction.do?method=json&common=queryPraises&classes=appinterface";
-//    NSMutableDictionary * dic =[[NSMutableDictionary alloc]init];
-//    [dic setValue:[AccountManager sharedAccountManager].loginModel.mid forKey:@"mid"];
-//    [AFNetWorking postWithApi:str parameters:dic success:^(id json) {
-//        if ([json[@"jsondata"][@"retCode"] isEqualToString:@"0000"]) {
-//            NSArray * jsondata = json[@"jsondata"][@"list"];
-//            if (jsondata.count > 0 ) {
-//               
-//                [_heandBtn setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:jsondata[0][@"headportrait"]]]] forState:UIControlStateNormal];
-////                [self showLB:500 string:jsondata[0][@"sprouts"]];
-////                [self showLB:501 string:jsondata[0][@"gz"]];
-////                [self showLB:502 string:jsondata[0][@"fs"]];
-////                [self showLB:503 string:jsondata[0][@"praises"]];
-//                _nameLabel.text = jsondata[0][@"nickname"];
-//                
-//    
-//                cachedImage =[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:jsondata[0][@"headportrait"]]]];
-//                
-//                bgImgView.image = [self blurryImage:[self cutImage:cachedImage] withBlurLevel:0.2];
-//
-//                [self hideHud];
-////                 isJiazai = YES;
-//            }else{
-//                
-//                [self hideHud];
-//            }
-//        
-//    }
-//        
-//    } failure:^(NSError *error) {
-//        [self hideHud];
-//    }];
-//    
-//}
 
 /**
  * 处理背景
@@ -377,7 +332,7 @@
         case 0:
             return 2;
         case 1:
-            return 2;
+            return 3;
         default:
             return 0;
     }
@@ -493,14 +448,14 @@
             break;
         case 1:
         {
-            if (indexPath.row  == 1) {
+            if (indexPath.row  == 2) {
                 NSLog(@"111");
                 ChangePasswordViewController * changVc = [[ChangePasswordViewController alloc]init];
                 [self.navigationController pushViewController:changVc animated:YES];
              
             }
             
-            if (indexPath.row ==0) {
+            if (indexPath.row ==1) {
                 
                 NSUserDefaults * defaults =[NSUserDefaults standardUserDefaults];
                 NSString * devoLG =[AccountManager sharedAccountManager].loginModel.deviceno;
@@ -527,6 +482,17 @@
                 [self.navigationController pushViewController:feed animated:YES];
                 }
             }
+            
+            if (indexPath.row  == 0) {
+               
+               // 抛球机
+                ThrowMachineViewcontrol * troVC =[[ThrowMachineViewcontrol alloc]init];
+                [self.navigationController pushViewController:troVC animated:YES];
+                
+                
+                
+            }
+            
         }
             break;
             
