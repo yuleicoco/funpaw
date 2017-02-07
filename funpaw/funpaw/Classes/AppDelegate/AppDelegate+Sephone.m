@@ -16,7 +16,11 @@
     //Sephone  单向无须做太多操作(考虑到以后)
     [[SephoneManager instance]	startSephoneCore];
     
-    
+   // 创建manger
+   // AFHTTPSessionManager * afmanger =[AFHTTPSessionManager manager];
+   
+    // 网络状态
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     
     
