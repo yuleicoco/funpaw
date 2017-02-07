@@ -10,7 +10,7 @@
 #import "IQKeyboardManager.h"
 #import <CoreTelephony/CTCallCenter.h>
 #import "AppDelegate+Sephone.h"
-
+#import "AppDelegate+Launcher.h"
 
 
 
@@ -33,7 +33,7 @@
     [[IQKeyboardManager sharedManager]setEnableAutoToolbar:NO];
     
   
-    
+    [self launcherApplication:application didFinishLaunchingWithOptions:launchOptions];
  
     [self initSephoneVoip:application didFinishLaunchingWithOptions:launchOptions];
     
