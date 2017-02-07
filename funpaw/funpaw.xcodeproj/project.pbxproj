@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		343A014B1E07DBFD003B93F4 /* ThrowMachineViewcontrol.m in Sources */ = {isa = PBXBuildFile; fileRef = 343A014A1E07DBFD003B93F4 /* ThrowMachineViewcontrol.m */; };
+		3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3468FF451E4857AF00DEBE4B /* ShareWork.m */; };
 		3496F9C51E04DF8E00744A1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9C41E04DF8E00744A1E /* main.m */; };
 		3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9CA1E04DF8E00744A1E /* ViewController.m */; };
 		3496F9CE1E04DF8E00744A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3496F9CC1E04DF8E00744A1E /* Main.storyboard */; };
@@ -443,6 +444,8 @@
 /* Begin PBXFileReference section */
 		343A01491E07DBFD003B93F4 /* ThrowMachineViewcontrol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThrowMachineViewcontrol.h; sourceTree = "<group>"; };
 		343A014A1E07DBFD003B93F4 /* ThrowMachineViewcontrol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThrowMachineViewcontrol.m; sourceTree = "<group>"; };
+		3468FF441E4857AF00DEBE4B /* ShareWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWork.h; sourceTree = "<group>"; };
+		3468FF451E4857AF00DEBE4B /* ShareWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWork.m; sourceTree = "<group>"; };
 		3496F9C01E04DF8E00744A1E /* funpaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funpaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3496F9C41E04DF8E00744A1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3496F9C91E04DF8E00744A1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1766,6 +1769,8 @@
 				34E15FFA1E050B16004A65AB /* AFHttpClient.m */,
 				34E15FFB1E050B16004A65AB /* AFNetWorking.h */,
 				34E15FFC1E050B16004A65AB /* AFNetWorking.m */,
+				3468FF441E4857AF00DEBE4B /* ShareWork.h */,
+				3468FF451E4857AF00DEBE4B /* ShareWork.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3606,6 +3611,7 @@
 				343A014B1E07DBFD003B93F4 /* ThrowMachineViewcontrol.m in Sources */,
 				34E1642A1E050B18004A65AB /* PersonDetailModel.m in Sources */,
 				34E164BA1E050B18004A65AB /* RegiestViewController.m in Sources */,
+				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
 				34E1641D1E050B18004A65AB /* TimeHistoryModel.m in Sources */,
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E1643C1E050B18004A65AB /* AFHttpClient+Nearby.m in Sources */,
