@@ -320,7 +320,6 @@
 		34E166521E0520F1004A65AB /* 退出.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1661B1E0520F1004A65AB /* 退出.png */; };
 		34E166531E0520F1004A65AB /* incall.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1661C1E0520F1004A65AB /* incall.png */; };
 		34E166541E0520F1004A65AB /* konw.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1661D1E0520F1004A65AB /* konw.png */; };
-		34E166551E0520F1004A65AB /* new_egg_seting.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1661E1E0520F1004A65AB /* new_egg_seting.png */; };
 		34E166561E0520F1004A65AB /* offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1661F1E0520F1004A65AB /* offline.png */; };
 		34E166571E0520F1004A65AB /* online.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166201E0520F1004A65AB /* online.png */; };
 		34E166581E0520F1004A65AB /* setb.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166211E0520F1004A65AB /* setb.png */; };
@@ -349,6 +348,15 @@
 		34E1666F1E0520F1004A65AB /* 线.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663A1E0520F1004A65AB /* 线.png */; };
 		34E166701E0520F1004A65AB /* xiala@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663B1E0520F1004A65AB /* xiala@2x.png */; };
 		34E166711E0520F1004A65AB /* xiala@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663C1E0520F1004A65AB /* xiala@3x.png */; };
+		7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58271E499FEF0086A823 /* AppDelegate+Launcher.m */; };
+		7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58301E49A3700086A823 /* BaseViewController.m */; };
+		7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58321E49A3700086A823 /* BaseTabViewController.m */; };
+		7D2D58371E49A5410086A823 /* EggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58361E49A5410086A823 /* EggViewController.m */; };
+		7D2D583A1E49A5610086A823 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58391E49A5610086A823 /* MoreViewController.m */; };
+		7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583C1E49A5A30086A823 /* MainTabViewController.m */; };
+		7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583F1E49AB290086A823 /* LoginViewController.m */; };
+		7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58451E49ABE80086A823 /* AccountManager.m */; };
+		7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D584B1E49ADD70086A823 /* LoginModel.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1116,7 +1124,6 @@
 		34E1661B1E0520F1004A65AB /* 退出.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出.png"; sourceTree = "<group>"; };
 		34E1661C1E0520F1004A65AB /* incall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = incall.png; sourceTree = "<group>"; };
 		34E1661D1E0520F1004A65AB /* konw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = konw.png; sourceTree = "<group>"; };
-		34E1661E1E0520F1004A65AB /* new_egg_seting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_egg_seting.png; sourceTree = "<group>"; };
 		34E1661F1E0520F1004A65AB /* offline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline.png; sourceTree = "<group>"; };
 		34E166201E0520F1004A65AB /* online.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = online.png; sourceTree = "<group>"; };
 		34E166211E0520F1004A65AB /* setb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setb.png; sourceTree = "<group>"; };
@@ -1147,6 +1154,24 @@
 		34E1663C1E0520F1004A65AB /* xiala@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiala@3x.png"; sourceTree = "<group>"; };
 		3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.release.xcconfig"; sourceTree = "<group>"; };
 		782952FC14463F99DF3112FF /* libPods-funpaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funpaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2D58261E499FEF0086A823 /* AppDelegate+Launcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Launcher.h"; sourceTree = "<group>"; };
+		7D2D58271E499FEF0086A823 /* AppDelegate+Launcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Launcher.m"; sourceTree = "<group>"; };
+		7D2D582F1E49A3700086A823 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		7D2D58301E49A3700086A823 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		7D2D58311E49A3700086A823 /* BaseTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabViewController.h; sourceTree = "<group>"; };
+		7D2D58321E49A3700086A823 /* BaseTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabViewController.m; sourceTree = "<group>"; };
+		7D2D58351E49A5410086A823 /* EggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EggViewController.h; sourceTree = "<group>"; };
+		7D2D58361E49A5410086A823 /* EggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EggViewController.m; sourceTree = "<group>"; };
+		7D2D58381E49A5610086A823 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		7D2D58391E49A5610086A823 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		7D2D583B1E49A5A30086A823 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		7D2D583C1E49A5A30086A823 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		7D2D583E1E49AB290086A823 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		7D2D583F1E49AB290086A823 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		7D2D58441E49ABE80086A823 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountManager.h; sourceTree = "<group>"; };
+		7D2D58451E49ABE80086A823 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
+		7D2D584A1E49ADD70086A823 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		7D2D584B1E49ADD70086A823 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1268,6 +1293,7 @@
 			isa = PBXGroup;
 			children = (
 				34E15F731E050B16004A65AB /* AppDelegate */,
+				7D2D58291E49A27A0086A823 /* ViewControllers */,
 				34E15F7C1E050B16004A65AB /* Common */,
 				34E15FA21E050B16004A65AB /* Managers */,
 				34E15FA61E050B16004A65AB /* Models */,
@@ -1285,6 +1311,8 @@
 				34E15F771E050B16004A65AB /* AppDelegate+Sephone.m */,
 				34E15F7A1E050B16004A65AB /* AppDelegate.h */,
 				34E15F7B1E050B16004A65AB /* AppDelegate.m */,
+				7D2D58261E499FEF0086A823 /* AppDelegate+Launcher.h */,
+				7D2D58271E499FEF0086A823 /* AppDelegate+Launcher.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1407,6 +1435,8 @@
 		34E15FA31E050B16004A65AB /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				7D2D58441E49ABE80086A823 /* AccountManager.h */,
+				7D2D58451E49ABE80086A823 /* AccountManager.m */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1414,6 +1444,8 @@
 		34E15FA61E050B16004A65AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
+				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				34E15FA71E050B16004A65AB /* Base */,
 			);
 			path = Models;
@@ -2495,7 +2527,6 @@
 				34E166091E0520F1004A65AB /* Horizontal */,
 				34E1661C1E0520F1004A65AB /* incall.png */,
 				34E1661D1E0520F1004A65AB /* konw.png */,
-				34E1661E1E0520F1004A65AB /* new_egg_seting.png */,
 				34E1661F1E0520F1004A65AB /* offline.png */,
 				34E166201E0520F1004A65AB /* online.png */,
 				34E166211E0520F1004A65AB /* setb.png */,
@@ -2602,6 +2633,65 @@
 				782952FC14463F99DF3112FF /* libPods-funpaw.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D2D58291E49A27A0086A823 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D582D1E49A3060086A823 /* MainTab */,
+				7D2D582A1E49A3060086A823 /* Base */,
+				7D2D582B1E49A3060086A823 /* Egg */,
+				7D2D582C1E49A3060086A823 /* Login */,
+				7D2D582E1E49A3060086A823 /* More */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7D2D582A1E49A3060086A823 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D582F1E49A3700086A823 /* BaseViewController.h */,
+				7D2D58301E49A3700086A823 /* BaseViewController.m */,
+				7D2D58311E49A3700086A823 /* BaseTabViewController.h */,
+				7D2D58321E49A3700086A823 /* BaseTabViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7D2D582B1E49A3060086A823 /* Egg */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D58351E49A5410086A823 /* EggViewController.h */,
+				7D2D58361E49A5410086A823 /* EggViewController.m */,
+			);
+			path = Egg;
+			sourceTree = "<group>";
+		};
+		7D2D582C1E49A3060086A823 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D583E1E49AB290086A823 /* LoginViewController.h */,
+				7D2D583F1E49AB290086A823 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		7D2D582D1E49A3060086A823 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D583B1E49A5A30086A823 /* MainTabViewController.h */,
+				7D2D583C1E49A5A30086A823 /* MainTabViewController.m */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		7D2D582E1E49A3060086A823 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				7D2D58381E49A5610086A823 /* MoreViewController.h */,
+				7D2D58391E49A5610086A823 /* MoreViewController.m */,
+			);
+			path = More;
 			sourceTree = "<group>";
 		};
 		BE24F9B948DE606D7B2BFECA /* Pods */ = {
@@ -2916,7 +3006,6 @@
 				34E1648A1E050B18004A65AB /* ok.png in Resources */,
 				34E166481E0520F1004A65AB /* Lclick_rool.png in Resources */,
 				34E165741E050B19004A65AB /* new_huangguan.png in Resources */,
-				34E166551E0520F1004A65AB /* new_egg_seting.png in Resources */,
 				34E165BF1E050B19004A65AB /* tab_egg_press@3x.png in Resources */,
 				34E165B61E050B19004A65AB /* play.png in Resources */,
 				34E166431E0520F1004A65AB /* L_down.png in Resources */,
@@ -2998,22 +3087,31 @@
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
 				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
+				7D2D583A1E49A5610086A823 /* MoreViewController.m in Sources */,
+				7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */,
+				7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */,
 				34E164141E050B18004A65AB /* UIView+TapBlocks.m in Sources */,
 				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
+				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
+				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
+				7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */,
 				34E164181E050B18004A65AB /* CycleScrollView.m in Sources */,
 				34E164171E050B18004A65AB /* Reachability.m in Sources */,
 				34E164111E050B18004A65AB /* UIButton+Blocks.m in Sources */,
 				34E1640C1E050B18004A65AB /* AppDelegate.m in Sources */,
 				34E1640F1E050B18004A65AB /* UIActionSheet+Blocks.m in Sources */,
 				34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */,
+				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
+				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
+				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,
@@ -3139,7 +3237,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4UKEB375ND;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/yulei/funpaw/funpaw/funpaw/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/czx/funpaw999/funpaw/funpaw/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -3184,7 +3282,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4UKEB375ND;
 				ENABLE_BITCODE = NO;
-				GCC_PREFIX_HEADER = /Users/yulei/funpaw/funpaw/funpaw/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/czx/funpaw999/funpaw/funpaw/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
