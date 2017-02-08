@@ -14,6 +14,8 @@
 		3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9CF1E04DF8E00744A1E /* funpaw.xcdatamodeld */; };
 		3496F9D31E04DF8E00744A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3496F9D21E04DF8E00744A1E /* Assets.xcassets */; };
 		3496F9D61E04DF8E00744A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3496F9D41E04DF8E00744A1E /* LaunchScreen.storyboard */; };
+		34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A864511E49A02300AD6D8A /* ShareWork+account.m */; };
+		34A864551E49A07100AD6D8A /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A864541E49A07100AD6D8A /* BaseModel.m */; };
 		34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E15F771E050B16004A65AB /* AppDelegate+Sephone.m */; };
 		34E1640C1E050B18004A65AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E15F7B1E050B16004A65AB /* AppDelegate.m */; };
 		34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E15F7F1E050B16004A65AB /* NSString+URLEncoding.m */; };
@@ -362,6 +364,10 @@
 		3496F9D21E04DF8E00744A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3496F9D51E04DF8E00744A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3496F9D71E04DF8E00744A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34A864501E49A02300AD6D8A /* ShareWork+account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+account.h"; sourceTree = "<group>"; };
+		34A864511E49A02300AD6D8A /* ShareWork+account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+account.m"; sourceTree = "<group>"; };
+		34A864531E49A07100AD6D8A /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		34A864541E49A07100AD6D8A /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		34E15F761E050B16004A65AB /* AppDelegate+Sephone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Sephone.h"; sourceTree = "<group>"; };
 		34E15F771E050B16004A65AB /* AppDelegate+Sephone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Sephone.m"; sourceTree = "<group>"; };
 		34E15F7A1E050B16004A65AB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1416,6 +1422,8 @@
 		34E15FA71E050B16004A65AB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				34A864531E49A07100AD6D8A /* BaseModel.h */,
+				34A864541E49A07100AD6D8A /* BaseModel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1425,6 +1433,8 @@
 			children = (
 				3468FF441E4857AF00DEBE4B /* ShareWork.h */,
 				3468FF451E4857AF00DEBE4B /* ShareWork.m */,
+				34A864501E49A02300AD6D8A /* ShareWork+account.h */,
+				34A864511E49A02300AD6D8A /* ShareWork+account.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2986,6 +2996,7 @@
 				34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */,
 				34E164121E050B18004A65AB /* UIImage-Extensions.m in Sources */,
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
+				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
 				34E164141E050B18004A65AB /* UIView+TapBlocks.m in Sources */,
 				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
@@ -3004,6 +3015,7 @@
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
+				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,9 +16,11 @@
     static ShareWork * manager =nil;
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
-        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:@"http://httpbin.org/"]];
+        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:@"http://180.97.80.227:15102/"]];
     });
     return manager;
+    
+  
     
     
 }
@@ -35,6 +37,8 @@
         [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
         
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
+        
+         self.securityPolicy.allowInvalidCertificates = YES;
         
         [self.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
             
@@ -57,7 +61,7 @@
 
         }];
         [self.reachabilityManager startMonitoring];
-        self.securityPolicy.allowInvalidCertificates = YES;
+       
     }
     return self;
 }
@@ -73,8 +77,8 @@
     switch (method) {
         case GET:{
             [self GET:path parameters:params progress:nil success:^(NSURLSessionTask *task, NSDictionary * responseObject) {
-                NSLog(@"JSON: %@", responseObject);
-                success(responseObject);
+                BaseModel * model =[[BaseModel  alloc]initWithDictionary:responseObject error:nil];
+                success(model);
             } failure:^(NSURLSessionTask *operation, NSError *error) {
                 NSLog(@"Error: %@", error);
                 failure(error);
@@ -83,13 +87,25 @@
         }
         case POST:{
             
-            params[@"classes"] = @"appinterface";
-            params[@"method"] = @"json";
+//            params[@"classes"] = @"appinterface";
+//            params[@"method"] = @"json";
+            
+            path =[NSString  stringWithFormat:@"http://180.97.80.227:15102/clientAction.do?method=json&classes=appinterface&common=memberLogin%@",path];
+            
+            
+           
+
+            
+           // path =@"http://180.97.80.227:15102/clientAction.do?method=json&classes=appinterface&common=memberLogin";
+            
+
+        
             [self POST:path parameters:params progress:nil success:^(NSURLSessionTask *task, NSDictionary * responseObject) {
-                NSLog(@"JSON: %@", responseObject);
-                success(responseObject);
+                 NSError* error = nil;
                 
+                BaseModel * model =[[BaseModel  alloc]initWithDictionary:responseObject error:&error];
                 
+                success(model);
             } failure:^(NSURLSessionTask *operation, NSError *error) {
                 NSLog(@"Error: %@", error);
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:error.localizedDescription delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
