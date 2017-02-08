@@ -17,7 +17,7 @@
     [[SephoneManager instance]	startSephoneCore];
     
    // 创建manger
-   // AFHTTPSessionManager * afmanger =[AFHTTPSessionManager manager];
+  //  AFHTTPSessionManager * afmanger =[AFHTTPSessionManager manager];
    
     // 网络状态
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
