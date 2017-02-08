@@ -12,6 +12,7 @@
 
 //egg
 "openButton" = "Open";
+"tabEgg_title" ="FunPawQ";
 
 // set
 "setTitle" = "Setting";

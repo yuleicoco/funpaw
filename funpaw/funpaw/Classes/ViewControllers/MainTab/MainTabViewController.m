@@ -38,9 +38,9 @@
 -(UINavigationController *)eggVc{
     if (!_eggVc) {
         EggViewController * vc = [[EggViewController alloc]init];
-        vc.tabBarItem =[[UITabBarItem alloc]initWithTitle:@"Device"
-                                                    image:[[UIImage imageNamed:@"tab_home"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                        selectedImage:[[UIImage imageNamed:@"tab_homedian"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        vc.tabBarItem =[[UITabBarItem alloc]initWithTitle:nil
+                                                    image:[[UIImage imageNamed:@"left"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                        selectedImage:[[UIImage imageNamed:@"right"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         
         _eggVc = [[UINavigationController alloc]initWithRootViewController:vc];
@@ -52,8 +52,8 @@
 -(UINavigationController *)moreVc{
     if ((!_moreVc)) {
         MoreViewController * vc = [[MoreViewController alloc]init];
-        vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"More"
-                                                     image:[[UIImage imageNamed:@"tab_person"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"tab_persondian"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+        vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil
+                                                     image:[[UIImage imageNamed:@"right"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"left"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         _moreVc =[[UINavigationController alloc]initWithRootViewController:vc];
     }
