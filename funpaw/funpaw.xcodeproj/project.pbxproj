@@ -348,6 +348,7 @@
 		34E1666F1E0520F1004A65AB /* 线.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663A1E0520F1004A65AB /* 线.png */; };
 		34E166701E0520F1004A65AB /* xiala@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663B1E0520F1004A65AB /* xiala@2x.png */; };
 		34E166711E0520F1004A65AB /* xiala@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1663C1E0520F1004A65AB /* xiala@3x.png */; };
+		7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */; };
 		7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58271E499FEF0086A823 /* AppDelegate+Launcher.m */; };
 		7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58301E49A3700086A823 /* BaseViewController.m */; };
 		7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58321E49A3700086A823 /* BaseTabViewController.m */; };
@@ -1154,6 +1155,8 @@
 		34E1663C1E0520F1004A65AB /* xiala@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiala@3x.png"; sourceTree = "<group>"; };
 		3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.release.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.release.xcconfig"; sourceTree = "<group>"; };
 		782952FC14463F99DF3112FF /* libPods-funpaw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-funpaw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0FCE761E4AFDD7009E3E21 /* RegiestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestViewController.h; sourceTree = "<group>"; };
+		7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestViewController.m; sourceTree = "<group>"; };
 		7D2D58261E499FEF0086A823 /* AppDelegate+Launcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Launcher.h"; sourceTree = "<group>"; };
 		7D2D58271E499FEF0086A823 /* AppDelegate+Launcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Launcher.m"; sourceTree = "<group>"; };
 		7D2D582F1E49A3700086A823 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -2672,6 +2675,8 @@
 			children = (
 				7D2D583E1E49AB290086A823 /* LoginViewController.h */,
 				7D2D583F1E49AB290086A823 /* LoginViewController.m */,
+				7D0FCE761E4AFDD7009E3E21 /* RegiestViewController.h */,
+				7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -3112,6 +3117,7 @@
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
+				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,

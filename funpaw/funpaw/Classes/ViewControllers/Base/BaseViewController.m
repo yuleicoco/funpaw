@@ -17,6 +17,7 @@
     if (self.navigationController) {
 //        self.navigationController.navigationBar.layer.shadowColor = [UIColor whiteColor].CGColor;
        self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(0, 1);
+        self.navigationController.navigationBar.barTintColor = RGB(245, 145, 40);
         //self.navigationController.navigationBar.layer.shadowOpacity = 0.4;
         //self.navigationController.navigationBar.layer.shadowRadius = 2;
        //self.navigationController.navigationBar.barStyle=UIBarStyleDefault;
@@ -180,7 +181,7 @@
     CGSize titleSize =self.navigationController.navigationBar.bounds.size;
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, titleSize.width/2,titleSize.height)];
     label.backgroundColor = [UIColor clearColor];
-    label.textColor = UIColorFromHex(333333);
+    label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.text=navTitle;
     label.font = [UIFont systemFontOfSize:20];

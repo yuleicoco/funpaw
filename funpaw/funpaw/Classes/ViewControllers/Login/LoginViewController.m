@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "RegiestViewController.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong)UITextField * accountTextfield;
@@ -96,15 +97,87 @@
         
     }];
     
+    _passwordTextfield = [[UITextField alloc]init];
+    _passwordTextfield.font = [UIFont systemFontOfSize:18];
+    _passwordTextfield.tintColor = [UIColor whiteColor];
+    _passwordTextfield.textColor = [UIColor whiteColor];
+    _passwordTextfield.placeholder = @"PASSWORD";
+    [_passwordTextfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    [self.view addSubview:_passwordTextfield];
+    [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(downKuang.mas_left).offset(15);
+        make.width.mas_equalTo(200);
+        make.top.mas_equalTo(downKuang.mas_top);
+        make.height.mas_equalTo(50);
+    }];
+    
+    UILabel * forgetLabel = [[UILabel alloc]init];
+    forgetLabel.text = @"FORGOT PASSWORD?";
+    forgetLabel.textColor = [UIColor whiteColor];
+    forgetLabel.font = [UIFont systemFontOfSize:16];
+    [self.view addSubview:forgetLabel];
+    [forgetLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_passwordTextfield.mas_left);
+        make.top.equalTo(downKuang.mas_bottom).offset(15);
+        
+
+    }];
+    
+    UIButton * forgetBtn = [[UIButton alloc]init];
+    forgetBtn.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:forgetBtn];
+    [forgetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(forgetLabel.mas_left);
+        make.top.equalTo(forgetLabel.mas_top);
+        make.width.mas_equalTo(150);
+        make.height.mas_equalTo(30);
+        
+    }];
+    
+    UIButton * loginBtn = [[UIButton alloc]init];
+    loginBtn.backgroundColor = [UIColor whiteColor];
+    loginBtn.layer.cornerRadius = 18;
+    [loginBtn setTitle:@"LOGIN" forState:UIControlStateNormal];
+    [loginBtn setTitleColor:RGB(245, 145, 40) forState:UIControlStateNormal];
+    [self.view addSubview:loginBtn];
+    [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(centerView.mas_bottom).offset(-20);
+        make.centerX.equalTo(centerView.mas_centerX);
+        make.width.mas_equalTo(250);
+        make.height.mas_equalTo(35);
+        
+    }];
     
     
-    
-    
-    
-    
-    
+    UIButton * signupBtn = [[UIButton alloc]init];
+    signupBtn.backgroundColor = [UIColor clearColor];
+    [signupBtn setTitle:@"SIGN UP" forState:UIControlStateNormal];
+    [signupBtn setTitleColor:RGB(245, 145, 40) forState:UIControlStateNormal];
+    signupBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    [signupBtn addTarget:self action:@selector(regiestButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:signupBtn];
+    [signupBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(signupBtn.superview.mas_centerX);
+        make.bottom.equalTo(signupBtn.superview.mas_bottom).offset(-50);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(35);
+        
+        
+    }];
+
     
 }
+
+-(void)regiestButtonTouch{
+    RegiestViewController * regiestVc = [[RegiestViewController  alloc]init];
+    [self.navigationController pushViewController:regiestVc animated:NO];
+
+
+}
+
+
+
+
 
 
 
