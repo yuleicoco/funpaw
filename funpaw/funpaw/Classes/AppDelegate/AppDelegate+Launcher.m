@@ -48,11 +48,11 @@
 }
 
 -(void)loginStateChange:(NSNotification *)notification{
-//    BOOL loginSuccess = [notification.object boolValue];
-//
-//    if (loginSuccess) {
-//        [self enterMainTabVC];
-//    }else{
+    BOOL loginSuccess = [notification.object boolValue];
+
+    if (loginSuccess) {
+        [self enterMainTabVC];
+    }else{
 //        NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
 //        if (![[userdefaults objectForKey:@"STARTFLAG"] isEqualToString:@"1"]) {//第一次启动软件
 //            [self.window makeKeyAndVisible];
@@ -62,11 +62,11 @@
 //            popStartV.delegate = self;
 //            popStartV.ParentView = self.window;
 //            [self.window addSubview:popStartV];
-//            
+        
 //        }else {//不是第一次启动软件
 //            [self enterLoginVC];
-//            
-//        }
+        
+       // }
     
         
         
@@ -74,7 +74,7 @@
     
     
     
- //   }
+    }
     
 
 }

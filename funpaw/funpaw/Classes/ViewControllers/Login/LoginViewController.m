@@ -19,7 +19,18 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self setupView];
+    UIButton * test = [[UIButton alloc]initWithFrame:CGRectMake(100, 40, 100, 100)];
+    test.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:test];
+    [test addTarget:self action:@selector(dowewerwfwafa) forControlEvents:UIControlEventTouchUpInside];
+    
 }
+-(void)dowewerwfwafa{
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@YES];
+
+}
+
 
 -(void)setupView{
     UIImageView * backImage = [[UIImageView alloc]init];
