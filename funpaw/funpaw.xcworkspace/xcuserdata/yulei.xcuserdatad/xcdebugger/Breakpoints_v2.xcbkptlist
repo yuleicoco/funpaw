@@ -13,53 +13,5 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "funpaw/Classes/Network/ShareWork.m"
-            timestampString = "508158757.168738"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-requestWithMethod:WithPath:WithParams:WithSuccessBlock:WithFailurBlock:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ShareWork requestWithMethod:WithPath:WithParams:WithSuccessBlock:WithFailurBlock:]"
-                  moduleName = "funpaw"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yulei/funpaw/funpaw/funpaw/Classes/Network/ShareWork.m"
-                  timestampString = "508158784.484039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "572">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__84-[ShareWork requestWithMethod:WithPath:WithParams:WithSuccessBlock:WithFailurBlock:]_block_invoke.83"
-                  moduleName = "funpaw"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yulei/funpaw/funpaw/funpaw/Classes/Network/ShareWork.m"
-                  timestampString = "508158784.486541"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "103"
-                  endingLineNumber = "103"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
