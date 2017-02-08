@@ -6,10 +6,15 @@
 //  Copyright © 2017年 yulei. All rights reserved.
 //
 
+
+#define BASE_URL    @"clientAction.do?method=json&classes=appinterface&"
+
+
 #import <AFNetworking/AFNetworking.h>
+#import "BaseModel.h"
 
 //请求成功回调block
-typedef void (^requestSuccessBlock)(NSDictionary *dic);
+typedef void (^requestSuccessBlock)(BaseModel *model);
 
 //请求失败回调block
 typedef void (^requestFailureBlock)(NSError *error);

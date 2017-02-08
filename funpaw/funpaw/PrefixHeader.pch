@@ -17,6 +17,7 @@
 #import "Definition.h"
 #import "Notification.h"
 #import "AppUtil.h"
+#import "BaseModel.h"
 
 #import "SephoneManager.h"
 #include "sephone/sephonecore.h"
