@@ -91,10 +91,7 @@
 //            params[@"method"] = @"json";
             
             path =[NSString  stringWithFormat:@"http://180.97.80.227:15102/clientAction.do?method=json&classes=appinterface&%@",path];
-            
-            
-           
-
+        
             
            // path =@"http://180.97.80.227:15102/clientAction.do?method=json&classes=appinterface&common=memberLogin";
             

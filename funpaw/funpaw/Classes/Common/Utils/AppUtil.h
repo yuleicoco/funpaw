@@ -13,9 +13,12 @@
 //蓝色
 #define GREEN_COLOR RGB(73, 195, 241)
 
+//黄色
+#define YELLOW_COLOR RGB(245, 145, 40)
 //灰色
 #define GRAY_COLOR RGB(205, 205, 193)
 #define LIGHT_GRAY_COLOR RGB(239, 242, 243)
+#define LIGHT_GRAYdcdc_COLOR RGB(220, 220, 220)
 
 #undef	NAV_BUTTON_MIN_WIDTH
 #define	NAV_BUTTON_MIN_WIDTH	(40.0f)
