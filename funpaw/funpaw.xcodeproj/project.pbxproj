@@ -365,6 +365,7 @@
 		7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D584B1E49ADD70086A823 /* LoginModel.m */; };
 		7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */; };
 		7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009D1E4C62B400B5B40F /* PopStartView.m */; };
+		7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A01E4C674500B5B40F /* CompleViewController.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1194,6 +1195,8 @@
 		7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Login.m"; sourceTree = "<group>"; };
 		7D4A009C1E4C62B400B5B40F /* PopStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopStartView.h; sourceTree = "<group>"; };
 		7D4A009D1E4C62B400B5B40F /* PopStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopStartView.m; sourceTree = "<group>"; };
+		7D4A009F1E4C674500B5B40F /* CompleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleViewController.h; sourceTree = "<group>"; };
+		7D4A00A01E4C674500B5B40F /* CompleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleViewController.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2716,6 +2719,8 @@
 				7D2D583F1E49AB290086A823 /* LoginViewController.m */,
 				7D0FCE761E4AFDD7009E3E21 /* RegiestViewController.h */,
 				7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */,
+				7D4A009F1E4C674500B5B40F /* CompleViewController.h */,
+				7D4A00A01E4C674500B5B40F /* CompleViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -3164,6 +3169,7 @@
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
+				7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegiestViewController.h"
+#import "CompleViewController.h"
 #import "ShareWork+Login.h"
 #import "LoginModel.h"
 
@@ -127,6 +128,7 @@
     
     UIButton * forgetBtn = [[UIButton alloc]init];
     forgetBtn.backgroundColor = [UIColor clearColor];
+    [forgetBtn addTarget:self action:@selector(forgetButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:forgetBtn];
     [forgetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(forgetLabel.mas_left);
@@ -177,6 +179,13 @@
 
 
 }
+
+-(void)forgetButtonTouch{
+    CompleViewController * comVc = [[CompleViewController alloc]init];
+    [self.navigationController pushViewController:comVc animated:NO];
+
+}
+
 
 -(void)loginButtonTouch{
     if ([AppUtil isBlankString:_accountTextfield.text]) {
