@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */; };
+		34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC31E4AF6AC00D9D24D /* InCallViewController.m */; };
+		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
 		3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3468FF451E4857AF00DEBE4B /* ShareWork.m */; };
 		3496F9C51E04DF8E00744A1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9C41E04DF8E00744A1E /* main.m */; };
 		3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9CA1E04DF8E00744A1E /* ViewController.m */; };
@@ -363,6 +366,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34196FBE1E4AF55200D9D24D /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
+		34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWeakTimer.m; sourceTree = "<group>"; };
+		34196FC21E4AF6AC00D9D24D /* InCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InCallViewController.h; sourceTree = "<group>"; };
+		34196FC31E4AF6AC00D9D24D /* InCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InCallViewController.m; sourceTree = "<group>"; };
+		34196FC51E4AFA9400D9D24D /* ShareWork+device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+device.h"; sourceTree = "<group>"; };
+		34196FC61E4AFA9400D9D24D /* ShareWork+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+device.m"; sourceTree = "<group>"; };
 		3468FF441E4857AF00DEBE4B /* ShareWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWork.h; sourceTree = "<group>"; };
 		3468FF451E4857AF00DEBE4B /* ShareWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWork.m; sourceTree = "<group>"; };
 		3496F9C01E04DF8E00744A1E /* funpaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funpaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1249,6 +1258,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34196FC11E4AF68900D9D24D /* InCall */ = {
+			isa = PBXGroup;
+			children = (
+				34196FC21E4AF6AC00D9D24D /* InCallViewController.h */,
+				34196FC31E4AF6AC00D9D24D /* InCallViewController.m */,
+			);
+			path = InCall;
+			sourceTree = "<group>";
+		};
 		3496F9B71E04DF8E00744A1E = {
 			isa = PBXGroup;
 			children = (
@@ -1471,6 +1489,8 @@
 				3468FF451E4857AF00DEBE4B /* ShareWork.m */,
 				34A864501E49A02300AD6D8A /* ShareWork+account.h */,
 				34A864511E49A02300AD6D8A /* ShareWork+account.m */,
+				34196FC51E4AFA9400D9D24D /* ShareWork+device.h */,
+				34196FC61E4AFA9400D9D24D /* ShareWork+device.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2644,6 +2664,7 @@
 		7D2D58291E49A27A0086A823 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				34196FC11E4AF68900D9D24D /* InCall */,
 				7D2D582D1E49A3060086A823 /* MainTab */,
 				7D2D582A1E49A3060086A823 /* Base */,
 				7D2D582B1E49A3060086A823 /* Egg */,
@@ -2667,6 +2688,8 @@
 		7D2D582B1E49A3060086A823 /* Egg */ = {
 			isa = PBXGroup;
 			children = (
+				34196FBE1E4AF55200D9D24D /* HWWeakTimer.h */,
+				34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */,
 				7D2D58351E49A5410086A823 /* EggViewController.h */,
 				7D2D58361E49A5410086A823 /* EggViewController.m */,
 			);
@@ -3102,6 +3125,8 @@
 				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
+				34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */,
+				34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */,
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
@@ -3115,6 +3140,7 @@
 				34E1640F1E050B18004A65AB /* UIActionSheet+Blocks.m in Sources */,
 				34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */,
 				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
+				34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */,
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,

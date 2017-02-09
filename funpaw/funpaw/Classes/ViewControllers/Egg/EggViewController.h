@@ -10,4 +10,9 @@
 
 @interface EggViewController : BaseViewController
 
+@property(nonatomic,strong)NSTimer * moveTimer; 
+@property(nonatomic,strong)UIButton * openVideoBtn;
+@property(nonatomic,strong)UIImageView * bgImage;
+
+
 @end
