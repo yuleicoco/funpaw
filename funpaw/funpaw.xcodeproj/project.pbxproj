@@ -11,6 +11,11 @@
 		34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC31E4AF6AC00D9D24D /* InCallViewController.m */; };
 		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
 		3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3468FF451E4857AF00DEBE4B /* ShareWork.m */; };
+		347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */; };
+		347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EF1E4C6D91007FA2B0 /* UnbandViewController.m */; };
+		347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6F21E4C6D91007FA2B0 /* WifiViewController.m */; };
+		347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6F81E4C6E18007FA2B0 /* BindingViewController.m */; };
+		347FF6FD1E4C7058007FA2B0 /* English_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 347FF6FC1E4C7058007FA2B0 /* English_tips.png */; };
 		3496F9C51E04DF8E00744A1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9C41E04DF8E00744A1E /* main.m */; };
 		3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9CA1E04DF8E00744A1E /* ViewController.m */; };
 		3496F9CE1E04DF8E00744A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3496F9CC1E04DF8E00744A1E /* Main.storyboard */; };
@@ -303,7 +308,6 @@
 		34E166011E05154B004A65AB /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34E166001E05154B004A65AB /* 22.jpg */; };
 		34E1663D1E0520F1004A65AB /* egg_ prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166051E0520F1004A65AB /* egg_ prompt.png */; };
 		34E1663E1E0520F1004A65AB /* egg_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166061E0520F1004A65AB /* egg_add.png */; };
-		34E1663F1E0520F1004A65AB /* egg_nodevcie.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166071E0520F1004A65AB /* egg_nodevcie.png */; };
 		34E166401E0520F1004A65AB /* egg_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E166081E0520F1004A65AB /* egg_up.png */; };
 		34E166411E0520F1004A65AB /* down_egg.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1660A1E0520F1004A65AB /* down_egg.png */; };
 		34E166421E0520F1004A65AB /* halfAp.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1660B1E0520F1004A65AB /* halfAp.png */; };
@@ -378,6 +382,15 @@
 		34196FC61E4AFA9400D9D24D /* ShareWork+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+device.m"; sourceTree = "<group>"; };
 		3468FF441E4857AF00DEBE4B /* ShareWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWork.h; sourceTree = "<group>"; };
 		3468FF451E4857AF00DEBE4B /* ShareWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWork.m; sourceTree = "<group>"; };
+		347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		347FF6EE1E4C6D91007FA2B0 /* UnbandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnbandViewController.h; sourceTree = "<group>"; };
+		347FF6EF1E4C6D91007FA2B0 /* UnbandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnbandViewController.m; sourceTree = "<group>"; };
+		347FF6F11E4C6D91007FA2B0 /* WifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiViewController.h; sourceTree = "<group>"; };
+		347FF6F21E4C6D91007FA2B0 /* WifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiViewController.m; sourceTree = "<group>"; };
+		347FF6F71E4C6E18007FA2B0 /* BindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingViewController.h; sourceTree = "<group>"; };
+		347FF6F81E4C6E18007FA2B0 /* BindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingViewController.m; sourceTree = "<group>"; };
+		347FF6FC1E4C7058007FA2B0 /* English_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English_tips.png; path = ../English_tips.png; sourceTree = "<group>"; };
 		3496F9C01E04DF8E00744A1E /* funpaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funpaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3496F9C41E04DF8E00744A1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3496F9C91E04DF8E00744A1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1119,7 +1132,6 @@
 		34E166001E05154B004A65AB /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		34E166051E0520F1004A65AB /* egg_ prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "egg_ prompt.png"; sourceTree = "<group>"; };
 		34E166061E0520F1004A65AB /* egg_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg_add.png; sourceTree = "<group>"; };
-		34E166071E0520F1004A65AB /* egg_nodevcie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg_nodevcie.png; sourceTree = "<group>"; };
 		34E166081E0520F1004A65AB /* egg_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = egg_up.png; sourceTree = "<group>"; };
 		34E1660A1E0520F1004A65AB /* down_egg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down_egg.png; sourceTree = "<group>"; };
 		34E1660B1E0520F1004A65AB /* halfAp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfAp.png; sourceTree = "<group>"; };
@@ -1277,6 +1289,42 @@
 				34196FC31E4AF6AC00D9D24D /* InCallViewController.m */,
 			);
 			path = InCall;
+			sourceTree = "<group>";
+		};
+		347FF6EA1E4C6D91007FA2B0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */,
+				347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		347FF6ED1E4C6D91007FA2B0 /* Unband */ = {
+			isa = PBXGroup;
+			children = (
+				347FF6EE1E4C6D91007FA2B0 /* UnbandViewController.h */,
+				347FF6EF1E4C6D91007FA2B0 /* UnbandViewController.m */,
+			);
+			path = Unband;
+			sourceTree = "<group>";
+		};
+		347FF6F01E4C6D91007FA2B0 /* Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				347FF6F11E4C6D91007FA2B0 /* WifiViewController.h */,
+				347FF6F21E4C6D91007FA2B0 /* WifiViewController.m */,
+			);
+			path = Wifi;
+			sourceTree = "<group>";
+		};
+		347FF6F61E4C6DE2007FA2B0 /* Band */ = {
+			isa = PBXGroup;
+			children = (
+				347FF6F71E4C6E18007FA2B0 /* BindingViewController.h */,
+				347FF6F81E4C6E18007FA2B0 /* BindingViewController.m */,
+			);
+			path = Band;
 			sourceTree = "<group>";
 		};
 		3496F9B71E04DF8E00744A1E = {
@@ -2560,9 +2608,9 @@
 		34E166041E0520F1004A65AB /* device */ = {
 			isa = PBXGroup;
 			children = (
+				347FF6FC1E4C7058007FA2B0 /* English_tips.png */,
 				34E166051E0520F1004A65AB /* egg_ prompt.png */,
 				34E166061E0520F1004A65AB /* egg_add.png */,
-				34E166071E0520F1004A65AB /* egg_nodevcie.png */,
 				34E166081E0520F1004A65AB /* egg_up.png */,
 				34E166091E0520F1004A65AB /* Horizontal */,
 				34E1661C1E0520F1004A65AB /* incall.png */,
@@ -2678,6 +2726,10 @@
 		7D2D58291E49A27A0086A823 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				347FF6F61E4C6DE2007FA2B0 /* Band */,
+				347FF6EA1E4C6D91007FA2B0 /* Feed */,
+				347FF6ED1E4C6D91007FA2B0 /* Unband */,
+				347FF6F01E4C6D91007FA2B0 /* Wifi */,
 				34196FC11E4AF68900D9D24D /* InCall */,
 				7D2D582D1E49A3060086A823 /* MainTab */,
 				7D2D582A1E49A3060086A823 /* Base */,
@@ -3038,6 +3090,7 @@
 				34E165641E050B19004A65AB /* kuang_off.png in Resources */,
 				34E165C61E050B19004A65AB /* tab_square_normal@3x.png in Resources */,
 				34E1644C1E050B18004A65AB /* rootca.pem in Resources */,
+				347FF6FD1E4C7058007FA2B0 /* English_tips.png in Resources */,
 				34E165B91E050B19004A65AB /* sego1.png in Resources */,
 				34E1647B1E050B18004A65AB /* chat_message_inprogress.png in Resources */,
 				34E1657E1E050B19004A65AB /* person_photograph.png.png in Resources */,
@@ -3052,7 +3105,6 @@
 				34E166581E0520F1004A65AB /* setb.png in Resources */,
 				34E1647D1E050B18004A65AB /* composing_active_chat.png in Resources */,
 				34E166511E0520F1004A65AB /* top_egg.png in Resources */,
-				34E1663F1E0520F1004A65AB /* egg_nodevcie.png in Resources */,
 				34E166441E0520F1004A65AB /* L_top.png in Resources */,
 				34E1648A1E050B18004A65AB /* ok.png in Resources */,
 				34E166481E0520F1004A65AB /* Lclick_rool.png in Resources */,
@@ -3148,6 +3200,7 @@
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
 				34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */,
+				347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */,
 				34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */,
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
@@ -3164,15 +3217,18 @@
 				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
 				34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */,
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
+				347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
 				7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */,
+				347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,
+				347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import "FeedViewController.h"
 #import "UnbandViewController.h"
 #import "WifiViewController.h"
+#import "BindingViewController.h"
 
 
 @interface EggViewController ()
@@ -355,6 +356,8 @@
 -(void)btn_add:(UIButton *)sender
 {
     
+    BindingViewController * bindVC =[[BindingViewController alloc]init];
+    [self.navigationController pushViewController:bindVC animated:NO];
     
     
 }
