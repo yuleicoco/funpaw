@@ -20,7 +20,9 @@
         if (model) {
            // NSLog(@"哈哈");
         }
-        
+        if (completeBlock) {
+            completeBlock(model);
+        }
         
     } WithFailurBlock:^(NSError *error) {
         

@@ -198,6 +198,8 @@
    
     [[ShareWork sharedManager]DeviceStats:@"MI16090000013020" complete:^(BaseModel * model) {
         
+        NSLog(@"%@",model);
+        
         
     }];
     

@@ -194,18 +194,18 @@
 }
 
 -(void)provied{
-//    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
-//      
-//      //  if ([model.retCode isEqualToString:@"0000"]) {
-//            _achieveString = model.totalrecords;
-//            _codeNumber = model.content;
-//            [self timeout];
-//        //}
-//        
-//       // [[AppUtil appTopViewController] showHint:model.retDesc];
-//        
-//    }];
-//    
+    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
+      
+        if ([model.retCode isEqualToString:@"0000"]) {
+            _achieveString = model.totalrecords;
+            _codeNumber = model.content;
+            [self timeout];
+        }
+        
+        [[AppUtil appTopViewController] showHint:model.retDesc];
+
+    }];
+    
     
 }
 
