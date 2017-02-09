@@ -189,17 +189,18 @@
     }
      [self showHudInView:self.view hint:@"登录..."];
     [[ShareWork sharedManager]memberLoginWithAccountnumber:_accountTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
-        [self hideHud];
         if ([model.retCode isEqualToString:@"0000"]) {
-            
-            LoginModel * loginModel = [[LoginModel alloc]initWithDictionary:model.retVal error:nil];
+            LoginModel * loginModel = [[LoginModel alloc]initWithDictionary:model.list[0] error:nil];
             
             [[AccountManager sharedAccountManager]login:loginModel];
             [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@YES];
             
             
+        }else{
+            [[AppUtil appTopViewController]showHint:model.retDesc];
+            
         }
-        
+           [self hideHud];
     }];
     
     
