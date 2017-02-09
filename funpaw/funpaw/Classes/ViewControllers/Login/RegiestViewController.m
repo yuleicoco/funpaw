@@ -168,15 +168,13 @@
     [registBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     registBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [self.view addSubview:registBtn];
+    [registBtn addTarget:self action:@selector(regiestButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [registBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(registBtn.superview).offset(15);
         make.right.equalTo(registBtn.superview).offset(-15);
         make.top.equalTo(surepassView.mas_bottom).offset(25);
         make.height.mas_equalTo(50);
-
-
     }];
-    
     
 }
 
@@ -246,9 +244,8 @@
 //                _vercationBtn.backgroundColor = [UIColor whiteColor];
                 [_codeBtn setTitle:[NSString stringWithFormat:@"%@",strTime] forState:UIControlStateNormal];
                 [_codeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                _codeBtn.userInteractionEnabled = NO;
                 _codeBtn.backgroundColor = LIGHT_GRAY_COLOR;
-                
-            
                 
             });
             timeout--;
@@ -258,8 +255,58 @@
     
 }
 
+-(void)regiestButtonTouch{
+    if ([AppUtil isBlankString:_emailTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输号码"];
+        return;
+    }
+    if (![AppUtil isValidateEmail:_emailTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"不是邮箱"];
+        return;
+    }
+    if ([AppUtil isBlankString:_codeTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输验证码"];
+        return;
+    }
+    if ([AppUtil isBlankString:_passwordTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输密码"];
+        return;
+    }
+    if (![_emailTextfield.text isEqualToString:_achieveString]) {
+        [[AppUtil appTopViewController] showHint:@"不是发送验证码的那个邮箱"];
+        return;
+    }
+    if (![_codeTextfield.text isEqualToString:_codeNumber]) {
+        [[AppUtil appTopViewController] showHint:@"验证码不正确"];
+        return;
+    }
+    if (![_passwordTextfield.text isEqualToString:_surePasswordfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"两次输入密码不一致"];
+        return;
+    }
+    
+        [self showHudInView:self.view hint:@"注册中..."];
+    [[ShareWork sharedManager]memberRegisterWithEmail:_emailTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
+        [self hideHud];
+            [[AppUtil appTopViewController] showHint:model.retDesc];
+        if (model) {
+        
+            [self.navigationController popViewControllerAnimated:NO];
+        }
+        
+        
+    }];
+    
+    
+    
+    
+    
 
 
+
+
+
+}
 
 
 

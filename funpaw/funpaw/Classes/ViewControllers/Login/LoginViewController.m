@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "RegiestViewController.h"
+#import "ShareWork+Login.h"
+#import "LoginModel.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong)UITextField * accountTextfield;
@@ -139,6 +141,7 @@
     loginBtn.layer.cornerRadius = 18;
     [loginBtn setTitle:@"LOGIN" forState:UIControlStateNormal];
     [loginBtn setTitleColor:RGB(245, 145, 40) forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(loginButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(centerView.mas_bottom).offset(-20);
@@ -175,9 +178,41 @@
 
 }
 
+-(void)loginButtonTouch{
+    if ([AppUtil isBlankString:_accountTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输入号码"];
+        return;
+    }
+    if ([AppUtil isBlankString:_passwordTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输入密码"];
+        return;
+    }
+     [self showHudInView:self.view hint:@"登录..."];
+    [[ShareWork sharedManager]memberLoginWithAccountnumber:_accountTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
+        [self hideHud];
+        if ([model.retCode isEqualToString:@"0000"]) {
+            
+            LoginModel * loginModel = [[LoginModel alloc]initWithDictionary:model.retVal error:nil];
+            
+            [[AccountManager sharedAccountManager]login:loginModel];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@YES];
+            
+            
+        }
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
-
+}
 
 
 

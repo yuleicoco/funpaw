@@ -53,8 +53,22 @@
 }
 
 -(void)memberLoginWithAccountnumber:(NSString *)accountnumber password:(NSString *)password complete:(void (^)(BaseModel *))completeBlock{
-
-
+    NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
+    params[@"accountnumber"] = accountnumber;
+    params[@"password"] = password;
+    [self requestWithMethod:POST WithPath:@"common=memberLogin" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+        
+        if (model) {
+            //NSLog(@"哈哈");
+            completeBlock(model);
+        }
+        
+        
+    } WithFailurBlock:^(NSError *error) {
+        
+    }];
+    
+    
 
 
 
