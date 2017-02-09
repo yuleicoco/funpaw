@@ -360,6 +360,7 @@
 		7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583F1E49AB290086A823 /* LoginViewController.m */; };
 		7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58451E49ABE80086A823 /* AccountManager.m */; };
 		7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D584B1E49ADD70086A823 /* LoginModel.m */; };
+		7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1179,6 +1180,8 @@
 		7D2D58451E49ABE80086A823 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		7D2D584A1E49ADD70086A823 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		7D2D584B1E49ADD70086A823 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		7D4A00991E4C100F00B5B40F /* ShareWork+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Login.h"; sourceTree = "<group>"; };
+		7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Login.m"; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1472,6 +1475,8 @@
 			children = (
 				3468FF441E4857AF00DEBE4B /* ShareWork.h */,
 				3468FF451E4857AF00DEBE4B /* ShareWork.m */,
+				7D4A00991E4C100F00B5B40F /* ShareWork+Login.h */,
+				7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */,
 				34A864501E49A02300AD6D8A /* ShareWork+account.h */,
 				34A864511E49A02300AD6D8A /* ShareWork+account.m */,
 			);
@@ -3100,6 +3105,7 @@
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
 				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
+				7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */,
 				7D2D583A1E49A5610086A823 /* MoreViewController.m in Sources */,
 				7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */,
 				7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */,

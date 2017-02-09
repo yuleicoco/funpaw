@@ -7,6 +7,7 @@
 //
 
 #import "RegiestViewController.h"
+#import "ShareWork+Login.h"
 
 @interface RegiestViewController ()
 @property (nonatomic,strong)UIButton * codeBtn;
@@ -15,7 +16,8 @@
 @property (nonatomic,strong)UITextField * passwordTextfield;
 @property (nonatomic,strong)UITextField * surePasswordfield;
 
-
+@property (nonatomic,strong)NSString * achieveString;
+@property (nonatomic,strong)NSString * codeNumber;
 
 @end
 
@@ -65,6 +67,7 @@
     _codeBtn.titleLabel.numberOfLines = 2;
     _codeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     _codeBtn.layer.cornerRadius = 22;
+    [_codeBtn addTarget:self action:@selector(codebuttontouch) forControlEvents:UIControlEventTouchUpInside];
     [firstView addSubview:_codeBtn];
     [_codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(_codeBtn.superview.mas_right).offset(-2.5);
@@ -175,19 +178,92 @@
     }];
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
 }
+
+
+-(void)codebuttontouch{
+    if ([AppUtil isBlankString:_emailTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"regist_pl", nil)];
+        return;
+    }
+    if (![AppUtil isValidateEmail:_emailTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"regist_pl", nil)];
+        return;
+    }
+    [self provied];
+}
+
+-(void)provied{
+//    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
+//      
+//      //  if ([model.retCode isEqualToString:@"0000"]) {
+//            _achieveString = model.totalrecords;
+//            _codeNumber = model.content;
+//            [self timeout];
+//        //}
+//        
+//       // [[AppUtil appTopViewController] showHint:model.retDesc];
+//        
+//    }];
+//    
+    
+}
+
+
+- (void)timeout
+{
+    __block int timeout=60; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0);     dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<=0){ //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+//                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:18  ];
+//                [_vercationBtn setTitle:NSLocalizedString(@"regist_getcode", nil) forState:UIControlStateNormal];
+//                _vercationBtn.userInteractionEnabled = YES;
+//                _vercationBtn.backgroundColor = GREEN_COLOR;
+//                [_vercationBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                _codeBtn.backgroundColor = YELLOW_COLOR;
+                [_codeBtn setTitle:@"Send Code" forState:UIControlStateNormal];
+                _codeBtn.userInteractionEnabled = YES;
+                [_codeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        
+                
+            });
+        }else{
+            // int seconds = timeout % 60;
+            NSString *strTime = [NSString stringWithFormat:@"%.2d", timeout];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [UIView beginAnimations:nil context:nil];
+                [UIView setAnimationDuration:1];
+//                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+//                [_vercationBtn setTitle:[NSString stringWithFormat:@"%@s",strTime] forState:UIControlStateNormal];
+//                [_vercationBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//                [UIView commitAnimations];
+//                
+//                _vercationBtn.userInteractionEnabled = NO;
+//                _vercationBtn.backgroundColor = [UIColor whiteColor];
+                [_codeBtn setTitle:[NSString stringWithFormat:@"%@",strTime] forState:UIControlStateNormal];
+                [_codeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                _codeBtn.backgroundColor = LIGHT_GRAY_COLOR;
+                
+            
+                
+            });
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
+    
+}
+
+
+
+
+
+
+
 
 
 
