@@ -1,15 +1,14 @@
 //
-//  RegiestViewController.m
+//  CompleViewController.m
 //  funpaw
 //
-//  Created by czx on 2017/2/8.
+//  Created by czx on 2017/2/9.
 //  Copyright © 2017年 yulei. All rights reserved.
 //
 
-#import "RegiestViewController.h"
+#import "CompleViewController.h"
 #import "ShareWork+Login.h"
-
-@interface RegiestViewController ()
+@interface CompleViewController ()
 @property (nonatomic,strong)UIButton * codeBtn;
 @property (nonatomic,strong)UITextField * emailTextfield;
 @property (nonatomic,strong)UITextField * codeTextfield;
@@ -18,15 +17,14 @@
 
 @property (nonatomic,strong)NSString * achieveString;
 @property (nonatomic,strong)NSString * codeNumber;
-
 @end
 
-@implementation RegiestViewController
+@implementation CompleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"Sign Up"];
-   // self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
+    [self setNavTitle:@"Forget password"];
+    // self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     self.view.backgroundColor = LIGHT_GRAY_COLOR;
 }
 
@@ -59,7 +57,7 @@
         make.centerY.mas_equalTo(_emailTextfield.superview.mas_centerY);
     }];
     
-
+    
     _codeBtn = [[UIButton alloc]init];
     _codeBtn.backgroundColor = RGB(245, 145, 40);
     [_codeBtn setTitle:@"Send Code" forState:UIControlStateNormal];
@@ -88,7 +86,7 @@
         make.right.equalTo(secoendView.superview).offset(-15);
         make.top.equalTo(firstView.mas_bottom).offset(15);
         make.height.mas_equalTo(50);
-
+        
     }];
     
     _codeTextfield = [[UITextField alloc]init];
@@ -103,7 +101,7 @@
         make.width.mas_equalTo(250);
         make.height.mas_equalTo(48);
         make.centerY.mas_equalTo(_codeTextfield.superview.mas_centerY);
-
+        
     }];
     
     UIView * passView = [[UIView alloc]init];
@@ -117,7 +115,7 @@
         make.right.equalTo(passView.superview).offset(-15);
         make.top.equalTo(secoendView.mas_bottom).offset(15);
         make.height.mas_equalTo(50);
-
+        
     }];
     
     _passwordTextfield = [[UITextField alloc]init];
@@ -145,7 +143,7 @@
         make.right.equalTo(surepassView.superview).offset(-15);
         make.top.equalTo(passView.mas_bottom).offset(15);
         make.height.mas_equalTo(50);
-
+        
         
     }];
     
@@ -164,7 +162,7 @@
     
     UIButton * registBtn = [[UIButton alloc]init];
     registBtn.backgroundColor = YELLOW_COLOR;
-    [registBtn setTitle:@"Register" forState:UIControlStateNormal];
+    [registBtn setTitle:@"Done" forState:UIControlStateNormal];
     [registBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     registBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [self.view addSubview:registBtn];
@@ -192,8 +190,8 @@
 }
 
 -(void)provied{
-    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
-      
+    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"modifypassword" complete:^(BaseModel *model) {
+        
         if ([model.retCode isEqualToString:@"0000"]) {
             _achieveString = model.totalrecords;
             _codeNumber = model.content;
@@ -217,31 +215,31 @@
         if(timeout<=0){ //倒计时结束，关闭
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-//                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:18  ];
-//                [_vercationBtn setTitle:NSLocalizedString(@"regist_getcode", nil) forState:UIControlStateNormal];
-//                _vercationBtn.userInteractionEnabled = YES;
-//                _vercationBtn.backgroundColor = GREEN_COLOR;
-//                [_vercationBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                //                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:18  ];
+                //                [_vercationBtn setTitle:NSLocalizedString(@"regist_getcode", nil) forState:UIControlStateNormal];
+                //                _vercationBtn.userInteractionEnabled = YES;
+                //                _vercationBtn.backgroundColor = GREEN_COLOR;
+                //                [_vercationBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 _codeBtn.backgroundColor = YELLOW_COLOR;
                 [_codeBtn setTitle:@"Send Code" forState:UIControlStateNormal];
                 _codeBtn.userInteractionEnabled = YES;
                 [_codeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        
+                
                 
             });
         }else{
             // int seconds = timeout % 60;
             NSString *strTime = [NSString stringWithFormat:@"%.2d", timeout];
             dispatch_async(dispatch_get_main_queue(), ^{
-              //  [UIView beginAnimations:nil context:nil];
-               // [UIView setAnimationDuration:1];
-//                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-//                [_vercationBtn setTitle:[NSString stringWithFormat:@"%@s",strTime] forState:UIControlStateNormal];
-//                [_vercationBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//                [UIView commitAnimations];
-//                
-//                _vercationBtn.userInteractionEnabled = NO;
-//                _vercationBtn.backgroundColor = [UIColor whiteColor];
+                //  [UIView beginAnimations:nil context:nil];
+                // [UIView setAnimationDuration:1];
+                //                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+                //                [_vercationBtn setTitle:[NSString stringWithFormat:@"%@s",strTime] forState:UIControlStateNormal];
+                //                [_vercationBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                //                [UIView commitAnimations];
+                //
+                //                _vercationBtn.userInteractionEnabled = NO;
+                //                _vercationBtn.backgroundColor = [UIColor whiteColor];
                 [_codeBtn setTitle:[NSString stringWithFormat:@"%@",strTime] forState:UIControlStateNormal];
                 [_codeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                 _codeBtn.userInteractionEnabled = NO;
@@ -285,12 +283,12 @@
         return;
     }
     
-        [self showHudInView:self.view hint:@"注册中..."];
-    [[ShareWork sharedManager]memberRegisterWithEmail:_emailTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
+    [self showHudInView:self.view hint:@"修改中..."];
+    [[ShareWork sharedManager]resetPasswordWith:_emailTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
         [self hideHud];
-            [[AppUtil appTopViewController] showHint:model.retDesc];
+        [[AppUtil appTopViewController] showHint:model.retDesc];
         if (model) {
-        
+
             [self.navigationController popViewControllerAnimated:NO];
         }
         
@@ -301,17 +299,6 @@
     
     
     
-
-
-
-
-
+    
 }
-
-
-
-
-
-
-
 @end

@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 #import "RegiestViewController.h"
+#import "CompleViewController.h"
+#import "ShareWork+Login.h"
+#import "LoginModel.h"
 
 @interface LoginViewController ()
 @property (nonatomic,strong)UITextField * accountTextfield;
@@ -125,6 +128,7 @@
     
     UIButton * forgetBtn = [[UIButton alloc]init];
     forgetBtn.backgroundColor = [UIColor clearColor];
+    [forgetBtn addTarget:self action:@selector(forgetButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:forgetBtn];
     [forgetBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(forgetLabel.mas_left);
@@ -139,6 +143,7 @@
     loginBtn.layer.cornerRadius = 18;
     [loginBtn setTitle:@"LOGIN" forState:UIControlStateNormal];
     [loginBtn setTitleColor:RGB(245, 145, 40) forState:UIControlStateNormal];
+    [loginBtn addTarget:self action:@selector(loginButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
     [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(centerView.mas_bottom).offset(-20);
@@ -175,9 +180,49 @@
 
 }
 
+-(void)forgetButtonTouch{
+    CompleViewController * comVc = [[CompleViewController alloc]init];
+    [self.navigationController pushViewController:comVc animated:NO];
+
+}
 
 
+-(void)loginButtonTouch{
+    if ([AppUtil isBlankString:_accountTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输入号码"];
+        return;
+    }
+    if ([AppUtil isBlankString:_passwordTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输入密码"];
+        return;
+    }
+     [self showHudInView:self.view hint:@"登录..."];
+    [[ShareWork sharedManager]memberLoginWithAccountnumber:_accountTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
+        if ([model.retCode isEqualToString:@"0000"]) {
+            LoginModel * loginModel = [[LoginModel alloc]initWithDictionary:model.list[0] error:nil];
+            
+            [[AccountManager sharedAccountManager]login:loginModel];
+            [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@YES];
+            
+            
+        }else{
+            [[AppUtil appTopViewController]showHint:model.retDesc];
+            
+        }
+           [self hideHud];
+    }];
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
+
+}
 
 
 

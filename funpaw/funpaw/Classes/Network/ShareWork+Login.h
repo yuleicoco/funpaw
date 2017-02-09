@@ -18,6 +18,8 @@
 //会员登录
 -(void)memberLoginWithAccountnumber:(NSString *)accountnumber password:(NSString *)password complete:(void(^)(BaseModel *model))completeBlock;
 
+//忘记密码
+-(void)resetPasswordWith:(NSString *)email password:(NSString *)password complete:(void(^)(BaseModel *model))completeBlock;
 
 
 
