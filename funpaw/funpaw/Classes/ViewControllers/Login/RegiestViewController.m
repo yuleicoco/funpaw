@@ -194,18 +194,18 @@
 }
 
 -(void)provied{
-//    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
-//      
-//      //  if ([model.retCode isEqualToString:@"0000"]) {
-//            _achieveString = model.totalrecords;
-//            _codeNumber = model.content;
-//            [self timeout];
-//        //}
-//        
-//       // [[AppUtil appTopViewController] showHint:model.retDesc];
-//        
-//    }];
-//    
+    [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
+      
+        if ([model.retCode isEqualToString:@"0000"]) {
+            _achieveString = model.totalrecords;
+            _codeNumber = model.content;
+            [self timeout];
+        }
+        
+        [[AppUtil appTopViewController] showHint:model.retDesc];
+        
+    }];
+    
     
 }
 
@@ -235,8 +235,8 @@
             // int seconds = timeout % 60;
             NSString *strTime = [NSString stringWithFormat:@"%.2d", timeout];
             dispatch_async(dispatch_get_main_queue(), ^{
-                [UIView beginAnimations:nil context:nil];
-                [UIView setAnimationDuration:1];
+              //  [UIView beginAnimations:nil context:nil];
+               // [UIView setAnimationDuration:1];
 //                _vercationBtn.titleLabel.font = [UIFont systemFontOfSize:13];
 //                [_vercationBtn setTitle:[NSString stringWithFormat:@"%@s",strTime] forState:UIControlStateNormal];
 //                [_vercationBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];

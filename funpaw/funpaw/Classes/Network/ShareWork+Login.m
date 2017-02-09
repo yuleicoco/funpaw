@@ -16,8 +16,12 @@
     [self requestWithMethod:POST WithPath:@"common=getCode" WithParams:params WithSuccessBlock:^(BaseModel *model) {
         if (model) {
             //NSLog(@"哈哈");
-             completeBlock(model);
+            completeBlock(model);
         }
+        if (completeBlock) {
+            completeBlock(model);
+        }
+
         
     } WithFailurBlock:^(NSError *error) {
         

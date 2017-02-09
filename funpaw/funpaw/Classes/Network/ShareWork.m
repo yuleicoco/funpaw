@@ -100,9 +100,11 @@
             [self POST:path parameters:params progress:nil success:^(NSURLSessionTask *task, NSDictionary * responseObject) {
                  NSError* error = nil;
                 
-                BaseModel * model =[[BaseModel  alloc]initWithDictionary:responseObject error:&error];
+                BaseModel * model =[[BaseModel  alloc]initWithDictionary:responseObject[@"jsondata"] error:&error];
                 
                 success(model);
+                
+                
             } failure:^(NSURLSessionTask *operation, NSError *error) {
                 NSLog(@"Error: %@", error);
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:error.localizedDescription delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
