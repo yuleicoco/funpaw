@@ -10,9 +10,19 @@
 #import "InCallViewController.h"
 #import "HWWeakTimer.h"
 #import "ShareWork+device.h"
+#import "FeedViewController.h"
+#import "UnbandViewController.h"
+#import "WifiViewController.h"
+
 
 @interface EggViewController ()
 
+{
+    
+    // 设备状态
+    NSString *strState;
+    
+}
 @end
 
 
@@ -21,6 +31,8 @@
 @synthesize moveTimer;
 @synthesize openVideoBtn;
 @synthesize bgImage;
+@synthesize addBtn;
+
 
 
 - (void)viewDidLoad {
@@ -80,6 +92,7 @@
         }
         
     }];
+    
     
 
     
@@ -195,11 +208,31 @@
 // 检查设备状态
 - (void)checkDeviceStats
 {
-   
-    [[ShareWork sharedManager]DeviceStats:@"MI16090000013020" complete:^(BaseModel * model) {
+   //MI16090000013020
+    [[ShareWork sharedManager]DeviceStats:@"MI17020000013124" complete:^(BaseModel * model) {
+      
+        if ([model.retCode isEqualToString:@"0000"]) {
+            
+            
+            if ([AppUtil isBlankString:model.retVal[@"status"]]) {
+                strState = [NSString stringWithFormat:@"%@",@"ds000"];
+            }else{
+                strState = [NSString stringWithFormat:@"%@",model.retVal[@"status"]];
+            }
+            
+        }// 没有设备
+        else if ([model.totalrecords isEqualToString:@"0"])
+        {
+            strState = [NSString stringWithFormat:@"%@",@"ds000"];
+            
+        }
         
-        NSLog(@"%@",model);
+       
+        // 根据状态刷新UI
         
+        [self UIchangeMothod];
+        
+    
         
     }];
     
@@ -207,6 +240,14 @@
     
     
 }
+
+
+
+
+
+
+
+
 
 
 // 数据
@@ -224,23 +265,48 @@
 {
     [super setupView];
     
+    [self showBarButton:NAV_RIGHT imageName:@"1"];
+    
+    
     // 背景图
-    bgImage = [UIImageView new];
+    
+    bgImage =[UIImageView new];
     [self.view addSubview:bgImage];
     
     [bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
         
        // make.width.mas_equalTo(self.view.mas_width);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-49);
+        make.top.equalTo(self.view.mas_top).offset(-20);
+        make.bottom.equalTo(self.view.mas_bottom).offset(49);
         make.right.left.equalTo(@0);
         
        
         
     }];
-
     
     // 添加按钮
+    addBtn =[UIButton new];
+    [addBtn setImage:[UIImage imageNamed:@"egg_add"] forState:UIControlStateNormal];
+    [addBtn addTarget:self action:@selector(btn_add:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addBtn];
+    
+    [addBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+         make.size.mas_equalTo(CGSizeMake(90, 60));
+         make.centerX.equalTo(self.view.mas_centerX);
+         make.bottom.equalTo(self.view.mas_bottom).offset(-120);
+        
+        
+        
+    }];
+    
+    
+    
+
+    
+    // 开启按钮
     openVideoBtn =[UIButton new];
+    
     [openVideoBtn addTarget:self action:@selector(OpenVideo:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:openVideoBtn];
     
@@ -253,6 +319,74 @@
         
     }];
     
+    
+    
+    
+    
+    
+}
+
+
+// UI变化
+
+-(void)UIchangeMothod
+{
+    // nodevice
+    if ([strState isEqualToString:@"ds000"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@"English_tips"]];
+        
+    }
+    
+    
+}
+
+// +功能列表按钮
+- (void)doRightButtonTouch
+{
+    
+
+    
+    
+}
+
+
+//绑定设备
+-(void)btn_add:(UIButton *)sender
+{
+    
+    
+    
+}
+
+
+// 设置选项
+// wifi
+- (void)wifiTouch:(UIButton *)sender
+{
+    WifiViewController * wifiVC =[[WifiViewController alloc]init];
+    [self.navigationController pushViewController:wifiVC animated:NO];
+    
+    
+    
+}
+//喂食
+- (void)foodTouch:(UIButton *)sender
+{
+  
+    FeedViewController * feedVc = [[FeedViewController alloc]init];
+    [self.navigationController pushViewController:feedVc animated:NO];
+    
+    
+    
+}
+
+// 解除绑定
+- (void)bdinTouch:(UIButton *)sender
+{
+    
+    UnbandViewController * bandVC =[[UnbandViewController alloc]init];
+    [self.navigationController pushViewController:bandVC animated:NO];
     
     
     
@@ -272,6 +406,8 @@
     
     
 }
+
+
 
 
 
