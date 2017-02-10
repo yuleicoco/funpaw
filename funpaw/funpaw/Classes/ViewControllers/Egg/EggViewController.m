@@ -22,6 +22,9 @@
     
     // 设备状态
     NSString *strState;
+    // btn 数组
+    NSArray * arrBtn;
+    
     
 }
 @end
@@ -33,6 +36,8 @@
 @synthesize openVideoBtn;
 @synthesize bgImage;
 @synthesize addBtn;
+@synthesize SbgImage;
+
 
 
 
@@ -320,9 +325,55 @@
         
     }];
     
+    // tab
+    SbgImage =[UIImageView new];
+    SbgImage.image =[UIImage imageNamed:@"egg_ prompt"];
+    SbgImage.userInteractionEnabled = YES;
+    SbgImage.hidden = NO;
+    [self.view addSubview:SbgImage];
+    
+    [SbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+        make.size.mas_equalTo(CGSizeMake(125, 129));
+        make.right.equalTo(self.view).offset(-11);
+        make.top.equalTo(self.view).offset(1);
+        
+    }];
     
     
+    UIButton * wifiBtn =[UIButton new];
+    UIButton * foodBtn =[UIButton new];
+    UIButton * bdinBtn =[UIButton new];
+    // 三个buton
     
+    [wifiBtn setTitle:NSLocalizedString(@"tab_wifi", nil) forState:UIControlStateNormal];
+    [wifiBtn addTarget:self action:@selector(wifiTouch:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    [foodBtn addTarget:self action:@selector(foodTouch:) forControlEvents:UIControlEventTouchUpInside];
+    [foodBtn setTitle:NSLocalizedString(@"tab_food", nil) forState:UIControlStateNormal];
+    
+    [bdinBtn addTarget:self action:@selector(bdinTouch:) forControlEvents:UIControlEventTouchUpInside];
+    [bdinBtn setTitle:NSLocalizedString(@"solveaBinding", nil) forState:UIControlStateNormal];
+    [SbgImage addSubview:wifiBtn];
+    [SbgImage addSubview:foodBtn];
+    [SbgImage addSubview:bdinBtn];
+    
+    arrBtn =[NSArray array];
+    arrBtn =@[wifiBtn,foodBtn,bdinBtn];
+    
+    [arrBtn mas_distributeViewsAlongAxis:MASAxisTypeVertical
+                        withFixedSpacing:15
+                             leadSpacing:10
+                             tailSpacing:5];
+    
+    [arrBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(SbgImage).offset(20);
+        make.right.equalTo(SbgImage).offset(-20);
+        
+    }];
+
     
     
     
@@ -359,8 +410,12 @@
 -(void)btn_add:(UIButton *)sender
 {
     
-    BindingViewController * bindVC =[[BindingViewController alloc]init];
-    [self.navigationController pushViewController:bindVC animated:NO];
+//    BindingViewController * bindVC =[[BindingViewController alloc]init];
+//    [self.navigationController pushViewController:bindVC animated:NO];
+    
+    InCallViewController * incall =[[InCallViewController alloc]init];
+    [self presentViewController:incall animated:NO completion:nil];
+    
     
     
 }
@@ -391,7 +446,7 @@
 - (void)bdinTouch:(UIButton *)sender
 {
     
-    UnbandViewController * bandVC =[[UnbandViewController alloc]init];
+    BindingViewController * bandVC =[[BindingViewController alloc]init];
     [self.navigationController pushViewController:bandVC animated:NO];
     
     
