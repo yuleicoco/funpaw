@@ -21,6 +21,14 @@
 //忘记密码
 -(void)resetPasswordWith:(NSString *)email password:(NSString *)password complete:(void(^)(BaseModel *model))completeBlock;
 
+//修改密码
+
+
+
+
+
+
+
 
 
 

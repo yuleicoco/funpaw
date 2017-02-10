@@ -1,0 +1,163 @@
+//
+//  ExchangePasswordViewController.m
+//  funpaw
+//
+//  Created by czx on 2017/2/9.
+//  Copyright © 2017年 yulei. All rights reserved.
+//
+
+#import "ExchangePasswordViewController.h"
+
+@interface ExchangePasswordViewController ()
+@property (nonatomic,strong)UITextField * codeTextfield;
+@property (nonatomic,strong)UITextField * passwordTextfield;
+@property (nonatomic,strong)UITextField * surePasswordfield;
+@end
+
+@implementation ExchangePasswordViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setNavTitle:@"Exchange password"];
+}
+
+-(void)setupView{
+
+    UIView * secoendView = [[UIView alloc]init];
+    secoendView.backgroundColor = [UIColor whiteColor];
+    secoendView.layer.borderColor = [UIColor redColor].CGColor;
+    secoendView.layer.borderWidth = 1;
+    secoendView.layer.cornerRadius = 25;
+    [self.view addSubview:secoendView];
+    [secoendView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(secoendView.superview).offset(15);
+        make.right.equalTo(secoendView.superview).offset(-15);
+        make.top.equalTo(secoendView.superview).offset(10);
+        make.height.mas_equalTo(50);
+        
+    }];
+    
+    _codeTextfield = [[UITextField alloc]init];
+    _codeTextfield.tintColor = YELLOW_COLOR;
+    _codeTextfield.textColor = YELLOW_COLOR;
+    _codeTextfield.placeholder = @"Enter your old password";
+    [_codeTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
+    _codeTextfield.font = [UIFont systemFontOfSize:18];
+    _codeTextfield.keyboardType = UIKeyboardTypeAlphabet;
+    [secoendView addSubview:_codeTextfield];
+    [_codeTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_codeTextfield.superview.mas_left).offset(10);
+        make.width.mas_equalTo(250);
+        make.height.mas_equalTo(48);
+        make.centerY.mas_equalTo(_codeTextfield.superview.mas_centerY);
+        
+    }];
+    
+    UIView * passView = [[UIView alloc]init];
+    passView.backgroundColor =  [UIColor whiteColor];
+    passView.layer.borderColor = [UIColor redColor].CGColor;
+    passView.layer.borderWidth = 1;
+    passView.layer.cornerRadius = 25;
+    [self.view addSubview:passView];
+    [passView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(passView.superview).offset(15);
+        make.right.equalTo(passView.superview).offset(-15);
+        make.top.equalTo(secoendView.mas_bottom).offset(15);
+        make.height.mas_equalTo(50);
+        
+    }];
+    
+    _passwordTextfield = [[UITextField alloc]init];
+    _passwordTextfield.tintColor = YELLOW_COLOR;
+    _passwordTextfield.textColor = YELLOW_COLOR;
+    _passwordTextfield.placeholder = @"Enter password(at least 6 digits)";
+    [_passwordTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
+    _passwordTextfield.keyboardType = UIKeyboardTypeAlphabet;
+    [passView addSubview:_passwordTextfield];
+    [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_passwordTextfield.superview.mas_left).offset(10);
+        make.width.mas_equalTo(250);
+        make.height.mas_equalTo(48);
+        make.centerY.mas_equalTo(_passwordTextfield.superview.mas_centerY);
+        
+    }];
+    
+    UIView * surepassView = [[UIView alloc]init];
+    surepassView.backgroundColor = [UIColor whiteColor];
+    surepassView.layer.borderWidth = 1;
+    surepassView.layer.borderColor = [UIColor redColor].CGColor;
+    surepassView.layer.cornerRadius = 25;
+    [self.view addSubview:surepassView];
+    [surepassView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(surepassView.superview).offset(15);
+        make.right.equalTo(surepassView.superview).offset(-15);
+        make.top.equalTo(passView.mas_bottom).offset(15);
+        make.height.mas_equalTo(50);
+        
+        
+    }];
+    
+    _surePasswordfield = [[UITextField alloc]init];
+    _surePasswordfield.textColor = YELLOW_COLOR;
+    _surePasswordfield.tintColor = YELLOW_COLOR;
+    _surePasswordfield.placeholder = @"Re-enter password";
+    [_surePasswordfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
+    _surePasswordfield.keyboardType = UIKeyboardTypeAlphabet;
+    [surepassView addSubview:_surePasswordfield];
+    [_surePasswordfield mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(_surePasswordfield.superview.mas_left).offset(10);
+        make.width.mas_equalTo(250);
+        make.height.mas_equalTo(48);
+        make.centerY.mas_equalTo(_surePasswordfield.superview.mas_centerY);
+    }];
+    
+    UIButton * registBtn = [[UIButton alloc]init];
+    registBtn.backgroundColor = YELLOW_COLOR;
+    [registBtn setTitle:@"Done" forState:UIControlStateNormal];
+    [registBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    registBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    [self.view addSubview:registBtn];
+    [registBtn addTarget:self action:@selector(regiestButtonTouch313) forControlEvents:UIControlEventTouchUpInside];
+    [registBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(registBtn.superview).offset(15);
+        make.right.equalTo(registBtn.superview).offset(-15);
+        make.top.equalTo(surepassView.mas_bottom).offset(25);
+        make.height.mas_equalTo(50);
+    }];
+
+
+}
+
+-(void)regiestButtonTouch313{
+    if ([AppUtil isBlankString:_codeTextfield.text ]) {
+        [[AppUtil appTopViewController] showHint:@"没输号码"];
+        return;
+    }
+    if ([AppUtil isBlankString:_passwordTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"没输密码"];
+        return;
+
+    }
+    if (_passwordTextfield.text.length<6) {
+        [[AppUtil appTopViewController] showHint:@"新密码小于6位"];
+        return;
+
+    }
+    
+    if (![_passwordTextfield.text isEqualToString:_surePasswordfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"两次输入的密码不一致"];
+        return;
+    }
+
+
+    
+    
+    
+    
+
+}
+
+
+
+
+@end

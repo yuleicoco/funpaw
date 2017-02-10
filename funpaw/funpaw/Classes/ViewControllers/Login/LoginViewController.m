@@ -73,6 +73,7 @@
     
     _accountTextfield = [[UITextField alloc]init];
     _accountTextfield.font = [UIFont systemFontOfSize:18];
+    _accountTextfield.keyboardType = UIKeyboardTypeAlphabet;
     _accountTextfield.placeholder = @"ACCOUNT NAME/EMAL";
     _accountTextfield.tintColor = [UIColor whiteColor];
     _accountTextfield.textColor = [UIColor whiteColor];
@@ -105,6 +106,7 @@
     _passwordTextfield.tintColor = [UIColor whiteColor];
     _passwordTextfield.textColor = [UIColor whiteColor];
     _passwordTextfield.placeholder = @"PASSWORD";
+    _passwordTextfield.keyboardType = UIKeyboardTypeAlphabet;
     [_passwordTextfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     [self.view addSubview:_passwordTextfield];
     [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {

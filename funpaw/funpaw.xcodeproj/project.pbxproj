@@ -366,6 +366,7 @@
 		7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */; };
 		7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009D1E4C62B400B5B40F /* PopStartView.m */; };
 		7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A01E4C674500B5B40F /* CompleViewController.m */; };
+		7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1197,6 +1198,8 @@
 		7D4A009D1E4C62B400B5B40F /* PopStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopStartView.m; sourceTree = "<group>"; };
 		7D4A009F1E4C674500B5B40F /* CompleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleViewController.h; sourceTree = "<group>"; };
 		7D4A00A01E4C674500B5B40F /* CompleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleViewController.m; sourceTree = "<group>"; };
+		7D4A00A71E4C756000B5B40F /* ExchangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangePasswordViewController.h; sourceTree = "<group>"; };
+		7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangePasswordViewController.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -2737,10 +2740,28 @@
 		7D2D582E1E49A3060086A823 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				7D4A00A61E4C755300B5B40F /* exchangPassword */,
+				7D4A00A21E4C752800B5B40F /* VIdeo */,
 				7D2D58381E49A5610086A823 /* MoreViewController.h */,
 				7D2D58391E49A5610086A823 /* MoreViewController.m */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		7D4A00A21E4C752800B5B40F /* VIdeo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIdeo;
+			sourceTree = "<group>";
+		};
+		7D4A00A61E4C755300B5B40F /* exchangPassword */ = {
+			isa = PBXGroup;
+			children = (
+				7D4A00A71E4C756000B5B40F /* ExchangePasswordViewController.h */,
+				7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */,
+			);
+			path = exchangPassword;
 			sourceTree = "<group>";
 		};
 		BE24F9B948DE606D7B2BFECA /* Pods */ = {
@@ -3154,6 +3175,7 @@
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
+				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,
 				7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */,
 				34E164181E050B18004A65AB /* CycleScrollView.m in Sources */,
 				34E164171E050B18004A65AB /* Reachability.m in Sources */,
