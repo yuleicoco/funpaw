@@ -181,7 +181,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     btnBind.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     if ([AppUtil isBlankString:strTT]) {
         [btnBind setTitle:NSLocalizedString(@"bindDevice",nil) forState:UIControlStateNormal];
-        btnBind.backgroundColor = LIGHT_GRAYdcdc_COLOR;
+        btnBind.backgroundColor = YELLOW_COLOR;
         btnBind.enabled = FALSE;
     }else
     {
@@ -209,9 +209,11 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     UILabel * deveLB= [UILabel new];
     UILabel * incoLB =[UILabel new];
     deveLB.text =NSLocalizedString(@"deviceNum",nil);
+    deveLB.textColor = YELLOW_COLOR;
     deveLB.font = [UIFont systemFontOfSize:18];
     incoLB.text =NSLocalizedString(@"deviceIncode",nil);
     incoLB.font =[UIFont systemFontOfSize:18];
+    incoLB.textColor = YELLOW_COLOR;
     
     [devNum addSubview:deveLB];
     [inCode addSubview:incoLB];

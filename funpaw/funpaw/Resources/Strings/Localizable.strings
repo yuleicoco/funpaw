@@ -14,6 +14,9 @@
 "openButton" = "Open";
 "tabEgg_title" ="FunPawQ";
 "tabMore_title"="More";
+"tab_wifi"="Set WIFI";
+"tab_food"="Feeding";
+"solveaBinding" ="Unbinding";
 
 // set
 "setTitle" = "Setting";
@@ -21,6 +24,33 @@
 // wifi
 "wifiTitle" = "Set networ";
 "bindDevice" = "Binding device";
+
+// wifi
+"wifiTitle" = "Set WIFI";
+"INFO_NetNoReachable" = "当前网络不可用";
+"INFO_ReachableViaWWAN"= "当前非WIFI环境";
+"bindDevice" = "Binding";
+"solveaBinding" ="Unbind";
+"deviceNum" ="Q NO/";
+"deviceIncode"="AccessCode/";
+"Warring_bing" ="The device number does not exist";
+"Success_bing" ="Bind Success";
+"Warning" ="Tips";
+"Cancel_bind" = "Cancel";
+"Sure_bind" ="Sure";
+"Warning_Message" ="Are you sure to unbind??";
+"Solve_Success"="Unbundling success";
+"Find_device" ="Searching for equipment Please wait...";
+"find_noway" ="The device is not found, make sure Bluetooth is turned on";
+"I_kown" ="I konw";
+"no_turnon" ="You have not turned on Bluetooth";
+"Fail_seting" ="Configuration failed. Search the device again";
+"wif_encryption" ="Encryption type";
+"wif_name" ="Name/";
+"wif_code" ="Password/";
+"faile_net" ="The configuration fails. Please reset the network";
+"falie_bl"= "Configuration failed, please make sure device Bluetooth is turned on";
+"ing_net" ="Configuring device network, please wait...";
 
 // setting
 "settingViewTitle" = "Setting";

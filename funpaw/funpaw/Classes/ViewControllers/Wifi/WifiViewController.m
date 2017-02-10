@@ -131,6 +131,7 @@
     UILabel * labelMess=[UILabel new];
     labelMess.text =NSLocalizedString(@"wif_encryption", nil);
     labelMess.font =[UIFont systemFontOfSize:18];
+    labelMess.textColor = YELLOW_COLOR;
     [self.view addSubview:labelMess];
     
     [labelMess mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -149,12 +150,14 @@
     UILabel * wifips =[UILabel new];
     
     deveLB.text =NSLocalizedString(@"deviceNum", nil);
+    deveLB.textColor =YELLOW_COLOR;
     deveLB.font = [UIFont systemFontOfSize:18];
     wifiLB.text =NSLocalizedString(@"wif_name", nil);
     wifiLB.font =[UIFont systemFontOfSize:18];
-    
+    wifiLB.textColor =YELLOW_COLOR;
     wifips.text =NSLocalizedString(@"wif_code", nil);
     wifips.font =[UIFont systemFontOfSize:18];
+    wifips.textColor =YELLOW_COLOR;
     
     
     [devNum addSubview:deveLB];
@@ -186,8 +189,12 @@
     
     
     UITextField *  deviceTF =[UITextField new];
+    deviceTF.textColor =YELLOW_COLOR;
     incodeTF =[UITextField new];
+    incodeTF.textColor= YELLOW_COLOR;
+    
     wifiPsTF =[UITextField new];
+    wifiPsTF.textColor= YELLOW_COLOR;
     NSString * str  =  [Defaluts objectForKey:PREF_DEVICE_NUMBER];
     NSString * str1  = [AccountManager sharedAccountManager].loginModel.deviceno;
     deviceTF.text = str.length>str1.length?str:str1;
