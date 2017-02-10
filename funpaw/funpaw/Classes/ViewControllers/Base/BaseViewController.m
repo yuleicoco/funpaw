@@ -30,7 +30,7 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange) name:UIDeviceOrientationDidChangeNotification object:nil];
     
     
-    self.navigationController.navigationBar.barTintColor = RGB(245, 145, 40);
+   // self.navigationController.navigationBar.barTintColor = RGB(245, 145, 40);
    
    
     

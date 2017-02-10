@@ -13,6 +13,8 @@
 @property(nonatomic,strong)NSTimer * moveTimer; 
 @property(nonatomic,strong)UIButton * openVideoBtn;
 @property(nonatomic,strong)UIImageView * bgImage;
+@property(nonatomic,strong)UIButton * addBtn;
+
 
 
 @end
