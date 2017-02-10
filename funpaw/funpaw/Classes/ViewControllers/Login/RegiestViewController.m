@@ -51,6 +51,7 @@
     _emailTextfield.placeholder = @"Enter your email";
     [_emailTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _emailTextfield.font = [UIFont systemFontOfSize:18];
+    _emailTextfield.keyboardType = UIKeyboardTypeAlphabet;
     [firstView addSubview:_emailTextfield];
     [_emailTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_emailTextfield.superview.mas_left).offset(10);
@@ -97,6 +98,7 @@
     _codeTextfield.placeholder = @"Enter your verification code";
     [_codeTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _codeTextfield.font = [UIFont systemFontOfSize:18];
+    _codeTextfield.keyboardType = UIKeyboardTypeNumberPad;
     [secoendView addSubview:_codeTextfield];
     [_codeTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_codeTextfield.superview.mas_left).offset(10);
@@ -125,6 +127,7 @@
     _passwordTextfield.textColor = YELLOW_COLOR;
     _passwordTextfield.placeholder = @"Enter password(at least 6 digits)";
     [_passwordTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
+    _passwordTextfield.keyboardType = UIKeyboardTypeAlphabet;
     [passView addSubview:_passwordTextfield];
     [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_passwordTextfield.superview.mas_left).offset(10);
@@ -154,6 +157,7 @@
     _surePasswordfield.tintColor = YELLOW_COLOR;
     _surePasswordfield.placeholder = @"Re-enter password";
     [_surePasswordfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
+    _surePasswordfield.keyboardType = UIKeyboardTypeAlphabet;
     [surepassView addSubview:_surePasswordfield];
     [_surePasswordfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_surePasswordfield.superview.mas_left).offset(10);
@@ -272,6 +276,14 @@
         [[AppUtil appTopViewController] showHint:@"没输密码"];
         return;
     }
+    
+    if (_passwordTextfield.text.length<6) {
+        [[AppUtil appTopViewController] showHint:@"密码不能小于6位哦"];
+        return;
+        
+        
+    }
+    
     if (![_emailTextfield.text isEqualToString:_achieveString]) {
         [[AppUtil appTopViewController] showHint:@"不是发送验证码的那个邮箱"];
         return;
@@ -284,6 +296,8 @@
         [[AppUtil appTopViewController] showHint:@"两次输入密码不一致"];
         return;
     }
+
+    
     
         [self showHudInView:self.view hint:@"注册中..."];
     [[ShareWork sharedManager]memberRegisterWithEmail:_emailTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {

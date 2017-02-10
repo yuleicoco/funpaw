@@ -7,7 +7,7 @@
 //
 
 #import "MoreViewController.h"
-
+#import "ExchangePasswordViewController.h"
 
 @interface MoreViewController ()
 
@@ -19,12 +19,70 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavTitle:NSLocalizedString(@"tabMore_title",nil)];
-    UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
+    UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
     signoutBtn.backgroundColor = [UIColor blackColor];
     [self.view addSubview:signoutBtn];
     [signoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    self.view.backgroundColor =LIGHT_GRAY_COLOR;
+}
+
+-(void)setupView{
+    [super setupView];
+    UIView * topView = [[UIView alloc]init];
+    topView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:topView];
+    [topView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(topView.superview);
+        make.right.equalTo(topView.superview);
+        make.top.equalTo(topView.superview);
+        make.height.mas_equalTo(120);
+
+    }];
+
+    UILabel * linleLabel1 = [[UILabel alloc]init];
+    linleLabel1.backgroundColor = LIGHT_GRAY_COLOR;
+    [topView addSubview:linleLabel1];
+    [linleLabel1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(linleLabel1.superview.mas_centerY);
+        make.left.equalTo(linleLabel1.superview);
+        make.right.equalTo(linleLabel1.superview);
+        make.height.mas_equalTo(0.5);
+        
+    }];
+    
+    UILabel * videoLabel = [[UILabel alloc]init];
+    videoLabel.textColor = YELLOW_COLOR;
+    videoLabel.font = [UIFont systemFontOfSize:18];
+    videoLabel.text = @"Video";
+    [topView addSubview:videoLabel];
+    [videoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(videoLabel.superview.mas_left).offset(12);
+        make.top.equalTo(videoLabel.superview.mas_top).offset(20);
+        
+        
+    }];
+    
+    UIButton * videoBtn = [[UIButton alloc]init];
+    videoBtn.backgroundColor = [UIColor clearColor];
+  
+    [videoBtn addTarget:self action:@selector(videoButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+      [topView addSubview:videoBtn];
+    [videoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(videoBtn.superview);
+        make.right.equalTo(videoBtn.superview);
+        make.top.equalTo(videoBtn.superview);
+        make.bottom.equalTo(linleLabel1.mas_top);
+    
+    }];
+    
+}
+
+-(void)videoButtonTouch{
+    ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
+    [self.navigationController pushViewController:exchangVc animated:NO];
 
 }
+
 
 -(void)siggnoutButtonTouch{
   //  FuckLog(@"退出登录");
