@@ -8,7 +8,7 @@
 
 #import "MainTabViewController.h"
 #import "EggViewController.h"
-#import "MoreViewController.h"
+#import "More2ViewController.h"
 
 @interface MainTabViewController ()
 @property (nonatomic,strong)UINavigationController * eggVc;
@@ -51,7 +51,7 @@
 
 -(UINavigationController *)moreVc{
     if ((!_moreVc)) {
-        MoreViewController * vc = [[MoreViewController alloc]init];
+        More2ViewController * vc = [[More2ViewController alloc]init];
         vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil
                                                      image:[[UIImage imageNamed:@"right"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"left"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         

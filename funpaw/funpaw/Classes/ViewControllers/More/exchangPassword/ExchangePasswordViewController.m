@@ -7,6 +7,7 @@
 //
 
 #import "ExchangePasswordViewController.h"
+#import "ShareWork+Login.h"
 
 @interface ExchangePasswordViewController ()
 @property (nonatomic,strong)UITextField * codeTextfield;
@@ -130,11 +131,18 @@
 
 -(void)regiestButtonTouch313{
     if ([AppUtil isBlankString:_codeTextfield.text ]) {
-        [[AppUtil appTopViewController] showHint:@"没输号码"];
+        [[AppUtil appTopViewController] showHint:@"没输密码"];
         return;
     }
+    if (![[AccountManager sharedAccountManager].loginModel.password isEqualToString:_codeTextfield.text]) {
+        [[AppUtil appTopViewController] showHint:@"原密码错了"];
+        return;
+    }
+    
+    
+    
     if ([AppUtil isBlankString:_passwordTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输密码"];
+        [[AppUtil appTopViewController] showHint:@"没输新密码"];
         return;
 
     }
@@ -149,7 +157,37 @@
         return;
     }
 
+//    [self showHudInView:self.view hint:@"Being modified..."];
 
+    [[ShareWork sharedManager]modifyPasswordWithMid:[AccountManager sharedAccountManager].loginModel.mid password:_passwordTextfield.text complete:^(BaseModel *model) {
+  //      [self hideHud];
+        if (model) {
+            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"repair_success", nil) preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind", nil) style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@NO];
+                [[AccountManager sharedAccountManager]logout];
+                
+                NSUserDefaults *userDefatluts = [NSUserDefaults standardUserDefaults];
+                NSString * incodeNumStr = [userDefatluts objectForKey:@"incodeNum"];
+                
+                NSDictionary *dictionary = [userDefatluts dictionaryRepresentation];
+                for(NSString* key in [dictionary allKeys]){
+                    [userDefatluts removeObjectForKey:key];
+                    [userDefatluts synchronize];
+                }
+                [userDefatluts setObject:@"1" forKey:@"STARTFLAG"];
+                [userDefatluts setObject:incodeNumStr forKey:@"incodeNum"];
+            }];
+            
+            [alertController addAction:okAction];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }else{
+            [[AppUtil appTopViewController]showHint:model.retDesc];
+        }
+        
+        
+    }];
     
     
     

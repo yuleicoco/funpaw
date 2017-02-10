@@ -362,7 +362,6 @@
 		7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58301E49A3700086A823 /* BaseViewController.m */; };
 		7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58321E49A3700086A823 /* BaseTabViewController.m */; };
 		7D2D58371E49A5410086A823 /* EggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58361E49A5410086A823 /* EggViewController.m */; };
-		7D2D583A1E49A5610086A823 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58391E49A5610086A823 /* MoreViewController.m */; };
 		7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583C1E49A5A30086A823 /* MainTabViewController.m */; };
 		7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583F1E49AB290086A823 /* LoginViewController.m */; };
 		7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58451E49ABE80086A823 /* AccountManager.m */; };
@@ -371,6 +370,12 @@
 		7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009D1E4C62B400B5B40F /* PopStartView.m */; };
 		7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A01E4C674500B5B40F /* CompleViewController.m */; };
 		7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */; };
+		7D58077A1E4DB4EB00D79D7E /* More2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807791E4DB4EB00D79D7E /* More2ViewController.m */; };
+		7D58077E1E4DB95E00D79D7E /* BaseGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58077D1E4DB95E00D79D7E /* BaseGridViewController.m */; };
+		7D5807811E4DBA8700D79D7E /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807801E4DBA8700D79D7E /* PhotoViewController.m */; };
+		7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */; };
+		7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */; };
+		7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1194,8 +1199,6 @@
 		7D2D58321E49A3700086A823 /* BaseTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabViewController.m; sourceTree = "<group>"; };
 		7D2D58351E49A5410086A823 /* EggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EggViewController.h; sourceTree = "<group>"; };
 		7D2D58361E49A5410086A823 /* EggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EggViewController.m; sourceTree = "<group>"; };
-		7D2D58381E49A5610086A823 /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
-		7D2D58391E49A5610086A823 /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		7D2D583B1E49A5A30086A823 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
 		7D2D583C1E49A5A30086A823 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
 		7D2D583E1E49AB290086A823 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -1212,6 +1215,18 @@
 		7D4A00A01E4C674500B5B40F /* CompleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleViewController.m; sourceTree = "<group>"; };
 		7D4A00A71E4C756000B5B40F /* ExchangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangePasswordViewController.h; sourceTree = "<group>"; };
 		7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangePasswordViewController.m; sourceTree = "<group>"; };
+		7D5807781E4DB4EB00D79D7E /* More2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = More2ViewController.h; sourceTree = "<group>"; };
+		7D5807791E4DB4EB00D79D7E /* More2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = More2ViewController.m; sourceTree = "<group>"; };
+		7D58077C1E4DB95E00D79D7E /* BaseGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGridViewController.h; sourceTree = "<group>"; };
+		7D58077D1E4DB95E00D79D7E /* BaseGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGridViewController.m; sourceTree = "<group>"; };
+		7D58077F1E4DBA8700D79D7E /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		7D5807801E4DBA8700D79D7E /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		7D5807831E4DBD5800D79D7E /* MyVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		7D5807861E4DBDA100D79D7E /* ShareWork+Morephotovideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Morephotovideo.h"; sourceTree = "<group>"; };
+		7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Morephotovideo.m"; sourceTree = "<group>"; };
+		7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGrapgModel.h; sourceTree = "<group>"; };
+		7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGrapgModel.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1531,6 +1546,8 @@
 			children = (
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
+				7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */,
+				7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */,
 				34E15FA71E050B16004A65AB /* Base */,
 			);
 			path = Models;
@@ -1556,6 +1573,8 @@
 				34A864511E49A02300AD6D8A /* ShareWork+account.m */,
 				34196FC51E4AFA9400D9D24D /* ShareWork+device.h */,
 				34196FC61E4AFA9400D9D24D /* ShareWork+device.m */,
+				7D5807861E4DBDA100D79D7E /* ShareWork+Morephotovideo.h */,
+				7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2748,6 +2767,8 @@
 			children = (
 				7D4A009C1E4C62B400B5B40F /* PopStartView.h */,
 				7D4A009D1E4C62B400B5B40F /* PopStartView.m */,
+				7D58077C1E4DB95E00D79D7E /* BaseGridViewController.h */,
+				7D58077D1E4DB95E00D79D7E /* BaseGridViewController.m */,
 				7D2D582F1E49A3700086A823 /* BaseViewController.h */,
 				7D2D58301E49A3700086A823 /* BaseViewController.m */,
 				7D2D58311E49A3700086A823 /* BaseTabViewController.h */,
@@ -2792,10 +2813,12 @@
 		7D2D582E1E49A3060086A823 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				7D5807821E4DBD4C00D79D7E /* VIews */,
+				7D58077B1E4DB88700D79D7E /* Photo */,
 				7D4A00A61E4C755300B5B40F /* exchangPassword */,
 				7D4A00A21E4C752800B5B40F /* VIdeo */,
-				7D2D58381E49A5610086A823 /* MoreViewController.h */,
-				7D2D58391E49A5610086A823 /* MoreViewController.m */,
+				7D5807781E4DB4EB00D79D7E /* More2ViewController.h */,
+				7D5807791E4DB4EB00D79D7E /* More2ViewController.m */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -2814,6 +2837,24 @@
 				7D4A00A81E4C756000B5B40F /* ExchangePasswordViewController.m */,
 			);
 			path = exchangPassword;
+			sourceTree = "<group>";
+		};
+		7D58077B1E4DB88700D79D7E /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				7D58077F1E4DBA8700D79D7E /* PhotoViewController.h */,
+				7D5807801E4DBA8700D79D7E /* PhotoViewController.m */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		7D5807821E4DBD4C00D79D7E /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				7D5807831E4DBD5800D79D7E /* MyVideoCollectionViewCell.h */,
+				7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */,
+			);
+			path = VIews;
 			sourceTree = "<group>";
 		};
 		BE24F9B948DE606D7B2BFECA /* Pods */ = {
@@ -3212,19 +3253,23 @@
 				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
 				7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */,
-				7D2D583A1E49A5610086A823 /* MoreViewController.m in Sources */,
 				7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */,
 				7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */,
+				7D5807811E4DBA8700D79D7E /* PhotoViewController.m in Sources */,
+				7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */,
 				7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */,
 				34E164141E050B18004A65AB /* UIView+TapBlocks.m in Sources */,
 				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
+				7D58077E1E4DB95E00D79D7E /* BaseGridViewController.m in Sources */,
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
 				34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */,
 				347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */,
 				34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */,
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
+				7D58077A1E4DB4EB00D79D7E /* More2ViewController.m in Sources */,
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
+				7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
@@ -3242,6 +3287,7 @@
 				347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
+				7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
