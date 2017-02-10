@@ -410,8 +410,12 @@
 -(void)btn_add:(UIButton *)sender
 {
     
-    BindingViewController * bindVC =[[BindingViewController alloc]init];
-    [self.navigationController pushViewController:bindVC animated:NO];
+//    BindingViewController * bindVC =[[BindingViewController alloc]init];
+//    [self.navigationController pushViewController:bindVC animated:NO];
+    
+    InCallViewController * incall =[[InCallViewController alloc]init];
+    [self presentViewController:incall animated:NO completion:nil];
+    
     
     
 }

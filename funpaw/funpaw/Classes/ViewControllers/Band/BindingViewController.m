@@ -235,6 +235,9 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     
     deviceTF =[UITextField new];
     incodeTF =[UITextField new];
+    deviceTF.textColor =YELLOW_COLOR;
+    incodeTF.textColor = YELLOW_COLOR;
+    
     
     
     

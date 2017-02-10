@@ -10,6 +10,10 @@
 		34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */; };
 		34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC31E4AF6AC00D9D24D /* InCallViewController.m */; };
 		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
+		342659221E4D572800280A73 /* FeedSetingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 342659211E4D572800280A73 /* FeedSetingTableViewCell.m */; };
+		342659251E4D57AA00280A73 /* ShareWork+feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 342659241E4D57AA00280A73 /* ShareWork+feed.m */; };
+		342659281E4D589F00280A73 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 342659271E4D589F00280A73 /* FeedModel.m */; };
+		3426592B1E4D9C7B00280A73 /* ShareWork+Incall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3426592A1E4D9C7B00280A73 /* ShareWork+Incall.m */; };
 		3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3468FF451E4857AF00DEBE4B /* ShareWork.m */; };
 		347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */; };
 		347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EF1E4C6D91007FA2B0 /* UnbandViewController.m */; };
@@ -381,6 +385,14 @@
 		34196FC31E4AF6AC00D9D24D /* InCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InCallViewController.m; sourceTree = "<group>"; };
 		34196FC51E4AFA9400D9D24D /* ShareWork+device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+device.h"; sourceTree = "<group>"; };
 		34196FC61E4AFA9400D9D24D /* ShareWork+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+device.m"; sourceTree = "<group>"; };
+		342659201E4D572800280A73 /* FeedSetingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedSetingTableViewCell.h; sourceTree = "<group>"; };
+		342659211E4D572800280A73 /* FeedSetingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSetingTableViewCell.m; sourceTree = "<group>"; };
+		342659231E4D57AA00280A73 /* ShareWork+feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+feed.h"; sourceTree = "<group>"; };
+		342659241E4D57AA00280A73 /* ShareWork+feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+feed.m"; sourceTree = "<group>"; };
+		342659261E4D589F00280A73 /* FeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedModel.h; sourceTree = "<group>"; };
+		342659271E4D589F00280A73 /* FeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
+		342659291E4D9C7B00280A73 /* ShareWork+Incall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Incall.h"; sourceTree = "<group>"; };
+		3426592A1E4D9C7B00280A73 /* ShareWork+Incall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Incall.m"; sourceTree = "<group>"; };
 		3468FF441E4857AF00DEBE4B /* ShareWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWork.h; sourceTree = "<group>"; };
 		3468FF451E4857AF00DEBE4B /* ShareWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWork.m; sourceTree = "<group>"; };
 		347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
@@ -1294,9 +1306,19 @@
 			path = InCall;
 			sourceTree = "<group>";
 		};
+		3426591F1E4D572800280A73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				342659201E4D572800280A73 /* FeedSetingTableViewCell.h */,
+				342659211E4D572800280A73 /* FeedSetingTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		347FF6EA1E4C6D91007FA2B0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				3426591F1E4D572800280A73 /* Views */,
 				347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */,
 				347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */,
 			);
@@ -1532,6 +1554,8 @@
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				34E15FA71E050B16004A65AB /* Base */,
+				342659261E4D589F00280A73 /* FeedModel.h */,
+				342659271E4D589F00280A73 /* FeedModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1556,6 +1580,10 @@
 				34A864511E49A02300AD6D8A /* ShareWork+account.m */,
 				34196FC51E4AFA9400D9D24D /* ShareWork+device.h */,
 				34196FC61E4AFA9400D9D24D /* ShareWork+device.m */,
+				342659231E4D57AA00280A73 /* ShareWork+feed.h */,
+				342659241E4D57AA00280A73 /* ShareWork+feed.m */,
+				342659291E4D9C7B00280A73 /* ShareWork+Incall.h */,
+				3426592A1E4D9C7B00280A73 /* ShareWork+Incall.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3226,20 +3254,24 @@
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
+				342659221E4D572800280A73 /* FeedSetingTableViewCell.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
 				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,
 				7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */,
 				34E164181E050B18004A65AB /* CycleScrollView.m in Sources */,
+				3426592B1E4D9C7B00280A73 /* ShareWork+Incall.m in Sources */,
 				34E164171E050B18004A65AB /* Reachability.m in Sources */,
 				34E164111E050B18004A65AB /* UIButton+Blocks.m in Sources */,
 				34E1640C1E050B18004A65AB /* AppDelegate.m in Sources */,
 				34E1640F1E050B18004A65AB /* UIActionSheet+Blocks.m in Sources */,
 				34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */,
+				342659251E4D57AA00280A73 /* ShareWork+feed.m in Sources */,
 				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
 				34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */,
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
 				347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */,
+				342659281E4D589F00280A73 /* FeedModel.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
