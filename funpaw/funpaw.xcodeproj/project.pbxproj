@@ -376,6 +376,13 @@
 		7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */; };
 		7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */; };
 		7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */; };
+		7D58078E1E4DC3E500D79D7E /* ShareWork+Incall.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078D1E4DC3E500D79D7E /* ShareWork+Incall.m */; };
+		7D5807921E4DC41500D79D7E /* FeedSetingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807911E4DC41500D79D7E /* FeedSetingTableViewCell.m */; };
+		7D5807951E4DC43200D79D7E /* ShareWork+feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807941E4DC43200D79D7E /* ShareWork+feed.m */; };
+		7D5807981E4DC44400D79D7E /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807971E4DC44400D79D7E /* FeedModel.m */; };
+		7D58079A1E4DC76B00D79D7E /* HeaderViewCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5807991E4DC76B00D79D7E /* HeaderViewCollection.xib */; };
+		7D71EAB11E51877F00417173 /* LargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EAAF1E51877F00417173 /* LargeViewController.m */; };
+		7D71EAB21E51877F00417173 /* LargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71EAB01E51877F00417173 /* LargeViewController.xib */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1227,6 +1234,18 @@
 		7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Morephotovideo.m"; sourceTree = "<group>"; };
 		7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGrapgModel.h; sourceTree = "<group>"; };
 		7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGrapgModel.m; sourceTree = "<group>"; };
+		7D58078C1E4DC3E500D79D7E /* ShareWork+Incall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Incall.h"; sourceTree = "<group>"; };
+		7D58078D1E4DC3E500D79D7E /* ShareWork+Incall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Incall.m"; sourceTree = "<group>"; };
+		7D5807901E4DC41500D79D7E /* FeedSetingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedSetingTableViewCell.h; sourceTree = "<group>"; };
+		7D5807911E4DC41500D79D7E /* FeedSetingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSetingTableViewCell.m; sourceTree = "<group>"; };
+		7D5807931E4DC43200D79D7E /* ShareWork+feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+feed.h"; sourceTree = "<group>"; };
+		7D5807941E4DC43200D79D7E /* ShareWork+feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+feed.m"; sourceTree = "<group>"; };
+		7D5807961E4DC44400D79D7E /* FeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedModel.h; sourceTree = "<group>"; };
+		7D5807971E4DC44400D79D7E /* FeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
+		7D5807991E4DC76B00D79D7E /* HeaderViewCollection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderViewCollection.xib; sourceTree = "<group>"; };
+		7D71EAAE1E51877F00417173 /* LargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeViewController.h; sourceTree = "<group>"; };
+		7D71EAAF1E51877F00417173 /* LargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeViewController.m; sourceTree = "<group>"; };
+		7D71EAB01E51877F00417173 /* LargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeViewController.xib; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1312,6 +1331,7 @@
 		347FF6EA1E4C6D91007FA2B0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				7D58078F1E4DC41500D79D7E /* Views */,
 				347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */,
 				347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */,
 			);
@@ -1548,6 +1568,8 @@
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */,
 				7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */,
+				7D5807961E4DC44400D79D7E /* FeedModel.h */,
+				7D5807971E4DC44400D79D7E /* FeedModel.m */,
 				34E15FA71E050B16004A65AB /* Base */,
 			);
 			path = Models;
@@ -1575,6 +1597,10 @@
 				34196FC61E4AFA9400D9D24D /* ShareWork+device.m */,
 				7D5807861E4DBDA100D79D7E /* ShareWork+Morephotovideo.h */,
 				7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */,
+				7D58078C1E4DC3E500D79D7E /* ShareWork+Incall.h */,
+				7D58078D1E4DC3E500D79D7E /* ShareWork+Incall.m */,
+				7D5807931E4DC43200D79D7E /* ShareWork+feed.h */,
+				7D5807941E4DC43200D79D7E /* ShareWork+feed.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2853,8 +2879,21 @@
 			children = (
 				7D5807831E4DBD5800D79D7E /* MyVideoCollectionViewCell.h */,
 				7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */,
+				7D5807991E4DC76B00D79D7E /* HeaderViewCollection.xib */,
+				7D71EAAE1E51877F00417173 /* LargeViewController.h */,
+				7D71EAAF1E51877F00417173 /* LargeViewController.m */,
+				7D71EAB01E51877F00417173 /* LargeViewController.xib */,
 			);
 			path = VIews;
+			sourceTree = "<group>";
+		};
+		7D58078F1E4DC41500D79D7E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D5807901E4DC41500D79D7E /* FeedSetingTableViewCell.h */,
+				7D5807911E4DC41500D79D7E /* FeedSetingTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BE24F9B948DE606D7B2BFECA /* Pods */ = {
@@ -2900,7 +2939,7 @@
 				TargetAttributes = {
 					3496F9BF1E04DF8E00744A1E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 4UKEB375ND;
+						DevelopmentTeam = ZMFX8728A9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3029,6 +3068,7 @@
 				34E165C01E050B19004A65AB /* tab_near_normal@3x.png in Resources */,
 				34E165701E050B19004A65AB /* message.png in Resources */,
 				34E166641E0520F1004A65AB /* Ltopbtn.png in Resources */,
+				7D58079A1E4DC76B00D79D7E /* HeaderViewCollection.xib in Resources */,
 				34E165521E050B19004A65AB /* delect_guize.png in Resources */,
 				34E165681E050B19004A65AB /* left_on.png in Resources */,
 				34E164951E050B18004A65AB /* stopcall-red.png in Resources */,
@@ -3147,6 +3187,7 @@
 				34E166541E0520F1004A65AB /* konw.png in Resources */,
 				34E1644F1E050B18004A65AB /* sephonerc-factory in Resources */,
 				34E164931E050B18004A65AB /* status-orange.png in Resources */,
+				7D71EAB21E51877F00417173 /* LargeViewController.xib in Resources */,
 				34E164501E050B18004A65AB /* sephonerc-factory~ipad in Resources */,
 				34E166701E0520F1004A65AB /* xiala@2x.png in Resources */,
 				34E165641E050B19004A65AB /* kuang_off.png in Resources */,
@@ -3247,6 +3288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34E164151E050B18004A65AB /* UIViewController+HUD.m in Sources */,
+				7D5807921E4DC41500D79D7E /* FeedSetingTableViewCell.m in Sources */,
 				34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */,
 				34E164121E050B18004A65AB /* UIImage-Extensions.m in Sources */,
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
@@ -3271,6 +3313,8 @@
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
 				7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
+				7D71EAB11E51877F00417173 /* LargeViewController.m in Sources */,
+				7D5807981E4DC44400D79D7E /* FeedModel.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
 				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,
@@ -3289,12 +3333,14 @@
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
+				7D5807951E4DC43200D79D7E /* ShareWork+feed.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
 				7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */,
 				347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
+				7D58078E1E4DC3E500D79D7E /* ShareWork+Incall.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,
 				347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */,
 			);
@@ -3417,7 +3463,7 @@
 			baseConfigurationReference = D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4UKEB375ND;
+				DEVELOPMENT_TEAM = ZMFX8728A9;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3462,7 +3508,7 @@
 			baseConfigurationReference = 3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4UKEB375ND;
+				DEVELOPMENT_TEAM = ZMFX8728A9;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (

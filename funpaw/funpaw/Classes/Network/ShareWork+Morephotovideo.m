@@ -32,13 +32,50 @@
         
     }];
     
+}
 
+-(void)delPhotoGraphWith:(NSString *)mid filename:(NSString *)filename complete:(void (^)(BaseModel *))completeBlock{
+    NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
+    params[@"mid"] = mid;
+    params[@"filename"] = filename;
+    
+    [self requestWithMethod:POST WithPath:@"common=delPhotoGraph" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+        
+        if (model) {
+        
+        }
+        if (completeBlock) {
+            completeBlock(model);
+        }
+        
+        
+    } WithFailurBlock:^(NSError *error) {
+        
+    }];
 
-
-
+    
+    
+    
+    
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end
