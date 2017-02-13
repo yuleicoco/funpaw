@@ -113,7 +113,7 @@
     
     btnBind =[UIButton new];
     btnBind.layer.cornerRadius = 4;
-    btnBind.backgroundColor = GREEN_COLOR;
+    btnBind.backgroundColor = YELLOW_COLOR;
     [btnBind setTitle:NSLocalizedString(@"Sure_bind", nil) forState:UIControlStateNormal];
     [btnBind addTarget:self action:@selector(Surebtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnBind];

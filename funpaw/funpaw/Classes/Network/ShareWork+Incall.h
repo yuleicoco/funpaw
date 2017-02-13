@@ -41,4 +41,8 @@
 -(void)DeviceUse:(NSString *)num
     complete:(void(^)(BaseModel *model))completeBlock;
 
+//开始设备记录
+-(void)DeviceUseMember:(NSString *)mid object :(NSString *)object deviceno:(NSString *)deviceno belong:(NSString *)belong starttime:(NSString *)starttime    complete:(void (^)(BaseModel *))completeBlock;
+
+
 @end

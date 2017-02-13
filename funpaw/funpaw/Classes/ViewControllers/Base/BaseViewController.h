@@ -30,7 +30,8 @@ typedef enum
 - (void)showBarButton:(EzNavigationBar)position title:(NSString *)name fontColor:(UIColor *)color hide:(BOOL)hide;
 
 
-- (void)showBarButton:(EzNavigationBar)position imageName:(NSString *)imageName;
+- (void)showBarButton:(EzNavigationBar)position imageName:(NSString *)imageName hide:(BOOL)hide;
+
 
 - (void)showBarButton:(EzNavigationBar)position button:(UIButton *)button;
 

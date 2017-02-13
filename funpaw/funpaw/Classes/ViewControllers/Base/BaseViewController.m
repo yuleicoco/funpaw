@@ -139,7 +139,7 @@
     [self showBarButton:position button:button];
 }
 
-- (void)showBarButton:(EzNavigationBar)position imageName:(NSString *)imageName{
+- (void)showBarButton:(EzNavigationBar)position imageName:(NSString *)imageName hide:(BOOL)hide{
     UIButton *button ;
     UIImage* image = [UIImage imageNamed:imageName];
     CGRect buttonFrame = CGRectZero;
@@ -153,6 +153,7 @@
         buttonFrame.size.height = NAV_BUTTON_MIN_HEIGHT;
     }
     button = [[UIButton alloc] initWithFrame:buttonFrame];
+    button.hidden = hide;
     button.contentMode = UIViewContentModeScaleAspectFit;
     button.backgroundColor = [UIColor clearColor];
     [button setImage:image forState:UIControlStateNormal];

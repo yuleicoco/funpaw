@@ -28,7 +28,5 @@
 @property (nonatomic,strong)UIImageView * pointTouch;
 @property (nonatomic,strong)UILabel * timeLable;
 @property (nonatomic,strong)UIButton * pullBtn;
-@property(nonatomic,assign)BOOL isOth;
-@property(nonatomic,strong)NSString * deviceoOth;
-@property(nonatomic,strong)NSString * termidOth;
+
 @end

@@ -14,6 +14,7 @@
 #import "UnbandViewController.h"
 #import "WifiViewController.h"
 #import "BindingViewController.h"
+#import "ShareWork+Incall.h"
 
 
 @interface EggViewController ()
@@ -37,6 +38,9 @@
 @synthesize bgImage;
 @synthesize addBtn;
 @synthesize SbgImage;
+@synthesize Guideview;
+@synthesize IkonwBtn;
+
 
 
 
@@ -46,7 +50,7 @@
     [self setNavTitle:NSLocalizedString(@"tabEgg_title",nil)];
     
     // sephone
- //   [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"www.segosip001.cn"];
+    [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"www.segosip001.cn"];
     
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (status) {
@@ -124,6 +128,9 @@
         [self checkDeviceStats];
     } userInfo:@"Fire" repeats:YES];
     [self checkDeviceStats];
+    // 检查是否提示
+    [self ChooseGuide];
+    
  
     
 }
@@ -142,7 +149,7 @@
         case SephoneCallOutgoingInit:{
             // 成功
             InCallViewController *   _incallVC =[[InCallViewController alloc]init];
-            
+            [_incallVC setCall:call];
             [self presentViewController:_incallVC animated:YES completion:nil];
             break;
         }
@@ -215,7 +222,7 @@
 - (void)checkDeviceStats
 {
    //MI16090000013020
-    [[ShareWork sharedManager]DeviceStats:@"MI17020000013124" complete:^(BaseModel * model) {
+    [[ShareWork sharedManager]DeviceStats:Mid_S complete:^(BaseModel * model) {
       
         if ([model.retCode isEqualToString:@"0000"]) {
             
@@ -271,8 +278,41 @@
 {
     [super setupView];
     
-    [self showBarButton:NAV_RIGHT imageName:@"1"];
+    // 手势
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handletapPressGesture:)];
+    [self.view addGestureRecognizer:tapGesture];
     
+  
+    // 指导界面
+    Guideview =[UIImageView new];
+    Guideview.image =[UIImage imageNamed:@"setb"];
+    Guideview.userInteractionEnabled = YES;
+    Guideview.hidden = YES;
+    
+    [ApplicationDelegate.window addSubview:Guideview];
+    [Guideview mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(ApplicationDelegate.window.mas_centerY);
+        make.size.mas_equalTo(ApplicationDelegate.window);
+        
+    }];
+    
+    IkonwBtn =[UIButton new];
+    [IkonwBtn setImage:[UIImage imageNamed:@"konw"] forState:UIControlStateNormal];
+    [IkonwBtn addTarget:self action:@selector(disparrBtn:) forControlEvents:UIControlEventTouchUpInside];
+    IkonwBtn.hidden = YES;
+    
+    [Guideview addSubview:IkonwBtn];
+    
+    [IkonwBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(ApplicationDelegate.window).offset(191);
+        make.right.equalTo(ApplicationDelegate.window).offset(-79);
+        make.top.equalTo(@160);
+        make.height.equalTo(@40);
+        
+        
+        
+    }];
     
     // 背景图
     
@@ -381,17 +421,98 @@
     
 }
 
+//检查是否引导页
+-(void)ChooseGuide
+{
+    // 这个时候出现引导界面
+    if ([[Defaluts objectForKey:@"setimage"] isEqualToString:@"ok"]) {
+        IkonwBtn.hidden = NO;
+        Guideview.hidden = NO;
+        addBtn.hidden = YES;
+        [Defaluts removeObjectForKey:@"setimage"];
+        [Defaluts synchronize];
+        
+    }
+
+    
+    
+}
+// 知道按钮
+- (void)disparrBtn:(UIButton *)sender
+{
+    bgImage.hidden = NO;
+    [sender removeFromSuperview];
+    [Guideview removeFromSuperview];
+    
+    
+}
+
 
 // UI变化
 
 -(void)UIchangeMothod
 {
-    // nodevice
+    // 设备不存在
     if ([strState isEqualToString:@"ds000"]) {
-        
         [bgImage setImage:[UIImage imageNamed:@"English_tips"]];
         
+        [self showBarBtn:YES];
+        return;
+    }else
+    {
+    //设备在线
+    if ([strState isEqualToString:@"ds001"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        
     }
+    //离线
+    if ([strState isEqualToString:@"ds002"]) {
+        
+         [bgImage setImage:[UIImage imageNamed:@""]];
+        
+    }
+    // 通话中
+    if ([strState isEqualToString:@"ds003"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        }
+    //正在上传文件
+    if ([strState isEqualToString:@"ds004"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        
+    }
+        
+        [self showBarBtn:NO];
+        
+    }
+    
+    
+}
+
+// 功能列表
+-(void)handletapPressGesture:(UITapGestureRecognizer*)sender{
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        SbgImage.alpha=0.0;
+    } completion:^(BOOL finished) {
+        // [setImage removeFromSuperview];
+    }];
+    [self dismissViewControllerAnimated:YES
+                             completion:^{
+                                 [self.view removeGestureRecognizer:sender];
+                             }];
+    
+    
+}
+
+
+// +号功能显示
+- (void)showBarBtn:(BOOL)hide
+{
+      [self showBarButton:NAV_RIGHT imageName:@"1" hide:hide];
+      SbgImage.hidden = hide;
     
     
 }
@@ -400,6 +521,23 @@
 - (void)doRightButtonTouch
 {
     
+    if (SbgImage.alpha<1) {
+        SbgImage.alpha = 1;
+        SbgImage.hidden = NO;
+        
+    }else
+    {
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            SbgImage.alpha=0.0;
+            SbgImage.hidden = YES;
+            
+        } completion:^(BOOL finished) {
+            // [setImage removeFromSuperview];
+        }];
+        return;
+        
+    }
 
     
     
@@ -410,11 +548,9 @@
 -(void)btn_add:(UIButton *)sender
 {
     
-//    BindingViewController * bindVC =[[BindingViewController alloc]init];
-//    [self.navigationController pushViewController:bindVC animated:NO];
+    BindingViewController * bindVC =[[BindingViewController alloc]init];
+    [self.navigationController pushViewController:bindVC animated:NO];
     
-    InCallViewController * incall =[[InCallViewController alloc]init];
-    [self presentViewController:incall animated:NO completion:nil];
     
     
     
@@ -463,6 +599,40 @@
  */
 - (void)OpenVideo:(UIButton *)sender
 {
+    
+    
+    NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
+    
+    if ([AppUtil isBlankString:Mid_D]) {
+        
+        [self sipCall:strDevicenume sipName:nil];
+    }else
+    {
+        [self sipCall:Mid_D sipName:nil];
+        
+    }
+    
+    
+    NSDate *  senddate=[NSDate date];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *  locationString=[dateformatter stringFromDate:senddate];
+
+    
+     if ([strState isEqualToString:@"ds001"]) {
+    [[ShareWork sharedManager]DeviceUseMember:Mid_S object:@"self" deviceno:Mid_D belong:Mid_S starttime:locationString complete:^(BaseModel * model) {
+        [Defaluts setObject:model.content forKey:@"selfID"];
+        [Defaluts synchronize];
+
+        
+    }];
+     }else
+     {
+         
+         return;
+         
+     }
+    
     
     
     

@@ -73,9 +73,7 @@
 @synthesize pointTouch;
 @synthesize timeLable;
 @synthesize pullBtn;
-@synthesize isOth;
-@synthesize deviceoOth;
-@synthesize termidOth;
+
 
 
 
@@ -207,14 +205,11 @@
     UIButton * downBtn =[UIButton new] ;
     UIButton * leftBtn  =[UIButton new];
     UIButton * rightBtn = [UIButton new];
-    UIButton * RtopBtn = [UIButton new];
-    UIButton * RdownBtn =[UIButton new];
     topBtn.tag =1000001;
     downBtn.tag=1000002;
     leftBtn.tag =1000003;
     rightBtn.tag =1000004;
-    RtopBtn.tag =1000005;
-    RdownBtn.tag =1000006;
+
     
     
     [topBtn addTarget:self action:@selector(topClickSt:) forControlEvents:UIControlEventTouchUpInside];
@@ -231,15 +226,9 @@
     [rightBtn addTarget:self action:@selector(rightClickSt:) forControlEvents:UIControlEventTouchUpInside];
     [rightBtn addTarget:self action:@selector(Srightclick:) forControlEvents:UIControlEventTouchDown];
     
-    [RtopBtn addTarget:self action:@selector(RtopClickSt:) forControlEvents:UIControlEventTouchUpInside];
-    [RtopBtn addTarget:self action:@selector(Slef_toptclick:) forControlEvents:UIControlEventTouchDown];
     
-    [RdownBtn addTarget:self action:@selector(RdownClickSt:) forControlEvents:UIControlEventTouchUpInside];
-    [RdownBtn addTarget:self action:@selector(Slef_downtclick:) forControlEvents:UIControlEventTouchDown];
-    
-    
-    DriArr =@[topBtn,downBtn,leftBtn,rightBtn,RtopBtn,RdownBtn];
-    for (NSInteger i =0; i<6; i++) {
+    DriArr =@[topBtn,downBtn,leftBtn,rightBtn];
+    for (NSInteger i =0; i<4; i++) {
         [self.view addSubview:DriArr[i]];
         
         
@@ -542,9 +531,9 @@
                               leadSpacing:70
                               tailSpacing:-60];
     
-    NSArray * imageList =@[@"top_egg",@"down_egg",@"left_egg",@"right_egg",@"L_top",@"L_down"];
+    NSArray * imageList =@[@"top_egg",@"down_egg",@"left_egg",@"right_egg"];
     
-    for (NSInteger i =0; i<6; i++) {
+    for (NSInteger i =0; i<4; i++) {
         [DriArr[i] setImage:[UIImage imageNamed:imageList[i]] forState:UIControlStateNormal];
         
     }
@@ -609,27 +598,7 @@
         
     }];
     
-    [DriArr[4] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-110);
-        make.right.mas_equalTo(-393);
-        make.height.mas_equalTo(78);
-        make.width.mas_equalTo(53);
-        
-        
-        
-        
-    }];
-    
-    [DriArr[5] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-32);
-        make.right.mas_equalTo(-393);
-        make.width.mas_equalTo(53);
-        make.height.mas_equalTo(78);
-        
-        
-        
-    }];
-    
+       
     
     
     
@@ -909,85 +878,6 @@
     
 }
 
-
-
-
-//  抬头  上
-
-- (void)Slef_toptclick:(UIButton *)sender {
-    
-    [self moverobot:@"1"]; // 上
-    
-    
-    
-}
-
-
-- (void)RtopClickSt:(UIButton *)sender {
-    [self overTime];
-    
-}
-
-
-- (void)Slef_downtclick:(UIButton *)sender {
-    [self moverobot:@"2"]; // 上
-    
-    
-    
-}
-
-- (void)RdownClickSt:(UIButton *)sender {
-    
-    [self overTime];
-}
-
-
--(void)moverobot:(NSString *)str
-{
-    NSInteger i = [str integerValue];
-    switch (i) {
-        case 1:
-            [self.view viewWithTag:100001].userInteractionEnabled = NO;
-            [self.view viewWithTag:100002].userInteractionEnabled = NO;
-            [self.view viewWithTag:100003].userInteractionEnabled = NO;
-            [self.view viewWithTag:100004].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = YES;
-            [self.view viewWithTag:100006].userInteractionEnabled = NO;
-            
-            break;
-            
-        case 2:
-            
-            [self.view viewWithTag:100001].userInteractionEnabled = NO;
-            [self.view viewWithTag:100002].userInteractionEnabled = NO;
-            [self.view viewWithTag:100003].userInteractionEnabled = NO;
-            [self.view viewWithTag:100004].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = NO;
-            [self.view viewWithTag:100006].userInteractionEnabled = YES;
-            
-            break;
-            
-        default:
-            break;
-    }
-    
-    
-    moveTimer = [HWWeakTimer scheduledTimerWithTimeInterval:1.0*0.2 block:^(id userInfo) {
-        
-        [self sendInfomationL:str];
-    } userInfo:@"Fire" repeats:YES];
-    [moveTimer fire];
-    
-    
-}
-
-- (void)sendInfomationL:(NSString *)sender
-{
-    
-    NSString * msg =[NSString stringWithFormat:@"control_servo,0,0,2,%d,200",[sender intValue]];
-    NSLog(@"我走");
-    [self sendMessage:msg];
-}
 
 
 

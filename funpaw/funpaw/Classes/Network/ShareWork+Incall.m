@@ -146,4 +146,32 @@
     
 }
 
+-(void)DeviceUseMember:(NSString *)mid object :(NSString *)object deviceno:(NSString *)deviceno belong:(NSString *)belong starttime:(NSString *)starttime    complete:(void (^)(BaseModel *))completeBlock
+{
+    NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
+    params[@"mid"] = mid;
+    params[@"object"]= object;
+    params[@"deviceno"] = deviceno;
+    params[@"belong"]= belong;
+    params[@"starttime"]= starttime;
+
+    
+    [self requestWithMethod:POST WithPath:@"common=addDeviceUseRecord" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+        
+        if (model) {
+            // NSLog(@"哈哈");
+        }
+        if (completeBlock) {
+            completeBlock(model);
+        }
+        
+    } WithFailurBlock:^(NSError *error) {
+        
+    }];
+    
+    
+    
+    
+}
+
 @end
