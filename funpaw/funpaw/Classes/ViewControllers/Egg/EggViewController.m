@@ -14,6 +14,7 @@
 #import "UnbandViewController.h"
 #import "WifiViewController.h"
 #import "BindingViewController.h"
+#import "ShareWork+Incall.h"
 
 
 @interface EggViewController ()
@@ -277,9 +278,11 @@
 {
     [super setupView];
     
-    [self showBarButton:NAV_RIGHT imageName:@"1"];
+    // 手势
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handletapPressGesture:)];
+    [self.view addGestureRecognizer:tapGesture];
     
-    
+  
     // 指导界面
     Guideview =[UIImageView new];
     Guideview.image =[UIImage imageNamed:@"setb"];
@@ -449,12 +452,67 @@
 
 -(void)UIchangeMothod
 {
-    // nodevice
+    // 设备不存在
     if ([strState isEqualToString:@"ds000"]) {
-        
         [bgImage setImage:[UIImage imageNamed:@"English_tips"]];
         
+        [self showBarBtn:YES];
+        return;
+    }else
+    {
+    //设备在线
+    if ([strState isEqualToString:@"ds001"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        
     }
+    //离线
+    if ([strState isEqualToString:@"ds002"]) {
+        
+         [bgImage setImage:[UIImage imageNamed:@""]];
+        
+    }
+    // 通话中
+    if ([strState isEqualToString:@"ds003"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        }
+    //正在上传文件
+    if ([strState isEqualToString:@"ds004"]) {
+        
+        [bgImage setImage:[UIImage imageNamed:@""]];
+        
+    }
+        
+        [self showBarBtn:NO];
+        
+    }
+    
+    
+}
+
+// 功能列表
+-(void)handletapPressGesture:(UITapGestureRecognizer*)sender{
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        SbgImage.alpha=0.0;
+    } completion:^(BOOL finished) {
+        // [setImage removeFromSuperview];
+    }];
+    [self dismissViewControllerAnimated:YES
+                             completion:^{
+                                 [self.view removeGestureRecognizer:sender];
+                             }];
+    
+    
+}
+
+
+// +号功能显示
+- (void)showBarBtn:(BOOL)hide
+{
+      [self showBarButton:NAV_RIGHT imageName:@"1" hide:hide];
+      SbgImage.hidden = hide;
     
     
 }
@@ -463,6 +521,23 @@
 - (void)doRightButtonTouch
 {
     
+    if (SbgImage.alpha<1) {
+        SbgImage.alpha = 1;
+        SbgImage.hidden = NO;
+        
+    }else
+    {
+        
+        [UIView animateWithDuration:0.5 animations:^{
+            SbgImage.alpha=0.0;
+            SbgImage.hidden = YES;
+            
+        } completion:^(BOOL finished) {
+            // [setImage removeFromSuperview];
+        }];
+        return;
+        
+    }
 
     
     
@@ -524,6 +599,40 @@
  */
 - (void)OpenVideo:(UIButton *)sender
 {
+    
+    
+    NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
+    
+    if ([AppUtil isBlankString:Mid_D]) {
+        
+        [self sipCall:strDevicenume sipName:nil];
+    }else
+    {
+        [self sipCall:Mid_D sipName:nil];
+        
+    }
+    
+    
+    NSDate *  senddate=[NSDate date];
+    NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
+    [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *  locationString=[dateformatter stringFromDate:senddate];
+
+    
+     if ([strState isEqualToString:@"ds001"]) {
+    [[ShareWork sharedManager]DeviceUseMember:Mid_S object:@"self" deviceno:Mid_D belong:Mid_S starttime:locationString complete:^(BaseModel * model) {
+        [Defaluts setObject:model.content forKey:@"selfID"];
+        [Defaluts synchronize];
+
+        
+    }];
+     }else
+     {
+         
+         return;
+         
+     }
+    
     
     
     

@@ -10,6 +10,10 @@
 		34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */; };
 		34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC31E4AF6AC00D9D24D /* InCallViewController.m */; };
 		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
+		3445C0631E514E9100F579A6 /* FeedSetingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445C0621E514E9100F579A6 /* FeedSetingTableViewCell.m */; };
+		3445C0661E514EB700F579A6 /* ShareWork+feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445C0651E514EB700F579A6 /* ShareWork+feed.m */; };
+		3445C0691E514ED900F579A6 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445C0681E514ED900F579A6 /* FeedModel.m */; };
+		3445C06C1E514EFB00F579A6 /* ShareWork+Incall.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445C06B1E514EFB00F579A6 /* ShareWork+Incall.m */; };
 		3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 3468FF451E4857AF00DEBE4B /* ShareWork.m */; };
 		347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */; };
 		347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6EF1E4C6D91007FA2B0 /* UnbandViewController.m */; };
@@ -386,6 +390,14 @@
 		34196FC31E4AF6AC00D9D24D /* InCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InCallViewController.m; sourceTree = "<group>"; };
 		34196FC51E4AFA9400D9D24D /* ShareWork+device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+device.h"; sourceTree = "<group>"; };
 		34196FC61E4AFA9400D9D24D /* ShareWork+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+device.m"; sourceTree = "<group>"; };
+		3445C0611E514E9100F579A6 /* FeedSetingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedSetingTableViewCell.h; sourceTree = "<group>"; };
+		3445C0621E514E9100F579A6 /* FeedSetingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedSetingTableViewCell.m; sourceTree = "<group>"; };
+		3445C0641E514EB700F579A6 /* ShareWork+feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+feed.h"; sourceTree = "<group>"; };
+		3445C0651E514EB700F579A6 /* ShareWork+feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+feed.m"; sourceTree = "<group>"; };
+		3445C0671E514ED900F579A6 /* FeedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedModel.h; sourceTree = "<group>"; };
+		3445C0681E514ED900F579A6 /* FeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
+		3445C06A1E514EFB00F579A6 /* ShareWork+Incall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Incall.h"; sourceTree = "<group>"; };
+		3445C06B1E514EFB00F579A6 /* ShareWork+Incall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Incall.m"; sourceTree = "<group>"; };
 		3468FF441E4857AF00DEBE4B /* ShareWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareWork.h; sourceTree = "<group>"; };
 		3468FF451E4857AF00DEBE4B /* ShareWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareWork.m; sourceTree = "<group>"; };
 		347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
@@ -1309,11 +1321,21 @@
 			path = InCall;
 			sourceTree = "<group>";
 		};
+		3445C0601E514E9100F579A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3445C0611E514E9100F579A6 /* FeedSetingTableViewCell.h */,
+				3445C0621E514E9100F579A6 /* FeedSetingTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		347FF6EA1E4C6D91007FA2B0 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				347FF6EB1E4C6D91007FA2B0 /* FeedViewController.h */,
 				347FF6EC1E4C6D91007FA2B0 /* FeedViewController.m */,
+				3445C0601E514E9100F579A6 /* Views */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -1546,6 +1568,8 @@
 			children = (
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
+				3445C0671E514ED900F579A6 /* FeedModel.h */,
+				3445C0681E514ED900F579A6 /* FeedModel.m */,
 				7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */,
 				7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */,
 				34E15FA71E050B16004A65AB /* Base */,
@@ -1565,6 +1589,8 @@
 		34E15FDA1E050B16004A65AB /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				3445C0641E514EB700F579A6 /* ShareWork+feed.h */,
+				3445C0651E514EB700F579A6 /* ShareWork+feed.m */,
 				3468FF441E4857AF00DEBE4B /* ShareWork.h */,
 				3468FF451E4857AF00DEBE4B /* ShareWork.m */,
 				7D4A00991E4C100F00B5B40F /* ShareWork+Login.h */,
@@ -1575,6 +1601,8 @@
 				34196FC61E4AFA9400D9D24D /* ShareWork+device.m */,
 				7D5807861E4DBDA100D79D7E /* ShareWork+Morephotovideo.h */,
 				7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */,
+				3445C06A1E514EFB00F579A6 /* ShareWork+Incall.h */,
+				3445C06B1E514EFB00F579A6 /* ShareWork+Incall.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -3259,11 +3287,13 @@
 				7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */,
 				7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */,
 				34E164141E050B18004A65AB /* UIView+TapBlocks.m in Sources */,
+				3445C0631E514E9100F579A6 /* FeedSetingTableViewCell.m in Sources */,
 				3468FF461E4857AF00DEBE4B /* ShareWork.m in Sources */,
 				7D58077E1E4DB95E00D79D7E /* BaseGridViewController.m in Sources */,
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
 				34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */,
+				3445C0661E514EB700F579A6 /* ShareWork+feed.m in Sources */,
 				347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */,
 				34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */,
 				3496F9D11E04DF8E00744A1E /* funpaw.xcdatamodeld in Sources */,
@@ -3286,6 +3316,7 @@
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
 				347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
+				3445C06C1E514EFB00F579A6 /* ShareWork+Incall.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */,
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
@@ -3295,6 +3326,7 @@
 				347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				34A864551E49A07100AD6D8A /* BaseModel.m in Sources */,
+				3445C0691E514ED900F579A6 /* FeedModel.m in Sources */,
 				3496F9C51E04DF8E00744A1E /* main.m in Sources */,
 				347FF6F41E4C6D91007FA2B0 /* UnbandViewController.m in Sources */,
 			);
