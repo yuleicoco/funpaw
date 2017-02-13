@@ -22,7 +22,7 @@
 -(void)resetPasswordWith:(NSString *)email password:(NSString *)password complete:(void(^)(BaseModel *model))completeBlock;
 
 //修改密码
-
+-(void)modifyPasswordWithMid:(NSString *)mid password:(NSString *)password complete:(void(^)(BaseModel *model))completeBlock;
 
 
 

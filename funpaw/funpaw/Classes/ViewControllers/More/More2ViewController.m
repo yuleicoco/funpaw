@@ -1,29 +1,29 @@
 //
-//  MoreViewController.m
+//  More2ViewController.m
 //  funpaw
 //
-//  Created by czx on 2017/2/7.
+//  Created by czx on 2017/2/10.
 //  Copyright © 2017年 yulei. All rights reserved.
 //
 
-#import "MoreViewController.h"
+#import "More2ViewController.h"
 #import "ExchangePasswordViewController.h"
-
-@interface MoreViewController ()
+#import "PhotoViewController.h"
+@interface More2ViewController ()
 
 @end
 
-@implementation MoreViewController
+@implementation More2ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavTitle:NSLocalizedString(@"tabMore_title",nil)];
-    UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
-    signoutBtn.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:signoutBtn];
-    [signoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
-    self.view.backgroundColor =LIGHT_GRAY_COLOR;
+        [self setNavTitle:NSLocalizedString(@"tabMore_title",nil)];
+        UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
+        signoutBtn.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:signoutBtn];
+        [signoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+        self.view.backgroundColor =LIGHT_GRAY_COLOR;
 }
 
 -(void)setupView{
@@ -47,9 +47,9 @@
         make.left.equalTo(linleLabel1.superview);
         make.right.equalTo(linleLabel1.superview);
         make.height.mas_equalTo(0.5);
-        
+
     }];
-    
+
     UILabel * videoLabel = [[UILabel alloc]init];
     videoLabel.textColor = YELLOW_COLOR;
     videoLabel.font = [UIFont systemFontOfSize:18];
@@ -58,13 +58,13 @@
     [videoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(videoLabel.superview.mas_left).offset(12);
         make.top.equalTo(videoLabel.superview.mas_top).offset(20);
-        
-        
+
+
     }];
-    
+
     UIButton * videoBtn = [[UIButton alloc]init];
     videoBtn.backgroundColor = [UIColor clearColor];
-  
+
     [videoBtn addTarget:self action:@selector(videoButtonTouch) forControlEvents:UIControlEventTouchUpInside];
       [topView addSubview:videoBtn];
     [videoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -72,10 +72,43 @@
         make.right.equalTo(videoBtn.superview);
         make.top.equalTo(videoBtn.superview);
         make.bottom.equalTo(linleLabel1.mas_top);
-    
+
     }];
-    
+
+
+    UILabel * photoLabel = [[UILabel alloc]init];
+    photoLabel.text = @"Photo";
+    photoLabel.textColor = YELLOW_COLOR;
+    photoLabel.font = [UIFont systemFontOfSize:18];
+    [topView addSubview:photoLabel];
+    [photoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(photoLabel.superview.mas_left).offset(12);
+        make.top.equalTo(linleLabel1.mas_top).offset(20);
+
+    }];
+
+    UIButton * photoBtn = [[UIButton alloc]init];
+    photoBtn.backgroundColor = [UIColor clearColor];
+    [photoBtn addTarget:self action:@selector(photoButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:photoBtn];
+    [photoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(photoBtn.superview.mas_left);
+        make.right.equalTo(photoBtn.superview.mas_right);
+        make.top.equalTo(linleLabel1.mas_bottom);
+        make.bottom.equalTo(photoBtn.superview.mas_bottom);
+
+    }];
+
+
 }
+
+-(void)photoButtonTouch{
+    PhotoViewController * photoVc = [[PhotoViewController alloc]init];
+    [self.navigationController pushViewController:photoVc animated:NO];
+
+
+}
+
 
 -(void)videoButtonTouch{
     ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
@@ -86,23 +119,23 @@
 
 -(void)siggnoutButtonTouch{
   //  FuckLog(@"退出登录");
-    
+
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"me_tips", nil) preferredStyle:UIAlertControllerStyleAlert];
-    
+
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-        
+
+
     }]];
-    
+
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
+
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@NO];
         [[AccountManager sharedAccountManager]logout];
-        
+
         NSUserDefaults *userDefatluts = [NSUserDefaults standardUserDefaults];
         NSDictionary *dictionary = [userDefatluts dictionaryRepresentation];
      //   NSString * incodeNumStr = [userDefatluts objectForKey:@"incodeNum"];
-        
+
         for(NSString* key in [dictionary allKeys]){
             [userDefatluts removeObjectForKey:key];
             [userDefatluts synchronize];
@@ -111,23 +144,15 @@
        // [userDefatluts setObject:incodeNumStr forKey:@"incodeNum"];
     }]];
     [self presentViewController:alert animated:YES completion:nil];
-    
 
-    
+
+
     
 
 }
 
 
 
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
