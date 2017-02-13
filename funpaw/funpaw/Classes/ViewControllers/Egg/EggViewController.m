@@ -37,6 +37,9 @@
 @synthesize bgImage;
 @synthesize addBtn;
 @synthesize SbgImage;
+@synthesize Guideview;
+@synthesize IkonwBtn;
+
 
 
 
@@ -124,6 +127,9 @@
         [self checkDeviceStats];
     } userInfo:@"Fire" repeats:YES];
     [self checkDeviceStats];
+    // 检查是否提示
+    [self ChooseGuide];
+    
  
     
 }
@@ -142,7 +148,7 @@
         case SephoneCallOutgoingInit:{
             // 成功
             InCallViewController *   _incallVC =[[InCallViewController alloc]init];
-            
+            [_incallVC setCall:call];
             [self presentViewController:_incallVC animated:YES completion:nil];
             break;
         }
@@ -215,7 +221,7 @@
 - (void)checkDeviceStats
 {
    //MI16090000013020
-    [[ShareWork sharedManager]DeviceStats:@"MI17020000013124" complete:^(BaseModel * model) {
+    [[ShareWork sharedManager]DeviceStats:Mid_S complete:^(BaseModel * model) {
       
         if ([model.retCode isEqualToString:@"0000"]) {
             
@@ -273,6 +279,37 @@
     
     [self showBarButton:NAV_RIGHT imageName:@"1"];
     
+    
+    // 指导界面
+    Guideview =[UIImageView new];
+    Guideview.image =[UIImage imageNamed:@"setb"];
+    Guideview.userInteractionEnabled = YES;
+    Guideview.hidden = YES;
+    
+    [ApplicationDelegate.window addSubview:Guideview];
+    [Guideview mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(ApplicationDelegate.window.mas_centerY);
+        make.size.mas_equalTo(ApplicationDelegate.window);
+        
+    }];
+    
+    IkonwBtn =[UIButton new];
+    [IkonwBtn setImage:[UIImage imageNamed:@"konw"] forState:UIControlStateNormal];
+    [IkonwBtn addTarget:self action:@selector(disparrBtn:) forControlEvents:UIControlEventTouchUpInside];
+    IkonwBtn.hidden = YES;
+    
+    [Guideview addSubview:IkonwBtn];
+    
+    [IkonwBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(ApplicationDelegate.window).offset(191);
+        make.right.equalTo(ApplicationDelegate.window).offset(-79);
+        make.top.equalTo(@160);
+        make.height.equalTo(@40);
+        
+        
+        
+    }];
     
     // 背景图
     
@@ -381,6 +418,32 @@
     
 }
 
+//检查是否引导页
+-(void)ChooseGuide
+{
+    // 这个时候出现引导界面
+    if ([[Defaluts objectForKey:@"setimage"] isEqualToString:@"ok"]) {
+        IkonwBtn.hidden = NO;
+        Guideview.hidden = NO;
+        addBtn.hidden = YES;
+        [Defaluts removeObjectForKey:@"setimage"];
+        [Defaluts synchronize];
+        
+    }
+
+    
+    
+}
+// 知道按钮
+- (void)disparrBtn:(UIButton *)sender
+{
+    bgImage.hidden = NO;
+    [sender removeFromSuperview];
+    [Guideview removeFromSuperview];
+    
+    
+}
+
 
 // UI变化
 
@@ -410,11 +473,9 @@
 -(void)btn_add:(UIButton *)sender
 {
     
-//    BindingViewController * bindVC =[[BindingViewController alloc]init];
-//    [self.navigationController pushViewController:bindVC animated:NO];
+    BindingViewController * bindVC =[[BindingViewController alloc]init];
+    [self.navigationController pushViewController:bindVC animated:NO];
     
-    InCallViewController * incall =[[InCallViewController alloc]init];
-    [self presentViewController:incall animated:NO completion:nil];
     
     
     

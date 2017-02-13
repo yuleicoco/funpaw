@@ -105,7 +105,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
             // 3G网可用。
         case ReachableViaWWAN:
             hasNetwork = YES;
-            [self showWarningTip:NSLocalizedString(@"INFO_ReachableViaWWAN", nil)];
+           // [self showWarningTip:NSLocalizedString(@"INFO_ReachableViaWWAN", nil)];
             break;
     }
     return hasNetwork;
@@ -187,7 +187,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     {
         [btnBind setTitle:NSLocalizedString(@"solveaBinding",nil) forState:UIControlStateNormal];
         btnBind.enabled = TRUE;
-        btnBind.backgroundColor = GREEN_COLOR;
+        btnBind.backgroundColor = YELLOW_COLOR;
         
         
         
@@ -330,7 +330,8 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
             }else
             {
                 // 错误提示
-                // [self wariring];
+                [self showWarningTip:model.retDesc];
+                
                 
                 return ;
                 

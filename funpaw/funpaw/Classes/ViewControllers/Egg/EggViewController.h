@@ -15,6 +15,9 @@
 @property(nonatomic,strong)UIImageView * bgImage;
 @property(nonatomic,strong)UIButton * addBtn;
 @property(nonatomic,strong)UIImageView * SbgImage;
+@property(nonatomic,strong)UIButton * IkonwBtn;
+@property(nonatomic,strong)UIImageView * Guideview;
+
 
 
 
