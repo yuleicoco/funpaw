@@ -383,6 +383,10 @@
 		7D58079A1E4DC76B00D79D7E /* HeaderViewCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D5807991E4DC76B00D79D7E /* HeaderViewCollection.xib */; };
 		7D71EAB11E51877F00417173 /* LargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EAAF1E51877F00417173 /* LargeViewController.m */; };
 		7D71EAB21E51877F00417173 /* LargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D71EAB01E51877F00417173 /* LargeViewController.xib */; };
+		7D71EAB51E51B5D400417173 /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EAB41E51B5D400417173 /* RepositoryViewController.m */; };
+		7D71EAB81E51B62900417173 /* ReposialreaduploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EAB71E51B62900417173 /* ReposialreaduploadViewController.m */; };
+		7D71EABB1E51B64600417173 /* ReposinotuploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EABA1E51B64600417173 /* ReposinotuploadViewController.m */; };
+		7D71EABE1E51BD7A00417173 /* RecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71EABD1E51BD7A00417173 /* RecordModel.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1246,6 +1250,14 @@
 		7D71EAAE1E51877F00417173 /* LargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeViewController.h; sourceTree = "<group>"; };
 		7D71EAAF1E51877F00417173 /* LargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeViewController.m; sourceTree = "<group>"; };
 		7D71EAB01E51877F00417173 /* LargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeViewController.xib; sourceTree = "<group>"; };
+		7D71EAB31E51B5D400417173 /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
+		7D71EAB41E51B5D400417173 /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
+		7D71EAB61E51B62900417173 /* ReposialreaduploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposialreaduploadViewController.h; sourceTree = "<group>"; };
+		7D71EAB71E51B62900417173 /* ReposialreaduploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposialreaduploadViewController.m; sourceTree = "<group>"; };
+		7D71EAB91E51B64600417173 /* ReposinotuploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposinotuploadViewController.h; sourceTree = "<group>"; };
+		7D71EABA1E51B64600417173 /* ReposinotuploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposinotuploadViewController.m; sourceTree = "<group>"; };
+		7D71EABC1E51BD7A00417173 /* RecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordModel.h; sourceTree = "<group>"; };
+		7D71EABD1E51BD7A00417173 /* RecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordModel.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1564,6 +1576,8 @@
 		34E15FA61E050B16004A65AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D71EABC1E51BD7A00417173 /* RecordModel.h */,
+				7D71EABD1E51BD7A00417173 /* RecordModel.m */,
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */,
@@ -2852,6 +2866,12 @@
 		7D4A00A21E4C752800B5B40F /* VIdeo */ = {
 			isa = PBXGroup;
 			children = (
+				7D71EAB31E51B5D400417173 /* RepositoryViewController.h */,
+				7D71EAB41E51B5D400417173 /* RepositoryViewController.m */,
+				7D71EAB61E51B62900417173 /* ReposialreaduploadViewController.h */,
+				7D71EAB71E51B62900417173 /* ReposialreaduploadViewController.m */,
+				7D71EAB91E51B64600417173 /* ReposinotuploadViewController.h */,
+				7D71EABA1E51B64600417173 /* ReposinotuploadViewController.m */,
 			);
 			path = VIdeo;
 			sourceTree = "<group>";
@@ -3287,7 +3307,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D71EABE1E51BD7A00417173 /* RecordModel.m in Sources */,
+				7D71EAB81E51B62900417173 /* ReposialreaduploadViewController.m in Sources */,
 				34E164151E050B18004A65AB /* UIViewController+HUD.m in Sources */,
+				7D71EABB1E51B64600417173 /* ReposinotuploadViewController.m in Sources */,
+				7D71EAB51E51B5D400417173 /* RepositoryViewController.m in Sources */,
 				7D5807921E4DC41500D79D7E /* FeedSetingTableViewCell.m in Sources */,
 				34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */,
 				34E164121E050B18004A65AB /* UIImage-Extensions.m in Sources */,

@@ -13,6 +13,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "BaseModel.h"
 #import "PhotoGrapgModel.h"
+#import "RecordModel.h"
 
 //请求成功回调block
 typedef void (^requestSuccessBlock)(BaseModel *model);
