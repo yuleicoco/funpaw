@@ -89,7 +89,7 @@
     params[@"mid"] = mid;
     params[@"filename"] = filename;
     
-    [self requestWithMethod:POST WithPath:@"common=delPhotoGraph" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+    [self requestWithMethod:POST WithPath:@"common=delVideo" WithParams:params WithSuccessBlock:^(BaseModel *model) {
         
         if (model) {
             

@@ -31,20 +31,42 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 @implementation ReposialreaduploadViewController
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    _isSelect = NO;
-      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua) name:@"yishangchuan" object:nil];
+       //yishangchuanbianbian
+    
 }
 -(void)yishangchuanshua{
-    _isSelect = !_isSelect;
+    //_isSelect = !_isSelect;
+    if (_isSelect == YES) {
+        _isSelect = NO;
+    }else{
+        _isSelect = YES;
+    }
+    
     [self.collectionView reloadData];
 }
+-(void)yishangchuanshua231{
+    _isSelect = NO;
+     [self.collectionView reloadData];
+
+}
+
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     //[self setNavTitle:@"已上传"];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self showBarButton:NAV_RIGHT title:@"dadad" fontColor:[UIColor blackColor] hide:NO];
+   // [self showBarButton:NAV_RIGHT title:@"dadad" fontColor:[UIColor blackColor] hide:NO];
+    
+    _isSelect = NO;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua) name:@"yishangchuan" object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua231) name:@"yishangchuanbianbian" object:nil];
+    
+
+    
+    
 }
 -(void)setupData{
     [super setupData];
@@ -59,7 +81,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     _deleteBtn.backgroundColor = YELLOW_COLOR;
     [_deleteBtn setTitle:@"Delete" forState:UIControlStateNormal];
     [_deleteBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
- //   [_deleteBtn addTarget:self action:@selector(deleteButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [_deleteBtn addTarget:self action:@selector(deleteButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_deleteBtn];
     [_deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_deleteBtn.superview);
@@ -192,11 +214,15 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     UITapGestureRecognizer *tapMYP = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onVideo:)];
     [cell.imageV addGestureRecognizer:tapMYP];
     
-    if (_isSelect == YES) {
-        cell.rightBtn.hidden = NO;
-    }else{
+    if (_isSelect == NO) {
         cell.rightBtn.hidden = YES;
+    }else{
+        cell.rightBtn.hidden = NO;
     }
+//    if (_isSelect == nil) {
+//        cell.rightBtn.hidden = NO;
+//    }
+    
     cell.rightBtn.selected = NO;
     
     
@@ -331,29 +357,29 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     }
 }
 
-//-(void)deleteButtonTouch{
-//    
-//    // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
-//    NSMutableString * filenameStr = [[NSMutableString alloc]init];
-//    
-//    if (deleteOrUpdateArr.count == 1) {
-//        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
-//        [filenameStr appendFormat:@"'%@'",str];
-//        
-//        
-//    }else{
-//        for (int i = 0; i < deleteOrUpdateArr.count; i++) {
-//            NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
-//            if (i == deleteOrUpdateArr.count - 1) {
-//                [filenameStr appendFormat:@"'%@'",strrr];
-//            }else{
-//                [filenameStr appendFormat:@"'%@',",strrr];
-//            }
-//            
-//        }
-//        
-//    }
-//    
+-(void)deleteButtonTouch{
+    
+    // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
+    NSMutableString * filenameStr = [[NSMutableString alloc]init];
+    
+    if (deleteOrUpdateArr.count == 1) {
+        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
+        [filenameStr appendFormat:@"'%@'",str];
+        
+        
+    }else{
+        for (int i = 0; i < deleteOrUpdateArr.count; i++) {
+            NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
+            if (i == deleteOrUpdateArr.count - 1) {
+                [filenameStr appendFormat:@"'%@'",strrr];
+            }else{
+                [filenameStr appendFormat:@"'%@',",strrr];
+            }
+            
+        }
+        
+    }
+    
 //    [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
 //        if (model) {
 //            //[self initRefreshView];
@@ -364,9 +390,20 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 //        }
 //        
 //    }];
-//
-//    
-//}
+
+    [[ShareWork sharedManager]delVideoWithMid:Mid_S filename:filenameStr complete:^(BaseModel *model) {
+        if (model) {
+            //[self initRefreshView];
+            _isSelect = NO;
+            _deleteBtn.hidden = YES;
+            [self initRefreshView];
+              [[NSNotificationCenter defaultCenter]postNotificationName:@"shangchuanbutton" object:nil];
+            
+        }
+
+    }];
+    
+}
 
 
 

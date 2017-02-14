@@ -41,7 +41,23 @@
     [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
     
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //shangchuanbutton
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(buttonBian) name:@"shangchuanbutton" object:nil];
+}
+-(void)buttonBian{
+    _isselect = !_isselect;
+    if (_isselect == NO) {
+        [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    }else{
+        [self showBarButton:1 title:@"cancel" fontColor:[UIColor whiteColor] hide:NO];
+    }
+}
+
+
 -(void)doRightButtonTouch{
+
     _isselect = !_isselect;
     if (_isselect == NO) {
         [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
@@ -53,10 +69,10 @@
         //已上传
          [[NSNotificationCenter defaultCenter]postNotificationName:@"yishangchuan" object:nil];
     }else{
-//    [self showBarButton:1 title:@"dada22" fontColor:[UIColor whiteColor] hide:NO];
-        //未上传
-        
-        
+////    [self showBarButton:1 title:@"dada22" fontColor:[UIColor whiteColor] hide:NO];
+//        //未上传
+//        
+//        
     }
 
 
@@ -117,6 +133,10 @@
 
 -(void)leftbuttonTouch{
     _isupload = NO;
+    [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    //_isselect = !_isselect;
+     [[NSNotificationCenter defaultCenter]postNotificationName:@"yishangchuanbianbian" object:nil];
+    
     _leftBtn.selected = YES;
     _rightBtn.selected = NO;
     [UIView animateWithDuration:0.3 animations:^{
@@ -128,6 +148,8 @@
 
 -(void)rightButtonTouch{
     _isupload = YES;
+    [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    //_isselect = !_isselect;
     _leftBtn.selected = NO;
     _rightBtn.selected = YES;
     [UIView animateWithDuration:0.3 animations:^{
