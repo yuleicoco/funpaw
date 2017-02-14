@@ -39,8 +39,8 @@
     if (!_eggVc) {
         EggViewController * vc = [[EggViewController alloc]init];
         vc.tabBarItem =[[UITabBarItem alloc]initWithTitle:nil
-                                                    image:[[UIImage imageNamed:@"left"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
-                                                        selectedImage:[[UIImage imageNamed:@"right"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                                                    image:[[UIImage imageNamed:@"egg_device_n"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+                                                        selectedImage:[[UIImage imageNamed:@"egg_device"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         
         _eggVc = [[UINavigationController alloc]initWithRootViewController:vc];
@@ -53,7 +53,7 @@
     if ((!_moreVc)) {
         More2ViewController * vc = [[More2ViewController alloc]init];
         vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil
-                                                     image:[[UIImage imageNamed:@"right"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"left"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                                                     image:[[UIImage imageNamed:@"egg_more"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"egg_more_s"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         _moreVc =[[UINavigationController alloc]initWithRootViewController:vc];
     }

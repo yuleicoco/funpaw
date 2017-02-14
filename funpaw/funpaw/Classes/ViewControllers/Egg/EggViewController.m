@@ -114,11 +114,16 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.translucent = NO;
+    
     /*
-     CGRect rectTab1 =  self.tabBarController.tabBar.frame;
-     CGRect rectTab2  = self.navigationController.navigationBar.frame;
-     CGRect  rectTab3 = [[UIApplication sharedApplication] statusBarFrame];
-     */
+     CGRect rectTab1 =  self.tabBarController.tabBar.frame;//49
+     CGRect rectTab2  = self.navigationController.navigationBar.frame;//44
+     CGRect  rectTab3 = [[UIApplication sharedApplication] statusBarFrame];//20
+   */
+    
+    
+    
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callUpdate:) name:kSephoneCallUpdate object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registrationUpdate:) name:kSephoneRegistrationUpdate object:nil];
@@ -322,8 +327,8 @@
     [bgImage mas_makeConstraints:^(MASConstraintMaker *make) {
         
        // make.width.mas_equalTo(self.view.mas_width);
-        make.top.equalTo(self.view.mas_top).offset(-20);
-        make.bottom.equalTo(self.view.mas_bottom).offset(49);
+        make.top.equalTo(self.view.mas_top).offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-49);
         make.right.left.equalTo(@0);
         
        
@@ -332,7 +337,8 @@
     
     // 添加按钮
     addBtn =[UIButton new];
-    [addBtn setImage:[UIImage imageNamed:@"egg_add"] forState:UIControlStateNormal];
+    [addBtn setImage:[UIImage imageNamed:@"egg_add_bin"] forState:UIControlStateNormal];
+    addBtn.hidden = YES;
     [addBtn addTarget:self action:@selector(btn_add:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addBtn];
     
@@ -358,10 +364,9 @@
     
     [openVideoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.height.equalTo(@45);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-90);
-        make.left.equalTo(self.view.mas_left).with.offset(18);
-        make.right.equalTo(self.view.mas_right).with.offset(-18);
+        make.height.width.equalTo(@62);
+        make.bottom.equalTo(self.view.mas_centerY).offset(91);
+        make.right.equalTo(self.view.mas_right).with.offset(-35);
         
     }];
     
@@ -369,13 +374,13 @@
     SbgImage =[UIImageView new];
     SbgImage.image =[UIImage imageNamed:@"egg_ prompt"];
     SbgImage.userInteractionEnabled = YES;
-    SbgImage.hidden = NO;
+    SbgImage.hidden = YES;
     [self.view addSubview:SbgImage];
     
     [SbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
     
-        make.size.mas_equalTo(CGSizeMake(125, 129));
-        make.right.equalTo(self.view).offset(-11);
+        make.size.mas_equalTo(CGSizeMake(110, 129));
+        make.right.equalTo(self.view).offset(-1);
         make.top.equalTo(self.view).offset(1);
         
     }];
@@ -463,24 +468,24 @@
     //设备在线
     if ([strState isEqualToString:@"ds001"]) {
         
-        [bgImage setImage:[UIImage imageNamed:@""]];
+        [bgImage setImage:[UIImage imageNamed:@"egg_online"]];
         
     }
     //离线
     if ([strState isEqualToString:@"ds002"]) {
         
-         [bgImage setImage:[UIImage imageNamed:@""]];
+         [bgImage setImage:[UIImage imageNamed:@"egg_offline"]];
         
     }
     // 通话中
     if ([strState isEqualToString:@"ds003"]) {
         
-        [bgImage setImage:[UIImage imageNamed:@""]];
+        [bgImage setImage:[UIImage imageNamed:@"egg_busy"]];
         }
     //正在上传文件
     if ([strState isEqualToString:@"ds004"]) {
         
-        [bgImage setImage:[UIImage imageNamed:@""]];
+        [bgImage setImage:[UIImage imageNamed:@"egg_busy"]];
         
     }
         
@@ -495,7 +500,7 @@
 -(void)handletapPressGesture:(UITapGestureRecognizer*)sender{
     
     [UIView animateWithDuration:0.5 animations:^{
-        SbgImage.alpha=0.0;
+        SbgImage.hidden = YES;
     } completion:^(BOOL finished) {
         // [setImage removeFromSuperview];
     }];
@@ -511,8 +516,27 @@
 // +号功能显示
 - (void)showBarBtn:(BOOL)hide
 {
-      [self showBarButton:NAV_RIGHT imageName:@"1" hide:hide];
-      SbgImage.hidden = hide;
+      [self showBarButton:NAV_RIGHT imageName:@"egg_add_nav" hide:hide];
+    
+
+    
+    if (hide) {
+        
+        openVideoBtn.hidden = YES;
+        
+    }else
+    {
+        openVideoBtn.hidden = NO;
+        if ([strState isEqualToString:@"ds001"]) {
+             [openVideoBtn setImage:[UIImage imageNamed:@"egg_open"] forState:UIControlStateNormal];
+            
+        }else{
+        
+        [openVideoBtn setImage:[UIImage imageNamed:@"egg_open_offine"] forState:UIControlStateNormal];
+            openVideoBtn.userInteractionEnabled = NO;
+        
+        }
+    }
     
     
 }
@@ -521,15 +545,13 @@
 - (void)doRightButtonTouch
 {
     
-    if (SbgImage.alpha<1) {
-        SbgImage.alpha = 1;
+    if (SbgImage.hidden) {
         SbgImage.hidden = NO;
         
     }else
     {
         
         [UIView animateWithDuration:0.5 animations:^{
-            SbgImage.alpha=0.0;
             SbgImage.hidden = YES;
             
         } completion:^(BOOL finished) {
@@ -611,6 +633,9 @@
         [self sipCall:Mid_D sipName:nil];
         
     }
+    
+    
+
     
     
     NSDate *  senddate=[NSDate date];

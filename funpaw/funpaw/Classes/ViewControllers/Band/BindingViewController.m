@@ -149,9 +149,9 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     UIView * inCode =[UIView new];
     devNum.backgroundColor = [UIColor whiteColor];
     inCode.backgroundColor = [UIColor whiteColor];
-    devNum.layer.cornerRadius =4;
-    devNum.layer.borderWidth =0.4;
-    devNum.layer.borderColor =GRAY_COLOR.CGColor;
+    devNum.layer.cornerRadius =28;
+    devNum.layer.borderWidth =1;
+    devNum.layer.borderColor =RED_COLOR.CGColor;
     inCode.layer.cornerRadius =4;
     inCode.layer.borderWidth =0.4;
     inCode.layer.borderColor = GRAY_COLOR.CGColor;
@@ -254,6 +254,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     }
     
     incodeTF.secureTextEntry = TRUE;
+    deviceTF.secureTextEntry = TRUE;
     deviceTF.enabled = NO;
     incodeTF.enabled = NO;
     
