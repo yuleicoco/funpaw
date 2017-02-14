@@ -20,6 +20,13 @@
 		347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6F21E4C6D91007FA2B0 /* WifiViewController.m */; };
 		347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347FF6F81E4C6E18007FA2B0 /* BindingViewController.m */; };
 		347FF6FD1E4C7058007FA2B0 /* English_tips.png in Resources */ = {isa = PBXBuildFile; fileRef = 347FF6FC1E4C7058007FA2B0 /* English_tips.png */; };
+		348A2D651E52B10B00B85D7B /* RecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 348A2D641E52B10B00B85D7B /* RecordModel.m */; };
+		348A2D6A1E52B16400B85D7B /* HeaderViewCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348A2D661E52B16400B85D7B /* HeaderViewCollection.xib */; };
+		348A2D6B1E52B16400B85D7B /* LargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348A2D681E52B16400B85D7B /* LargeViewController.m */; };
+		348A2D6C1E52B16400B85D7B /* LargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348A2D691E52B16400B85D7B /* LargeViewController.xib */; };
+		348A2D731E52B18000B85D7B /* ReposialreaduploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348A2D6E1E52B18000B85D7B /* ReposialreaduploadViewController.m */; };
+		348A2D741E52B18000B85D7B /* ReposinotuploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348A2D701E52B18000B85D7B /* ReposinotuploadViewController.m */; };
+		348A2D751E52B18000B85D7B /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 348A2D721E52B18000B85D7B /* RepositoryViewController.m */; };
 		3496F9C51E04DF8E00744A1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9C41E04DF8E00744A1E /* main.m */; };
 		3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3496F9CA1E04DF8E00744A1E /* ViewController.m */; };
 		3496F9CE1E04DF8E00744A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3496F9CC1E04DF8E00744A1E /* Main.storyboard */; };
@@ -409,6 +416,18 @@
 		347FF6F71E4C6E18007FA2B0 /* BindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingViewController.h; sourceTree = "<group>"; };
 		347FF6F81E4C6E18007FA2B0 /* BindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingViewController.m; sourceTree = "<group>"; };
 		347FF6FC1E4C7058007FA2B0 /* English_tips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = English_tips.png; path = ../English_tips.png; sourceTree = "<group>"; };
+		348A2D631E52B10B00B85D7B /* RecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordModel.h; sourceTree = "<group>"; };
+		348A2D641E52B10B00B85D7B /* RecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordModel.m; sourceTree = "<group>"; };
+		348A2D661E52B16400B85D7B /* HeaderViewCollection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderViewCollection.xib; sourceTree = "<group>"; };
+		348A2D671E52B16400B85D7B /* LargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeViewController.h; sourceTree = "<group>"; };
+		348A2D681E52B16400B85D7B /* LargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeViewController.m; sourceTree = "<group>"; };
+		348A2D691E52B16400B85D7B /* LargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeViewController.xib; sourceTree = "<group>"; };
+		348A2D6D1E52B18000B85D7B /* ReposialreaduploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposialreaduploadViewController.h; sourceTree = "<group>"; };
+		348A2D6E1E52B18000B85D7B /* ReposialreaduploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposialreaduploadViewController.m; sourceTree = "<group>"; };
+		348A2D6F1E52B18000B85D7B /* ReposinotuploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposinotuploadViewController.h; sourceTree = "<group>"; };
+		348A2D701E52B18000B85D7B /* ReposinotuploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposinotuploadViewController.m; sourceTree = "<group>"; };
+		348A2D711E52B18000B85D7B /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
+		348A2D721E52B18000B85D7B /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
 		3496F9C01E04DF8E00744A1E /* funpaw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = funpaw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3496F9C41E04DF8E00744A1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3496F9C91E04DF8E00744A1E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -1566,6 +1585,8 @@
 		34E15FA61E050B16004A65AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				348A2D631E52B10B00B85D7B /* RecordModel.h */,
+				348A2D641E52B10B00B85D7B /* RecordModel.m */,
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				3445C0671E514ED900F579A6 /* FeedModel.h */,
@@ -2854,6 +2875,12 @@
 		7D4A00A21E4C752800B5B40F /* VIdeo */ = {
 			isa = PBXGroup;
 			children = (
+				348A2D6D1E52B18000B85D7B /* ReposialreaduploadViewController.h */,
+				348A2D6E1E52B18000B85D7B /* ReposialreaduploadViewController.m */,
+				348A2D6F1E52B18000B85D7B /* ReposinotuploadViewController.h */,
+				348A2D701E52B18000B85D7B /* ReposinotuploadViewController.m */,
+				348A2D711E52B18000B85D7B /* RepositoryViewController.h */,
+				348A2D721E52B18000B85D7B /* RepositoryViewController.m */,
 			);
 			path = VIdeo;
 			sourceTree = "<group>";
@@ -2879,6 +2906,10 @@
 		7D5807821E4DBD4C00D79D7E /* VIews */ = {
 			isa = PBXGroup;
 			children = (
+				348A2D661E52B16400B85D7B /* HeaderViewCollection.xib */,
+				348A2D671E52B16400B85D7B /* LargeViewController.h */,
+				348A2D681E52B16400B85D7B /* LargeViewController.m */,
+				348A2D691E52B16400B85D7B /* LargeViewController.xib */,
 				7D5807831E4DBD5800D79D7E /* MyVideoCollectionViewCell.h */,
 				7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */,
 			);
@@ -3057,6 +3088,7 @@
 				34E165C01E050B19004A65AB /* tab_near_normal@3x.png in Resources */,
 				34E165701E050B19004A65AB /* message.png in Resources */,
 				34E166641E0520F1004A65AB /* Ltopbtn.png in Resources */,
+				348A2D6A1E52B16400B85D7B /* HeaderViewCollection.xib in Resources */,
 				34E165521E050B19004A65AB /* delect_guize.png in Resources */,
 				34E165681E050B19004A65AB /* left_on.png in Resources */,
 				34E164951E050B18004A65AB /* stopcall-red.png in Resources */,
@@ -3175,6 +3207,7 @@
 				34E166541E0520F1004A65AB /* konw.png in Resources */,
 				34E1644F1E050B18004A65AB /* sephonerc-factory in Resources */,
 				34E164931E050B18004A65AB /* status-orange.png in Resources */,
+				348A2D6C1E52B16400B85D7B /* LargeViewController.xib in Resources */,
 				34E164501E050B18004A65AB /* sephonerc-factory~ipad in Resources */,
 				34E166701E0520F1004A65AB /* xiala@2x.png in Resources */,
 				34E165641E050B19004A65AB /* kuang_off.png in Resources */,
@@ -3274,10 +3307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				348A2D731E52B18000B85D7B /* ReposialreaduploadViewController.m in Sources */,
 				34E164151E050B18004A65AB /* UIViewController+HUD.m in Sources */,
+				348A2D741E52B18000B85D7B /* ReposinotuploadViewController.m in Sources */,
 				34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */,
 				34E164121E050B18004A65AB /* UIImage-Extensions.m in Sources */,
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
+				348A2D6B1E52B16400B85D7B /* LargeViewController.m in Sources */,
 				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
 				7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */,
@@ -3311,6 +3347,7 @@
 				34E1640C1E050B18004A65AB /* AppDelegate.m in Sources */,
 				34E1640F1E050B18004A65AB /* UIActionSheet+Blocks.m in Sources */,
 				34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */,
+				348A2D751E52B18000B85D7B /* RepositoryViewController.m in Sources */,
 				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
 				34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */,
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
@@ -3322,6 +3359,7 @@
 				34E164521E050B18004A65AB /* SephoneUtils.m in Sources */,
 				7D2D583D1E49A5A30086A823 /* MainTabViewController.m in Sources */,
 				7D0FCE781E4AFDD7009E3E21 /* RegiestViewController.m in Sources */,
+				348A2D651E52B10B00B85D7B /* RecordModel.m in Sources */,
 				7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */,
 				347FF6F91E4C6E18007FA2B0 /* BindingViewController.m in Sources */,
 				34E164A61E050B18004A65AB /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
