@@ -21,6 +21,15 @@
 //删除录像
 -(void)delVideoWithMid:(NSString *)mid filename:(NSString *)filename complete:(void (^)(BaseModel * model))completeBlock;
 
+//上传录像
+-(void)uploadVideoWithMid:(NSString *)mid deviceno:(NSString *)deviceno termid:(NSString *)termid filename:(NSString *)filename complete:(void (^)(BaseModel * model))completeBlock;
+
+//查询录像上传进度
+-(void)queryTaskWithTid:(NSString *)tid complete:(void (^)(BaseModel * model))completeBlock;
+
+
+
 
 
 @end
+

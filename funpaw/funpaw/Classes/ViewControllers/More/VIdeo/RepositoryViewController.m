@@ -72,7 +72,9 @@
 ////    [self showBarButton:1 title:@"dada22" fontColor:[UIColor whiteColor] hide:NO];
 //        //未上传
 //        
-//        
+//
+         [[NSNotificationCenter defaultCenter]postNotificationName:@"weishangchuan" object:nil];
+        
     }
 
 
@@ -134,7 +136,7 @@
 -(void)leftbuttonTouch{
     _isupload = NO;
     [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
-    //_isselect = !_isselect;
+    _isselect = NO;
      [[NSNotificationCenter defaultCenter]postNotificationName:@"yishangchuanbianbian" object:nil];
     
     _leftBtn.selected = YES;
@@ -149,9 +151,10 @@
 -(void)rightButtonTouch{
     _isupload = YES;
     [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
-    //_isselect = !_isselect;
+    _isselect = NO;
+     [[NSNotificationCenter defaultCenter]postNotificationName:@"weishangchuanbianbian" object:nil];
     _leftBtn.selected = NO;
-    _rightBtn.selected = YES;
+    _rightBtn.selected = NO;
     [UIView animateWithDuration:0.3 animations:^{
         _lineLabel.frame = CGRectMake(202 * W_Wide_Zoom, 38 * W_Hight_Zoom, 50 * W_Wide_Zoom, 1 * W_Hight_Zoom);
         

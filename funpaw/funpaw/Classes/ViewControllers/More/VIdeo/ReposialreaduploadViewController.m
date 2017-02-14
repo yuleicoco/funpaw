@@ -45,8 +45,10 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     [self.collectionView reloadData];
 }
 -(void)yishangchuanshua231{
+    [deleteOrUpdateArr removeAllObjects];
     _isSelect = NO;
      [self.collectionView reloadData];
+    _deleteBtn.hidden = YES;
 
 }
 
@@ -63,9 +65,6 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua) name:@"yishangchuan" object:nil];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua231) name:@"yishangchuanbianbian" object:nil];
-    
-
-    
     
 }
 -(void)setupData{
@@ -117,7 +116,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 
 -(void)loadDataSourceWithPage:(int)page{
       [deleteOrUpdateArr removeAllObjects];
-    [[ShareWork sharedManager]getVideoWithMid:Mid_S status:@"0" page:page complete:^(BaseModel *model) {
+    [[ShareWork sharedManager]getVideoWithMid:Mid_S status:@"1" page:page complete:^(BaseModel *model) {
         if (model) {
             if (page == START_PAGE_INDEX) {
                 [self.dataSource removeAllObjects];
