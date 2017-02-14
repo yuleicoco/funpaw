@@ -1,21 +1,22 @@
 //
-//  PhotoViewController.m
+//  ReposialreaduploadViewController.m
 //  funpaw
 //
-//  Created by czx on 2017/2/10.
+//  Created by czx on 2017/2/13.
 //  Copyright © 2017年 yulei. All rights reserved.
 //
 
-#import "PhotoViewController.h"
+#import "ReposialreaduploadViewController.h"
 #import "MyVideoCollectionViewCell.h"
 #import "ShareWork+Morephotovideo.h"
-#import "PhotoGrapgModel.h"
+#import "RecordModel.h"
 #import "LargeViewController.h"
 
 static NSString *kfooterIdentifier = @"footerIdentifier";
 static NSString *kheaderIdentifier = @"headerIdentifier";
 static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
-@interface PhotoViewController ()
+
+@interface ReposialreaduploadViewController ()
 {
     NSMutableArray * deleteOrUpdateArr;
     BOOL _isSelect;
@@ -24,41 +25,33 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 @property (nonatomic,strong)UIButton * rightBtn;
 @property (nonatomic,strong)UIButton * deleteBtn;
 
+
 @end
 
-@implementation PhotoViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = LIGHT_GRAY_COLOR;
+@implementation ReposialreaduploadViewController
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     _isSelect = NO;
-    [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor blueColor] hide:NO];
-    
+      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(yishangchuanshua) name:@"yishangchuan" object:nil];
 }
--(void)setupData{
-    [super setupData];
-        deleteOrUpdateArr =[[NSMutableArray alloc]init];
-    [self.dataSource addObject:[[PhotoGrapgModel alloc] init]];
-
-}
--(void)doRightButtonTouch{
-    [deleteOrUpdateArr removeAllObjects];
+-(void)yishangchuanshua{
     _isSelect = !_isSelect;
-    if (_isSelect == YES) {
-        [self showBarButton:NAV_RIGHT title:@"dance" fontColor:[UIColor redColor] hide:NO];
-       // _deleteBtn.hidden = NO;
-    }else{
-        [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor blueColor] hide:NO];
-        _deleteBtn.hidden = YES;
-    }
     [self.collectionView reloadData];
 }
 
 
-
-
-
-
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //[self setNavTitle:@"已上传"];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self showBarButton:NAV_RIGHT title:@"dadad" fontColor:[UIColor blackColor] hide:NO];
+}
+-(void)setupData{
+    [super setupData];
+    deleteOrUpdateArr =[[NSMutableArray alloc]init];
+    [self.dataSource addObject:[[RecordModel alloc] init]];
+    
+}
 -(void)setupView{
     [super setupView];
     
@@ -66,7 +59,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     _deleteBtn.backgroundColor = YELLOW_COLOR;
     [_deleteBtn setTitle:@"Delete" forState:UIControlStateNormal];
     [_deleteBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [_deleteBtn addTarget:self action:@selector(deleteButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+ //   [_deleteBtn addTarget:self action:@selector(deleteButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_deleteBtn];
     [_deleteBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_deleteBtn.superview);
@@ -76,7 +69,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     }];
     
     _deleteBtn.hidden = YES;
-
+    
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.collectionView.superview);
         make.right.equalTo(self.collectionView.superview);
@@ -97,23 +90,23 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     self.collectionView.backgroundColor =[UIColor whiteColor];
     
     [self initRefreshView];
-
+    
 }
 
-
 -(void)loadDataSourceWithPage:(int)page{
-    [deleteOrUpdateArr removeAllObjects];
-    [[ShareWork sharedManager]getPhotoGraphWithMid:[AccountManager sharedAccountManager].loginModel.mid page:page complete:^(BaseModel *model) {
+      [deleteOrUpdateArr removeAllObjects];
+    [[ShareWork sharedManager]getVideoWithMid:Mid_S status:@"0" page:page complete:^(BaseModel *model) {
         if (model) {
             if (page == START_PAGE_INDEX) {
                 [self.dataSource removeAllObjects];
-                [self.dataSource addObject:[[PhotoGrapgModel alloc] init]];
+                [self.dataSource addObject:[[RecordModel alloc] init]];
             }
             
-            for (PhotoGrapgModel * photoModel in model.list) {
+            for (RecordModel * photoModel in model.list) {
                 photoModel.networkaddressArray = [photoModel.networkaddress componentsSeparatedByString:@","];
-                photoModel.imagenameArray = [photoModel.imagename componentsSeparatedByString:@","];
+                photoModel.thumbailsArray = [photoModel.thumbnails componentsSeparatedByString:@","];
                 //   recordModel.typeArray = [recordModel.type componentsSeparatedByString:@","];
+                photoModel.filenameArray = [photoModel.filename componentsSeparatedByString:@"," ];
             }
             
             if (model.list.count == 0) {
@@ -135,10 +128,14 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         [self.collectionView reloadData];
         
         
+        
+        
     }];
 
 
+
 }
+
 
 #pragma Mark  --- collectionDelegate
 
@@ -149,9 +146,9 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         return 0;
     }
     
-    PhotoGrapgModel *model = self.dataSource[section];
+     RecordModel *model = self.dataSource[section];
     
-    return model.imagenameArray.count;
+    return model.thumbailsArray.count;
     
 }
 
@@ -169,7 +166,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 //定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(5, 5, 5,5);
-
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -178,10 +175,10 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         return nil;
     }
     
-    PhotoGrapgModel *model = self.dataSource[indexPath.section];
+    RecordModel *model = self.dataSource[indexPath.section];
     
     MyVideoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageId" forIndexPath:indexPath];
-    [cell.imageV sd_setImageWithURL:[NSURL URLWithString:model.networkaddressArray[indexPath.row]] placeholderImage:[UIImage imageNamed:@"sego1.png"]];
+    [cell.imageV sd_setImageWithURL:[NSURL URLWithString:model.thumbailsArray[indexPath.row]] placeholderImage:[UIImage imageNamed:@"sego1.png"]];
     
     cell.imageV.backgroundColor = [UIColor blackColor];
     cell.imageV.tag = 1000*(indexPath.section+1) +indexPath.row;
@@ -194,14 +191,14 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     //    }
     UITapGestureRecognizer *tapMYP = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(onVideo:)];
     [cell.imageV addGestureRecognizer:tapMYP];
-
+    
     if (_isSelect == YES) {
         cell.rightBtn.hidden = NO;
     }else{
         cell.rightBtn.hidden = YES;
     }
     cell.rightBtn.selected = NO;
-   
+    
     
     
     return cell;
@@ -254,9 +251,9 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         
         view.backgroundColor =[UIColor whiteColor];
         
-        PhotoGrapgModel *model = self.dataSource[indexPath.section];
+        RecordModel *model = self.dataSource[indexPath.section];
         
-        label.text = model.pgtime;
+        label.text = model.opttime;
     }
     
     return view;
@@ -265,18 +262,18 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 
 - (void)onVideo:(UITapGestureRecognizer *)imageSender
 {
-//    NSUserDefaults * userdefautls = [NSUserDefaults standardUserDefaults];
-//    NSMutableArray * videoArrray = [userdefautls objectForKey:@"respositVideo"];
-//    if (videoArrray.count >0) {
-//        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_war", nil)];
-//        return;
-//    }
-//    
+    //    NSUserDefaults * userdefautls = [NSUserDefaults standardUserDefaults];
+    //    NSMutableArray * videoArrray = [userdefautls objectForKey:@"respositVideo"];
+    //    if (videoArrray.count >0) {
+    //        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_war", nil)];
+    //        return;
+    //    }
+    //
     NSInteger i = imageSender.view.tag/1000;//分区
     int j = imageSender.view.tag%1000;//每个分区的分组
     
-    PhotoGrapgModel *model = self.dataSource[i - 1];
-    NSArray *imageA  = model.imagenameArray;
+    RecordModel *model = self.dataSource[i - 1];
+    NSArray *imageA  = model.filenameArray;
     MyVideoCollectionViewCell *cell = (MyVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:j inSection:i-1]];
     if (_isSelect == NO) {
         NSLog(@"dada");
@@ -286,93 +283,91 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         _deleteBtn.hidden = YES;
         
     }else{
-//    
-//    if (deleteOrUpdateArr.count>=4) {
-//        if (cell.rightBtn.selected == YES) {
-//       //     cell.rightBtn.hidden = YES;
-//            cell.rightBtn.selected = NO;
-//            [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
-//        }else{
-//            [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_pic", nil)];
-//            return;
-//        }
-//    }else{
+        //
+        //    if (deleteOrUpdateArr.count>=4) {
+        //        if (cell.rightBtn.selected == YES) {
+        //       //     cell.rightBtn.hidden = YES;
+        //            cell.rightBtn.selected = NO;
+        //            [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
+        //        }else{
+        //            [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_pic", nil)];
+        //            return;
+        //        }
+        //    }else{
         if (cell.rightBtn.selected == NO) {
             //cell.rightBtn.hidden = NO;
             cell.rightBtn.selected = YES;
             [deleteOrUpdateArr addObject:imageA[j]];//把要删除的图片加入删除数组
             
         }else{
-         //   cell.rightBtn.hidden = YES;
+            //   cell.rightBtn.hidden = YES;
             cell.rightBtn.selected = NO;
             [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
         }
-  //  }
-//    
-//    if (deleteOrUpdateArr.count>0) {
-//        _numBtn.hidden = NO;
-//        [_numBtn setTitle:[NSString stringWithFormat:@"%ld",deleteOrUpdateArr.count] forState:UIControlStateNormal];
-//        [_rightBtn setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
-//        _rightBtn.selected = NO;
-//    }else{
-//        _numBtn.hidden = YES;
-//        // _numBtn.backgroundColor = [UIColor redColor];
-//        [_rightBtn setTitleColor:RGB(220, 220, 220) forState:UIControlStateNormal];
-//        //_rightBtn.selected = YES;
-//    }
-//
-//    NSUserDefaults * userdefautls2 = [NSUserDefaults standardUserDefaults];
-//    [userdefautls2 setObject:deleteOrUpdateArr forKey:@"repositImage"];
-    // [userdefautls2 synchronize];
+        //  }
+        //
+        //    if (deleteOrUpdateArr.count>0) {
+        //        _numBtn.hidden = NO;
+        //        [_numBtn setTitle:[NSString stringWithFormat:@"%ld",deleteOrUpdateArr.count] forState:UIControlStateNormal];
+        //        [_rightBtn setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
+        //        _rightBtn.selected = NO;
+        //    }else{
+        //        _numBtn.hidden = YES;
+        //        // _numBtn.backgroundColor = [UIColor redColor];
+        //        [_rightBtn setTitleColor:RGB(220, 220, 220) forState:UIControlStateNormal];
+        //        //_rightBtn.selected = YES;
+        //    }
+        //
+        //    NSUserDefaults * userdefautls2 = [NSUserDefaults standardUserDefaults];
+        //    [userdefautls2 setObject:deleteOrUpdateArr forKey:@"repositImage"];
+        // [userdefautls2 synchronize];
         
         if (deleteOrUpdateArr.count<1) {
             _deleteBtn.hidden = YES;
         }else{
             _deleteBtn.hidden = NO;
-        
-        }
-    }
-}
-
--(void)deleteButtonTouch{
-    
-   // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
-    NSMutableString * filenameStr = [[NSMutableString alloc]init];
-    
-    if (deleteOrUpdateArr.count == 1) {
-        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
-        [filenameStr appendFormat:@"'%@'",str];
-        
-        
-    }else{
-    for (int i = 0; i < deleteOrUpdateArr.count; i++) {
-        NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
-        if (i == deleteOrUpdateArr.count - 1) {
-              [filenameStr appendFormat:@"'%@'",strrr];
-        }else{
-              [filenameStr appendFormat:@"'%@',",strrr];
-        }
-        
-    }
-    
-}
-    
-    [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
-        if (model) {
-            //[self initRefreshView];
-            _isSelect = NO;
-           // [self loadDataSourceWithPage:0];
-           [self initRefreshView];
             
         }
-        
-    }];
-    
-    
-    
-
-
+    }
 }
+
+//-(void)deleteButtonTouch{
+//    
+//    // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
+//    NSMutableString * filenameStr = [[NSMutableString alloc]init];
+//    
+//    if (deleteOrUpdateArr.count == 1) {
+//        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
+//        [filenameStr appendFormat:@"'%@'",str];
+//        
+//        
+//    }else{
+//        for (int i = 0; i < deleteOrUpdateArr.count; i++) {
+//            NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
+//            if (i == deleteOrUpdateArr.count - 1) {
+//                [filenameStr appendFormat:@"'%@'",strrr];
+//            }else{
+//                [filenameStr appendFormat:@"'%@',",strrr];
+//            }
+//            
+//        }
+//        
+//    }
+//    
+//    [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
+//        if (model) {
+//            //[self initRefreshView];
+//            _isSelect = NO;
+//            // [self loadDataSourceWithPage:0];
+//            [self initRefreshView];
+//            
+//        }
+//        
+//    }];
+//
+//    
+//}
+
 
 
 

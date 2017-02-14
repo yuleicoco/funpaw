@@ -31,8 +31,9 @@
         _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         //[_rightBtn setBackgroundImage:[UIImage imageNamed:@"gou-xuan.png"] forState:UIControlStateNormal];
         //[_rightBtn setBackgroundImage:[UIImage imageNamed:@"yi_xuan.png"] forState:UIControlStateSelected];
-        [_rightBtn setImage:[UIImage imageNamed:@"rigtBtnImage.png"] forState:UIControlStateNormal];
-        
+        [_rightBtn setImage:[UIImage imageNamed:@"gou-xuan.png"] forState:UIControlStateNormal];
+        [_rightBtn setImage:[UIImage imageNamed:@"yi_xuan.png"] forState:UIControlStateSelected];
+
         _rightBtn.frame = CGRectMake(self.bounds.size.width-22, self.bounds.size.height-22, 20, 20);
         _rightBtn.userInteractionEnabled = YES;
         _rightBtn.hidden = YES;

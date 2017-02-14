@@ -9,6 +9,7 @@
 #import "More2ViewController.h"
 #import "ExchangePasswordViewController.h"
 #import "PhotoViewController.h"
+#import "RepositoryViewController.h"
 @interface More2ViewController ()
 
 @end
@@ -99,7 +100,7 @@
 
     }];
 
-
+    
 }
 
 -(void)photoButtonTouch{
@@ -111,9 +112,12 @@
 
 
 -(void)videoButtonTouch{
-    ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
-    [self.navigationController pushViewController:exchangVc animated:NO];
-
+//    ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
+//    [self.navigationController pushViewController:exchangVc animated:NO];
+    RepositoryViewController * repostvc = [[RepositoryViewController alloc]init];
+    [self.navigationController pushViewController:repostvc animated:NO];
+    
+    
 }
 
 
