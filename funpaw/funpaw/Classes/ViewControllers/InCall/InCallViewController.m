@@ -25,6 +25,15 @@
     NSTimer * moveTimer;
     NSTimer * timeShow;
     
+    UIButton * topBtn;
+    UIButton * downBtn;
+    UIButton * leftBtn;
+    UIButton * rightBtn;
+    
+    BOOL isOPen;
+    
+    
+    
     
     int timeCompar;
     int doubleTime;
@@ -73,6 +82,9 @@
 @synthesize pointTouch;
 @synthesize timeLable;
 @synthesize pullBtn;
+@synthesize Lcoin;
+@synthesize Scoin;
+
 
 
 
@@ -139,12 +151,11 @@
 - (void)setupView
 {
     [super setupView];
-    
+    isOPen = YES;
     // 视频界面
     videoView =[UIView new];
     videoView.backgroundColor =[UIColor blackColor];
     [self.view addSubview:videoView];
-    
     
     // 等待状态
     flowUI  =[UIActivityIndicatorView new];
@@ -182,7 +193,8 @@
     
     // 时间
     timeLable =[UILabel new];
-    timeLable.font =[UIFont systemFontOfSize:14];
+    timeLable.textColor =[UIColor whiteColor];
+    timeLable.font =[UIFont systemFontOfSize:21];
     [self.view addSubview:timeLable];
     
     // 激光笔背景
@@ -190,6 +202,17 @@
     pesnBack.userInteractionEnabled = YES;
     pesnBack.image =[UIImage imageNamed:@"penPlace"];
     [self.view addSubview:pesnBack];
+    
+    // 大圆小圆
+    Lcoin =[UIImageView new];
+    Lcoin.userInteractionEnabled = YES;
+    Lcoin.image =[UIImage imageNamed:@"L_coin"];
+    [self.view addSubview:Lcoin];
+    
+    Scoin =[UIButton new];
+    [Scoin setImage:[UIImage imageNamed:@"S_coin"] forState:UIControlStateNormal];
+    [Scoin addTarget:self action:@selector(changeAn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:Scoin];
     
     
     
@@ -201,14 +224,14 @@
     
     
     // 方向键
-    UIButton * topBtn   =[UIButton new];
-    UIButton * downBtn =[UIButton new] ;
-    UIButton * leftBtn  =[UIButton new];
-    UIButton * rightBtn = [UIButton new];
-    topBtn.tag =1000001;
-    downBtn.tag=1000002;
-    leftBtn.tag =1000003;
-    rightBtn.tag =1000004;
+     topBtn   =[UIButton new];
+     downBtn =[UIButton new] ;
+     leftBtn  =[UIButton new];
+     rightBtn = [UIButton new];
+     topBtn.tag =1000001;
+     downBtn.tag=1000002;
+     leftBtn.tag =1000003;
+     rightBtn.tag =1000004;
 
     
     
@@ -229,7 +252,7 @@
     
     DriArr =@[topBtn,downBtn,leftBtn,rightBtn];
     for (NSInteger i =0; i<4; i++) {
-        [self.view addSubview:DriArr[i]];
+        [Lcoin addSubview:DriArr[i]];
         
         
     }
@@ -256,15 +279,6 @@
     [pullBtn addTarget:self action:@selector(pullBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     [FiveView addSubview:pullBtn];
-    
-    
-    // 小圆
-    UIImageView * SmallImage =[UIImageView new];
-    SmallImage.tag = 10000001;
-    SmallImage.image =[UIImage imageNamed:@"small"];
-    [self.view addSubview:SmallImage];
-    
-    
     
     
     
@@ -294,6 +308,8 @@
     
     
 }
+
+
 
 // 横屏激光笔
 
@@ -405,6 +421,8 @@
  */
 - (void)HviewUpdateView
 {
+    
+    
     pullBtn.hidden = NO;
     pointTouch.hidden = YES;
     
@@ -435,18 +453,18 @@
     
     
     
-    [timeLable mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [timeLable mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.right.equalTo(self.view.mas_right).offset(-52);
-        make.top.equalTo(self.view.mas_top).offset(20);
-        make.size.mas_equalTo(CGSizeMake(60, 30));
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(0);
+        make.size.mas_equalTo(CGSizeMake(65, 40));
         
     }];
     
     
     
     // 激光笔背景
-    [pesnBack mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [pesnBack mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.width.height.mas_equalTo(@0);
         
@@ -493,7 +511,7 @@
         
         make.left.equalTo(FiveView.mas_left).offset(6);
         make.size.mas_equalTo(CGSizeMake(15, 22));
-        make.bottom.equalTo(self.view.mas_bottom).offset(-187);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-184);
         
         
         
@@ -531,7 +549,7 @@
                               leadSpacing:70
                               tailSpacing:-60];
     
-    NSArray * imageList =@[@"top_egg",@"down_egg",@"left_egg",@"right_egg"];
+    NSArray * imageList =@[@"v_up",@"v_down",@"v_left",@"v_right"];
     
     for (NSInteger i =0; i<4; i++) {
         [DriArr[i] setImage:[UIImage imageNamed:imageList[i]] forState:UIControlStateNormal];
@@ -554,12 +572,33 @@
     
     
     
+    // 大圆小圆
+    [Lcoin mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(148, 148));
+        make.left.equalTo(self.view.mas_left).offset(16);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-25);
+        
+        
+    }];
+    
+    
+    [Scoin mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.size.mas_equalTo(CGSizeMake(41, 41));
+        make.centerX.equalTo(Lcoin.mas_centerX);
+        make.centerY.equalTo(Lcoin.mas_centerY);
+        
+        
+    }];
+    
+    
     //方向按钮
     
-    [DriArr[0] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-124);
-        make.size.mas_equalTo(CGSizeMake(143*0.75,79*0.75));
-        make.left.mas_equalTo(55);
+    [DriArr[0] mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).offset(-124);
+        make.size.mas_equalTo(CGSizeMake(79*0.75,79*0.75));
+        make.centerX.equalTo(Lcoin.mas_centerX);
+
         
         
         
@@ -567,34 +606,30 @@
     }];
     
     
-    [DriArr[1] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-32);
-        make.size.mas_equalTo(CGSizeMake(143*0.75,79*0.75));
-        make.left.mas_equalTo(55);
-        
+    [DriArr[1] mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom).offset(-16);
+        make.size.mas_equalTo(CGSizeMake(79*0.75,79*0.75));
+        make.centerX.equalTo(Lcoin.mas_centerX);
+
         
         
         
     }];
     //左
-    [DriArr[2] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-54);
-        make.size.mas_equalTo(CGSizeMake(79*0.75,143*0.75));
-        make.left.mas_equalTo(33);
-        
+    [DriArr[2] mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(79*0.75,79*0.75));
+        make.centerY.equalTo(Lcoin.mas_centerY);
+        make.left.equalTo(self.view.mas_left).offset(14);
         
         
         
     }];
     
-    [DriArr[3] mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(videoView.mas_bottom).offset(-54);
-        make.size.mas_equalTo(CGSizeMake(79*0.75,143*0.75));
-        make.left.mas_equalTo(125);
-        
-        
-        
-        
+    [DriArr[3] mas_makeConstraints:^(MASConstraintMaker *make) {
+          make.centerY.equalTo(Lcoin.mas_centerY);
+          make.size.mas_equalTo(CGSizeMake(79*0.75,79*0.75));
+          make.left.equalTo(self.view.mas_left).offset(114);
+
         
     }];
     
@@ -603,6 +638,80 @@
     
     
 }
+
+
+// 收回
+- (void)changeAn:(UIButton *)sender
+{
+    
+ 
+    
+    if (isOPen) {
+     
+        isOPen = NO;
+     [UIView animateWithDuration:0.5 animations:^{
+       
+         Lcoin.transform=CGAffineTransformMakeScale(0.1f, 0.1f);
+        
+        for (int i = 0; i<4; i ++) {
+            
+            [self.view viewWithTag:1000001+i].center = CGPointMake(74, 74);
+            [self.view viewWithTag:1000001+i].transform = CGAffineTransformMakeScale(0.6f, 0.6f);
+            
+        }
+        
+    } completion:^(BOOL finished) {
+        //平移结束
+        
+        return ;
+        
+    }];
+    }else
+    {
+        Lcoin.transform=CGAffineTransformMakeScale(1.0f, 1.0f);
+
+        isOPen = YES;
+        [UIView animateWithDuration:0.5 animations:^{
+           
+            for (int i = 0; i<4; i ++) {
+                
+                if(i<2)
+                {
+                     leftBtn.center = CGPointMake(27.75, 74);
+                     rightBtn.center = CGPointMake(127.75, 74);
+                    
+                }else{
+                    topBtn.center = CGPointMake(74, 19.5);
+                    downBtn.center =CGPointMake(74, 127.5);
+                    
+                }
+                
+                
+                [self.view viewWithTag:1000001+i].transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+                
+            }
+            
+        } completion:^(BOOL finished) {
+            //平移结束
+            
+            
+            return ;
+            
+        }];
+        
+    
+
+        
+   }
+
+    
+
+    
+    
+}
+
+
+
 
 #pragma mark  buttonMethod _________________各点击事件__________________________
 
