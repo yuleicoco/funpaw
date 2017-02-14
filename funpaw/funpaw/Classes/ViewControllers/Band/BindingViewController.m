@@ -152,9 +152,9 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     devNum.layer.cornerRadius =28;
     devNum.layer.borderWidth =1;
     devNum.layer.borderColor =RED_COLOR.CGColor;
-    inCode.layer.cornerRadius =4;
-    inCode.layer.borderWidth =0.4;
-    inCode.layer.borderColor = GRAY_COLOR.CGColor;
+    inCode.layer.cornerRadius =28;
+    inCode.layer.borderWidth =1;
+    inCode.layer.borderColor = RED_COLOR.CGColor;
     [self.view addSubview:devNum];
     [self.view addSubview:inCode];
     
@@ -320,7 +320,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
                 [Defaluts setObject:model.content forKey:TERMID_DEVICNUMER];
                 [Defaluts setObject:deviceTF.text forKey:PREF_DEVICE_NUMBER];
                 [Defaluts setValue:incodeTF.text forKey:@"incodeNum"];
-                [Defaluts setObject:@"ok" forKey:@"setimage"];
+                [Defaluts setObject:@"ok" forKey:@"guide_image"];
                 
                 
                 // PREF_DEVICE_NUMBER DeviceNum
@@ -373,14 +373,14 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     
     // 解除绑定
     
-    [[ShareWork sharedManager]RemoveDevice:[AccountManager sharedAccountManager].loginModel.mid complete:^(BaseModel * model) {
+    [[ShareWork sharedManager]RemoveDevice:Mid_S complete:^(BaseModel * model) {
         if ([model.retCode isEqualToString:@"0000"]) {
             // 解除绑定成功
             // 提示
             [self showWarningTip:NSLocalizedString(@"Solve_Success", nil)];
             
             [Defaluts removeObjectForKey:PREF_DEVICE_NUMBER];
-            Mid_D=nil;
+            [AccountManager sharedAccountManager].loginModel.deviceno =nil;
             [Defaluts removeObjectForKey:@"incodeNum"];
             [Defaluts synchronize];
             deviceTF.text =@"";

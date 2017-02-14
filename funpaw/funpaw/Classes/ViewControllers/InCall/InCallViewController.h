@@ -24,7 +24,8 @@
 @property (nonatomic,strong)UIImageView * pesnBack;
 // 5个button背景
 @property (nonatomic,strong)UIImageView * FiveView;
-
+@property (nonatomic,strong)UIImageView * Lcoin;
+@property (nonatomic,strong)UIButton *Scoin;
 @property (nonatomic,strong)UIImageView * pointTouch;
 @property (nonatomic,strong)UILabel * timeLable;
 @property (nonatomic,strong)UIButton * pullBtn;

@@ -53,7 +53,7 @@
     if ((!_moreVc)) {
         More2ViewController * vc = [[More2ViewController alloc]init];
         vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:nil
-                                                     image:[[UIImage imageNamed:@"egg_more"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"egg_more_s"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                                                     image:[[UIImage imageNamed:@"egg_more@2x"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] selectedImage:[[UIImage imageNamed:@"egg_more_s"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
         
         _moreVc =[[UINavigationController alloc]initWithRootViewController:vc];
     }

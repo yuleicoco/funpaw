@@ -290,7 +290,7 @@
   
     // 指导界面
     Guideview =[UIImageView new];
-    Guideview.image =[UIImage imageNamed:@"setb"];
+    Guideview.image =[UIImage imageNamed:@"egg_guide"];
     Guideview.userInteractionEnabled = YES;
     Guideview.hidden = YES;
     
@@ -303,18 +303,17 @@
     }];
     
     IkonwBtn =[UIButton new];
-    [IkonwBtn setImage:[UIImage imageNamed:@"konw"] forState:UIControlStateNormal];
+    [IkonwBtn setImage:[UIImage imageNamed:@"ikonw"] forState:UIControlStateNormal];
     [IkonwBtn addTarget:self action:@selector(disparrBtn:) forControlEvents:UIControlEventTouchUpInside];
     IkonwBtn.hidden = YES;
     
     [Guideview addSubview:IkonwBtn];
     
     [IkonwBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(ApplicationDelegate.window).offset(191);
-        make.right.equalTo(ApplicationDelegate.window).offset(-79);
-        make.top.equalTo(@160);
-        make.height.equalTo(@40);
-        
+        make.centerX.equalTo(ApplicationDelegate.window.mas_centerX);
+        make.top.equalTo(@250);
+        make.height.equalTo(@39);
+        make.width.equalTo(@78);
         
         
     }];
@@ -345,8 +344,8 @@
     [addBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
          make.size.mas_equalTo(CGSizeMake(90, 60));
-         make.centerX.equalTo(self.view.mas_centerX);
-         make.bottom.equalTo(self.view.mas_bottom).offset(-120);
+        make.centerX.equalTo(self.view.mas_centerX);
+         make.bottom.equalTo(self.view.mas_bottom).offset(-204);
         
         
         
@@ -430,11 +429,11 @@
 -(void)ChooseGuide
 {
     // 这个时候出现引导界面
-    if ([[Defaluts objectForKey:@"setimage"] isEqualToString:@"ok"]) {
+    if ([[Defaluts objectForKey:@"guide_image"] isEqualToString:@"ok"]) {
         IkonwBtn.hidden = NO;
         Guideview.hidden = NO;
         addBtn.hidden = YES;
-        [Defaluts removeObjectForKey:@"setimage"];
+        [Defaluts removeObjectForKey:@"guide_image"];
         [Defaluts synchronize];
         
     }
@@ -460,7 +459,8 @@
     // 设备不存在
     if ([strState isEqualToString:@"ds000"]) {
         [bgImage setImage:[UIImage imageNamed:@"English_tips"]];
-        
+        addBtn.hidden = NO;
+        SbgImage.hidden = YES;
         [self showBarBtn:YES];
         return;
     }else
@@ -529,6 +529,7 @@
         openVideoBtn.hidden = NO;
         if ([strState isEqualToString:@"ds001"]) {
              [openVideoBtn setImage:[UIImage imageNamed:@"egg_open"] forState:UIControlStateNormal];
+            openVideoBtn.userInteractionEnabled = YES;
             
         }else{
         
@@ -622,7 +623,13 @@
 - (void)OpenVideo:(UIButton *)sender
 {
     
+    InCallViewController * incall =[[InCallViewController alloc]init];
     
+    [self presentViewController:incall animated:YES completion:nil];
+    
+    
+    
+    /*
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
     if ([AppUtil isBlankString:Mid_D]) {
@@ -658,6 +665,7 @@
          
      }
     
+     */
     
     
     
