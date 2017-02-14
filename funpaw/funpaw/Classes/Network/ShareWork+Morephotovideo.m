@@ -107,10 +107,55 @@
 
 }
 
+-(void)uploadVideoWithMid:(NSString *)mid deviceno:(NSString *)deviceno termid:(NSString *)termid filename:(NSString *)filename complete:(void (^)(BaseModel *))completeBlock{
+    NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
+    params[@"mid"] = mid;
+    params[@"deviceno"] = deviceno;
+    params[@"termid"] = termid;
+    params[@"filename"] = filename;
+    
+    [self requestWithMethod:POST WithPath:@"common=uploadVideo" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+        
+        if (model) {
+            
+        }
+        if (completeBlock) {
+            completeBlock(model);
+        }
+        
+        
+    } WithFailurBlock:^(NSError *error) {
+        
+    }];
 
 
 
 
+
+
+}
+
+
+-(void)queryTaskWithTid:(NSString *)tid complete:(void (^)(BaseModel *))completeBlock{
+    NSMutableDictionary * params = [[NSMutableDictionary alloc]init];
+    params[@"tid"] = tid;
+    [self requestWithMethod:POST WithPath:@"common=queryTask" WithParams:params WithSuccessBlock:^(BaseModel *model) {
+        
+        if (model) {
+            
+        }
+        if (completeBlock) {
+            completeBlock(model);
+        }
+        
+        
+    } WithFailurBlock:^(NSError *error) {
+        
+    }];
+
+
+
+}
 
 
 

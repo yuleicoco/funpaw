@@ -370,6 +370,13 @@
 		7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583F1E49AB290086A823 /* LoginViewController.m */; };
 		7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58451E49ABE80086A823 /* AccountManager.m */; };
 		7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D584B1E49ADD70086A823 /* LoginModel.m */; };
+		7D48C6031E52B11B0025B669 /* ReposialreaduploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D48C5FE1E52B11B0025B669 /* ReposialreaduploadViewController.m */; };
+		7D48C6041E52B11B0025B669 /* ReposinotuploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D48C6001E52B11B0025B669 /* ReposinotuploadViewController.m */; };
+		7D48C6051E52B11B0025B669 /* RepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D48C6021E52B11B0025B669 /* RepositoryViewController.m */; };
+		7D48C6081E52B1460025B669 /* RecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D48C6071E52B1460025B669 /* RecordModel.m */; };
+		7D48C60D1E52B1540025B669 /* HeaderViewCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D48C6091E52B1540025B669 /* HeaderViewCollection.xib */; };
+		7D48C60E1E52B1540025B669 /* LargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D48C60B1E52B1540025B669 /* LargeViewController.m */; };
+		7D48C60F1E52B1540025B669 /* LargeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D48C60C1E52B1540025B669 /* LargeViewController.xib */; };
 		7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */; };
 		7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009D1E4C62B400B5B40F /* PopStartView.m */; };
 		7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A01E4C674500B5B40F /* CompleViewController.m */; };
@@ -1219,6 +1226,18 @@
 		7D2D58451E49ABE80086A823 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		7D2D584A1E49ADD70086A823 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		7D2D584B1E49ADD70086A823 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		7D48C5FD1E52B11B0025B669 /* ReposialreaduploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposialreaduploadViewController.h; sourceTree = "<group>"; };
+		7D48C5FE1E52B11B0025B669 /* ReposialreaduploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposialreaduploadViewController.m; sourceTree = "<group>"; };
+		7D48C5FF1E52B11B0025B669 /* ReposinotuploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposinotuploadViewController.h; sourceTree = "<group>"; };
+		7D48C6001E52B11B0025B669 /* ReposinotuploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposinotuploadViewController.m; sourceTree = "<group>"; };
+		7D48C6011E52B11B0025B669 /* RepositoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryViewController.h; sourceTree = "<group>"; };
+		7D48C6021E52B11B0025B669 /* RepositoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryViewController.m; sourceTree = "<group>"; };
+		7D48C6061E52B1460025B669 /* RecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordModel.h; sourceTree = "<group>"; };
+		7D48C6071E52B1460025B669 /* RecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordModel.m; sourceTree = "<group>"; };
+		7D48C6091E52B1540025B669 /* HeaderViewCollection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderViewCollection.xib; sourceTree = "<group>"; };
+		7D48C60A1E52B1540025B669 /* LargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeViewController.h; sourceTree = "<group>"; };
+		7D48C60B1E52B1540025B669 /* LargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeViewController.m; sourceTree = "<group>"; };
+		7D48C60C1E52B1540025B669 /* LargeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeViewController.xib; sourceTree = "<group>"; };
 		7D4A00991E4C100F00B5B40F /* ShareWork+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Login.h"; sourceTree = "<group>"; };
 		7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Login.m"; sourceTree = "<group>"; };
 		7D4A009C1E4C62B400B5B40F /* PopStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopStartView.h; sourceTree = "<group>"; };
@@ -1566,6 +1585,8 @@
 		34E15FA61E050B16004A65AB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D48C6061E52B1460025B669 /* RecordModel.h */,
+				7D48C6071E52B1460025B669 /* RecordModel.m */,
 				7D2D584A1E49ADD70086A823 /* LoginModel.h */,
 				7D2D584B1E49ADD70086A823 /* LoginModel.m */,
 				3445C0671E514ED900F579A6 /* FeedModel.h */,
@@ -2854,6 +2875,12 @@
 		7D4A00A21E4C752800B5B40F /* VIdeo */ = {
 			isa = PBXGroup;
 			children = (
+				7D48C6011E52B11B0025B669 /* RepositoryViewController.h */,
+				7D48C6021E52B11B0025B669 /* RepositoryViewController.m */,
+				7D48C5FD1E52B11B0025B669 /* ReposialreaduploadViewController.h */,
+				7D48C5FE1E52B11B0025B669 /* ReposialreaduploadViewController.m */,
+				7D48C5FF1E52B11B0025B669 /* ReposinotuploadViewController.h */,
+				7D48C6001E52B11B0025B669 /* ReposinotuploadViewController.m */,
 			);
 			path = VIdeo;
 			sourceTree = "<group>";
@@ -2881,6 +2908,10 @@
 			children = (
 				7D5807831E4DBD5800D79D7E /* MyVideoCollectionViewCell.h */,
 				7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */,
+				7D48C6091E52B1540025B669 /* HeaderViewCollection.xib */,
+				7D48C60A1E52B1540025B669 /* LargeViewController.h */,
+				7D48C60B1E52B1540025B669 /* LargeViewController.m */,
+				7D48C60C1E52B1540025B669 /* LargeViewController.xib */,
 			);
 			path = VIews;
 			sourceTree = "<group>";
@@ -3057,6 +3088,7 @@
 				34E165C01E050B19004A65AB /* tab_near_normal@3x.png in Resources */,
 				34E165701E050B19004A65AB /* message.png in Resources */,
 				34E166641E0520F1004A65AB /* Ltopbtn.png in Resources */,
+				7D48C60D1E52B1540025B669 /* HeaderViewCollection.xib in Resources */,
 				34E165521E050B19004A65AB /* delect_guize.png in Resources */,
 				34E165681E050B19004A65AB /* left_on.png in Resources */,
 				34E164951E050B18004A65AB /* stopcall-red.png in Resources */,
@@ -3175,6 +3207,7 @@
 				34E166541E0520F1004A65AB /* konw.png in Resources */,
 				34E1644F1E050B18004A65AB /* sephonerc-factory in Resources */,
 				34E164931E050B18004A65AB /* status-orange.png in Resources */,
+				7D48C60F1E52B1540025B669 /* LargeViewController.xib in Resources */,
 				34E164501E050B18004A65AB /* sephonerc-factory~ipad in Resources */,
 				34E166701E0520F1004A65AB /* xiala@2x.png in Resources */,
 				34E165641E050B19004A65AB /* kuang_off.png in Resources */,
@@ -3278,6 +3311,7 @@
 				34E1640D1E050B18004A65AB /* NSString+URLEncoding.m in Sources */,
 				34E164121E050B18004A65AB /* UIImage-Extensions.m in Sources */,
 				34E1644D1E050B18004A65AB /* SephoneManager.m in Sources */,
+				7D48C6031E52B11B0025B669 /* ReposialreaduploadViewController.m in Sources */,
 				34A864521E49A02300AD6D8A /* ShareWork+account.m in Sources */,
 				34E1640E1E050B18004A65AB /* QFTableView.m in Sources */,
 				7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */,
@@ -3293,6 +3327,7 @@
 				34E164191E050B18004A65AB /* NSTimer+Addition.m in Sources */,
 				34E164A71E050B18004A65AB /* UIView+SDAutoLayout.m in Sources */,
 				34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */,
+				7D48C6051E52B11B0025B669 /* RepositoryViewController.m in Sources */,
 				3445C0661E514EB700F579A6 /* ShareWork+feed.m in Sources */,
 				347FF6F31E4C6D91007FA2B0 /* FeedViewController.m in Sources */,
 				34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */,
@@ -3306,9 +3341,11 @@
 				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,
 				7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */,
 				34E164181E050B18004A65AB /* CycleScrollView.m in Sources */,
+				7D48C6041E52B11B0025B669 /* ReposinotuploadViewController.m in Sources */,
 				34E164171E050B18004A65AB /* Reachability.m in Sources */,
 				34E164111E050B18004A65AB /* UIButton+Blocks.m in Sources */,
 				34E1640C1E050B18004A65AB /* AppDelegate.m in Sources */,
+				7D48C6081E52B1460025B669 /* RecordModel.m in Sources */,
 				34E1640F1E050B18004A65AB /* UIActionSheet+Blocks.m in Sources */,
 				34E1640A1E050B18004A65AB /* AppDelegate+Sephone.m in Sources */,
 				7D2D58281E499FEF0086A823 /* AppDelegate+Launcher.m in Sources */,
@@ -3316,6 +3353,7 @@
 				34E164101E050B18004A65AB /* UIAlertView+Blocks.m in Sources */,
 				347FF6F51E4C6D91007FA2B0 /* WifiViewController.m in Sources */,
 				7D2D58371E49A5410086A823 /* EggViewController.m in Sources */,
+				7D48C60E1E52B1540025B669 /* LargeViewController.m in Sources */,
 				3445C06C1E514EFB00F579A6 /* ShareWork+Incall.m in Sources */,
 				34E164131E050B18004A65AB /* UIView+Sizes.m in Sources */,
 				7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */,
