@@ -100,6 +100,54 @@
 
     }];
 
+    UIView * changeView = [[UIView alloc]init];
+    changeView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:changeView];
+    [changeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(changeView.superview);
+        make.right.equalTo(changeView.superview);
+        make.top.equalTo(topView.mas_bottom).offset(12);
+        make.height.mas_equalTo(55);
+        
+    }];
+    
+    UILabel * changepassLabel = [[UILabel alloc]init];
+    changepassLabel.text = @"Change Password";
+    changepassLabel.font = [UIFont systemFontOfSize:18];
+    changepassLabel.textColor = YELLOW_COLOR;
+    [changeView addSubview:changepassLabel];
+    [changepassLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(changepassLabel.superview.mas_left).offset(12);
+        make.centerY.equalTo(changepassLabel.superview);
+        
+    }];
+    
+    UIButton * changepassBtn = [[UIButton alloc]init];
+    changepassBtn.backgroundColor = [UIColor clearColor];
+    [changepassBtn addTarget:self action:@selector(changepassButtontouch) forControlEvents:UIControlEventTouchUpInside];
+    [changeView addSubview:changepassBtn];
+    [changepassBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(changepassBtn.superview);
+        make.right.equalTo(changepassBtn.superview);
+        make.top.equalTo(changepassBtn.superview);
+        make.bottom.equalTo(changepassBtn.superview);
+        
+    }];
+    
+    UIView * logoutView = [[UIView alloc]init];
+    logoutView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:logoutView];
+    [logoutView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
     
 }
 
@@ -110,10 +158,22 @@
 
 }
 
+-(void)changepassButtontouch{
+    
+    ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
+    [self.navigationController pushViewController:exchangVc animated:NO];
+
+
+    
+    
+    
+    
+    
+    
+}
+
 
 -(void)videoButtonTouch{
-//    ExchangePasswordViewController * exchangVc = [[ExchangePasswordViewController alloc]init];
-//    [self.navigationController pushViewController:exchangVc animated:NO];
     RepositoryViewController * repostvc = [[RepositoryViewController alloc]init];
     [self.navigationController pushViewController:repostvc animated:NO];
     
