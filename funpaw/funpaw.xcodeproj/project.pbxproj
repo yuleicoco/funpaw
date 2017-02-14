@@ -12,6 +12,7 @@
 		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		342549B11E529D9100DA7F5B /* 关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = 3425499E1E529D9100DA7F5B /* 关闭.png */; };
 		342549B21E529D9100DA7F5B /* 半圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 3425499F1E529D9100DA7F5B /* 半圆.png */; };
 		342549B31E529D9100DA7F5B /* 向上.png in Resources */ = {isa = PBXBuildFile; fileRef = 342549A01E529D9100DA7F5B /* 向上.png */; };
@@ -39,6 +40,8 @@
 		342549D61E529DD000DA7F5B /* 离线 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 342549CC1E529DD000DA7F5B /* 离线 (2).png */; };
 		342549D71E529DD000DA7F5B /* 离线.png in Resources */ = {isa = PBXBuildFile; fileRef = 342549CD1E529DD000DA7F5B /* 离线.png */; };
 		342549D81E529DD000DA7F5B /* 繁忙.png in Resources */ = {isa = PBXBuildFile; fileRef = 342549CE1E529DD000DA7F5B /* 繁忙.png */; };
+=======
+>>>>>>> parent of 89fb6dd... no message
 =======
 >>>>>>> parent of 89fb6dd... no message
 		3445C0631E514E9100F579A6 /* FeedSetingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3445C0621E514E9100F579A6 /* FeedSetingTableViewCell.m */; };
@@ -436,6 +439,7 @@
 		34196FC61E4AFA9400D9D24D /* ShareWork+device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+device.m"; sourceTree = "<group>"; };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		3425499E1E529D9100DA7F5B /* 关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭.png"; sourceTree = "<group>"; };
 		3425499F1E529D9100DA7F5B /* 半圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "半圆.png"; sourceTree = "<group>"; };
 		342549A01E529D9100DA7F5B /* 向上.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向上.png"; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 		342549CC1E529DD000DA7F5B /* 离线 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "离线 (2).png"; sourceTree = "<group>"; };
 		342549CD1E529DD000DA7F5B /* 离线.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "离线.png"; sourceTree = "<group>"; };
 		342549CE1E529DD000DA7F5B /* 繁忙.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "繁忙.png"; sourceTree = "<group>"; };
+=======
+>>>>>>> parent of 89fb6dd... no message
 =======
 >>>>>>> parent of 89fb6dd... no message
 		3445C0611E514E9100F579A6 /* FeedSetingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedSetingTableViewCell.h; sourceTree = "<group>"; };
@@ -1420,6 +1426,7 @@
 		};
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		3425499D1E529D9100DA7F5B /* eggImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,6 +1468,8 @@
 			path = funpawegg;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> parent of 89fb6dd... no message
 =======
 >>>>>>> parent of 89fb6dd... no message
 		3445C0601E514E9100F579A6 /* Views */ = {
