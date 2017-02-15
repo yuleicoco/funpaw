@@ -43,7 +43,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     }else{
         _isSelect = YES;
     }
-    
+    [deleteOrUpdateArr removeAllObjects];
+    _deleteBtn.hidden = YES;
     [self.collectionView reloadData];
 }
 -(void)yishangchuanshua231{

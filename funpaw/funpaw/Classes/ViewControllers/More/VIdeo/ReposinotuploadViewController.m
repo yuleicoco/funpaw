@@ -59,6 +59,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     }else{
         _isSelect = YES;
     }
+    [deleteOrUpdateArr removeAllObjects];
+    _deleteBtn.hidden = YES;
     [self.collectionView reloadData];
 
 }
@@ -324,7 +326,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
             cell.rightBtn.selected = NO;
             [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
         }else{
-            [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_pic", nil)];
+            [[AppUtil appTopViewController] showHint:@"Only select a video"];
             return;
         }
             
