@@ -623,13 +623,13 @@
 - (void)OpenVideo:(UIButton *)sender
 {
     
-    InCallViewController * incall =[[InCallViewController alloc]init];
+//    InCallViewController * incall =[[InCallViewController alloc]init];
+//    
+//    [self presentViewController:incall animated:YES completion:nil];
     
-    [self presentViewController:incall animated:YES completion:nil];
     
     
     
-    /*
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
     if ([AppUtil isBlankString:Mid_D]) {
@@ -665,7 +665,7 @@
          
      }
     
-     */
+    
     
     
     

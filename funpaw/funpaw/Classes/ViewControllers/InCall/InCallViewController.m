@@ -256,20 +256,8 @@
         
         
     }
-    // 5个文本字体
-    UILabel * label1 =[UILabel new];
-    UILabel * label2 =[UILabel new];
-    UILabel * label3 =[UILabel new];
-    UILabel * label4 =[UILabel new];
-    UILabel * label5 =[UILabel new];
-    LabeArr =@[label1,label2,label3,label4,label5];
-    for (NSInteger  i=0; i<5; i++) {
-        
-        
-        [FiveView addSubview:LabeArr[i]];
-        
-    }
     
+
     // 推拉
     pullBtn =[UIButton new];
     pullBtn.userInteractionEnabled = YES;
@@ -494,8 +482,8 @@
     }];
     
     // 5个按钮
-    NSArray * imageListS=@[@"Lclick_light",@"Lclick_rool",@"Lclick_food",@"Lclick_photo"];
-    NSArray * imageListN=@[@"Lnormal_light",@"Lnormal_rool",@"Lnormal_food",@"Lnormal_photo"];
+    NSArray * imageListS=@[@"v_light",@"v_rool",@"v_feed",@"v_photo"];
+    NSArray * imageListN=@[@"v_light_n",@"v_rool_n",@"v_feed_n",@"v_photo_n"];
     for (NSInteger i =0; i<4; i++) {
         [btnList[i] setImage:[UIImage imageNamed:imageListN[i]] forState:UIControlStateNormal];
         [btnList[i] setImage:[UIImage imageNamed:imageListS[i]] forState:UIControlStateSelected];
@@ -518,36 +506,11 @@
         
     }];
     
-    NSArray * arrText;
-    arrText = @[@"开灯",@"喂食",@"投食",@"抓拍"];
-    for (NSInteger  i=0; i<4; i++) {
-        UILabel * newLable =LabeArr[i];
-        newLable.text =arrText[i];
-        newLable.font =[UIFont systemFontOfSize:12];
-        newLable.textColor =[UIColor whiteColor];
-        
-        
-    }
     
     
-    // 文本字体
-    [LabeArr mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(FiveView.mas_centerX).offset(8);
-        
-    }];
     
-    /**
-     *  axisType         轴线方向
-     *  fixedSpacing     间隔大小
-     *  fixedItemLength  每个控件的固定长度/宽度
-     *  leadSpacing      头部间隔
-     *  tailSpacing      尾部间隔
-     *
-     */
-    [LabeArr mas_distributeViewsAlongAxis:MASAxisTypeVertical
-                         withFixedItemLength:12
-                              leadSpacing:70
-                              tailSpacing:-60];
+    
+   
     
     NSArray * imageList =@[@"v_up",@"v_down",@"v_left",@"v_right"];
     
@@ -564,10 +527,19 @@
         
     }];
     
+    /**
+     *  axisType         轴线方向
+     *  fixedSpacing     间隔大小
+     *  fixedItemLength  每个控件的固定长度/宽度
+     *  leadSpacing      头部间隔
+     *  tailSpacing      尾部间隔
+     *
+     */
+    
     [btnList mas_distributeViewsAlongAxis:MASAxisTypeVertical
-                         withFixedSpacing:31
-                              leadSpacing:20
-                              tailSpacing:20];
+                         withFixedSpacing:25
+                              leadSpacing:19
+                              tailSpacing:19];
     
     
     
@@ -728,6 +700,10 @@
         [UIView animateWithDuration:0.5 animations:^{
             FiveView.center = CGPointMake(687, FiveView.center.y);
             
+            NSLog(@"第一步");
+            
+            
+            
         } completion:^(BOOL finished) {
             //平移结束
             
@@ -738,6 +714,7 @@
     {
         [UIView animateWithDuration:0.5 animations:^{
             FiveView.center = CGPointMake(625.5, FiveView.center.y);
+             NSLog(@"第二步");
         } completion:^(BOOL finished) {
             //平移结束
             
