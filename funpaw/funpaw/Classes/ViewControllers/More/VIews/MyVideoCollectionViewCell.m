@@ -24,17 +24,17 @@
         [self addSubview:self.timeLable];
         
         self.startImageV = [[UIImageView alloc]initWithFrame:CGRectMake(7 * W_Wide_Zoom, 70 * W_Hight_Zoom, 12 * W_Wide_Zoom, 7 * W_Hight_Zoom)];
-        self.startImageV.image = [UIImage imageNamed:@"video.png"];
-        self.startImageV.hidden = YES;
+        self.startImageV.image = [UIImage imageNamed:@"videobiaobiao.png"];
+        //self.startImageV.hidden = no;
         [self addSubview:self.startImageV];
         
         _rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         //[_rightBtn setBackgroundImage:[UIImage imageNamed:@"gou-xuan.png"] forState:UIControlStateNormal];
         //[_rightBtn setBackgroundImage:[UIImage imageNamed:@"yi_xuan.png"] forState:UIControlStateSelected];
-        [_rightBtn setImage:[UIImage imageNamed:@"gou-xuan.png"] forState:UIControlStateNormal];
-        [_rightBtn setImage:[UIImage imageNamed:@"yi_xuan.png"] forState:UIControlStateSelected];
+        [_rightBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+        [_rightBtn setImage:[UIImage imageNamed:@"selecttt.png"] forState:UIControlStateSelected];
 
-        _rightBtn.frame = CGRectMake(self.bounds.size.width-22, self.bounds.size.height-22, 20, 20);
+        _rightBtn.frame = CGRectMake(self.bounds.size.width-22,0, 20, 20);
         _rightBtn.userInteractionEnabled = YES;
         _rightBtn.hidden = YES;
         [self addSubview:_rightBtn];

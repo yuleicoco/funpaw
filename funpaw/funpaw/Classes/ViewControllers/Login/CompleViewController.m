@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"Forget password"];
+    [self setNavTitle:@"Forgot Password"];
     // self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     self.view.backgroundColor = LIGHT_GRAY_COLOR;
 }
@@ -31,7 +31,7 @@
 -(void)setupView{
     UIView * firstView = [[UIView alloc]init];
     firstView.backgroundColor = [UIColor whiteColor];
-    firstView.layer.borderColor = [UIColor redColor].CGColor;
+    firstView.layer.borderColor = RED_COLOR.CGColor;
     firstView.layer.borderWidth = 1;
     firstView.layer.cornerRadius = 25;
     [self.view addSubview:firstView];
@@ -78,7 +78,7 @@
     
     UIView * secoendView = [[UIView alloc]init];
     secoendView.backgroundColor = [UIColor whiteColor];
-    secoendView.layer.borderColor = [UIColor redColor].CGColor;
+    secoendView.layer.borderColor = RED_COLOR.CGColor;
     secoendView.layer.borderWidth = 1;
     secoendView.layer.cornerRadius = 25;
     [self.view addSubview:secoendView];
@@ -108,7 +108,7 @@
     
     UIView * passView = [[UIView alloc]init];
     passView.backgroundColor =  [UIColor whiteColor];
-    passView.layer.borderColor = [UIColor redColor].CGColor;
+    passView.layer.borderColor = RED_COLOR.CGColor;
     passView.layer.borderWidth = 1;
     passView.layer.cornerRadius = 25;
     [self.view addSubview:passView];
@@ -138,7 +138,7 @@
     UIView * surepassView = [[UIView alloc]init];
     surepassView.backgroundColor = [UIColor whiteColor];
     surepassView.layer.borderWidth = 1;
-    surepassView.layer.borderColor = [UIColor redColor].CGColor;
+    surepassView.layer.borderColor = RED_COLOR.CGColor;
     surepassView.layer.cornerRadius = 25;
     [self.view addSubview:surepassView];
     [surepassView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -183,11 +183,11 @@
 
 -(void)codebuttontouch{
     if ([AppUtil isBlankString:_emailTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"regist_pl", nil)];
+        [[AppUtil appTopViewController] showHint:@"Please enter your email"];
         return;
     }
     if (![AppUtil isValidateEmail:_emailTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:NSLocalizedString(@"regist_pl", nil)];
+        [[AppUtil appTopViewController] showHint:@"Mailbox format is not correct"];
         return;
     }
     [self provied];
@@ -259,43 +259,43 @@
 
 -(void)regiestButtonTouch{
     if ([AppUtil isBlankString:_emailTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输号码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter your email"];
         return;
     }
     if (![AppUtil isValidateEmail:_emailTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"不是邮箱"];
+        [[AppUtil appTopViewController] showHint:@"Mailbox format is not correct"];
         return;
     }
     if ([AppUtil isBlankString:_codeTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输验证码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter the verification code"];
         return;
     }
     if ([AppUtil isBlankString:_passwordTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输密码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter password"];
         return;
     }
     
     if (_passwordTextfield.text.length<6) {
-        [[AppUtil appTopViewController] showHint:@"密码不能小于6位哦"];
+        [[AppUtil appTopViewController] showHint:@"Password at least 6 digits"];
         return;
         
         
     }
     
     if (![_emailTextfield.text isEqualToString:_achieveString]) {
-        [[AppUtil appTopViewController] showHint:@"不是发送验证码的那个邮箱"];
+        [[AppUtil appTopViewController] showHint:@"Please enter the correct verification code"];
         return;
     }
     if (![_codeTextfield.text isEqualToString:_codeNumber]) {
-        [[AppUtil appTopViewController] showHint:@"验证码不正确"];
+        [[AppUtil appTopViewController] showHint:@"Please enter the correct verification code"];
         return;
     }
     if (![_passwordTextfield.text isEqualToString:_surePasswordfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"两次输入密码不一致"];
+        [[AppUtil appTopViewController] showHint:@"password do not match"];
         return;
     }
     
-    [self showHudInView:self.view hint:@"修改中..."];
+    [self showHudInView:self.view hint:@"Is Submitting..."];
     [[ShareWork sharedManager]resetPasswordWith:_emailTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
         [self hideHud];
         [[AppUtil appTopViewController] showHint:model.retDesc];

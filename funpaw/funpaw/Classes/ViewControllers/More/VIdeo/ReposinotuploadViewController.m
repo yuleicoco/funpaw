@@ -75,7 +75,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     
     _deleteBtn = [[UIButton alloc]init];
     _deleteBtn.backgroundColor = YELLOW_COLOR;
-    [_deleteBtn setTitle:@"Delete" forState:UIControlStateNormal];
+    [_deleteBtn setTitle:@"Upload" forState:UIControlStateNormal];
     [_deleteBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [_deleteBtn addTarget:self action:@selector(deleteButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_deleteBtn];
@@ -112,6 +112,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 }
 -(void)loadDataSourceWithPage:(int)page{
     [deleteOrUpdateArr removeAllObjects];
+       bigBtn.hidden = YES;
     [[ShareWork sharedManager]getVideoWithMid:Mid_S status:@"0" page:page complete:^(BaseModel *model) {
         if (model) {
             if (page == START_PAGE_INDEX) {
@@ -296,11 +297,11 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     NSArray *imageA  = model.filenameArray;
     MyVideoCollectionViewCell *cell = (MyVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:j inSection:i-1]];
     if (_isSelect == NO) {
-        NSLog(@"dada");
-        LargeViewController * largVc =[[LargeViewController alloc]init];
-        largVc.dataArray = model.networkaddressArray;
-        [self.navigationController pushViewController:largVc animated:NO];
-        _deleteBtn.hidden = YES;
+//        NSLog(@"dada");
+//        LargeViewController * largVc =[[LargeViewController alloc]init];
+//        largVc.dataArray = model.networkaddressArray;
+//        [self.navigationController pushViewController:largVc animated:NO];
+//        _deleteBtn.hidden = YES;
         
     }else{
         //
@@ -314,6 +315,23 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         //            return;
         //        }
         //    }else{
+        
+        if (deleteOrUpdateArr.count>=1) {
+//            [[AppUtil appTopViewController] showHint:@"Only select a video"];
+//            return;
+        if (cell.rightBtn.selected == YES) {
+       //     cell.rightBtn.hidden = YES;
+            cell.rightBtn.selected = NO;
+            [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
+        }else{
+            [[AppUtil appTopViewController] showHint:NSLocalizedString(@"resourece_pic", nil)];
+            return;
+        }
+            
+        }else{
+        
+        
+        
         if (cell.rightBtn.selected == NO) {
             //cell.rightBtn.hidden = NO;
             cell.rightBtn.selected = YES;
@@ -342,50 +360,56 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
         //    [userdefautls2 setObject:deleteOrUpdateArr forKey:@"repositImage"];
         // [userdefautls2 synchronize];
         
-        if (deleteOrUpdateArr.count<1) {
-            _deleteBtn.hidden = YES;
-        }else{
-            _deleteBtn.hidden = NO;
-            
+       
         }
     }
+    if (deleteOrUpdateArr.count<1) {
+        _deleteBtn.hidden = YES;
+    }else{
+        _deleteBtn.hidden = NO;
+        
+    }
+    
+    
 }
 
 -(void)deleteButtonTouch{
     
-    NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
+    NSString * devinoce = [Defaluts objectForKey:@"deviceNumber"];
+    if ([AppUtil isBlankString:devinoce]&&[AppUtil isBlankString:Mid_D]) {
+        [[AppUtil appTopViewController]showHint:@"You have not bound a FunPaw Q"];
+        
+        return;
+    }
     
-   
+    NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
     [[ShareWork sharedManager]uploadVideoWithMid:Mid_S deviceno:Mid_D termid:Mid_T filename:filenameString complete:^(BaseModel *model) {
-        if (model) {
-            
+        if ([model.retCode isEqualToString:@"0000"]) {
             timeee = 12;
-           
             timer =  [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(checkVideoStats:) userInfo:model.content repeats:YES];
             [timer setFireDate:[NSDate distantPast]];
-
+            bigBtn = [[UIButton alloc]init];
+            bigBtn.backgroundColor = [UIColor blackColor];
+            bigBtn.alpha = 0.4;
+            [[UIApplication sharedApplication].keyWindow addSubview:bigBtn];
+            [bigBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(bigBtn.superview);
+                make.bottom.equalTo(bigBtn.superview);
+                make.left.equalTo(bigBtn.superview);
+                make.right.equalTo(bigBtn.superview);
+            }];
+            
         }
-        
-        
+
     }];
-    
     
 }
 
 - (void)checkVideoStats:(NSTimer *)tid
 {
-    bigBtn = [[UIButton alloc]init];
-    bigBtn.backgroundColor = [UIColor blackColor];
-    bigBtn.alpha = 0.4;
-    [[UIApplication sharedApplication].keyWindow addSubview:bigBtn];
-    [bigBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bigBtn.superview);
-        make.bottom.equalTo(bigBtn.superview);
-        make.left.equalTo(bigBtn.superview);
-        make.right.equalTo(bigBtn.superview);
-    }];
-     timeee--;
-     [self showHudInView:self.view hint:@"uploading..."];
+    
+        timeee--;
+     [self showHudInView:self.view hint:@"Uploading..."];
      [[ShareWork sharedManager]queryTaskWithTid:tid.userInfo complete:^(BaseModel *model) {
          if ([model.retCode isEqualToString:@"0000"]) {
              if ([model.content isEqualToString:@"0"]) {
@@ -400,14 +424,15 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                      return ;
                  }
              }else if ([model.content isEqualToString:@"1"]){
-                   [[AppUtil appTopViewController]showHint:@"成功"];
-                  [self hideHud];
-                   bigBtn.hidden = YES;
-                    [timer setFireDate:[NSDate distantFuture]];
+                   [[AppUtil appTopViewController]showHint:@"Success"];
+                 [self hideHud];
+                  bigBtn.hidden = YES;
+                 
+                 [timer setFireDate:[NSDate distantFuture]];
                  _isSelect = NO;
                  [self initRefreshView];
              }else if ([model.content isEqualToString:@"2"]){
-                 [[AppUtil appTopViewController]showHint:@"失败"];
+                 [[AppUtil appTopViewController]showHint:@"Failed"];
                   [self hideHud];
                    bigBtn.hidden = YES;
                     [timer setFireDate:[NSDate distantFuture]];
@@ -416,7 +441,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
              }
          }else{
         
-          [[AppUtil appTopViewController]showHint:@"faild"];
+          [[AppUtil appTopViewController]showHint:@"Failed"];
               [self hideHud];
                bigBtn.hidden = YES;
                 [timer setFireDate:[NSDate distantFuture]];
@@ -425,7 +450,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
          }
          
          
-         
+         //  bigBtn.hidden = YES;
      }];
 
 

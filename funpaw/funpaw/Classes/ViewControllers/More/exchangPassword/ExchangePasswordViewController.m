@@ -19,14 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavTitle:@"Exchange password"];
+    [self setNavTitle:@"Change Password"];
 }
 
 -(void)setupView{
 
     UIView * secoendView = [[UIView alloc]init];
     secoendView.backgroundColor = [UIColor whiteColor];
-    secoendView.layer.borderColor = [UIColor redColor].CGColor;
+    secoendView.layer.borderColor = RED_COLOR.CGColor;
     secoendView.layer.borderWidth = 1;
     secoendView.layer.cornerRadius = 25;
     [self.view addSubview:secoendView];
@@ -56,7 +56,7 @@
     
     UIView * passView = [[UIView alloc]init];
     passView.backgroundColor =  [UIColor whiteColor];
-    passView.layer.borderColor = [UIColor redColor].CGColor;
+    passView.layer.borderColor = RED_COLOR.CGColor;
     passView.layer.borderWidth = 1;
     passView.layer.cornerRadius = 25;
     [self.view addSubview:passView];
@@ -86,7 +86,7 @@
     UIView * surepassView = [[UIView alloc]init];
     surepassView.backgroundColor = [UIColor whiteColor];
     surepassView.layer.borderWidth = 1;
-    surepassView.layer.borderColor = [UIColor redColor].CGColor;
+    surepassView.layer.borderColor = RED_COLOR.CGColor;
     surepassView.layer.cornerRadius = 25;
     [self.view addSubview:surepassView];
     [surepassView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -131,29 +131,28 @@
 
 -(void)regiestButtonTouch313{
     if ([AppUtil isBlankString:_codeTextfield.text ]) {
-        [[AppUtil appTopViewController] showHint:@"没输密码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter password"];
         return;
     }
     if (![[AccountManager sharedAccountManager].loginModel.password isEqualToString:_codeTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"原密码错了"];
+        [[AppUtil appTopViewController] showHint:@"Please enter the correct old password"];
         return;
     }
     
-    
-    
+
     if ([AppUtil isBlankString:_passwordTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输新密码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter the new  password"];
         return;
 
     }
     if (_passwordTextfield.text.length<6) {
-        [[AppUtil appTopViewController] showHint:@"新密码小于6位"];
+        [[AppUtil appTopViewController] showHint:@"Password at least 6 digits"];
         return;
 
     }
     
     if (![_passwordTextfield.text isEqualToString:_surePasswordfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"两次输入的密码不一致"];
+        [[AppUtil appTopViewController] showHint:@"password do not match"];
         return;
     }
 
@@ -162,9 +161,9 @@
     [[ShareWork sharedManager]modifyPasswordWithMid:[AccountManager sharedAccountManager].loginModel.mid password:_passwordTextfield.text complete:^(BaseModel *model) {
   //      [self hideHud];
         if (model) {
-            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"repair_success", nil) preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Tips"message:@"Modify success, please login again" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind", nil) style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Sure" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@NO];
                 [[AccountManager sharedAccountManager]logout];
                 

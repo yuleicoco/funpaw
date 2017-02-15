@@ -35,7 +35,7 @@
 
 -(void)setupView{
     UIImageView * backImage = [[UIImageView alloc]init];
-    backImage.image = [UIImage imageNamed:@"egg_login.jpg"];
+    backImage.image = [UIImage imageNamed:@"loginBackkk.png"];
     [self.view addSubview:backImage];
     [backImage mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.equalTo(backImage.superview).insets(UIEdgeInsetsMake(0, 0, 0, 0));
@@ -71,7 +71,7 @@
     _accountTextfield = [[UITextField alloc]init];
     _accountTextfield.font = [UIFont systemFontOfSize:18];
     _accountTextfield.keyboardType = UIKeyboardTypeAlphabet;
-    _accountTextfield.placeholder = @"ACCOUNT NAME/EMAL";
+    _accountTextfield.placeholder = @"EMAIL";
     _accountTextfield.tintColor = [UIColor whiteColor];
     _accountTextfield.textColor = [UIColor whiteColor];
     [_accountTextfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
@@ -188,14 +188,14 @@
 
 -(void)loginButtonTouch{
     if ([AppUtil isBlankString:_accountTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输入号码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter your email"];
         return;
     }
     if ([AppUtil isBlankString:_passwordTextfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"没输入密码"];
+        [[AppUtil appTopViewController] showHint:@"Please enter your password"];
         return;
     }
-     [self showHudInView:self.view hint:@"登录..."];
+     [self showHudInView:self.view hint:@"please wait..."];
     [[ShareWork sharedManager]memberLoginWithAccountnumber:_accountTextfield.text password:_passwordTextfield.text complete:^(BaseModel *model) {
         if ([model.retCode isEqualToString:@"0000"]) {
             LoginModel * loginModel = [[LoginModel alloc]initWithDictionary:model.list[0] error:nil];

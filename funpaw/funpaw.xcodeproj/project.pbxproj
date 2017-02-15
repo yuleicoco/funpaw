@@ -411,6 +411,11 @@
 		7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */; };
 		7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */; };
 		7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */; };
+		7D58F0391E543C370008FC23 /* loginBackkk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D58F0381E543C370008FC23 /* loginBackkk.png */; };
+		7D58F03B1E54450E0008FC23 /* backk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D58F03A1E54450E0008FC23 /* backk@2x.png */; };
+		7D58F03D1E5455A40008FC23 /* selecttt.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D58F03C1E5455A40008FC23 /* selecttt.png */; };
+		7D58F03F1E5456030008FC23 /* videobiaobiao.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D58F03E1E5456030008FC23 /* videobiaobiao.png */; };
+		7D58F0421E545CAE0008FC23 /* RegiestxieyiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58F0411E545CAE0008FC23 /* RegiestxieyiViewController.m */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1306,6 +1311,12 @@
 		7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Morephotovideo.m"; sourceTree = "<group>"; };
 		7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGrapgModel.h; sourceTree = "<group>"; };
 		7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGrapgModel.m; sourceTree = "<group>"; };
+		7D58F0381E543C370008FC23 /* loginBackkk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBackkk.png; sourceTree = "<group>"; };
+		7D58F03A1E54450E0008FC23 /* backk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backk@2x.png"; sourceTree = "<group>"; };
+		7D58F03C1E5455A40008FC23 /* selecttt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selecttt.png; sourceTree = "<group>"; };
+		7D58F03E1E5456030008FC23 /* videobiaobiao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videobiaobiao.png; sourceTree = "<group>"; };
+		7D58F0401E545CAE0008FC23 /* RegiestxieyiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestxieyiViewController.h; sourceTree = "<group>"; };
+		7D58F0411E545CAE0008FC23 /* RegiestxieyiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestxieyiViewController.m; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1437,6 +1448,10 @@
 		348A2D761E52B24700B85D7B /* eggImage */ = {
 			isa = PBXGroup;
 			children = (
+				7D58F03E1E5456030008FC23 /* videobiaobiao.png */,
+				7D58F03C1E5455A40008FC23 /* selecttt.png */,
+				7D58F03A1E54450E0008FC23 /* backk@2x.png */,
+				7D58F0381E543C370008FC23 /* loginBackkk.png */,
 				348A2D771E52B24700B85D7B /* 关闭.png */,
 				348A2D781E52B24700B85D7B /* 半圆.png */,
 				348A2D791E52B24700B85D7B /* v_up@2x.png */,
@@ -2939,6 +2954,8 @@
 				7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */,
 				7D4A009F1E4C674500B5B40F /* CompleViewController.h */,
 				7D4A00A01E4C674500B5B40F /* CompleViewController.m */,
+				7D58F0401E545CAE0008FC23 /* RegiestxieyiViewController.h */,
+				7D58F0411E545CAE0008FC23 /* RegiestxieyiViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -3115,6 +3132,7 @@
 				34E165841E050B19004A65AB /* right_on.png in Resources */,
 				34E165421E050B19004A65AB /* egg_upload.png in Resources */,
 				34E164491E050B18004A65AB /* ring.caf in Resources */,
+				7D58F03F1E5456030008FC23 /* videobiaobiao.png in Resources */,
 				34E165691E050B19004A65AB /* light_off_off.png in Resources */,
 				34E166671E0520F1004A65AB /* 按钮.png in Resources */,
 				34E1666D1E0520F1004A65AB /* voice_off.png in Resources */,
@@ -3123,6 +3141,7 @@
 				34E1665F1E0520F1004A65AB /* light_on.png in Resources */,
 				348A2DA91E52B24700B85D7B /* egg_online.png in Resources */,
 				34E165A81E050B19004A65AB /* 2.png in Resources */,
+				7D58F03D1E5455A40008FC23 /* selecttt.png in Resources */,
 				34E165941E050B19004A65AB /* wangwang.png in Resources */,
 				34E165BC1E050B19004A65AB /* jiluhou.png in Resources */,
 				34E165B01E050B19004A65AB /* egg_usertubiao.png in Resources */,
@@ -3262,6 +3281,7 @@
 				34E165651E050B19004A65AB /* kuang_on.png in Resources */,
 				34E165AA1E050B19004A65AB /* btn_back@2x.png in Resources */,
 				348A2DA71E52B24700B85D7B /* egg_open.png in Resources */,
+				7D58F0391E543C370008FC23 /* loginBackkk.png in Resources */,
 				34C102ED1E52D7F100FFB241 /* egg_more@2x.png in Resources */,
 				34E165891E050B19004A65AB /* showPs.png in Resources */,
 				34E1659A1E050B19004A65AB /* womenAnimal.png in Resources */,
@@ -3295,6 +3315,7 @@
 				34E164A21E050B18004A65AB /* sweet.wav in Resources */,
 				34E165B31E050B19004A65AB /* MV.png in Resources */,
 				34E165931E050B19004A65AB /* video_point.png in Resources */,
+				7D58F03B1E54450E0008FC23 /* backk@2x.png in Resources */,
 				34E165AB1E050B19004A65AB /* btn_new_issue@2x.png in Resources */,
 				34E1655F1E050B19004A65AB /* history_triangle.png in Resources */,
 				34E1658D1E050B19004A65AB /* time.png in Resources */,
@@ -3454,6 +3475,7 @@
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
 				7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
+				7D58F0421E545CAE0008FC23 /* RegiestxieyiViewController.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
 				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,

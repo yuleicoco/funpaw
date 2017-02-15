@@ -32,7 +32,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     [super viewDidLoad];
     self.view.backgroundColor = LIGHT_GRAY_COLOR;
     _isSelect = NO;
-    [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor blueColor] hide:NO];
+    [self setNavTitle:@"Photo"];
+    [self showBarButton:NAV_RIGHT title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     
 }
 -(void)setupData{
@@ -45,10 +46,10 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     [deleteOrUpdateArr removeAllObjects];
     _isSelect = !_isSelect;
     if (_isSelect == YES) {
-        [self showBarButton:NAV_RIGHT title:@"dance" fontColor:[UIColor redColor] hide:NO];
+        [self showBarButton:NAV_RIGHT title:@"Cancel" fontColor:[UIColor whiteColor] hide:NO];
        // _deleteBtn.hidden = NO;
     }else{
-        [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor blueColor] hide:NO];
+        [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor whiteColor] hide:NO];
         _deleteBtn.hidden = YES;
     }
     [self.collectionView reloadData];
@@ -187,6 +188,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     cell.imageV.tag = 1000*(indexPath.section+1) +indexPath.row;
     cell.imageV.userInteractionEnabled = YES;
     
+    cell.startImageV.hidden = YES;
     //    if ([model.typeArray[indexPath.row] isEqualToString:@"video"]) {
     //  cell.startImageV.hidden = NO;
     //    }else{
