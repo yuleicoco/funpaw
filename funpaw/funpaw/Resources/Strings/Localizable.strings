@@ -24,6 +24,8 @@
 // wifi
 "wifiTitle" = "Set networ";
 "bindDevice" = "Binding device";
+"Wifi_done"="Done";
+
 
 // wifi
 "wifiTitle" = "Set WIFI";

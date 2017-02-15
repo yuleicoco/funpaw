@@ -64,7 +64,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     
     
     
-    self.view.backgroundColor =GRAY_COLOR;
+    self.view.backgroundColor =[UIColor whiteColor];
     isOpenPerOK = NO;
     
     
@@ -181,7 +181,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     btnBind.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     if ([AppUtil isBlankString:strTT]) {
         [btnBind setTitle:NSLocalizedString(@"bindDevice",nil) forState:UIControlStateNormal];
-        btnBind.backgroundColor = YELLOW_COLOR;
+        btnBind.backgroundColor = GRAY_COLOR;
         btnBind.enabled = FALSE;
     }else
     {
@@ -247,7 +247,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     }else
     {
         deviceTF.text =strTT;
-        incodeTF.text =strYY;
+        incodeTF.text =@"123456";
         
         
         
@@ -311,7 +311,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
         return;
     }
     if ([AppUtil isBlankString:strTT]) {
-        [[ShareWork sharedManager]AddDeviceStats:[AccountManager sharedAccountManager].loginModel.mid deviceno:deviceTF.text complete:^(BaseModel *model) {
+        [[ShareWork sharedManager]AddDeviceStats:Mid_S deviceno:deviceTF.text complete:^(BaseModel *model) {
             
             NSLog(@"%@",model);
             
@@ -764,7 +764,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
  *  使能绑定按钮
  */
 - (void)enableBindButton {
-    btnBind.backgroundColor = GREEN_COLOR;
+    btnBind.backgroundColor = YELLOW_COLOR;
     btnBind.enabled = TRUE;
     
 }

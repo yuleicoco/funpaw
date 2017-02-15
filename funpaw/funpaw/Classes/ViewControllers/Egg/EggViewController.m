@@ -236,6 +236,8 @@
                 strState = [NSString stringWithFormat:@"%@",@"ds000"];
             }else{
                 strState = [NSString stringWithFormat:@"%@",model.retVal[@"status"]];
+                Mid_D =model.retVal[@"deviceno"];
+                
             }
             
         }// 没有设备
@@ -625,6 +627,11 @@
     
 
     
+    InCallViewController * incal =[[InCallViewController alloc]init];
+    [self presentViewController:incal animated:YES completion:nil];
+    
+    
+    
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
     if ([AppUtil isBlankString:Mid_D]) {
@@ -654,6 +661,7 @@
          return;
          
      }
+    
     
     
     
