@@ -32,6 +32,7 @@ extern NSString *const SEGOEGG_PREFIX;
 @property (nonatomic,strong)UITextField * incodeTF;
 @property (nonatomic,strong)UIButton * btnBind;
 @property (nonatomic,strong) MBProgressHUD *hud;
+@property (nonatomic,strong)NSString * strTT;
 
 
 

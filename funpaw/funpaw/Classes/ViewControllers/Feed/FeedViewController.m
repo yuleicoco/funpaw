@@ -14,44 +14,35 @@
 static NSString * cellId = @"fedseting2321232322313323231";
 
 @interface FeedViewController ()
-@property (nonatomic,strong)UIButton * bigBtn;
-@property (nonatomic,strong)UIButton * oneDayButton;
-@property (nonatomic,strong)UIButton * twoDayButton;
-@property (nonatomic,strong)UIView * moveView;
-@property (nonatomic,assign)BOOL isOneOrTwo;
+{
+    
+    NSArray * arrWord;
+    
+}
 
-@property (nonatomic,strong)NSMutableArray * ondedayArray;
-@property (nonatomic,strong)NSString * timeStr;
-
-
-@property (nonatomic,strong)UIButton * bigBtn11;
-
-@property (nonatomic,strong)UIButton * timeBtn1;
-@property (nonatomic,strong)UIButton * timeBtn2;
-@property (nonatomic,strong)UIButton * timeBtn3;
-@property (nonatomic,strong)UIButton * timeBtn4;
-@property (nonatomic,strong)UIButton * timeBtn5;
-@property (nonatomic,strong)UIButton * timeBtn6;
-
-
-
-@property (nonatomic,strong)UIDatePicker * datePicker;
-@property (nonatomic,strong)UIView * bigView;
-@property (nonatomic,strong)UIButton * bigButton;
-@property (nonatomic,strong)UIButton * wanchengBtn;
-@property (nonatomic,strong)NSString * panduanStr;
-
-@property (nonatomic,strong)NSMutableArray * dataArray;
-
-
-@property (nonatomic,strong)UIView * bigView1;
-@property (nonatomic,strong)UIView * bigView2;
-
-@property (nonatomic,strong)UIButton * sureBtn2;
-@property (nonatomic,strong)NSDictionary * sourceDic;
 @end
 
 @implementation FeedViewController
+@synthesize bigBtn; // 喂食盘
+@synthesize oneDayButton; // 一个
+@synthesize twoDayButton; // 第二个
+@synthesize StopBtn; // 停止
+@synthesize bgViewTwo; // 两顿的背景
+@synthesize bgViewOne; // 四顿的背景
+@synthesize timeBtn1;
+@synthesize timeBtn2;
+@synthesize timeBtn3;
+@synthesize timeBtn4;
+@synthesize timeBtn5;
+@synthesize timeBtn6;
+@synthesize RbgImage;
+
+
+
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -60,6 +51,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self setNavTitle:NSLocalizedString(@"feed_model", nil)];
     _dataArray = [[NSMutableArray alloc]init];
     self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
+    arrWord =@[@"A",@"B",@"C",@"D"];
+
     [self querWeishi];
 }
 
@@ -80,112 +73,131 @@ static NSString * cellId = @"fedseting2321232322313323231";
 
 -(void)setupView{
     [super setupView];
-    UIView * whiteView1 = [[UIView alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 0 * W_Hight_Zoom, 375 * W_Wide_Zoom, 290 * W_Hight_Zoom)];
-    whiteView1.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:whiteView1];
+    
+    // 圆圈背景
+    RbgImage = [UIView new];
+    RbgImage.backgroundColor = [UIColor whiteColor];
+    RbgImage.layer.borderColor =RED_COLOR.CGColor;
+    RbgImage.layer.borderWidth =0.7;
+    [self.view addSubview:RbgImage];
+    
+    [RbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(375, 350));
+        
+        
+    }];
     
     
     
-    _bigBtn = [[UIButton alloc]initWithFrame:CGRectMake(87.5 * W_Wide_Zoom, 80 * W_Hight_Zoom , 200 * W_Wide_Zoom, 200 * W_Hight_Zoom)];
-    //_bigBtn.backgroundColor = [UIColor blueColor];
-    [_bigBtn setImage:[UIImage imageNamed:@"weishi_onday.png"] forState:UIControlStateNormal];
-    _bigBtn.layer.cornerRadius = _bigBtn.width/2;
-    [self.view addSubview:_bigBtn];
+    // 圆盘
+    bigBtn =[UIButton new];
+    [bigBtn setImage:[UIImage imageNamed:@"feed_pan"] forState:UIControlStateNormal];
+    bigBtn.layer.cornerRadius = bigBtn.width/2;
+    [self.view addSubview:bigBtn];
     
-    UIView * whiteView = [[UIView alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 290 * W_Hight_Zoom, 375 * W_Wide_Zoom, 50 * W_Hight_Zoom)];
-    whiteView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:whiteView];
+    [bigBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.size.mas_equalTo(CGSizeMake(204, 204));
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(self.view.mas_top).offset(74);
+        
+        
+        
+    }];
     
     
-    
-    UILabel * wenziLabel = [[UILabel alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 15 * W_Hight_Zoom, 100 * W_Wide_Zoom, 20 * W_Hight_Zoom)];
+
+    // 方式
+    UILabel * wenziLabel = [UILabel new];
     wenziLabel.text = NSLocalizedString(@"feed_way", nil);
-    wenziLabel.textColor = [UIColor blackColor];
+    wenziLabel.textColor =YELLOW_COLOR;
     wenziLabel.font = [UIFont systemFontOfSize:20];
-    [whiteView addSubview:wenziLabel];
+    [RbgImage addSubview:wenziLabel];
+    [wenziLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(self.view.mas_left).offset(12);
+        make.size.mas_equalTo(CGSizeMake(100, 28));
+        make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
+        
+    }];
     
-    _oneDayButton = [[UIButton alloc]initWithFrame:CGRectMake(235 * W_Wide_Zoom, 16 * W_Hight_Zoom, 17 * W_Wide_Zoom, 17 * W_Hight_Zoom)];
-    _oneDayButton.selected = YES;
-    [_oneDayButton setImage:[UIImage imageNamed:@"quan_guize.png"] forState:UIControlStateNormal];
-    [_oneDayButton setImage:[UIImage imageNamed:@"xuanquan_guize.png"] forState:UIControlStateSelected];
-    [whiteView  addSubview:_oneDayButton];
-    [_oneDayButton addTarget:self action:@selector(onedayButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     
-    UILabel * wenzi1 =[[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_oneDayButton.frame) + 5, 15 * W_Hight_Zoom, 50 * W_Wide_Zoom, 20 * W_Hight_Zoom)];
-    wenzi1.text = NSLocalizedString(@"feed_four", nil);
-    wenzi1.textColor = GREEN_COLOR;
+    
+    
+    // 两个圆圈
+    
+    
+    oneDayButton =[UIButton new];
+    oneDayButton.selected = YES;
+    [oneDayButton setImage:[UIImage imageNamed:@"feed_r"] forState:UIControlStateNormal];
+    
+    [oneDayButton addTarget:self action:@selector(onedayButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [oneDayButton setImage:[UIImage imageNamed:@"feed_s"] forState:UIControlStateSelected];
+    [RbgImage  addSubview:oneDayButton];
+    [oneDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(self.view.mas_centerX).offset(30);
+        make.size.mas_equalTo(CGSizeMake(17, 17));
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        
+    }];
+    
+    
+    // 第一个圈文字
+    
+
+    UILabel * wenzi1 =[UILabel new];
+    wenzi1.text = NSLocalizedString(@"feed_two", nil);
+    wenzi1.textColor = YELLOW_COLOR;
     wenzi1.font = [UIFont systemFontOfSize:20];
-    [whiteView addSubview:wenzi1];
+    [RbgImage addSubview:wenzi1];
+    [wenzi1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(oneDayButton.mas_right).offset(5);
+        make.size.mas_equalTo(CGSizeMake(50, 30));
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        
+    }];
     
     
+     // 第二个
+
+    twoDayButton = [UIButton new];
+    [twoDayButton setImage:[UIImage imageNamed:@"feed_r"] forState:UIControlStateNormal];
+    [twoDayButton setImage:[UIImage imageNamed:@"feed_s"] forState:UIControlStateSelected];
+    [twoDayButton addTarget:self action:@selector(twoDayButtontouch) forControlEvents:UIControlEventTouchUpInside];
+    [RbgImage addSubview:twoDayButton];
     
-    _twoDayButton = [[UIButton alloc]initWithFrame:CGRectMake(310 * W_Wide_Zoom, 16 * W_Hight_Zoom, 17 * W_Wide_Zoom, 17 * W_Hight_Zoom)];
-    [_twoDayButton setImage:[UIImage imageNamed:@"quan_guize.png"] forState:UIControlStateNormal];
-    [_twoDayButton setImage:[UIImage imageNamed:@"xuanquan_guize.png"] forState:UIControlStateSelected];
-    [whiteView addSubview:_twoDayButton];
-    [_twoDayButton addTarget:self action:@selector(twoDayButtontouch) forControlEvents:UIControlEventTouchUpInside];
+    [twoDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.equalTo(wenzi1.mas_right).offset(16);
+        make.size.mas_equalTo(CGSizeMake(17, 17));
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        
+    }];
+   
+    
+    // 第二个文字
     
     
-    UILabel * wenzi2 = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_twoDayButton.frame) + 5, 15 * W_Hight_Zoom, 50 * W_Wide_Zoom, 20 * W_Hight_Zoom)];
-    wenzi2.text = NSLocalizedString(@"feed_two", nil);
-    wenzi2.textColor = GREEN_COLOR;
+    UILabel * wenzi2 =[UILabel new];
+    wenzi2.text = NSLocalizedString(@"feed_four", nil);
+    wenzi2.textColor = YELLOW_COLOR;
     wenzi2.font = [UIFont systemFontOfSize:20];
-    [whiteView addSubview:wenzi2];
+    [RbgImage addSubview:wenzi2];
     
+    [wenzi2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(twoDayButton.mas_right).offset(5);
+        make.size.mas_equalTo(CGSizeMake(50, 30));
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        
+    }];
+
     
-    
-    
-    
-    
-    //    UIView * whiteView = [[UIView alloc]initWithFrame:CGRectMake(230 * W_Wide_Zoom, 300 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    //    whiteView.backgroundColor = [UIColor whiteColor];
-    //    whiteView.layer.cornerRadius = 3;
-    //    [self.view addSubview:whiteView];
-    //
-    //    _oneDayButton = [[UIButton alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 0 * W_Hight_Zoom, 40 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    //    [_oneDayButton setTitle:@"一天" forState:UIControlStateNormal];
-    //    _oneDayButton.backgroundColor = [UIColor whiteColor];
-    //    _oneDayButton.titleLabel.font = [UIFont systemFontOfSize:13];
-    //    [_oneDayButton setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
-    //    [whiteView addSubview:_oneDayButton];
-    //    [_oneDayButton addTarget:self action:@selector(onedayButtonTouch) forControlEvents:UIControlEventTouchUpInside];
-    //
-    //
-    //
-    //    _twoDayButton = [[UIButton alloc]initWithFrame:CGRectMake(40 * W_Wide_Zoom, 0 * W_Hight_Zoom, 40 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    //    [_twoDayButton setTitle:@"两天" forState:UIControlStateNormal];
-    //    _twoDayButton.backgroundColor = [UIColor whiteColor];
-    //    _twoDayButton.titleLabel.font = [UIFont systemFontOfSize:13];
-    //    [_twoDayButton setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
-    //    [whiteView addSubview:_twoDayButton];
-    //    [_twoDayButton addTarget:self action:@selector(twoDayButtontouch) forControlEvents:UIControlEventTouchUpInside];
-    //
-    //    _moveView = [[UIView alloc]initWithFrame:CGRectMake(2 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom)];
-    //    _moveView.backgroundColor = GREEN_COLOR;
-    //    [whiteView addSubview:_moveView];
-    
+
     _isOneOrTwo = YES;
     
     
-    //    UIButton * sureBtn = [[UIButton alloc]initWithFrame:CGRectMake(221.25 * W_Wide_Zoom, 620 * W_Hight_Zoom, 120 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    //    sureBtn.backgroundColor = GREEN_COLOR;
-    //    [sureBtn setTitle:@"确定" forState:UIControlStateNormal];
-    //    [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    sureBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-    //    sureBtn.layer.cornerRadius = 5;
-    //    [self.view addSubview:sureBtn];
-    //    [sureBtn addTarget:self action:@selector(hahahahaha) forControlEvents:UIControlEventTouchUpInside];
-    //
-    //
-    //    _sureBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(33.75 * W_Wide_Zoom, 620 * W_Hight_Zoom, 120 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    //    _sureBtn2.backgroundColor = GREEN_COLOR;
-    //    [_sureBtn2 setTitle:@"停用" forState:UIControlStateNormal];
-    //    [_sureBtn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    //    _sureBtn2.titleLabel.font = [UIFont systemFontOfSize:13];
-    //    _sureBtn2.layer.cornerRadius = 5;
-    //    [self.view addSubview:_sureBtn2];
-    //    [_sureBtn2 addTarget:self action:@selector(stopWeishi) forControlEvents:UIControlEventTouchUpInside];
-    
+    // 下面tab bar
     UIView * bottomview = [[UIView alloc]init];
     bottomview.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bottomview];
@@ -197,24 +209,26 @@ static NSString * cellId = @"fedseting2321232322313323231";
         
     }];
     
-    _sureBtn2= [[UIButton alloc]init];
-    [_sureBtn2 setTitle:NSLocalizedString(@"feed_stop", nil) forState:UIControlStateNormal];
-    [_sureBtn2 setTitleColor:RGB(220, 220, 220) forState:UIControlStateNormal];
-    _sureBtn2.titleLabel.font = [UIFont systemFontOfSize:18];
-    [_sureBtn2 addTarget:self action:@selector(stopWeishi) forControlEvents:UIControlEventTouchUpInside];
-    [bottomview addSubview:_sureBtn2];
-    [_sureBtn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_sureBtn2.superview).offset(79);
-        make.centerY.equalTo(_sureBtn2.superview.mas_centerY);
+    StopBtn= [UIButton new];
+    [StopBtn setTitle:NSLocalizedString(@"feed_stop", nil) forState:UIControlStateNormal];
+    [StopBtn setTitleColor:RGB(220, 220, 220) forState:UIControlStateNormal];
+    StopBtn.titleLabel.font = [UIFont systemFontOfSize:18];
+    [StopBtn addTarget:self action:@selector(StopFeed:) forControlEvents:UIControlEventTouchUpInside];
+    [bottomview addSubview:StopBtn];
+    [StopBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(StopBtn.superview).offset(79);
+        make.centerY.equalTo(StopBtn.superview.mas_centerY);
         
     }];
     
     
-    UIButton * sureBtn = [[UIButton alloc]init];
+    
+    
+    UIButton * sureBtn = [UIButton new];
     [sureBtn setTitle:NSLocalizedString(@"feed_start", nil) forState:UIControlStateNormal];
-    [sureBtn setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
+    [sureBtn setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
     sureBtn.titleLabel.font = [UIFont systemFontOfSize:18];
-    [sureBtn addTarget:self action:@selector(hahahahaha) forControlEvents:UIControlEventTouchUpInside];
+    [sureBtn addTarget:self action:@selector(StartFeed:) forControlEvents:UIControlEventTouchUpInside];
     [bottomview addSubview:sureBtn];
     [sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(sureBtn.superview).offset(-79);
@@ -233,7 +247,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
 }
 
--(void)stopWeishi{
+// 停止喂食
+-(void)StopFeed:(UIButton *)sender{
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"feed_surefeed", nil) preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
@@ -267,105 +282,118 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+
 -(void)twoDayView{
-    //dadaad
-    [_bigView1 removeFromSuperview];
-    _bigView2 = [[UIView alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 350 * W_Hight_Zoom, 375 * W_Wide_Zoom, 120 * W_Hight_Zoom)];
-    _bigView2.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_bigView2];
-    
-    _timeBtn5 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 15 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn5 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn5.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView2 addSubview:_timeBtn5];
-    _timeBtn5.tag = 15;
-    [_timeBtn5 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    _timeBtn6 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 75 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn6 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn6 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn6.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView2 addSubview:_timeBtn6];
-    _timeBtn6.tag = 16;
-    [_timeBtn6 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    for (int i = 0 ; i < 2; i++) {
+   
+    [bgViewOne removeFromSuperview];
+    //两顿背景
+    bgViewTwo = [UIView new ];
+    bgViewTwo.backgroundColor = [UIColor redColor];
+    [self.view addSubview:bgViewTwo];
+    [bgViewTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         
+        make.top.equalTo(self.view.mas_top).offset(350);
+        make.size.mas_equalTo(CGSizeMake(375, 120));
+        
+                          
+    }];
+    
+   
+    
+    // A B
+    for (int i = 0 ; i < 2; i++) {
         UILabel * lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 59 * W_Hight_Zoom + i * 60 * W_Hight_Zoom, 351 * W_Wide_Zoom, 1 * W_Hight_Zoom)];
         lineLabel.backgroundColor = LIGHT_GRAYdcdc_COLOR;
-        [_bigView2 addSubview:lineLabel];
-        
-        
+        [bgViewTwo addSubview:lineLabel];
         
         UILabel * tLabel = [[UILabel alloc]initWithFrame:CGRectMake(350 * W_Wide_Zoom, 15 * W_Hight_Zoom + i*60 * W_Hight_Zoom, 30 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-        tLabel.text = [NSString stringWithFormat:@"t%d",i+1];
-        tLabel.textColor = GREEN_COLOR;
+        tLabel.text = arrWord[i];
+        tLabel.textColor = YELLOW_COLOR;
         tLabel.font = [UIFont systemFontOfSize:20];
-        [_bigView2 addSubview:tLabel];
+        [bgViewTwo addSubview:tLabel];
     }
+    
+    
+    
+    timeBtn5 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 15 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
+    [timeBtn5 setTitle:@"00:00" forState:UIControlStateNormal];
+    [timeBtn5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    timeBtn5.titleLabel.font = [UIFont systemFontOfSize:20];
+    [bgViewTwo addSubview:timeBtn5];
+    timeBtn5.tag = 15;
+    [timeBtn5 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    timeBtn6 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 75 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
+    [timeBtn6 setTitle:@"00:00" forState:UIControlStateNormal];
+    [timeBtn6 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    timeBtn6.titleLabel.font = [UIFont systemFontOfSize:20];
+    [bgViewTwo addSubview:timeBtn6];
+    timeBtn6.tag = 16;
+    [timeBtn6 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
+    
     
 }
 
 -(void)onedayView{
-    [_bigView2 removeFromSuperview];
-    _bigView1 = [[UIView alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 350 * W_Hight_Zoom, 375 * W_Wide_Zoom, 240 * W_Hight_Zoom)];
-    _bigView1.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:_bigView1];
+    [bgViewTwo removeFromSuperview];
     
-    _bigBtn11 = [[UIButton alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 0 * W_Hight_Zoom, 375 * W_Wide_Zoom, 60 * W_Hight_Zoom)];
-    _bigBtn11.userInteractionEnabled=NO;
-    _bigBtn11.backgroundColor = [UIColor whiteColor];
-    [_bigView1 addSubview:_bigBtn11];
+     bgViewOne = [UIView new];
+     bgViewOne.backgroundColor = [UIColor whiteColor];
+     [self.view addSubview:bgViewOne];
     
-    
-    _timeBtn1 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 15 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn1 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn1.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView1 addSubview:_timeBtn1];
-    _timeBtn1.tag = 11;
-    [_timeBtn1 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    _timeBtn2 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 75 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn2 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn2.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView1 addSubview:_timeBtn2];
-    _timeBtn2.tag = 12;
-    [_timeBtn2 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
-    _timeBtn3 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 135 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn3 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn3.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView1 addSubview:_timeBtn3];
-    _timeBtn3.tag = 13;
-    [_timeBtn3 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    _timeBtn4 = [[UIButton alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 195 * W_Hight_Zoom, 80 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-    [_timeBtn4 setTitle:@"00:00" forState:UIControlStateNormal];
-    [_timeBtn4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _timeBtn4.titleLabel.font = [UIFont systemFontOfSize:20];
-    [_bigView1 addSubview:_timeBtn4];
-    _timeBtn4.tag = 14;
-    [_timeBtn4 addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
-    
-    for (int i = 0 ; i < 4; i++) {
+    [bgViewOne mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(350);
+        make.size.mas_equalTo(CGSizeMake(375, 240));
+        
+    }];
+    for ( int i = 0; i<4; i++) {
+        UIButton * btn =[UIButton new];
+        btn.tag = 11+i;
+        [btn setTitle:@"00:00" forState:UIControlStateNormal];
+        [btn setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:20];
+        [btn addTarget:self action:@selector(hehedada:) forControlEvents:UIControlEventTouchUpInside];
+        [bgViewOne addSubview:btn];
         
         UILabel * lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 59 * W_Hight_Zoom + i * 60 * W_Hight_Zoom, 351 * W_Wide_Zoom, 1 * W_Hight_Zoom)];
         lineLabel.backgroundColor = LIGHT_GRAYdcdc_COLOR;
-        [_bigView1 addSubview:lineLabel];
+        [bgViewOne addSubview:lineLabel];
         
-        UILabel * tLabel = [[UILabel alloc]initWithFrame:CGRectMake(350 * W_Wide_Zoom, 15 * W_Hight_Zoom + i*60 * W_Hight_Zoom, 30 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
-        tLabel.text = [NSString stringWithFormat:@"t%d",i+1];
-        tLabel.textColor = GREEN_COLOR;
+        UILabel * tLabel = [[UILabel alloc]initWithFrame:CGRectMake(12 * W_Wide_Zoom, 15 * W_Hight_Zoom + i*60 * W_Hight_Zoom, 30 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
+        tLabel.text = arrWord[i];
+        tLabel.textColor = YELLOW_COLOR;
         tLabel.font = [UIFont systemFontOfSize:20];
-        [_bigView1 addSubview:tLabel];
+        [bgViewOne addSubview:tLabel];
     }
+     timeBtn1 = [self.view viewWithTag:11];
+     timeBtn2 = [self.view viewWithTag:12];
+     timeBtn3 = [self.view viewWithTag:13];
+     timeBtn4 = [self.view viewWithTag:14];
+     NSArray * OneArrlist =@[timeBtn1,timeBtn2,timeBtn3,timeBtn4];
+    
+    
+    /**
+     *  axisType         轴线方向
+     *  fixedSpacing     间隔大小
+     *  fixedItemLength  每个控件的固定长度/宽度
+     *  leadSpacing      头部间隔
+     *  tailSpacing      尾部间隔
+     *
+     */
+    [OneArrlist mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.right.equalTo(self.view.mas_right).offset(-15);
+        
+    
+    }];
+    [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
+
+    
+   
+    
+    
 }
 -(void)hehedada:(UIButton *)sender{
     if (sender.tag == 11) {
@@ -420,17 +448,17 @@ static NSString * cellId = @"fedseting2321232322313323231";
     NSString *dateString = [pickerFormatter stringFromDate:pickerDate];
     //  NSInteger i = (NSInteger)dateString;
     if ([_panduanStr isEqualToString:@"11"]) {
-        [_timeBtn1 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn1 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"12"]){
-        [_timeBtn2 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn2 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"13"]){
-        [_timeBtn3 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn3 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"14"]){
-        [_timeBtn4 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn4 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"15"]){
-        [_timeBtn5 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn5 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"16"]){
-        [_timeBtn6 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn6 setTitle:dateString forState:UIControlStateNormal];
     }
     sender.hidden = YES;
     _bigButton.hidden = YES;
@@ -447,20 +475,19 @@ static NSString * cellId = @"fedseting2321232322313323231";
     NSString *dateString = [pickerFormatter stringFromDate:pickerDate];
     
     if ([_panduanStr isEqualToString:@"11"]) {
-        [_timeBtn1 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn1 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"12"]){
-        [_timeBtn2 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn2 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"13"]){
-        [_timeBtn3 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn3 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"14"]){
-        [_timeBtn4 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn4 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"15"]){
-        [_timeBtn5 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn5 setTitle:dateString forState:UIControlStateNormal];
     }else if ([_panduanStr isEqualToString:@"16"]){
-        [_timeBtn6 setTitle:dateString forState:UIControlStateNormal];
+        [timeBtn6 setTitle:dateString forState:UIControlStateNormal];
     }
-    //打印显示日期时间
-    NSLog(@"格式化显示时间：%@",dateString);
+   
 }
 
 -(void)bigButtonHidden{
@@ -471,52 +498,46 @@ static NSString * cellId = @"fedseting2321232322313323231";
 }
 
 -(void)onedayButtonTouch{
-    _oneDayButton.selected = YES;
-    _twoDayButton.selected = NO;
+    oneDayButton.selected = YES;
+    twoDayButton.selected = NO;
     _isOneOrTwo = YES;
-    [_bigView2 removeFromSuperview];
-    _bigView2.hidden = YES;
-    _bigView1.hidden = NO;
+    [bgViewTwo removeFromSuperview];
+    bgViewOne.hidden = NO;
     [self onedayView];
-    //    [UIView animateWithDuration:0.3 animations:^{
-    //        _moveView.frame = CGRectMake(2 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom);
-    //    [[AppUtil appTopViewController] showHint:@"启用一天模式"];
-    [_bigBtn setImage:[UIImage imageNamed:@"weishi_onday.png"] forState:UIControlStateNormal];
-    //    }];
+    [bigBtn setImage:[UIImage imageNamed:@"feed_pan"] forState:UIControlStateNormal];
+  
 }
 
 -(void)twoDayButtontouch{
-    [_bigView1 removeFromSuperview];
-    _bigView2.hidden = NO;
-    _bigView1.hidden = YES;
-    _oneDayButton.selected = NO;
-    _twoDayButton.selected = YES;
+    [bgViewOne removeFromSuperview];
+    bgViewTwo.hidden = NO;
+
+    oneDayButton.selected = NO;
+    twoDayButton.selected = YES;
     _isOneOrTwo = NO;
     [self twoDayView];
-    //    [UIView animateWithDuration:0.3 animations:^{
-    //        _moveView.frame = CGRectMake(42 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom);
-    //         [[AppUtil appTopViewController] showHint:@"启用两天模式"];
-    [_bigBtn setImage:[UIImage imageNamed:@"weishi_twoday.png"] forState:UIControlStateNormal];
-    //    }];
-    //
+    [bigBtn setImage:[UIImage imageNamed:@"feed_pan"] forState:UIControlStateNormal];
+    
+    
+    
 }
 
 
 
-
--(void)hahahahaha{
+// 激活喂食
+-(void)StartFeed:(UIButton *)sender{
     NSString * typeStr = @"";
     if (_isOneOrTwo == YES) {
         [_dataArray removeAllObjects];
-        [_dataArray addObject:_timeBtn1.titleLabel.text];
-        [_dataArray addObject:_timeBtn2.titleLabel.text];
-        [_dataArray addObject:_timeBtn3.titleLabel.text];
-        [_dataArray addObject:_timeBtn4.titleLabel.text];
+        [_dataArray addObject:timeBtn1.titleLabel.text];
+        [_dataArray addObject:timeBtn2.titleLabel.text];
+        [_dataArray addObject:timeBtn3.titleLabel.text];
+        [_dataArray addObject:timeBtn4.titleLabel.text];
         typeStr = @"one";
     }else{
         [_dataArray removeAllObjects];
-        [_dataArray addObject:_timeBtn5.titleLabel.text];
-        [_dataArray addObject:_timeBtn6.titleLabel.text];
+        [_dataArray addObject:timeBtn5.titleLabel.text];
+        [_dataArray addObject:timeBtn6.titleLabel.text];
         typeStr = @"two";
     }
     
@@ -530,7 +551,6 @@ static NSString * cellId = @"fedseting2321232322313323231";
     }
     [self showHudInView:self.view hint:NSLocalizedString(@"feed_setting", nil)];
     NSString * timeStr = [_dataArray componentsJoinedByString:@","];
-    NSLog(@"%@",timeStr);
     NSString * termidStr = [AccountManager sharedAccountManager].loginModel.termid ;
     NSString * deviceno = [AccountManager sharedAccountManager].loginModel.deviceno;
     if ([AppUtil isBlankString:termidStr]) {
@@ -539,7 +559,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
         termidStr= [defaults objectForKey:@"termid"];
     }
     
-    [[ShareWork sharedManager]addFeedingtimeWithMid:[AccountManager sharedAccountManager].loginModel.mid type:typeStr times:timeStr deviceno:[AccountManager sharedAccountManager].loginModel.deviceno termid:[AccountManager sharedAccountManager].loginModel.termid complete:^(BaseModel *model) {
+    [[ShareWork sharedManager]addFeedingtimeWithMid:Mid_S type:typeStr times:timeStr deviceno:Mid_D termid:Mid_T complete:^(BaseModel *model) {
         [self hideHud];
         if (model) {
             [[AppUtil appTopViewController] showHint:model.retDesc];
@@ -552,63 +572,53 @@ static NSString * cellId = @"fedseting2321232322313323231";
 
 //查询
 -(void)querWeishi{
-    [_bigView2 removeFromSuperview];
-    [_bigView1
+    [bgViewTwo removeFromSuperview];
+    [bgViewOne
      removeFromSuperview];
-    [_timeBtn1 setTitle:@"" forState:UIControlStateNormal];
-    [_timeBtn2 setTitle:@"" forState:UIControlStateNormal];
-    [_timeBtn3 setTitle:@"" forState:UIControlStateNormal];
-    [_timeBtn4 setTitle:@"" forState:UIControlStateNormal];
-    [_timeBtn5 setTitle:@"" forState:UIControlStateNormal];
-    [_timeBtn6 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn1 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn2 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn3 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn4 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn5 setTitle:@"" forState:UIControlStateNormal];
+    [timeBtn6 setTitle:@"" forState:UIControlStateNormal];
     [self.dataSource removeAllObjects];
     [[ShareWork sharedManager]queryFeedingtimeWithMid:[AccountManager sharedAccountManager].loginModel.mid status:@"1" complete:^(BaseModel *model) {
         if (model.retVal.count > 0 ) {
-            [_sureBtn2 setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
-            _sureBtn2.userInteractionEnabled = YES;
+            [StopBtn setTitleColor:GREEN_COLOR forState:UIControlStateNormal];
+            StopBtn.userInteractionEnabled = YES;
             _sourceDic = model.retVal;
-            // [self.dataSource addObjectsFromArray:model.list];
-            // FeddingModel * model = self.dataSource[0];
-            //            NSArray * array = [model.times componentsSeparatedByString:NSLocalizedString(@",", nil)];
+
             NSArray * array = [model.retVal[@"times"] componentsSeparatedByString:NSLocalizedString(@",", nil)];
             
             if ([model.retVal[@"type"] isEqualToString:@"one"]) {
-                _oneDayButton.selected = YES;
-                _twoDayButton.selected = NO;
+                oneDayButton.selected = YES;
+                twoDayButton.selected = NO;
                 _isOneOrTwo = YES;
                 _moveView.frame = CGRectMake(2 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom);
                 //[[AppUtil appTopViewController] showHint:@"启用一天模式"];
-                _bigBtn.backgroundColor = [UIColor blueColor];
+                bigBtn.backgroundColor = [UIColor blueColor];
                 [self onedayView];
-                [_timeBtn1 setTitle:array[0] forState:UIControlStateNormal];
-                [_timeBtn2 setTitle:array[1] forState:UIControlStateNormal];
-                [_timeBtn3 setTitle:array[2] forState:UIControlStateNormal];
-                [_timeBtn4 setTitle:array[3] forState:UIControlStateNormal];
+                [timeBtn1 setTitle:array[0] forState:UIControlStateNormal];
+                [timeBtn2 setTitle:array[1] forState:UIControlStateNormal];
+                [timeBtn3 setTitle:array[2] forState:UIControlStateNormal];
+                [timeBtn4 setTitle:array[3] forState:UIControlStateNormal];
             }else{
-                _oneDayButton.selected = NO;
-                _twoDayButton.selected = YES;
+                oneDayButton.selected = NO;
+                twoDayButton.selected = YES;
                 _isOneOrTwo = NO;
                 _moveView.frame = CGRectMake(42 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom);
-                // [[AppUtil appTopViewController] showHint:@"启用两天模式"];
-                _bigBtn.backgroundColor = [UIColor redColor];
+                bigBtn.backgroundColor = [UIColor redColor];
                 [self twoDayView];
-                [_timeBtn5 setTitle:array[0] forState:UIControlStateNormal];
-                [_timeBtn6 setTitle:array[1] forState:UIControlStateNormal];
+                [timeBtn5 setTitle:array[0] forState:UIControlStateNormal];
+                [timeBtn6 setTitle:array[1] forState:UIControlStateNormal];
             }
             
         }else{
-            // [self onedayView];
-            //[self onedayButtonTouch];
+           
             [self twoDayView];
-            //   _sureBtn2.backgroundColor = [UIColor grayColor];
-            _sureBtn2.userInteractionEnabled = NO;
-            //            [_timeBtn1 setTitle:@"00:00" forState:UIControlStateNormal];
-            //            [_timeBtn2 setTitle:@"00:00" forState:UIControlStateNormal];
-            //            [_timeBtn3 setTitle:@"00:00" forState:UIControlStateNormal];
-            //            [_timeBtn4 setTitle:@"00:00" forState:UIControlStateNormal];
-            //
-            _oneDayButton.selected = NO;
-            _twoDayButton.selected = YES;
+            StopBtn.userInteractionEnabled = NO;
+            oneDayButton.selected = NO;
+            twoDayButton.selected = YES;
             _isOneOrTwo = NO;
             _moveView.frame = CGRectMake(2 * W_Wide_Zoom, 2 * W_Hight_Zoom, 36 * W_Wide_Zoom, 26 * W_Hight_Zoom);
         }
@@ -617,10 +627,5 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
 }
 
-
--(void)setupData{
-    [super setupData];
-    
-}
 
 @end

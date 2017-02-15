@@ -25,6 +25,8 @@
     NSString *strState;
     // btn 数组
     NSArray * arrBtn;
+    NSString * DeviceNum;
+    
     
     
 }
@@ -237,6 +239,9 @@
             }else{
                 strState = [NSString stringWithFormat:@"%@",model.retVal[@"status"]];
                 Mid_D =model.retVal[@"deviceno"];
+                Mid_T = model.retVal[@"termid"];
+                DeviceNum =model.retVal[@"deviceno"];
+                
                 
             }
             
@@ -244,6 +249,7 @@
         else if ([model.totalrecords isEqualToString:@"0"])
         {
             strState = [NSString stringWithFormat:@"%@",@"ds000"];
+        
             
         }
         
@@ -434,7 +440,6 @@
     if ([[Defaluts objectForKey:@"guide_image"] isEqualToString:@"ok"]) {
         IkonwBtn.hidden = NO;
         Guideview.hidden = NO;
-        addBtn.hidden = YES;
         [Defaluts removeObjectForKey:@"guide_image"];
         [Defaluts synchronize];
         
@@ -492,6 +497,8 @@
     }
         
         [self showBarBtn:NO];
+        addBtn.hidden = YES;
+        
         
     }
     
@@ -572,10 +579,12 @@
 //绑定设备
 -(void)btn_add:(UIButton *)sender
 {
-    
-    BindingViewController * bindVC =[[BindingViewController alloc]init];
-    [self.navigationController pushViewController:bindVC animated:NO];
-    
+//    
+//    BindingViewController * bindVC =[[BindingViewController alloc]init];
+//    [self.navigationController pushViewController:bindVC animated:NO];
+    FeedViewController * feedVc = [[FeedViewController alloc]init];
+    [self.navigationController pushViewController:feedVc animated:NO];
+
     
     
     
@@ -608,6 +617,7 @@
 {
     
     BindingViewController * bandVC =[[BindingViewController alloc]init];
+    bandVC.strTT =DeviceNum;
     [self.navigationController pushViewController:bandVC animated:NO];
     
     
@@ -626,10 +636,7 @@
 {
     
 
-    
-    InCallViewController * incal =[[InCallViewController alloc]init];
-    [self presentViewController:incal animated:YES completion:nil];
-    
+
     
     
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];

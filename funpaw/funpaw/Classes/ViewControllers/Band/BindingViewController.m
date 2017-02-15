@@ -38,8 +38,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     int serviceNum;   // 添加成功的service数量
     BOOL isAccecptOk; // 是否接收结果成功
     BOOL isOpenPerOK; // 判断是否从机开始广播
-    NSString * strTT;
-    NSString * strYY;
+    
     NSTimer * timerCheck;
     NSInteger  timerEnd;
     
@@ -56,6 +55,8 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
 @synthesize deviceTF;
 @synthesize incodeTF;
 @synthesize hud;
+@synthesize strTT;
+
 
 
 
@@ -118,31 +119,6 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
 - (void)setupView
 {
     [super setupView];
-    
-    NSString * strBing =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
-    NSString * strLogin =Mid_D;
-    
-    NSString * st1 =[Defaluts objectForKey:@"incodeNum"];
-    NSString * st2 =Mid_T;
-    
-    
-    
-    strTT = strBing.length>strLogin.length?strBing:strLogin;
-    strYY = st1.length>st2.length?st1:st2;
-    
-    
-    
-    if ([AppUtil isBlankString:strTT]) {
-        
-        [self setNavTitle:NSLocalizedString(@"bindDevice",nil)];
-    }else{
-        
-        [self setNavTitle:NSLocalizedString(@"solveaBinding",nil)];
-    }
-    
-    
-    
-    
     
     
     UIView * devNum =[UIView new];
@@ -239,22 +215,23 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     incodeTF.textColor = YELLOW_COLOR;
     
     
+   
+        if ([AppUtil isBlankString:strTT]) {
+            
+            [self setNavTitle:NSLocalizedString(@"bindDevice",nil)];
+            deviceTF.text =@"";
+            incodeTF.text =@"";
+        }else{
+            
+            [self setNavTitle:NSLocalizedString(@"solveaBinding",nil)];
+            deviceTF.text =strTT;
+            incodeTF.text =@"123456";
+        }
     
-    
-    if ([AppUtil isBlankString:strTT]) {
-        deviceTF.text =@"";
-        incodeTF.text =@"";
-    }else
-    {
-        deviceTF.text =strTT;
-        incodeTF.text =@"123456";
-        
-        
-        
-    }
+
+
     
     incodeTF.secureTextEntry = TRUE;
-    deviceTF.secureTextEntry = TRUE;
     deviceTF.enabled = NO;
     incodeTF.enabled = NO;
     
@@ -348,12 +325,12 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
         
         
         
-        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel_bind_n", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
             
         }]];
         
-        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind_n_", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
             [self jiechuband];
             
@@ -381,6 +358,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
             
             [Defaluts removeObjectForKey:PREF_DEVICE_NUMBER];
             [AccountManager sharedAccountManager].loginModel.deviceno =nil;
+             Mid_D = nil;
             [Defaluts removeObjectForKey:@"incodeNum"];
             [Defaluts synchronize];
             deviceTF.text =@"";

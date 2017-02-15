@@ -186,7 +186,7 @@
     // 返回按钮
     btnBack =[UIButton new];
     [btnBack addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [btnBack setImage:[UIImage imageNamed:@"btn_back.png"] forState:UIControlStateNormal];
+    [btnBack setImage:[UIImage imageNamed:@"close_down"] forState:UIControlStateNormal];
     [self.view addSubview:btnBack];
     
     
@@ -278,9 +278,9 @@
     
     [lightbtn addTarget:self action:@selector(LightClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    [foodbtn addTarget:self action:@selector(FoodClick:) forControlEvents:UIControlEventTouchUpInside];
+    [foodbtn addTarget:self action:@selector(RollClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    [rollbtn addTarget:self action:@selector(RollClick:) forControlEvents:UIControlEventTouchUpInside];
+    [rollbtn addTarget:self action:@selector(FoodClick:) forControlEvents:UIControlEventTouchUpInside];
     [takephoto addTarget:self action:@selector(PhotoClick:) forControlEvents:UIControlEventTouchUpInside];
     
     btnList =@[lightbtn,foodbtn,rollbtn,takephoto];
@@ -426,7 +426,7 @@
         
         make.left.equalTo(self.view.mas_left).offset(12);
         make.top.mas_equalTo(15);
-        make.size.mas_equalTo(CGSizeMake(15, 25));
+        make.size.mas_equalTo(CGSizeMake(15, 15));
         
     }];
     
@@ -522,6 +522,9 @@
     [btnList mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(FiveView.mas_left).offset(28);
         make.right.equalTo(self.view.mas_right).offset(-13);
+        make.height.equalTo(@50);
+        
+        
         
         
     }];
@@ -536,9 +539,8 @@
      */
     
     [btnList mas_distributeViewsAlongAxis:MASAxisTypeVertical
-                         withFixedSpacing:25
-                              leadSpacing:19
-                              tailSpacing:19];
+                      withFixedItemLength:50 leadSpacing:22 tailSpacing:22];
+    
     
     
     
