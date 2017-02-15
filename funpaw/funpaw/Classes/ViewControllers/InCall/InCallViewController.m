@@ -998,40 +998,36 @@
     switch (i) {
         case 1:
             
-            [self.view viewWithTag:i].userInteractionEnabled = YES;
+            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
             [self.view viewWithTag:100002].userInteractionEnabled = NO;
             [self.view viewWithTag:100003].userInteractionEnabled = NO;
             [self.view viewWithTag:100004].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = NO;
-            [self.view viewWithTag:100006].userInteractionEnabled = NO;
+           
             break;
             
         case 2:
-            [self.view viewWithTag:i].userInteractionEnabled = YES;
+            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
             [self.view viewWithTag:100001].userInteractionEnabled = NO;
             [self.view viewWithTag:100003].userInteractionEnabled = NO;
             [self.view viewWithTag:100004].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = NO;
-            [self.view viewWithTag:100006].userInteractionEnabled = NO;
+            
             
             break;
         case 3:
-            [self.view viewWithTag:i].userInteractionEnabled = YES;
+            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
             [self.view viewWithTag:100002].userInteractionEnabled = NO;
             [self.view viewWithTag:100001].userInteractionEnabled = NO;
             [self.view viewWithTag:100004].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = NO;
-            [self.view viewWithTag:100006].userInteractionEnabled = NO;
+            
             
             break;
         case 4:
             
-            [self.view viewWithTag:i].userInteractionEnabled = YES;
+            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
             [self.view viewWithTag:100002].userInteractionEnabled = NO;
             [self.view viewWithTag:100003].userInteractionEnabled = NO;
             [self.view viewWithTag:100001].userInteractionEnabled = NO;
-            [self.view viewWithTag:100005].userInteractionEnabled = NO;
-            [self.view viewWithTag:100006].userInteractionEnabled = NO;
+           
             break;
             
         default:
