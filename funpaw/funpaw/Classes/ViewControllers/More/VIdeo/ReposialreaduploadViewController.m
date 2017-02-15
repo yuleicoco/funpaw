@@ -11,6 +11,8 @@
 #import "ShareWork+Morephotovideo.h"
 #import "RecordModel.h"
 #import "LargeViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
+
 
 static NSString *kfooterIdentifier = @"footerIdentifier";
 static NSString *kheaderIdentifier = @"headerIdentifier";
@@ -41,7 +43,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     }else{
         _isSelect = YES;
     }
-    
+    [deleteOrUpdateArr removeAllObjects];
+    _deleteBtn.hidden = YES;
     [self.collectionView reloadData];
 }
 -(void)yishangchuanshua231{
@@ -302,10 +305,19 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     MyVideoCollectionViewCell *cell = (MyVideoCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:j inSection:i-1]];
     if (_isSelect == NO) {
         NSLog(@"dada");
-        LargeViewController * largVc =[[LargeViewController alloc]init];
-        largVc.dataArray = model.networkaddressArray;
-        [self.navigationController pushViewController:largVc animated:NO];
-        _deleteBtn.hidden = YES;
+//        LargeViewController * largVc =[[LargeViewController alloc]init];
+//        largVc.dataArray = model.networkaddressArray;
+//        [self.navigationController pushViewController:largVc animated:NO];
+//        _deleteBtn.hidden = YES;
+        MPMoviePlayerViewController * vc = [[MPMoviePlayerViewController alloc]initWithContentURL:[NSURL URLWithString:model.networkaddressArray[j]]];
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+        NSError *err = nil;
+        [audioSession setCategory :AVAudioSessionCategoryPlayback error:&err];
+        [self presentMoviePlayerViewControllerAnimated:vc];
+        
+        
+        
+        
         
     }else{
         //

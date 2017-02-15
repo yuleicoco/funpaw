@@ -38,7 +38,7 @@
     self.view.backgroundColor = GRAY_COLOR;
     _isupload = NO;
     _isselect = NO;
-    [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -49,9 +49,9 @@
 -(void)buttonBian{
     _isselect = !_isselect;
     if (_isselect == NO) {
-        [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+        [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     }else{
-        [self showBarButton:1 title:@"cancel" fontColor:[UIColor whiteColor] hide:NO];
+        [self showBarButton:1 title:@"Cancel" fontColor:[UIColor whiteColor] hide:NO];
     }
 }
 
@@ -60,9 +60,9 @@
 
     _isselect = !_isselect;
     if (_isselect == NO) {
-        [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+        [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     }else{
-        [self showBarButton:1 title:@"cancel" fontColor:[UIColor whiteColor] hide:NO];
+        [self showBarButton:1 title:@"Cancel" fontColor:[UIColor whiteColor] hide:NO];
     }
     if (_isupload == NO) {
         //[self showBarButton:1 title:@"dada" fontColor:[UIColor whiteColor] hide:NO];
@@ -89,27 +89,27 @@
     topView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:topView];
 
-    _leftBtn =[[UIButton alloc]initWithFrame:CGRectMake(117 * W_Wide_Zoom , 7 * W_Hight_Zoom, 70 * W_Wide_Zoom , 30 * W_Hight_Zoom )];
+    _leftBtn =[[UIButton alloc]initWithFrame:CGRectMake(77 * W_Wide_Zoom , 7 * W_Hight_Zoom, 70 * W_Wide_Zoom , 30 * W_Hight_Zoom )];
     [_leftBtn setTitle:@"Oncloud" forState:UIControlStateNormal];
     _leftBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [_leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_leftBtn setTitleColor:GREEN_COLOR forState:UIControlStateSelected];
+    [_leftBtn setTitleColor:YELLOW_COLOR forState:UIControlStateSelected];
     _leftBtn.selected = YES;
     
     [_leftBtn addTarget:self action:@selector(leftbuttonTouch) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:_leftBtn];
     
     
-    _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(122 * W_Wide_Zoom, 38 * W_Hight_Zoom, 50 * W_Wide_Zoom, 1 * W_Hight_Zoom)];
-    _lineLabel.backgroundColor = GREEN_COLOR;
+    _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(82 * W_Wide_Zoom, 38 * W_Hight_Zoom, 60 * W_Wide_Zoom, 1 * W_Hight_Zoom)];
+    _lineLabel.backgroundColor = YELLOW_COLOR;
     [topView addSubview:_lineLabel];
     
     
-    _rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(197 * W_Wide_Zoom, 7 * W_Hight_Zoom, 70 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
+    _rightBtn = [[UIButton alloc]initWithFrame:CGRectMake(237 * W_Wide_Zoom, 7 * W_Hight_Zoom, 70 * W_Wide_Zoom, 30 * W_Hight_Zoom)];
     [_rightBtn setTitle:@"Local" forState:UIControlStateNormal];
     _rightBtn.titleLabel.font = [UIFont systemFontOfSize:18];
     [_rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_rightBtn setTitleColor:GREEN_COLOR forState:UIControlStateSelected];
+    [_rightBtn setTitleColor:YELLOW_COLOR forState:UIControlStateSelected];
     _rightBtn.selected = NO;
     [_rightBtn addTarget:self action:@selector(rightButtonTouch) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:_rightBtn];
@@ -135,14 +135,14 @@
 
 -(void)leftbuttonTouch{
     _isupload = NO;
-    [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     _isselect = NO;
      [[NSNotificationCenter defaultCenter]postNotificationName:@"yishangchuanbianbian" object:nil];
     
     _leftBtn.selected = YES;
     _rightBtn.selected = NO;
     [UIView animateWithDuration:0.3 animations:^{
-        _lineLabel.frame = CGRectMake(122 * W_Wide_Zoom, 38 * W_Hight_Zoom, 50 * W_Wide_Zoom, 1 * W_Hight_Zoom);
+        _lineLabel.frame = CGRectMake(82 * W_Wide_Zoom, 38 * W_Hight_Zoom, 60 * W_Wide_Zoom, 1 * W_Hight_Zoom);
     }];
     
     [self.pageViewController setViewControllers:@[self.viewControllers[0]] direction:UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
@@ -150,13 +150,13 @@
 
 -(void)rightButtonTouch{
     _isupload = YES;
-    [self showBarButton:1 title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+    [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
     _isselect = NO;
      [[NSNotificationCenter defaultCenter]postNotificationName:@"weishangchuanbianbian" object:nil];
     _leftBtn.selected = NO;
-    _rightBtn.selected = NO;
+    _rightBtn.selected = YES;
     [UIView animateWithDuration:0.3 animations:^{
-        _lineLabel.frame = CGRectMake(202 * W_Wide_Zoom, 38 * W_Hight_Zoom, 50 * W_Wide_Zoom, 1 * W_Hight_Zoom);
+        _lineLabel.frame = CGRectMake(250 * W_Wide_Zoom, 38 * W_Hight_Zoom, 40 * W_Wide_Zoom, 1 * W_Hight_Zoom);
         
     }];
     
