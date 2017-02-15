@@ -156,6 +156,16 @@
         
     }];
     
+    UIButton * logoutBtn = [[UIButton alloc]init];
+    logoutBtn.backgroundColor = [UIColor clearColor];
+    [logoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [logoutView addSubview:logoutBtn];
+    [logoutBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(logoutBtn.superview);
+        make.right.equalTo(logoutBtn.superview);
+        make.top.equalTo(logoutBtn.superview);
+        make.bottom.equalTo(logoutBtn.superview);
+    }];
     
     
     
@@ -165,6 +175,7 @@
     
     
 }
+
 
 -(void)photoButtonTouch{
     PhotoViewController * photoVc = [[PhotoViewController alloc]init];
