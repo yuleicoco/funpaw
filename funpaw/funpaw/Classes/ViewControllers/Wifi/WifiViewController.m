@@ -48,7 +48,7 @@
     listArr = @[ @"Public", @"WPA/WPA2", @"WEP" ];
     curEncryption = [NSString stringWithFormat:@"1"];
     
-    self.view.backgroundColor = GRAY_COLOR;
+    self.view.backgroundColor = [UIColor whiteColor];
     
     
     
@@ -113,8 +113,8 @@
     
     btnBind =[UIButton new];
     btnBind.layer.cornerRadius = 4;
-    btnBind.backgroundColor = YELLOW_COLOR;
-    [btnBind setTitle:NSLocalizedString(@"Sure_bind", nil) forState:UIControlStateNormal];
+    btnBind.backgroundColor = GRAY_COLOR;
+    [btnBind setTitle:NSLocalizedString(@"Wifi_done", nil) forState:UIControlStateNormal];
     [btnBind addTarget:self action:@selector(Surebtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btnBind];
     [btnBind mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -318,17 +318,18 @@
     
     
     
-    //    if ([AppUtil isBlankString:wifiPsTF.text]) {
-    //
-    //         btnBind.enabled = FALSE;
-    //         return;
-    //    }else
-    //    {
-    //
-    //        btnBind.enabled = TRUE;
-    //        btnBind.backgroundColor = GREEN_COLOR;
-    //
-    //    }
+        if ([AppUtil isBlankString:wifiPsTF.text]) {
+    
+             btnBind.enabled = FALSE;
+            btnBind.backgroundColor = GRAY_COLOR;
+             return;
+        }else
+        {
+    
+            btnBind.enabled = TRUE;
+            btnBind.backgroundColor = YELLOW_COLOR;
+    
+        }
     
     
     
@@ -620,15 +621,15 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     
-    //    if([AppUtil isBlankString:textField.text])
-    //    {
-    //        btnBind.enabled = FALSE;
-    //        btnBind.backgroundColor = GRAY_COLOR;
-    //
-    //    }else{
-    //    btnBind.enabled = TRUE;
-    //    btnBind.backgroundColor = GREEN_COLOR;
-    //    }
+        if([AppUtil isBlankString:textField.text])
+        {
+            btnBind.enabled = FALSE;
+            btnBind.backgroundColor = GRAY_COLOR;
+    
+        }else{
+        btnBind.enabled = TRUE;
+        btnBind.backgroundColor = YELLOW_COLOR;
+        }
     
 }
 

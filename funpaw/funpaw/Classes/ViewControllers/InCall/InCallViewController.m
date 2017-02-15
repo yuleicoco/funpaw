@@ -946,6 +946,7 @@
 - (void)Sleftclick:(UIButton *)sender {
     
     [self moveRobot:@"2"];
+     NSLog(@"左");
 }
 
 - (void)leftClickSt:(UIButton *)sender {
@@ -963,6 +964,7 @@
     
     
     [self moveRobot:@"1"];
+     NSLog(@"右");
     
 }
 
