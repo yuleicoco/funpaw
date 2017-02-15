@@ -623,12 +623,7 @@
 - (void)OpenVideo:(UIButton *)sender
 {
     
-//    InCallViewController * incall =[[InCallViewController alloc]init];
-//    
-//    [self presentViewController:incall animated:YES completion:nil];
-    
-    
-    
+
     
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
@@ -640,11 +635,6 @@
         [self sipCall:Mid_D sipName:nil];
         
     }
-    
-    
-
-    
-    
     NSDate *  senddate=[NSDate date];
     NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -652,7 +642,7 @@
 
     
      if ([strState isEqualToString:@"ds001"]) {
-    [[ShareWork sharedManager]DeviceUseMember:Mid_S object:@"self" deviceno:Mid_D belong:Mid_S starttime:locationString complete:^(BaseModel * model) {
+     [[ShareWork sharedManager]DeviceUseMember:Mid_S object:@"self" deviceno:Mid_D belong:Mid_S starttime:locationString complete:^(BaseModel * model) {
         [Defaluts setObject:model.content forKey:@"selfID"];
         [Defaluts synchronize];
 
