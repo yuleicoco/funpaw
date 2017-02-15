@@ -20,10 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
         [self setNavTitle:NSLocalizedString(@"tabMore_title",nil)];
-        UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
-        signoutBtn.backgroundColor = [UIColor blackColor];
-        [self.view addSubview:signoutBtn];
-        [signoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
+//        UIButton * signoutBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 400, 100, 100)];
+//        signoutBtn.backgroundColor = [UIColor blackColor];
+//        [self.view addSubview:signoutBtn];
+//        [signoutBtn addTarget:self action:@selector(siggnoutButtonTouch) forControlEvents:UIControlEventTouchUpInside];
         self.view.backgroundColor =LIGHT_GRAY_COLOR;
 }
 
@@ -138,9 +138,24 @@
     logoutView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:logoutView];
     [logoutView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.equalTo(logoutView.superview.mas_left).offset(12);
+        make.right.equalTo(logoutView.superview.mas_right).offset(-12);
+        make.bottom.equalTo(logoutView.superview.mas_bottom).offset(-110);
+        make.height.mas_equalTo(47);
+    }];
+    
+    
+    UILabel * logoutLabel = [[UILabel alloc]init];
+    logoutLabel.text = @"Log out";
+    logoutLabel.textColor = YELLOW_COLOR;
+    logoutLabel.font = [UIFont systemFontOfSize:18];
+    [logoutView addSubview:logoutLabel];
+    [logoutLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(logoutLabel.superview);
+        make.centerY.equalTo(logoutLabel.superview);
         
     }];
+    
     
     
     
