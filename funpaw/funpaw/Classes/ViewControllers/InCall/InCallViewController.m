@@ -61,8 +61,7 @@
     NSArray * btnList;
     //方向键
     NSArray * DriArr;
-    //文本
-    NSArray * LabeArr;
+  
     
     
     
@@ -460,7 +459,7 @@
     }];
     
     penSl.hidden = YES;
-    [penSl mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [penSl mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.width.height.mas_equalTo(@0);
         
@@ -470,7 +469,7 @@
     FiveView.layer.borderWidth =0;
     
     // 5个按钮背景
-    [FiveView mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [FiveView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.width.mas_equalTo(83);
         make.top.mas_equalTo(40);
@@ -495,7 +494,7 @@
     
     
     // 推拉
-    [pullBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+    [pullBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.equalTo(FiveView.mas_left).offset(6);
         make.size.mas_equalTo(CGSizeMake(15, 22));
@@ -698,23 +697,21 @@
     if (sender.selected) {
         // 移动view
         [UIView animateWithDuration:0.5 animations:^{
-            FiveView.center = CGPointMake(687, FiveView.center.y);
-            
-            NSLog(@"第一步");
-            
+            FiveView.center = CGPointMake(688, 187.5);
+        
             
             
         } completion:^(BOOL finished) {
             //平移结束
-            
+         
             return ;
             
         }];
     }else
-    {
+    { 
+
         [UIView animateWithDuration:0.5 animations:^{
-            FiveView.center = CGPointMake(625.5, FiveView.center.y);
-             NSLog(@"第二步");
+            FiveView.center = CGPointMake(625.5,187.5);
         } completion:^(BOOL finished) {
             //平移结束
             
@@ -916,6 +913,8 @@
 - (void)Stopclick:(UIButton *)sender {
     
     [self moveRobot:@"4"];
+    
+    NSLog(@"上");
 }
 
 // 上结束
@@ -934,6 +933,9 @@
 - (void)Sdownclick:(UIButton *)sender {
     
     [self moveRobot:@"3"];
+    
+    NSLog(@"下");
+    
     
 }
 
@@ -970,40 +972,45 @@
 
 - (void)moveRobot:(NSString *)str
 {
+
+    
     
     NSInteger i = [str integerValue];
     switch (i) {
         case 1:
-            
-            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
-            [self.view viewWithTag:100002].userInteractionEnabled = NO;
-            [self.view viewWithTag:100003].userInteractionEnabled = NO;
-            [self.view viewWithTag:100004].userInteractionEnabled = NO;
-           
+            topBtn.userInteractionEnabled = YES;
+            downBtn.userInteractionEnabled =NO;
+            leftBtn.userInteractionEnabled =NO;
+            rightBtn.userInteractionEnabled =NO;
+
             break;
             
         case 2:
-            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
-            [self.view viewWithTag:100001].userInteractionEnabled = NO;
-            [self.view viewWithTag:100003].userInteractionEnabled = NO;
-            [self.view viewWithTag:100004].userInteractionEnabled = NO;
+           
+            topBtn.userInteractionEnabled = NO;
+            downBtn.userInteractionEnabled =YES;
+            leftBtn.userInteractionEnabled =NO;
+            rightBtn.userInteractionEnabled =NO;
+
             
             
             break;
         case 3:
-            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
-            [self.view viewWithTag:100002].userInteractionEnabled = NO;
-            [self.view viewWithTag:100001].userInteractionEnabled = NO;
-            [self.view viewWithTag:100004].userInteractionEnabled = NO;
+           
+            topBtn.userInteractionEnabled = NO;
+            downBtn.userInteractionEnabled =NO;
+            leftBtn.userInteractionEnabled =YES;
+            rightBtn.userInteractionEnabled =NO;
             
             
             break;
         case 4:
             
-            [self.view viewWithTag:i+100000].userInteractionEnabled = YES;
-            [self.view viewWithTag:100002].userInteractionEnabled = NO;
-            [self.view viewWithTag:100003].userInteractionEnabled = NO;
-            [self.view viewWithTag:100001].userInteractionEnabled = NO;
+            topBtn.userInteractionEnabled = NO;
+            downBtn.userInteractionEnabled =NO;
+            leftBtn.userInteractionEnabled =NO;
+            rightBtn.userInteractionEnabled =YES;
+            
            
             break;
             
@@ -1112,7 +1119,7 @@
 {
     
  
-    NSString *  selfID =[Defaluts objectForKey:@"othID"];
+    NSString *  selfID =[Defaluts objectForKey:@"selfID"];
     [[ShareWork sharedManager]DeviceUse:selfID complete:^(BaseModel *model) {
         
     }];
