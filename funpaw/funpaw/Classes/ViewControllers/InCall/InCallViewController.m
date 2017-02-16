@@ -368,20 +368,10 @@
     
 }
 
+// 结束
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [super touchesEnded:touches withEvent:event];
-    UITouch *touch = [touches anyObject];
-     //触摸对象的位置
-    CGPoint previousPoint = [touch locationInView:self.view.window];
-    int currentX = (int)previousPoint.x;
-    int currentY = (int)previousPoint.y;
-    pointTouch.frame = CGRectMake(previousPoint.x - TARGET/2,(previousPoint.y - TARGET/2), TARGET, TARGET);
-  
-    
-  
-    
-
     
     
 }
