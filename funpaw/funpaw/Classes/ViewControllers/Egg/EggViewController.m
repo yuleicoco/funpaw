@@ -634,9 +634,6 @@
 - (void)OpenVideo:(UIButton *)sender
 {
     
-
-
-    
     
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
@@ -667,6 +664,7 @@
          return;
          
      }
+    
     
     
     

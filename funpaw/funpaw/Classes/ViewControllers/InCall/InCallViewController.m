@@ -61,6 +61,8 @@
     NSArray * btnList;
     //方向键
     NSArray * DriArr;
+    BOOL isPull;
+    
   
     
     
@@ -118,6 +120,9 @@
     [super viewDidLoad];
     // [[UIApplication sharedApplication].keyWindow addSubview:self.backBtn];
     
+    
+    isPull = YES;
+    
     self.center = [[CTCallCenter alloc] init];
     __weak InCallViewController *weakSelf = self;
     self.center.callEventHandler = ^(CTCall * call)
@@ -148,6 +153,8 @@
 - (void)setupView
 {
     [super setupView];
+    
+    [self dowithID];
     isOPen = YES;
     // 视频界面
     videoView =[UIView new];
@@ -167,7 +174,6 @@
     
     // 点
     pointTouch =[UIImageView new];
-    pointTouch.hidden  = YES;
     [pointTouch setImage:[UIImage imageNamed:@"penSelect"]];
     
     
@@ -260,12 +266,11 @@
     // 推拉
     pullBtn =[UIButton new];
     pullBtn.userInteractionEnabled = YES;
-    pullBtn.hidden = YES;
     [pullBtn setImage:[UIImage imageNamed:@"take_off"] forState:UIControlStateNormal];
     [pullBtn setImage:[UIImage imageNamed:@"take_on"] forState:UIControlStateSelected];
     [pullBtn addTarget:self action:@selector(pullBtn:) forControlEvents:UIControlEventTouchUpInside];
     
-    [FiveView addSubview:pullBtn];
+    [self.view addSubview:pullBtn];
     
     
     
@@ -303,7 +308,6 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
-    pointTouch.hidden = NO;
     UITouch *touch = [touches anyObject];
     
     //触摸对象的位置
@@ -342,10 +346,9 @@
     changeX = (int) ((MAX_MOVE / width) * currentX);
     changeY = (int) ((MAX_MOVE / height) * currentY);
     changeX = MAX_MOVE- changeX;
+    changeY = MAX_MOVE- changeY;
    
-    NSLog(@"====%d",changeX);
-    
-    NSString * msg =[NSString stringWithFormat:@"control_pantilt,0,0,1,0,%d,%d",changeX,30];
+    NSString * msg =[NSString stringWithFormat:@"control_pantilt,0,0,1,0,%d,%d",changeX,changeY];
     [self sendMessage:msg];
     
     
@@ -406,12 +409,6 @@
 - (void)HviewUpdateView
 {
     
-    
-    pullBtn.hidden = NO;
-    pointTouch.hidden = YES;
-    
-    
-    
     videoView.transform = CGAffineTransformScale(self.videoView.transform, 1.32, 1.04);
     
     // 视频界面
@@ -423,7 +420,7 @@
         
         make.left.equalTo(self.view.mas_left).offset(12);
         make.top.mas_equalTo(15);
-        make.size.mas_equalTo(CGSizeMake(15, 15));
+        make.size.mas_equalTo(CGSizeMake(35, 35));
         
     }];
     
@@ -454,9 +451,9 @@
     [FiveView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.width.mas_equalTo(83);
-        make.top.mas_equalTo(40);
+        make.top.equalTo(self.view.mas_top).offset(40);
         make.bottom.mas_offset(-40);
-        make.right.mas_equalTo(0);
+        make.right.equalTo(self.view.mas_right);
         
         
         
@@ -481,8 +478,6 @@
         make.left.equalTo(FiveView.mas_left).offset(6);
         make.size.mas_equalTo(CGSizeMake(15, 22));
         make.bottom.equalTo(self.view.mas_bottom).offset(-184);
-        
-        
         
         
     }];
@@ -675,36 +670,35 @@
 
 - (void)pullBtn:(UIButton *)sender
 {
-    sender.selected = !sender.selected;
     
+    sender.selected =!sender.selected;
     
     if (sender.selected) {
         // 移动view
+        FiveView.hidden = YES;
+    
         [UIView animateWithDuration:0.5 animations:^{
-            FiveView.center = CGPointMake(688, 187.5);
-
-            
+            pullBtn.center = CGPointMake(pullBtn.center.x+55, 180);
         } completion:^(BOOL finished) {
             //平移结束
-         
-            return ;
+          
             
         }];
     }else
-    { 
-
+    {
+         FiveView.hidden = NO;
         [UIView animateWithDuration:0.5 animations:^{
-            FiveView.center = CGPointMake(625.5,187.5);
+            pullBtn.center = CGPointMake(597.5,180);
         } completion:^(BOOL finished) {
             //平移结束
             
-            
-            return ;
             
         }];
         
         
     }
+    
+    
     
     
     
@@ -726,7 +720,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    //    [self.backBtn removeFromSuperview];
+   
     
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
     if (updateTimer != nil) {
@@ -818,11 +812,7 @@
         
     }];
     
-    
-    
-   
-    
-    
+
     
     
 }
@@ -859,7 +849,7 @@
 - (void)RollClick:(UIButton *)sender {
     
     sender.selected = !sender.selected;
-    NSString * selfID =[Defaluts objectForKey:@"otherbuildIDS"];
+    NSString * selfID =[Defaluts objectForKey:@"selfID"];
     [[ShareWork sharedManager]roll:deviceoSelf ter:termidSelf num:selfID complete:^(BaseModel *model) {
         sender.selected = !sender.selected;
     }];
@@ -875,8 +865,7 @@
     
     sender.selected = !sender.selected;
     
-    
-    [self dowithID];
+
     
    [[ShareWork sharedManager]photo:deviceoSelf ter:termidSelf complete:^(BaseModel *model) {
        
