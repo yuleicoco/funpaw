@@ -371,48 +371,60 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 -(void)deleteButtonTouch{
     
     // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
-    NSMutableString * filenameStr = [[NSMutableString alloc]init];
     
-    if (deleteOrUpdateArr.count == 1) {
-        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
-        [filenameStr appendFormat:@"'%@'",str];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"Are you sure to delete?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         
-    }else{
-        for (int i = 0; i < deleteOrUpdateArr.count; i++) {
-            NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
-            if (i == deleteOrUpdateArr.count - 1) {
-                [filenameStr appendFormat:@"'%@'",strrr];
-            }else{
-                [filenameStr appendFormat:@"'%@',",strrr];
+    }]];
+    
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        
+        NSMutableString * filenameStr = [[NSMutableString alloc]init];
+        if (deleteOrUpdateArr.count == 1) {
+            NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
+            [filenameStr appendFormat:@"'%@'",str];
+            
+            
+        }else{
+            for (int i = 0; i < deleteOrUpdateArr.count; i++) {
+                NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
+                if (i == deleteOrUpdateArr.count - 1) {
+                    [filenameStr appendFormat:@"'%@'",strrr];
+                }else{
+                    [filenameStr appendFormat:@"'%@',",strrr];
+                }
+                
             }
             
         }
-        
-    }
-    
-//    [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
-//        if (model) {
-//            //[self initRefreshView];
-//            _isSelect = NO;
-//            // [self loadDataSourceWithPage:0];
-//            [self initRefreshView];
-//            
-//        }
-//        
-//    }];
-
-    [[ShareWork sharedManager]delVideoWithMid:Mid_S filename:filenameStr complete:^(BaseModel *model) {
-        if (model) {
-            //[self initRefreshView];
-            _isSelect = NO;
-            _deleteBtn.hidden = YES;
-            [self initRefreshView];
-              [[NSNotificationCenter defaultCenter]postNotificationName:@"shangchuanbutton" object:nil];
+        [[ShareWork sharedManager]delVideoWithMid:Mid_S filename:filenameStr complete:^(BaseModel *model) {
+            if (model) {
+                //[self initRefreshView];
+                _isSelect = NO;
+                _deleteBtn.hidden = YES;
+                [self initRefreshView];
+                [[NSNotificationCenter defaultCenter]postNotificationName:@"shangchuanbutton" object:nil];
+                
+            }
             
-        }
+        }];
 
-    }];
+    
+    }]];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
 

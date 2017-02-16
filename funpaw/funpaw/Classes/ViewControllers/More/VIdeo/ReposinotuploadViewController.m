@@ -23,6 +23,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     NSTimer * timer;
     UIButton * bigBtn;
     int timeee;
+    NSUserDefaults *_standDefus;
     
 }
 @property (nonatomic,strong)UIButton * numBtn;
@@ -376,17 +377,30 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 }
 
 -(void)deleteButtonTouch{
+//    NSString *date = [AppUtil getNowTime];
+//    NSUserDefaults *standDefus = [NSUserDefaults standardUserDefaults];
+//    [standDefus setObject:date forKey:@"dateTimeee"];
+//    [standDefus synchronize];
+    
+    
+//    NSString *date = [AppUtil getNowTime];
+//    int dateOver = [self spare:date];
     
     NSString * devinoce = [Defaluts objectForKey:@"deviceNumber"];
     if ([AppUtil isBlankString:devinoce]&&[AppUtil isBlankString:Mid_D]) {
         [[AppUtil appTopViewController]showHint:@"You have not bound a FunPaw Q"];
-        
         return;
     }
     
     NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
     [[ShareWork sharedManager]uploadVideoWithMid:Mid_S deviceno:Mid_D termid:Mid_T filename:filenameString complete:^(BaseModel *model) {
         if ([model.retCode isEqualToString:@"0000"]) {
+            NSString *date = [AppUtil getNowTime];
+             _standDefus = [NSUserDefaults standardUserDefaults];
+            [_standDefus setObject:date forKey:@"dateTimeee"];
+            [_standDefus setObject:model.content forKey:@"videocontent"];
+            [_standDefus synchronize];
+            
             timeee = 12;
             timer =  [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(checkVideoStats:) userInfo:model.content repeats:YES];
             [timer setFireDate:[NSDate distantPast]];
@@ -401,6 +415,9 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                 make.right.equalTo(bigBtn.superview);
             }];
             
+        }else{
+            [[AppUtil appTopViewController]showHint:model.retDesc];
+
         }
 
     }];
@@ -410,7 +427,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 - (void)checkVideoStats:(NSTimer *)tid
 {
     
-        timeee--;
+     timeee--;
      [self showHudInView:self.view hint:@"Uploading..."];
      [[ShareWork sharedManager]queryTaskWithTid:tid.userInfo complete:^(BaseModel *model) {
          if ([model.retCode isEqualToString:@"0000"]) {
@@ -422,6 +439,9 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                         [timer setFireDate:[NSDate distantFuture]];
                      _isSelect = NO;
                      [self initRefreshView];
+                     [_standDefus removeObjectForKey:@"dateTimeee"];
+                     [_standDefus removeObjectForKey:@"videocontent"];
+                     
                  }else{
                      return ;
                  }
@@ -433,6 +453,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                  [timer setFireDate:[NSDate distantFuture]];
                  _isSelect = NO;
                  [self initRefreshView];
+                 [_standDefus removeObjectForKey:@"dateTimeee"];
+                  [_standDefus removeObjectForKey:@"videocontent"];
              }else if ([model.content isEqualToString:@"2"]){
                  [[AppUtil appTopViewController]showHint:@"Failed"];
                   [self hideHud];
@@ -440,6 +462,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                     [timer setFireDate:[NSDate distantFuture]];
                  _isSelect = NO;
                  [self initRefreshView];
+                 [_standDefus removeObjectForKey:@"dateTimeee"];
+                  [_standDefus removeObjectForKey:@"videocontent"];
              }
          }else{
         
@@ -449,6 +473,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                 [timer setFireDate:[NSDate distantFuture]];
              _isSelect = NO;
              [self initRefreshView];
+             [_standDefus removeObjectForKey:@"dateTimeee"];
+              [_standDefus removeObjectForKey:@"videocontent"];
          }
          
          
@@ -459,7 +485,16 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 }
 
 
-
+- (int )spare:(NSString *)str
+{
+    int a =[[str substringWithRange:NSMakeRange(0, 2)] intValue];
+    int b =[[str substringWithRange:NSMakeRange(3, 2)] intValue];
+    int c=[[str substringWithRange:NSMakeRange(6, 2)] intValue];
+    
+    a= (a*3600)+(b*60)+c;
+    return a;
+    
+}
 
 
 
