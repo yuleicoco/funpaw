@@ -75,8 +75,6 @@
 @synthesize videoView;
 @synthesize btnBack;
 @synthesize flowUI;
-@synthesize penSl;
-@synthesize pesnBack;
 @synthesize FiveView;
 @synthesize pointTouch;
 @synthesize timeLable;
@@ -161,6 +159,12 @@
     flowUI.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     [videoView addSubview:flowUI];
     
+    [flowUI mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(45, 45));
+        make.center.mas_equalTo(videoView.center);
+        
+    }];
+    
     // 点
     pointTouch =[UIImageView new];
     pointTouch.hidden  = YES;
@@ -196,11 +200,7 @@
     timeLable.font =[UIFont systemFontOfSize:21];
     [self.view addSubview:timeLable];
     
-    // 激光笔背景
-    pesnBack =[UIImageView new];
-    pesnBack.userInteractionEnabled = YES;
-    pesnBack.image =[UIImage imageNamed:@"penPlace"];
-    [self.view addSubview:pesnBack];
+
     
     // 大圆小圆
     Lcoin =[UIImageView new];
@@ -331,9 +331,27 @@
     int currentY = (int)previousPoint.y;
     
     pointTouch.frame = CGRectMake(previousPoint.x - TARGET/2,(previousPoint.y - TARGET/2), TARGET, TARGET);
+  //  int changeX = 0; //转换的x 不超过90
+    int changeY = 0; //转换的y 不超过90
+    
+    //屏幕尺寸
+    CGRect rect_screen = [[UIScreen mainScreen]bounds];
+    CGSize size_screen = rect_screen.size;
+    
+  //  CGFloat width = size_screen.width;
+    CGFloat height = size_screen.height;
+    
+    
+   // changeX = (int) ((MAX_MOVE / width) * currentX);
+    changeY = (int) ((MAX_MOVE / height) * currentY);
+    changeY = MAX_MOVE- changeY;
+    NSLog(@"=====%d",changeY);
+    
+    NSString * msg =[NSString stringWithFormat:@"control_pantilt,0,0,1,0,%d,%d",changeY,30];
+    [self sendMessage:msg];
+    
     
     if(_lastMoveX == -1 || _lastMoveY == -1) {
-        
         
         _lastMoveX = currentX;
         _lastMoveY = currentY;
@@ -345,8 +363,6 @@
         _lastMoveX = currentX;
         _lastMoveY = currentY;
         
-        
-        
     }
     
     
@@ -356,10 +372,17 @@
 {
     [super touchesEnded:touches withEvent:event];
     UITouch *touch = [touches anyObject];
-    //    //触摸对象的位置
+     //触摸对象的位置
     CGPoint previousPoint = [touch locationInView:self.view.window];
-    _lastMoveX = -1;
-    _lastMoveY = -1;
+    int currentX = (int)previousPoint.x;
+    int currentY = (int)previousPoint.y;
+    pointTouch.frame = CGRectMake(previousPoint.x - TARGET/2,(previousPoint.y - TARGET/2), TARGET, TARGET);
+  
+    
+  
+    
+
+    
     
 }
 
@@ -448,22 +471,7 @@
         
     }];
     
-    
-    
-    // 激光笔背景
-    [pesnBack mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.width.height.mas_equalTo(@0);
-        
-        
-    }];
-    
-    penSl.hidden = YES;
-    [penSl mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.width.height.mas_equalTo(@0);
-        
-    }];
+
     FiveView.image =[UIImage imageNamed:@"halfAp"];
     FiveView.backgroundColor =[UIColor clearColor];
     FiveView.layer.borderWidth =0;
@@ -700,8 +708,7 @@
         // 移动view
         [UIView animateWithDuration:0.5 animations:^{
             FiveView.center = CGPointMake(688, 187.5);
-        
-            
+
             
         } completion:^(BOOL finished) {
             //平移结束
