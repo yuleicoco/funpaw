@@ -45,5 +45,6 @@
 @property (nonatomic,strong)UIView * RbgImage;
 
 
+
 @end
 

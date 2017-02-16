@@ -579,11 +579,10 @@
 //绑定设备
 -(void)btn_add:(UIButton *)sender
 {
-//    
-//    BindingViewController * bindVC =[[BindingViewController alloc]init];
-//    [self.navigationController pushViewController:bindVC animated:NO];
-    FeedViewController * feedVc = [[FeedViewController alloc]init];
-    [self.navigationController pushViewController:feedVc animated:NO];
+    
+    BindingViewController * bindVC =[[BindingViewController alloc]init];
+    [self.navigationController pushViewController:bindVC animated:NO];
+   
 
     
     
