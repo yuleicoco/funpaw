@@ -11,9 +11,9 @@
 #import "ShareWork+Incall.h"
 #import "BindingViewController.h"
 
-#define TARGET 60
+#define TARGET 0
 #define DELTE_SCALE 16
-#define MAX_MOVE 90
+#define MAX_MOVE 200
 
 @import CoreTelephony;
 
@@ -304,9 +304,6 @@
 {
     
     pointTouch.hidden = NO;
-    
-    //touches ：动作的数量()  每个对象都是一个UITouch对象，而每一个事件都可以理解为一个手指触摸。
-    //获取任意一个触摸对象
     UITouch *touch = [touches anyObject];
     
     //触摸对象的位置
@@ -331,39 +328,26 @@
     int currentY = (int)previousPoint.y;
     
     pointTouch.frame = CGRectMake(previousPoint.x - TARGET/2,(previousPoint.y - TARGET/2), TARGET, TARGET);
-  //  int changeX = 0; //转换的x 不超过90
+    int changeX = 0; //转换的x 不超过90
     int changeY = 0; //转换的y 不超过90
     
     //屏幕尺寸
     CGRect rect_screen = [[UIScreen mainScreen]bounds];
     CGSize size_screen = rect_screen.size;
     
-  //  CGFloat width = size_screen.width;
+    CGFloat width = size_screen.width;
     CGFloat height = size_screen.height;
     
     
-   // changeX = (int) ((MAX_MOVE / width) * currentX);
+    changeX = (int) ((MAX_MOVE / width) * currentX);
     changeY = (int) ((MAX_MOVE / height) * currentY);
-    changeY = MAX_MOVE- changeY;
-    NSLog(@"=====%d",changeY);
+    changeX = MAX_MOVE- changeX;
+   
+    NSLog(@"====%d",changeX);
     
-    NSString * msg =[NSString stringWithFormat:@"control_pantilt,0,0,1,0,%d,%d",changeY,30];
+    NSString * msg =[NSString stringWithFormat:@"control_pantilt,0,0,1,0,%d,%d",changeX,30];
     [self sendMessage:msg];
     
-    
-    if(_lastMoveX == -1 || _lastMoveY == -1) {
-        
-        _lastMoveX = currentX;
-        _lastMoveY = currentY;
-        
-        
-        
-    } else if((abs(currentX - _lastMoveX) > _deltaX) || (abs(currentY - _lastMoveY) > _deltaY)) {
-        
-        _lastMoveX = currentX;
-        _lastMoveY = currentY;
-        
-    }
     
     
 }
@@ -1042,6 +1026,10 @@
 - (void)overTime
 {
     [moveTimer invalidate];
+    topBtn.userInteractionEnabled = YES;
+    downBtn.userInteractionEnabled =YES;
+    leftBtn.userInteractionEnabled =YES;
+    rightBtn.userInteractionEnabled =YES;
     
     
     
