@@ -10,6 +10,7 @@
 		340DE9E31E54531700B7B258 /* feed_r.png in Resources */ = {isa = PBXBuildFile; fileRef = 340DE9E01E54531700B7B258 /* feed_r.png */; };
 		340DE9E41E54531700B7B258 /* feed_pan.png in Resources */ = {isa = PBXBuildFile; fileRef = 340DE9E11E54531700B7B258 /* feed_pan.png */; };
 		340DE9E51E54531700B7B258 /* feed_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 340DE9E21E54531700B7B258 /* feed_s.png */; };
+		340DE9E81E553D2600B7B258 /* RegiestxieyiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 340DE9E71E553D2600B7B258 /* RegiestxieyiViewController.m */; };
 		34196FC01E4AF55200D9D24D /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */; };
 		34196FC41E4AF6AC00D9D24D /* InCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC31E4AF6AC00D9D24D /* InCallViewController.m */; };
 		34196FC71E4AFA9400D9D24D /* ShareWork+device.m in Sources */ = {isa = PBXBuildFile; fileRef = 34196FC61E4AFA9400D9D24D /* ShareWork+device.m */; };
@@ -421,6 +422,8 @@
 		340DE9E01E54531700B7B258 /* feed_r.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feed_r.png; sourceTree = "<group>"; };
 		340DE9E11E54531700B7B258 /* feed_pan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feed_pan.png; sourceTree = "<group>"; };
 		340DE9E21E54531700B7B258 /* feed_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feed_s.png; sourceTree = "<group>"; };
+		340DE9E61E553D2600B7B258 /* RegiestxieyiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegiestxieyiViewController.h; sourceTree = "<group>"; };
+		340DE9E71E553D2600B7B258 /* RegiestxieyiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegiestxieyiViewController.m; sourceTree = "<group>"; };
 		34196FBE1E4AF55200D9D24D /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
 		34196FBF1E4AF55200D9D24D /* HWWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWWeakTimer.m; sourceTree = "<group>"; };
 		34196FC21E4AF6AC00D9D24D /* InCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InCallViewController.h; sourceTree = "<group>"; };
@@ -2948,6 +2951,8 @@
 				7D0FCE771E4AFDD7009E3E21 /* RegiestViewController.m */,
 				7D4A009F1E4C674500B5B40F /* CompleViewController.h */,
 				7D4A00A01E4C674500B5B40F /* CompleViewController.m */,
+				340DE9E61E553D2600B7B258 /* RegiestxieyiViewController.h */,
+				340DE9E71E553D2600B7B258 /* RegiestxieyiViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -3466,6 +3471,7 @@
 				3496F9CB1E04DF8E00744A1E /* ViewController.m in Sources */,
 				7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */,
 				7D2D58331E49A3700086A823 /* BaseViewController.m in Sources */,
+				340DE9E81E553D2600B7B258 /* RegiestxieyiViewController.m in Sources */,
 				7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */,
 				34E164161E050B18004A65AB /* AppUtil.m in Sources */,
 				7D4A00A91E4C756000B5B40F /* ExchangePasswordViewController.m in Sources */,
