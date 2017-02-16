@@ -338,37 +338,57 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 
 -(void)deleteButtonTouch{
     
-   // NSString * filenameString = [deleteOrUpdateArr componentsJoinedByString:@","];
-    NSMutableString * filenameStr = [[NSMutableString alloc]init];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"Are you sure to delete?" preferredStyle:UIAlertControllerStyleAlert];
     
-    if (deleteOrUpdateArr.count == 1) {
-        NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
-        [filenameStr appendFormat:@"'%@'",str];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         
-    }else{
-    for (int i = 0; i < deleteOrUpdateArr.count; i++) {
-        NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
-        if (i == deleteOrUpdateArr.count - 1) {
-              [filenameStr appendFormat:@"'%@'",strrr];
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSMutableString * filenameStr = [[NSMutableString alloc]init];
+        
+        if (deleteOrUpdateArr.count == 1) {
+            NSString * str = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[0]];
+            [filenameStr appendFormat:@"'%@'",str];
+            
+            
         }else{
-              [filenameStr appendFormat:@"'%@',",strrr];
-        }
-        
-    }
-    
-}
-    
-    [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
-        if (model) {
-            //[self initRefreshView];
-            _isSelect = NO;
-           // [self loadDataSourceWithPage:0];
-           [self initRefreshView];
+            for (int i = 0; i < deleteOrUpdateArr.count; i++) {
+                NSString * strrr = [NSString stringWithFormat:@"%@",deleteOrUpdateArr[i]];
+                if (i == deleteOrUpdateArr.count - 1) {
+                    [filenameStr appendFormat:@"'%@'",strrr];
+                }else{
+                    [filenameStr appendFormat:@"'%@',",strrr];
+                }
+                
+            }
             
         }
         
-    }];
+        [[ShareWork sharedManager]delPhotoGraphWith:Mid_S filename:filenameStr complete:^(BaseModel *model) {
+            if (model) {
+                //[self initRefreshView];
+                _isSelect = NO;
+                // [self loadDataSourceWithPage:0];
+                [self initRefreshView];
+                
+            }
+            
+        }];
+        
+        
+
+        
+        
+    }]];
+    
+    
+    [self presentViewController:alert animated:YES completion:nil];
+
+    
+    
     
     
     

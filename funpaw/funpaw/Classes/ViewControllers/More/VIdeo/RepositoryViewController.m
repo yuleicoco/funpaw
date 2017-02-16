@@ -10,9 +10,15 @@
 #import "RepositoryViewController.h"
 #import "ReposialreaduploadViewController.h"
 #import "ReposinotuploadViewController.h"
-
+#import "ShareWork+Morephotovideo.h"
 
 @interface RepositoryViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+{
+    NSTimer * timer;
+    UIButton * bigBtn;
+     int timeee;
+
+}
 @property (nonatomic,strong)UIButton * leftBtn;
 @property (nonatomic,strong)UIButton * rightBtn;
 @property(nonatomic,strong)UILabel * lineLabel;
@@ -39,13 +45,115 @@
     _isupload = NO;
     _isselect = NO;
     [self showBarButton:1 title:@"Select" fontColor:[UIColor whiteColor] hide:NO];
-    
+    [self chectUpload];
 }
+
+-(void)chectUpload{
+    NSUserDefaults *standDefus = [NSUserDefaults standardUserDefaults];
+    NSString * endtime = [standDefus objectForKey:@"dateTimeee"];
+    if ([AppUtil isBlankString:endtime]) {
+        return;
+    }
+        int i = [self spare:endtime];
+        NSString * nowtime = [AppUtil getNowTime];
+        int j = [self spare:nowtime];
+        int miaoshu = j - i;
+        if (miaoshu>60) {
+               [[AppUtil appTopViewController]showHint:@"Upload failed"];
+        }else{
+            //重新查询
+            //int timeshu = miaoshu%5+1;
+            timeee = miaoshu%5+1;
+            timer =  [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(checkVideoStats:) userInfo:[standDefus objectForKey:@"videocontent"] repeats:YES];
+            [timer setFireDate:[NSDate distantPast]];
+            bigBtn = [[UIButton alloc]init];
+            bigBtn.backgroundColor = [UIColor blackColor];
+            bigBtn.alpha = 0.4;
+            [[UIApplication sharedApplication].keyWindow addSubview:bigBtn];
+            [bigBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(bigBtn.superview);
+                make.bottom.equalTo(bigBtn.superview);
+                make.left.equalTo(bigBtn.superview);
+                make.right.equalTo(bigBtn.superview);
+            }];
+            
+        }
+
+}
+
+- (void)checkVideoStats:(NSTimer *)tid
+{
+      timeee--;
+         [self showHudInView:self.view hint:@"Uploading..."];
+    [[ShareWork sharedManager]queryTaskWithTid:tid.userInfo complete:^(BaseModel *model) {
+        if ([model.retCode isEqualToString:@"0000"]) {
+            if ([model.content isEqualToString:@"0"]) {
+                if (timeee == 0) {
+                    [[AppUtil appTopViewController]showHint:@"Overtime"];
+                    [self hideHud];
+                    bigBtn.hidden = YES;
+                    [timer setFireDate:[NSDate distantFuture]];
+//                    _isSelect = NO;
+//                    [self initRefreshView];
+//                    [_standDefus removeObjectForKey:@"dateTimeee"];
+//                    [_standDefus removeObjectForKey:@"videocontent"];
+                    
+                }else{
+                    return ;
+                }
+            }else if ([model.content isEqualToString:@"1"]){
+                [[AppUtil appTopViewController]showHint:@"Upload Success"];
+                [self hideHud];
+                bigBtn.hidden = YES;
+                
+                [timer setFireDate:[NSDate distantFuture]];
+                
+            }else if ([model.content isEqualToString:@"2"]){
+                [[AppUtil appTopViewController]showHint:@"Upload Failed"];
+                [self hideHud];
+                bigBtn.hidden = YES;
+                [timer setFireDate:[NSDate distantFuture]];
+               
+            }
+        }else{
+            
+            [[AppUtil appTopViewController]showHint:@"Upload Failed"];
+            [self hideHud];
+            bigBtn.hidden = YES;
+            [timer setFireDate:[NSDate distantFuture]];
+           
+        
+        }
+        
+
+        
+        
+        
+        
+        
+        
+    }];
+
+
+}
+
+
+
+
+
+
+
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     //shangchuanbutton
      [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(buttonBian) name:@"shangchuanbutton" object:nil];
+    
+    
 }
+
+
 -(void)buttonBian{
     _isselect = !_isselect;
     if (_isselect == NO) {
@@ -205,7 +313,16 @@
 
 
 
-
+- (int )spare:(NSString *)str
+{
+    int a =[[str substringWithRange:NSMakeRange(0, 2)] intValue];
+    int b =[[str substringWithRange:NSMakeRange(3, 2)] intValue];
+    int c=[[str substringWithRange:NSMakeRange(6, 2)] intValue];
+    
+    a= (a*3600)+(b*60)+c;
+    return a;
+    
+}
 
 
 
