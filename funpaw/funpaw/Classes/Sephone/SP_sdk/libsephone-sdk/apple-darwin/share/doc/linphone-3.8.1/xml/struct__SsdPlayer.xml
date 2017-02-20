@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SsdPlayer" kind="struct" language="C++" prot="public">
+    <compoundname>_SsdPlayer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SsdPlayer_1a0789bfd88d3d53ae29ca75778f34613a" prot="public" static="no" mutable="no">
+        <type>struct _SephoneSoundDaemon *</type>
+        <definition>struct _SephoneSoundDaemon* _SsdPlayer::lsd</definition>
+        <argsstring></argsstring>
+        <name>lsd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="41" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1ac58a32104a5b33d5535cf7571cffa763" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _SsdPlayer::player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="42" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a33fdbc47580ac39027b2a69fd5214b9e" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _SsdPlayer::rateconv</definition>
+        <argsstring></argsstring>
+        <name>rateconv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="43" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1ad3dd8a4cec26e95f05c8aa7d01c0b380" prot="public" static="no" mutable="no">
+        <type>MSFilter *</type>
+        <definition>MSFilter* _SsdPlayer::chanadapter</definition>
+        <argsstring></argsstring>
+        <name>chanadapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="44" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a6b5c56d0c8ac644cc87897487a94491e" prot="public" static="no" mutable="no">
+        <type>LsdEndOfPlayCallback</type>
+        <definition>LsdEndOfPlayCallback _SsdPlayer::eop_cb</definition>
+        <argsstring></argsstring>
+        <name>eop_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="45" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a541c1028255f703ec71fdc890b086f02" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SsdPlayer::mixer_pin</definition>
+        <argsstring></argsstring>
+        <name>mixer_pin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="46" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a0b066a5fc4ea71dc075be0148b0f7722" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SsdPlayer::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="47" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a0585cf9ce1d4a98ddfbb878c6cdd5f66" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SsdPlayer::loop</definition>
+        <argsstring></argsstring>
+        <name>loop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="48" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SsdPlayer_1a37555e84908710f45a59bb67b7ebfca4" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SsdPlayer::pad[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>pad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="49" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="40" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="40" bodyend="50"/>
+    <listofallmembers>
+      <member refid="struct__SsdPlayer_1ad3dd8a4cec26e95f05c8aa7d01c0b380" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>chanadapter</name></member>
+      <member refid="struct__SsdPlayer_1a6b5c56d0c8ac644cc87897487a94491e" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>eop_cb</name></member>
+      <member refid="struct__SsdPlayer_1a0585cf9ce1d4a98ddfbb878c6cdd5f66" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>loop</name></member>
+      <member refid="struct__SsdPlayer_1a0789bfd88d3d53ae29ca75778f34613a" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>lsd</name></member>
+      <member refid="struct__SsdPlayer_1a541c1028255f703ec71fdc890b086f02" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>mixer_pin</name></member>
+      <member refid="struct__SsdPlayer_1a37555e84908710f45a59bb67b7ebfca4" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>pad</name></member>
+      <member refid="struct__SsdPlayer_1ac58a32104a5b33d5535cf7571cffa763" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>player</name></member>
+      <member refid="struct__SsdPlayer_1a33fdbc47580ac39027b2a69fd5214b9e" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>rateconv</name></member>
+      <member refid="struct__SsdPlayer_1a0b066a5fc4ea71dc075be0148b0f7722" prot="public" virt="non-virtual"><scope>_SsdPlayer</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

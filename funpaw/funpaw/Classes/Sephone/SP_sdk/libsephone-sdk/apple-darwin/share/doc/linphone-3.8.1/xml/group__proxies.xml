@@ -1,0 +1,2815 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="group__proxies" kind="group">
+    <compoundname>proxies</compoundname>
+    <title>Managing proxies</title>
+    <innerclass refid="structdial__plan" prot="public">dial_plan</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__proxies_1gaa85b33997ae5db6878eb6b0b89fb8fc5" prot="public" static="no">
+        <name>_SephoneRegistrationState</name>
+        <enumvalue id="group__proxies_1ggaa85b33997ae5db6878eb6b0b89fb8fc5abd0014e6cba1a89d8d2fee8abd783d8c" prot="public">
+          <name>SephoneRegistrationNone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Initial state for registrations </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaa85b33997ae5db6878eb6b0b89fb8fc5a78701d4577729b4e52b423a643e1119d" prot="public">
+          <name>SephoneRegistrationProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaa85b33997ae5db6878eb6b0b89fb8fc5a48da6899358a2902aeb15bb82c4705a0" prot="public">
+          <name>SephoneRegistrationOk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration is successful </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaa85b33997ae5db6878eb6b0b89fb8fc5af9f5314166945b6eeb12e344957fe96e" prot="public">
+          <name>SephoneRegistrationCleared</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Unregistration succeeded </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__proxies_1ggaa85b33997ae5db6878eb6b0b89fb8fc5a094cdac5232d53700faa90d4c203c46e" prot="public">
+          <name>SephoneRegistrationFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Registration failed </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneRegistrationState describes proxy registration states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="860" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="860" bodyend="866"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__proxies_1ga7cd5545dba861ebf21d6be1ae34d72ec" prot="public" static="no">
+        <type>struct dial_plan</type>
+        <definition>typedef struct dial_plan dial_plan_t</definition>
+        <argsstring></argsstring>
+        <name>dial_plan_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="602" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__proxies_1ga6de67319de408cf5e0994375df31f431" prot="public" static="no">
+        <type>struct _SephoneProxyConfig</type>
+        <definition>typedef struct _SephoneProxyConfig SephoneProxyConfig</definition>
+        <argsstring></argsstring>
+        <name>SephoneProxyConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SephoneProxyConfig object represents a proxy configuration to be used by the SephoneCore object. Its fields must not be used directly in favour of the accessors methods. Once created and filled properly the SephoneProxyConfig can be given to SephoneCore with <ref refid="group__proxies_1gad91c23dca381a6edae27825046d1e0b2" kindref="member">sephone_core_add_proxy_config()</ref>. This will automatically triggers the registration, if enabled.</para><para>The proxy configuration are persistent to restarts because they are saved in the configuration file. As a consequence, after <ref refid="group__initializing_1gaf6ea0ded4186e23f39d9a60c2a461cf4" kindref="member">sephone_core_new()</ref> there might already be a list of configured proxy that can be examined with <ref refid="group__proxies_1gaf7e74f2e124c52d8c03a4b98fa9311d3" kindref="member">sephone_core_get_proxy_config_list()</ref>.</para><para>The default proxy (see sephone_core_set_default_proxy() ) is the one of the list that is used by default for calls. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="825" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__proxies_1gaf4a17890badac0d9c74f634d193e876a" prot="public" static="no">
+        <type>enum <ref refid="group__proxies_1gaa85b33997ae5db6878eb6b0b89fb8fc5" kindref="member">_SephoneRegistrationState</ref></type>
+        <definition>typedef enum _SephoneRegistrationState SephoneRegistrationState</definition>
+        <argsstring></argsstring>
+        <name>SephoneRegistrationState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneRegistrationState describes proxy registration states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="866" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group__proxies_1ga5b8e43253c7a987e74f85a3c002b34ed" prot="public" static="yes" mutable="no">
+        <type>dial_plan_t const</type>
+        <definition>dial_plan_t const dial_plans[]</definition>
+        <argsstring>[]</argsstring>
+        <name>dial_plans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="606" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__proxies_1gac5e1bddd52282d48028f5106c1ec215b" prot="public" static="yes" mutable="no">
+        <type>dial_plan_t</type>
+        <definition>dial_plan_t most_common_dialplan</definition>
+        <argsstring></argsstring>
+        <name>most_common_dialplan</name>
+        <initializer>={ &quot;generic&quot; ,&quot;&quot;, &quot;&quot;, 10, &quot;00&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="832" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="832" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__proxies_1ga11df8ddb6fd45b3ec37a25ce3aef397e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+        <definition>SephoneProxyConfig * sephone_proxy_config_new</definition>
+        <argsstring>()</argsstring>
+        <name>sephone_proxy_config_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000023"><xreftitle>Deprecated</xreftitle><xrefdescription><para>, use <ref refid="group__proxies_1gaa2e1f98023a604ba9ef6afcc7e8860ac" kindref="member">sephone_core_create_proxy_config</ref> instead Creates an empty proxy config. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="139" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3230f9363efa98daff7a3ad36e479ab2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sephone_proxy_config_destroy</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>_sephone_proxy_config_destroy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="143" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="171" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gac113c497a90c0a203cffea2624ebc780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</definition>
+        <argsstring>(SephoneProxyConfig)</argsstring>
+        <name>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gac8fd46a69fa512f336c5c51428e8e006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_INSTANCIATE_VPTR</definition>
+        <argsstring>(SephoneProxyConfig, belle_sip_object_t,(belle_sip_object_destroy_t) _sephone_proxy_config_destroy, NULL, NULL, FALSE)</argsstring>
+        <name>BELLE_SIP_INSTANCIATE_VPTR</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref></type>
+        </param>
+        <param>
+          <type>belle_sip_object_t</type>
+        </param>
+        <param>
+          <type>(belle_sip_object_destroy_t)</type>
+          <declname>_sephone_proxy_config_destroy</declname>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>FALSE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaa2e1f98023a604ba9ef6afcc7e8860ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+        <definition>SephoneProxyConfig* sephone_core_create_proxy_config</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_create_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a proxy config with default values from Sephone core. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> with default values set </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="154" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga78a4fe9584d379e493299f3538175694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sephone_proxy_config_release_ops</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>_sephone_proxy_config_release_ops</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="160" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga0fcdf2e4fc8b069a6aba37c9cb32828e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_destroy</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_destroy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a proxy config. <xrefsect id="deprecated_1_deprecated000024"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>: SephoneProxyConfig that have been removed from SephoneCore with <ref refid="group__proxies_1gad7c81ad43603165e52a4abdc92c58448" kindref="member">sephone_core_remove_proxy_config()</ref> must not be freed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="196" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="196" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4b1a7c72d472a2f5905fac192e933086" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sephone_proxy_config_release</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>_sephone_proxy_config_release</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="200" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2ae1f4d34a0a7f1696757e868db2df15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+        <definition>SephoneProxyConfig * sephone_proxy_config_ref</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_ref</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="205" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="205" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga7a913e7609f18523a1266e981904acca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_unref</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_unref</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release reference to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="210" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga12031da8c53328b674922f0ae4c4443f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_is_registered</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_is_registered</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a boolean indicating that the user is sucessfully registered on the proxy. <xrefsect id="deprecated_1_deprecated000025"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__proxies_1ga3f58f4075cb1fba4fdae21a4aebd4466" kindref="member">sephone_proxy_config_get_state()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="218" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="218" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadc43151ff82b95eba90cf9431cc64008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_set_server_addr</definition>
+        <argsstring>(SephoneProxyConfig *obj, const char *server_addr)</argsstring>
+        <name>sephone_proxy_config_set_server_addr</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>server_addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the proxy address</para><para>Examples of valid sip proxy address are:<itemizedlist>
+<listitem><para>IP address: sip:87.98.157.38</para></listitem><listitem><para>IP address with port: sip:87.98.157.38:5062</para></listitem><listitem><para>hostnames : sip:sip.example.net </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="230" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="230" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacc9245f40c7172905de6692c8d11e7a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_set_identity</definition>
+        <argsstring>(SephoneProxyConfig *obj, const char *identity)</argsstring>
+        <name>sephone_proxy_config_set_identity</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>identity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the user identity as a SIP address.</para><para>This identity is normally formed with display name, username and domain, such as: Alice &lt;sip:<ulink url="mailto:alice@example.net">alice@example.net</ulink>&gt; The REGISTER messages will have from and to set to this identity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="265" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="265" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga380521307f8e7386228a0410ff211c5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_domain</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_domain</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the domain name of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The domain name of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="291" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="291" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga18f22b89c289a9e6a9e9b5ced8b302a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_set_route</definition>
+        <argsstring>(SephoneProxyConfig *obj, const char *route)</argsstring>
+        <name>sephone_proxy_config_set_route</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>route</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a SIP route. When a route is set, all outgoing calls will go to the route&apos;s destination if this proxy is the default one (see sephone_core_set_default_proxy() ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="300" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="300" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2ad1942e6ddf9ba4691f78300de58d23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_check</definition>
+        <argsstring>(SephoneCore *lc, SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_check</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="325" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="325" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga01a7763dd74fa2bf372c04c13d876fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_enable_register</definition>
+        <argsstring>(SephoneProxyConfig *obj, bool_t val)</argsstring>
+        <name>sephone_proxy_config_enable_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether a REGISTER request must be sent to the proxy.</para><para>Indicates either or not, REGISTRATION must be issued for this <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> . <linebreak/>
+ In case this <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> has been added to <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref>, follows the <ref refid="group__proxies_1ga6627f925269a392b8ae3cce8ace5806e" kindref="member">sephone_proxy_config_edit()</ref> rule. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, registration will be engaged </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="344" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="344" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga9b3fa5e4506b3d4431b168cd37ff5176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_expires</definition>
+        <argsstring>(SephoneProxyConfig *obj, int val)</argsstring>
+        <name>sephone_proxy_config_set_expires</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the registration expiration time in seconds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="351" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="351" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaa404ad7b5f1d8e414216e1587772a7d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_enable_publish</definition>
+        <argsstring>(SephoneProxyConfig *obj, bool_t val)</argsstring>
+        <name>sephone_proxy_config_enable_publish</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates either or not, PUBLISH must be issued for this <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> . <linebreak/>
+ In case this <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> has been added to <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref>, follows the <ref refid="group__proxies_1ga6627f925269a392b8ae3cce8ace5806e" kindref="member">sephone_proxy_config_edit()</ref> rule. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object pointer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true, publish will be engaged </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="356" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="356" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga62b65ceb0c4c81fced60cf05432313fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_pause_register</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_pause_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prevent a proxy config from refreshing its registration. This is useful to let registrations to expire naturally (or) when the application wants to keep control on when refreshes are sent. However, sephone_core_set_network_reachable(lc,TRUE) will always request the proxy configs to refresh their registrations. The refreshing operations can be resumed with <ref refid="group__proxies_1gab996911de16bb7385a439a503b6270c7" kindref="member">sephone_proxy_config_refresh_register()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="368" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="368" bodyend="370"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6627f925269a392b8ae3cce8ace5806e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_edit</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_edit</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts editing a proxy configuration.</para><para>Because proxy configuration must be consistent, applications MUST call <ref refid="group__proxies_1ga6627f925269a392b8ae3cce8ace5806e" kindref="member">sephone_proxy_config_edit()</ref> before doing any attempts to modify proxy configuration (such as identity, proxy address and so on). Once the modifications are done, then the application must call <ref refid="group__proxies_1gaf1b07373e06c3ec4c4eefeeb24d607d5" kindref="member">sephone_proxy_config_done()</ref> to commit the changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="381" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="381" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabcc156620b85d3c37a8a806af58b40f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_apply</definition>
+        <argsstring>(SephoneProxyConfig *obj, SephoneCore *lc)</argsstring>
+        <name>sephone_proxy_config_apply</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="395" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="395" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga0679959841f8f1c6d8ae686394f237dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_stop_refreshing</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_stop_refreshing</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="400" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="400" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gae770418ae51272309283edc1b02fd6e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* guess_contact_for_register</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>guess_contact_for_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="411" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="411" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga86f5e4a8d8432856f6bd036c2bd1f7ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void _sephone_proxy_config_unregister</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>_sephone_proxy_config_unregister</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unregister without moving the register_enable flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="452" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="452" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3e48aac937a536ecdf35f61e7119fd62" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sephone_proxy_config_register</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="458" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="458" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gab996911de16bb7385a439a503b6270c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_refresh_register</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_refresh_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refresh a proxy registration. This is useful if for example you resuming from suspend, thus IP address may have changed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="501" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="501" bodyend="507"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga86350888cd5f512f89dcfd15bb7f2e78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_dial_prefix</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *prefix)</argsstring>
+        <name>sephone_proxy_config_set_dial_prefix</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>prefix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a dialing prefix to be automatically prepended when inviting a number with <ref refid="group__call__control_1gae05e0732b1f7e47b08570d1fe0f3137c" kindref="member">sephone_core_invite()</ref>; This dialing prefix shall usually be the country code of the country where the user is living, without &quot;+&quot;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="516" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="516" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga79879919e8479c5b0afb07b794d74cc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_dial_prefix</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_dial_prefix</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns dialing prefix. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="529" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="529" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga13ddd7a8d96d1f09806fcb37a06e22a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_dial_escape_plus</definition>
+        <argsstring>(SephoneProxyConfig *cfg, bool_t val)</argsstring>
+        <name>sephone_proxy_config_set_dial_escape_plus</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether libsephone should replace &quot;+&quot; by international calling prefix in dialed numbers (passed to <ref refid="group__call__control_1gae05e0732b1f7e47b08570d1fe0f3137c" kindref="member">sephone_core_invite</ref> ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="538" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="538" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga10b0f8b5b325eff9fac57def1d8bff67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_get_dial_escape_plus</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_dial_escape_plus</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns whether libsephone should replace &quot;+&quot; by &quot;00&quot; in dialed numbers (passed to <ref refid="group__call__control_1gae05e0732b1f7e47b08570d1fe0f3137c" kindref="member">sephone_core_invite</ref> ). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="547" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="547" bodyend="549"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga98c68525ec71156e3eec0aed838f4213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_enable_quality_reporting</definition>
+        <argsstring>(SephoneProxyConfig *cfg, bool_t val)</argsstring>
+        <name>sephone_proxy_config_enable_quality_reporting</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether quality statistics during call should be stored and sent to a collector according to RFC 6035. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to sotre quality statistics and sent them to the collector, false to disable it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="551" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="551" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga1260b0417e76a307dce5420d1b2fae23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_quality_reporting_enabled</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_quality_reporting_enabled</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether quality statistics during call should be stored and sent to a collector according to RFC 6035. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if quality repotring is enabled, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="555" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="555" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf3e173db3813f98289f8e3a9c920c724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_quality_reporting_interval</definition>
+        <argsstring>(SephoneProxyConfig *cfg, uint8_t interval)</argsstring>
+        <name>sephone_proxy_config_set_quality_reporting_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interval between 2 interval reports sending when using quality reporting. If call exceed interval size, an interval report will be sent to the collector. On call termination, a session report will be sent for the remaining period. Value must be 0 (disabled) or positive. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in seconds, 0 means interval reports are disabled. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="560" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="560" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga8b36492c00a32ede2b8b843619b74772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_get_quality_reporting_interval</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_quality_reporting_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interval between interval reports when using quality reporting. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interval in seconds, 0 means interval reports are disabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="564" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="564" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga88eec52278cfbc61ff683a110dac4aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_quality_reporting_collector</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *collector)</argsstring>
+        <name>sephone_proxy_config_set_quality_reporting_collector</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>collector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the SIP address of the collector end-point when using quality reporting. This SIP address should be used on server-side to process packets directly then discard packets. Collector address should be a non existing account and should not received any packets. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">collector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SIP address of the collector end-point. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="568" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="568" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3071d2f61560614b1f3fdc58b29ad4c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_quality_reporting_collector</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_quality_reporting_collector</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the SIP address of the collector end-point when using quality reporting. This SIP address should be used on server-side to process packets directly then discard packets. Collector address should be a non existing account and should not received any packets. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The SIP address of the collector end-point. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="586" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="586" bodyend="588"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga15db7261845fdbb1c8d9fa36241246da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_dial_plan_lookup_ccc_from_e164</definition>
+        <argsstring>(const char *e164)</argsstring>
+        <name>sephone_dial_plan_lookup_ccc_from_e164</name>
+        <param>
+          <type>const char *</type>
+          <declname>e164</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from an e164 number, ex: +33952650121 will return 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e164</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phone number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="834" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="834" bodyend="859"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga87afd2314f5f0fd1ec65413470174bb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_dial_plan_lookup_ccc_from_iso</definition>
+        <argsstring>(const char *iso)</argsstring>
+        <name>sephone_dial_plan_lookup_ccc_from_iso</name>
+        <param>
+          <type>const char *</type>
+          <declname>iso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from ISO 3166-1 alpha-2 code, ex: FR returns 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iso</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>country code alpha2 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="860" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="860" bodyend="868"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga8d7f95f3192b6be1d45817099f2e31c3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void lookup_dial_plan</definition>
+        <argsstring>(const char *ccc, dial_plan_t *plan)</argsstring>
+        <name>lookup_dial_plan</name>
+        <param>
+          <type>const char *</type>
+          <declname>ccc</declname>
+        </param>
+        <param>
+          <type>dial_plan_t *</type>
+          <declname>plan</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="870" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="870" bodyend="881"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaeaa37d9c618a19c0120cd148c38121cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_is_phone_number</definition>
+        <argsstring>(SephoneProxyConfig *proxy, const char *username)</argsstring>
+        <name>sephone_proxy_config_is_phone_number</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Detect if the given input is a phone number or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>proxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> argument, unused yet but may contain useful data. Can be NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to parse. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if input is a phone number, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="883" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="883" bodyend="900"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga89f3641c31bfdb48b76c71a82da29462" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>static char* flatten_number</definition>
+        <argsstring>(const char *number)</argsstring>
+        <name>flatten_number</name>
+        <param>
+          <type>const char *</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="902" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="902" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga1c493f11f75685afa8d4f5112e7e5d43" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void replace_plus</definition>
+        <argsstring>(const char *src, char *dest, size_t destlen, const char *icp)</argsstring>
+        <name>replace_plus</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destlen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>icp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="915" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="915" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6b8f803a9df98b9721c5b63a89bd0a00" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void replace_icp</definition>
+        <argsstring>(const char *src, char *dest, size_t destlen, const char *icp)</argsstring>
+        <name>replace_icp</name>
+        <param>
+          <type>const char *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>destlen</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>icp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="930" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="930" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga08bb5e31f508aaf8642de2bfe7cd500c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_normalize_number</definition>
+        <argsstring>(SephoneProxyConfig *proxy, const char *username, char *result, size_t result_len)</argsstring>
+        <name>sephone_proxy_config_normalize_number</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>result_len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Normalize a human readable phone number into a basic string. 888-444-222 becomes 888444222 or +33888444222 depending on the <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> argument. This function will always generate a normalized username; if input is not a phone number, output will be a copy of input. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>proxy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object containing country code and/or escape symbol. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the string to parse </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the newly normalized number </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of the normalized number <emphasis>result</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if a phone number was recognized, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="940" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="940" bodyend="995"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf1b07373e06c3ec4c4eefeeb24d607d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_done</definition>
+        <argsstring>(SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_done</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Commits modification made to the proxy configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1000" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1000" bodyend="1023"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad6f0d57d3be64b75270a2e4fd24000d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_realm</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_realm</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the realm of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The realm of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1025" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1025" bodyend="1028"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga6d0b1697c54eeb7acc0842ceaef5a8a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_realm</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *realm)</argsstring>
+        <name>sephone_proxy_config_set_realm</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>realm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the realm of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">realm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New realm value. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The realm of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1029" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1029" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2f794ac7f3e1eb2bc3f8e142287eb88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_send_publish</definition>
+        <argsstring>(SephoneProxyConfig *proxy, SephonePresenceModel *presence)</argsstring>
+        <name>sephone_proxy_config_send_publish</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>proxy</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> *</type>
+          <declname>presence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1037" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1037" bodyend="1064"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaccbd7bc0eecf15664f6b7fbdfa00a5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_route</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_route</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the route set for this proxy configuration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1069" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1069" bodyend="1071"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4858956a94384d8234b0f36195304399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_identity</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_identity</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the SIP identity that belongs to this proxy configuration.</para><para>The SIP identity is a SIP address (Display Name &lt;sip:username@domain&gt; ) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1078" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1078" bodyend="1080"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga87fd8769613e928e63fc1b2a2b06d99b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_publish_enabled</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_publish_enabled</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if PUBLISH request is enabled for this proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1085" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1085" bodyend="1087"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabf4250b720847a5df4e23a3c26399449" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_server_addr</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_server_addr</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the proxy&apos;s SIP address. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1092" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1092" bodyend="1094"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2c171f9dabdf9184cb435f8fff02865e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_get_expires</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_expires</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the duration of registration. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1099" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1099" bodyend="1101"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga8d7fc8e3fe41272334ff1945f0089e6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_register_enabled</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_register_enabled</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if registration to the proxy is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1106" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1106" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gae6cbcb6915da9b5098514e64587d8239" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_contact_parameters</definition>
+        <argsstring>(SephoneProxyConfig *obj, const char *contact_params)</argsstring>
+        <name>sephone_proxy_config_set_contact_parameters</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set optional contact parameters that will be added to the contact information sent in the registration. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contact_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string contaning the additional parameters in text form, like &quot;myparam=something;myparam2=something_else&quot;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The main use case for this function is provide the proxy additional information regarding the user agent, like for example unique identifier or apple push id. As an example, the contact address in the SIP register sent will look like &lt;sip:<ulink url="mailto:joe@15.128.128.93">joe@15.128.128.93</ulink>:50421&gt;;apple-push-id=43143-DFE23F-2323-FA2232. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1118" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1118" bodyend="1126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga9aee5881348486cf5c1cdbc7469d1ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_contact_uri_parameters</definition>
+        <argsstring>(SephoneProxyConfig *obj, const char *contact_uri_params)</argsstring>
+        <name>sephone_proxy_config_set_contact_uri_parameters</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact_uri_params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set optional contact parameters that will be added to the contact information sent in the registration, inside the URI. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>contact_uri_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a string containing the additional parameters in text form, like &quot;myparam=something;myparam2=something_else&quot;</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The main use case for this function is provide the proxy additional information regarding the user agent, like for example unique identifier or apple push id. As an example, the contact address in the SIP register sent will look like &lt;sip:<ulink url="mailto:joe@15.128.128.93">joe@15.128.128.93</ulink>:50421;apple-push-id=43143-DFE23F-2323-FA2232&gt;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1136" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1136" bodyend="1144"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabd19ff37814a98ebe2a7f34a35ce805e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_contact_parameters</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_contact_parameters</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns previously set contact parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1149" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1149" bodyend="1151"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf73244972f1784253b0912f39d51bafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_contact_uri_parameters</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_contact_uri_parameters</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns previously set contact URI parameters. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1156" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1156" bodyend="1158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gac71b5dc2f1916e678e1c462dfe9ddad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct _SephoneCore *</type>
+        <definition>SephoneCore * sephone_proxy_config_get_core</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_core</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object to which is associated the <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object to which is associated the <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref>. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1160" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1160" bodyend="1162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabd71b122f798052bdbd8411f059a0c91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * sephone_proxy_config_get_custom_header</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *header_name)</argsstring>
+        <name>sephone_proxy_config_get_custom_header</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Obtain the value of a header sent by the server in last answer to REGISTER. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header name for which to fetch corresponding value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the value of the queried header. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1164" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1164" bodyend="1169"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga5f968b00b550677db0d2214e16dc57bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_custom_header</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *header_name, const char *header_value)</argsstring>
+        <name>sephone_proxy_config_set_custom_header</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the value of a custom header sent to the server in REGISTERs request. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the header&apos;s value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1171" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1171" bodyend="1173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad91c23dca381a6edae27825046d1e0b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_add_proxy_config</definition>
+        <argsstring>(SephoneCore *lc, SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_core_add_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a proxy configuration. This will start registration on the proxy, if registration is enabled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1179" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1179" bodyend="1190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gad7c81ad43603165e52a4abdc92c58448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_remove_proxy_config</definition>
+        <argsstring>(SephoneCore *lc, SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_core_remove_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a proxy configuration.</para><para>SephoneCore will then automatically unregister and place the proxy configuration on a deleted list. For that reason, a removed proxy does NOT need to be freed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1198" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1198" bodyend="1219"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaef19a3e4f2ce1aaebc73fbafe14e7b24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_clear_proxy_config</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_clear_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase all proxies from config. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1225" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1225" bodyend="1233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga469845aac0651aee827fcd2417e5893b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int sephone_core_get_default_proxy_config_index</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_default_proxy_config_index</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1235" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1235" bodyend="1241"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga06bf4a1c8914516e0f30070c43763c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_default_proxy_config</definition>
+        <argsstring>(SephoneCore *lc, SephoneProxyConfig *config)</argsstring>
+        <name>sephone_core_set_default_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the default proxy.</para><para>This default proxy must be part of the list of already entered SephoneProxyConfig. Toggling it as default will make SephoneCore use the identity associated with the proxy configuration in all incoming and outgoing calls. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy configuration to use as the default one. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1252" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1252" bodyend="1264"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga5fda94221cc839d0fbd6a4416802b30a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_default_proxy_index</definition>
+        <argsstring>(SephoneCore *lc, int index)</argsstring>
+        <name>sephone_core_set_default_proxy_index</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1266" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1266" bodyend="1269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga180ce647ddb1d24137159ae89d49c0e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_get_default_proxy</definition>
+        <argsstring>(SephoneCore *lc, SephoneProxyConfig **config)</argsstring>
+        <name>sephone_core_get_default_proxy</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> **</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default proxy configuration, that is the one used to determine the current identity. <xrefsect id="deprecated_1_deprecated000026"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__proxies_1gabb72cd3fc00912808e8b2222c517538a" kindref="member">sephone_core_get_default_proxy_config()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1275" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1275" bodyend="1278"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabb72cd3fc00912808e8b2222c517538a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+        <definition>SephoneProxyConfig* sephone_core_get_default_proxy_config</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_default_proxy_config</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default proxy configuration, that is the one used to determine the current identity. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The default proxy configuration. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1285" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1285" bodyend="1287"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf7e74f2e124c52d8c03a4b98fa9311d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSList *</type>
+        <definition>const MSList* sephone_core_get_proxy_config_list</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_proxy_config_list</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns an unmodifiable list of entered proxy configurations. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> objects. <mslist>SephoneProxyConfig</mslist>  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1294" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1294" bodyend="1296"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga7b32a5e25781844d2e7cc70801a83419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_write_to_config_file</definition>
+        <argsstring>(SpConfig *config, SephoneProxyConfig *obj, int index)</argsstring>
+        <name>sephone_proxy_config_write_to_config_file</name>
+        <param>
+          <type><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1298" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1298" bodyend="1341"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gadac4924a988f4460b5351e170aa2c3f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+        <definition>SephoneProxyConfig* sephone_proxy_config_new_from_config_file</definition>
+        <argsstring>(SephoneCore *lc, int index)</argsstring>
+        <name>sephone_proxy_config_new_from_config_file</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1357" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1357" bodyend="1398"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga8afdb1e5fb082710af17ad11b342f338" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sephone_proxy_config_activate_sip_setup</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_activate_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1400" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1400" bodyend="1432"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf7f34f62f9a6fbd0228120f694538bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SipSetup *</type>
+        <definition>SipSetup * sephone_proxy_config_get_sip_setup</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1434" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1434" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga5e7f64564acf34238d7ad47d213d90a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>static bool_t can_register</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>can_register</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1442" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1442" bodyend="1456"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaff3cb022d9c2d9d9bcad0522abc72e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_update</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_update</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1458" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1458" bodyend="1474"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacd70a6b81d32f9ce2663979c2bcd2204" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_sip_setup</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *type)</argsstring>
+        <name>sephone_proxy_config_set_sip_setup</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1476" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1476" bodyend="1484"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3bbc2193b20139c422b83d4e29dec703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SipSetupContext *</type>
+        <definition>SipSetupContext * sephone_proxy_config_get_sip_setup_context</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_sip_setup_context</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1486" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1486" bodyend="1488"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga85d77885df766c0b9aedde94577ad9ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_set_primary_contact</definition>
+        <argsstring>(SephoneCore *lc, const char *contact)</argsstring>
+        <name>sephone_core_set_primary_contact</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>contact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the local &quot;from&quot; identity.</para><para>This data is used in absence of any proxy configuration or when no default proxy configuration is set. See SephoneProxyConfig </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1804" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1804" bodyend="1829"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga54f3c2884ba560b26d764a690132e827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_primary_contact</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_primary_contact</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default identity when no proxy configuration is used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1863" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1863" bodyend="1875"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga49ca155ad9fdb98ffe4e7c49b92b4d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_guess_hostname</definition>
+        <argsstring>(SephoneCore *lc, bool_t val)</argsstring>
+        <name>sephone_core_set_guess_hostname</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells SephoneCore to guess local hostname automatically in primary contact. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1882" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1882" bodyend="1884"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacf31feafb6e18abb20e84c0c7d773cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_core_get_guess_hostname</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_guess_hostname</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns TRUE if hostname part of primary contact is guessed automatically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1891" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1891" bodyend="1893"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2f39e8d47e5a64861fa42654e216a4fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* sephone_core_get_primary_contact_parsed</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_primary_contact_parsed</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as <ref refid="group__proxies_1ga54f3c2884ba560b26d764a690132e827" kindref="member">sephone_core_get_primary_contact()</ref> but the result is a SephoneAddress object instead of const char* </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1915" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1915" bodyend="1917"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga7e085ebc050004f40c6ced0b81f2038c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_identity</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_identity</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the default identity SIP address.</para><para>This is an helper function:</para><para>If no default proxy is set, this will return the primary contact ( see <ref refid="group__proxies_1ga54f3c2884ba560b26d764a690132e827" kindref="member">sephone_core_get_primary_contact()</ref> ). If a default proxy is set it returns the registered identity on the proxy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="2835" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="2835" bodyend="2843"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2075d891bfbc6f1d357ed4f70b1eb419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_registration_state_to_string</definition>
+        <argsstring>(SephoneRegistrationState cs)</argsstring>
+        <name>sephone_registration_state_to_string</name>
+        <param>
+          <type><ref refid="group__proxies_1gaf4a17890badac0d9c74f634d193e876a" kindref="member">SephoneRegistrationState</ref></type>
+          <declname>cs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Human readable version of the <ref refid="group__proxies_1gaf4a17890badac0d9c74f634d193e876a" kindref="member">SephoneRegistrationState</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="872" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1623" bodyend="1642"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gacf4acf40eb7edebc47ef55e3c9801752" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sephone_proxy_config_get_user_data</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve the user pointer associated with the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user pointer associated with the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="893" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1590" bodyend="1592"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3a6bea1f0f93c0e016f82d89226fe0d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_user_data</definition>
+        <argsstring>(SephoneProxyConfig *cfg, void *ud)</argsstring>
+        <name>sephone_proxy_config_set_user_data</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user pointer to the proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The proxy config. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user pointer to associate with the proxy config. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="900" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1586" bodyend="1588"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga1614bcc881e6fa5ae08280dd27ef7560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_publish_expires</definition>
+        <argsstring>(SephoneProxyConfig *obj, int expires)</argsstring>
+        <name>sephone_proxy_config_set_publish_expires</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>expires</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the publish expiration time in second. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>proxy config </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expires</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>in second </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="932" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1683" bodyend="1685"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga9d4b0e30f9e6337a0fc51172d023125f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_proxy_config_get_publish_expires</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_publish_expires</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get the publish expiration time in second. Default value is the registration expiration value. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>expires in second </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="939" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1686" bodyend="1693"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3f58f4075cb1fba4fdae21a4aebd4466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__proxies_1gaf4a17890badac0d9c74f634d193e876a" kindref="member">SephoneRegistrationState</ref></type>
+        <definition>SephoneRegistrationState sephone_proxy_config_get_state</definition>
+        <argsstring>(const SephoneProxyConfig *obj)</argsstring>
+        <name>sephone_proxy_config_get_state</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the registration state of the given proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The registration state of the proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="998" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1619" bodyend="1621"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga61b6f8a3d5a90651ebb580fec07af218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__misc_1ga68a1eac99c3622808ca47ec379951ff0" kindref="member">SephoneReason</ref></type>
+        <definition>SephoneReason sephone_proxy_config_get_error</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_error</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reason why registration failed when the proxy config state is SephoneRegistrationFailed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The reason why registration failed for this proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1052" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1644" bodyend="1646"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabc5e2032ff1decf82084da105eb840ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="group__misc_1ga5b61cd0e899fd19430169cb6247b81da" kindref="member">SephoneErrorInfo</ref> *</type>
+        <definition>const SephoneErrorInfo* sephone_proxy_config_get_error_info</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_error_info</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get detailed information why registration failed when the proxy config state is SephoneRegistrationFailed. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The details why registration failed for this proxy config. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1059" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1648" bodyend="1650"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaf5a04c5cb9aed9f1980f9742081c3724" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_proxy_config_get_transport</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_transport</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the transport from either service route, route or addr. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The transport as a string (I.E udp, tcp, tls, dtls) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1066" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1655" bodyend="1676"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga19b23ba98d400adfe416ba55610928e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_privacy</definition>
+        <argsstring>(SephoneProxyConfig *cfg, SephonePrivacyMask privacy)</argsstring>
+        <name>sephone_proxy_config_set_privacy</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>SephonePrivacyMask</type>
+          <declname>privacy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set default privacy policy for all calls routed through this proxy. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object to be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>privacy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephonePrivacy to configure privacy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1101" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1677" bodyend="1679"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gaa8c2498863f3d60da8744fdc1ed05fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephonePrivacyMask</type>
+        <definition>SephonePrivacyMask sephone_proxy_config_get_privacy</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_privacy</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get default privacy policy for all calls routed through this proxy. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Privacy mode </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1107" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1680" bodyend="1682"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga39301e410eafbfa48f972752791ffd5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_file_transfer_server</definition>
+        <argsstring>(SephoneProxyConfig *cfg, const char *server_url)</argsstring>
+        <name>sephone_proxy_config_set_file_transfer_server</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>server_url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the http file transfer server to be used for content type application/vnd.gsma.rcs-ft-http+xml <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object to be modified </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>server_url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>URL of the file server like <ulink url="https://file.linphone.org/upload.php">https://file.linphone.org/upload.php</ulink> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga2db757893b8ce29cf63432f5dc01eaef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_proxy_config_get_file_transfer_server</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_file_transfer_server</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the http file transfer server to be used for content type application/vnd.gsma.rcs-ft-http+xml <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>URL of the file server like <ulink url="https://file.linphone.org/upload.php">https://file.linphone.org/upload.php</ulink> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga04a15b5bc05d21b9eeb36b003a3b3ffc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_enable_avpf</definition>
+        <argsstring>(SephoneProxyConfig *cfg, bool_t enable)</argsstring>
+        <name>sephone_proxy_config_enable_avpf</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether AVPF/SAVPF must be used for calls using this proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable AVPF/SAVF, false to disable it. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000039"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__proxies_1ga01c2bba558ea113db42573cb3d1529fc" kindref="member">sephone_proxy_config_set_avpf_mode()</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1127" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1695" bodyend="1697"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga4c5d066d8dc0b27c52a06b617ea29382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_proxy_config_avpf_enabled</definition>
+        <argsstring>(SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_avpf_enabled</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates whether AVPF/SAVPF is being used for calls using this proxy config. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if AVPF/SAVPF is enabled, false otherwise. </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000040"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__proxies_1ga01c2bba558ea113db42573cb3d1529fc" kindref="member">sephone_proxy_config_set_avpf_mode()</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1135" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1699" bodyend="1704"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga747c5cef635450d254619abd449d51c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_avpf_rr_interval</definition>
+        <argsstring>(SephoneProxyConfig *cfg, uint8_t interval)</argsstring>
+        <name>sephone_proxy_config_set_avpf_rr_interval</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the interval between regular RTCP reports when using AVPF/SAVPF. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interval in seconds (between 0 and 5 seconds). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1142" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1714" bodyend="1717"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1gabefaa88fce22014d9de3ccc679ae7e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t sephone_proxy_config_get_avpf_rr_interval</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_avpf_rr_interval</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the interval between regular RTCP reports when using AVPF/SAVPF. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The interval in seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1149" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1719" bodyend="1721"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga3b6de29ed556e5d027584eeddbb58767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__media__parameters_1ga766a2a2b15713c12bd1cdfb5a98df1f5" kindref="member">SephoneAVPFMode</ref></type>
+        <definition>SephoneAVPFMode sephone_proxy_config_get_avpf_mode</definition>
+        <argsstring>(const SephoneProxyConfig *cfg)</argsstring>
+        <name>sephone_proxy_config_get_avpf_mode</name>
+        <param>
+          <type>const <ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get enablement status of RTCP feedback (also known as AVPF profile). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the enablement mode, which can be SephoneAVPFDefault (use SephoneCore&apos;s mode), SephoneAVPFEnabled (avpf is enabled), or SephoneAVPFDisabled (disabled). </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1156" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1706" bodyend="1708"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga01c2bba558ea113db42573cb3d1529fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_proxy_config_set_avpf_mode</definition>
+        <argsstring>(SephoneProxyConfig *cfg, SephoneAVPFMode mode)</argsstring>
+        <name>sephone_proxy_config_set_avpf_mode</name>
+        <param>
+          <type><ref refid="group__proxies_1ga6de67319de408cf5e0994375df31f431" kindref="member">SephoneProxyConfig</ref> *</type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="group__media__parameters_1ga766a2a2b15713c12bd1cdfb5a98df1f5" kindref="member">SephoneAVPFMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable the use of RTCP feedback (also known as AVPF profile). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cfg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the proxy config </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the enablement mode, which can be SephoneAVPFDefault (use SephoneCore&apos;s mode), SephoneAVPFEnabled (avpf is enabled), or SephoneAVPFDisabled (disabled). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1163" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1710" bodyend="1712"/>
+      </memberdef>
+      <memberdef kind="function" id="group__proxies_1ga479058f27851648932c9b003a5a63b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_refresh_registers</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_refresh_registers</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>force registration refresh to be initiated upon next iterate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3153" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6590" bodyend="6603"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__proxies_1ga887770d5312e00b1bf98a05a3f72f85e" prot="public" static="no">
+        <name>CONFIGURE_STRING_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>{\
+	char* default_value = sephone_proxy_config_get_##param(obj)?ms_strdup(sephone_proxy_config_get_##param(obj)):NULL;\
+	sephone_proxy_config_set_##param(obj,<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(config,key,param_name,default_value)); \
+	if ( default_value) ms_free(default_value); \
+	}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1344" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga1a51185cadf2eb9e2999c3ec3543e31d" prot="public" static="no">
+        <name>CONFIGURE_BOOL_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>sephone_proxy_config_enable_##param(obj,<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(config,key,param_name,sephone_proxy_config_##param##_enabled(obj)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1351" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1gac9ad016c4968c8807f31e2d009c3517f" prot="public" static="no">
+        <name>CONFIGURE_INT_VALUE</name>
+        <param><defname>obj</defname></param>
+        <param><defname>config</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>param</defname></param>
+        <param><defname>param_name</defname></param>
+        <initializer>sephone_proxy_config_set_##param(obj,<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(config,key,param_name,sephone_proxy_config_get_##param(obj)));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" line="1354" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="1354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga43d5307bd1ad39a3e922f0610b17e24d" prot="public" static="no">
+        <name>sephone_proxy_config_expires</name>
+        <initializer><ref refid="group__proxies_1ga9b3fa5e4506b3d4431b168cd37ff5176" kindref="member">sephone_proxy_config_set_expires</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="907" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="907" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1ga0cb31b8b5adc469e8c7e61bad16dee10" prot="public" static="no">
+        <name>sephone_proxy_config_enableregister</name>
+        <initializer><ref refid="group__proxies_1ga01a7763dd74fa2bf372c04c13d876fe8" kindref="member">sephone_proxy_config_enable_register</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="915" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="915" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__proxies_1gaa7d9ccfea6f29b4efe6b81b798225d2b" prot="public" static="no">
+        <name>sephone_proxy_config_get_addr</name>
+        <initializer><ref refid="group__proxies_1gabf4250b720847a5df4e23a3c26399449" kindref="member">sephone_proxy_config_get_server_addr</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1027" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1027" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>User registration is controled by #LinphoneProxyConfig settings.<linebreak/>
+ Each #LinphoneProxyConfig object can be configured with registration informations like <ref refid="" kindref="compound">proxy address </ref> , <ref refid="" kindref="compound">user id </ref>, <ref refid="" kindref="compound">refresh period </ref>, and so on. <linebreak/>
+ A created proxy config using linphone_proxy_config_new(), once configured, must be added to #LinphoneCore using function linphone_core_add_proxy_config(). <linebreak/>
+ It is recommended to set a default <ref refid="" kindref="compound">proxy config </ref> using function linphone_core_set_default_proxy(). Once done, if <ref refid="" kindref="compound">a proxy config </ref> has been configured with attribute <ref refid="" kindref="compound">enable register </ref> , next call to linphone_core_iterate() triggers a SIP register. <linebreak/>
+ Registration status is reported by LinphoneCoreRegistrationStateChangedCb. <linebreak/>
+ <linebreak/>
+ This pseudo code demonstrates basic registration operations: <linebreak/>
+<programlisting><codeline><highlight class="normal">LinphoneProxyConfig*<sp/>proxy_cfg;</highlight></codeline>
+<codeline><highlight class="normal">/*create<sp/>proxy<sp/>config*/</highlight></codeline>
+<codeline><highlight class="normal">proxy_cfg<sp/>=<sp/>linphone_proxy_config_new();</highlight></codeline>
+<codeline><highlight class="normal">/*parse<sp/>identity*/</highlight></codeline>
+<codeline><highlight class="normal">LinphoneAddress<sp/>*from<sp/>=<sp/>linphone_address_new(&quot;sip:toto@sip.titi.com&quot;);</highlight></codeline>
+<codeline><highlight class="normal">LinphoneAuthInfo<sp/>*info;</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(password!=NULL){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>info=linphone_auth_info_new(linphone_address_get_username(from),NULL,&quot;secret&quot;,NULL,NULL);<sp/>/*create<sp/>authentication<sp/>structure<sp/>from<sp/>identity*/</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>linphone_core_add_auth_info(lc,info);<sp/>/*add<sp/>authentication<sp/>info<sp/>to<sp/>LinphoneCore*/</highlight></codeline>
+<codeline><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">//<sp/>configure<sp/>proxy<sp/>entries</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_set_identity(proxy_cfg,identity);<sp/>/*set<sp/>identity<sp/>with<sp/>user<sp/>name<sp/>and<sp/>domain*/</highlight></codeline>
+<codeline><highlight class="normal">const<sp/>char*<sp/>server_addr<sp/>=<sp/>linphone_address_get_domain(from);<sp/>/*extract<sp/>domain<sp/>address<sp/>from<sp/>identity*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_set_server_addr(proxy_cfg,server_addr);<sp/>/*<sp/>we<sp/>assume<sp/>domain<sp/>=<sp/>proxy<sp/>server<sp/>address*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_enable_register(proxy_cfg,TRUE);<sp/>/*activate<sp/>registration<sp/>for<sp/>this<sp/>proxy<sp/>config*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_address_destroy(from);<sp/>/*release<sp/>resource*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">linphone_core_add_proxy_config(lc,proxy_cfg);<sp/>/*add<sp/>proxy<sp/>config<sp/>to<sp/>linphone<sp/>core*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_core_set_default_proxy(lc,proxy_cfg);<sp/>/*set<sp/>to<sp/>default<sp/>proxy*/<sp/></highlight></codeline>
+</programlisting> <linebreak/>
+ Registration sate call back: <programlisting><codeline><highlight class="normal"><sp/>static<sp/>void<sp/>registration_state_changed(struct<sp/>_LinphoneCore<sp/>*lc,<sp/>LinphoneProxyConfig<sp/>*cfg,<sp/>LinphoneRegistrationState<sp/>cstate,<sp/>const<sp/>char<sp/>*message){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(&quot;New<sp/>registration<sp/>state<sp/>%s<sp/>for<sp/>user<sp/>id<sp/>[%s]<sp/>at<sp/>proxy<sp/>[%s]\n&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,linphone_registration_state_to_string(cstate)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,linphone_proxy_config_get_identity(cfg)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>,linphone_proxy_config_get_addr(cfg));</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <linebreak/>
+<bold>Authentication:</bold> <linebreak/>
+Most of the time, registration requires <ref refid="group__authentication" kindref="compound">authentication</ref> to succeed. #LinphoneAuthInfo info must be either added to #LinphoneCore using function linphone_core_add_auth_info() before #LinphoneProxyConfig is added to Linphone core, or on demand from call back #LinphoneCoreAuthInfoRequestedCb. <linebreak/>
+ <linebreak/>
+<bold>Unregistration:</bold> <linebreak/>
+ Unregistration or any changes to #LinphoneProxyConfig must be first started by a call to function linphone_proxy_config_edit() and validated by function linphone_proxy_config_done() <linebreak/>
+ This pseudo code shows how to unregister a user associated to a #LinphoneProxyConfig <programlisting><codeline><highlight class="normal">LinphoneProxyConfig*<sp/>proxy_cfg;</highlight></codeline>
+<codeline><highlight class="normal">linphone_core_get_default_proxy(lc,&amp;proxy_cfg);<sp/>/*<sp/>get<sp/>default<sp/>proxy<sp/>config*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_edit(proxy_cfg);<sp/>/*start<sp/>editing<sp/>proxy<sp/>configuration*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_enable_register(proxy_cfg,FALSE);<sp/>/*de-activate<sp/>registration<sp/>for<sp/>this<sp/>proxy<sp/>config*/</highlight></codeline>
+<codeline><highlight class="normal">linphone_proxy_config_done(proxy_cfg);<sp/>/*initiate<sp/>REGISTER<sp/>with<sp/>expire<sp/>=<sp/>0*/</highlight></codeline>
+</programlisting> <linebreak/>
+ A complete tutorial can be found at : <ref refid="group__registration__tutorials" kindref="compound">Registration tutorial</ref> </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

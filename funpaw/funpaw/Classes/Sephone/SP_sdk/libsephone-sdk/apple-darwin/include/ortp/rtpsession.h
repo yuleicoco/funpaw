@@ -319,9 +319,12 @@ typedef struct _RtpStream
 	int rcv_socket_size;
 	int ssrc_changed_thres;
 	jitter_stats_t jitter_stats;
-	//{ wqj 150707
+//{ wqj 150707
 	queue_t prev_intra_buffer;
-	//}
+//}
+//{ wqj 160907
+	queue_t prev_p_buffer;
+//}
 }RtpStream;
 
 typedef struct _RtcpStream
@@ -405,16 +408,25 @@ struct _RtpSession
 	bool_t ssrc_set;
 	bool_t reuseaddr; /*setsockopt SO_REUSEADDR */
 	unsigned char avpf_features; /**< A bitmask of ORTP_AVPF_FEATURE_* macros. */
-	//{ wqj 150707
+//{ wqj 150707
 	int resend_flag;
 	uint32_t last_nack_ts;
     int jumping_ts;
-	//}
-	//{ wqj 150922
+//}
+//{ wqj 150922
 	queue_t fec_buffer;
 	int intra_frame_num;
 	int fec_frame_num;
-	//}
+//}
+//{ wqj 160405
+	queue_t dec_fec_buffer;
+//}
+//{ wqj 160907
+	queue_t fec_buffer_for_p;
+	int p_frame_num;
+	int fec_frame_num_for_p;
+	queue_t dec_fec_buffer_for_p;
+//}
 };
 
 
@@ -449,6 +461,8 @@ ORTP_PUBLIC uint16_t rtp_session_get_seq_number(RtpSession *session);
 ORTP_PUBLIC uint32_t rtp_session_get_rcv_ext_seq_number(RtpSession *session);
 ORTP_PUBLIC int rtp_session_get_cum_loss(RtpSession *session);
 ORTP_PUBLIC void rtp_session_set_duplication_ratio(RtpSession *session, float ratio);
+
+ORTP_PUBLIC bool_t rtp_session_is_video_session(RtpSession *session);
 
 ORTP_PUBLIC void rtp_session_enable_jitter_buffer(RtpSession *session , bool_t enabled);
 ORTP_PUBLIC bool_t rtp_session_jitter_buffer_enabled(const RtpSession *session);

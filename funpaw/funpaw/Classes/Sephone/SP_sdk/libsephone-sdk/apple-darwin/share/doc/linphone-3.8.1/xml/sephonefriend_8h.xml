@@ -1,0 +1,1548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="sephonefriend_8h" kind="file" language="C++">
+    <compoundname>sephonefriend.h</compoundname>
+    <includes refid="sephonepresence_8h" local="yes">sephonepresence.h</includes>
+    <includedby refid="private_8h" local="yes">private.h</includedby>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__buddy__list_1ga1699c01138e6478da9c68e08f687393d" prot="public" static="no">
+        <name>sephone_friend_new_with_addr</name>
+        <initializer><ref refid="group__buddy__list_1gac799b73ca9a88fcf685fad8c5d7af1a2" kindref="member">sephone_friend_new_with_address</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor same as <ref refid="group__buddy__list_1ga55657aa5ea2ecfb3b387061869028e89" kindref="member">sephone_friend_new()</ref> + <ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address()</ref> <xrefsect id="deprecated_1_deprecated000072"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1gac799b73ca9a88fcf685fad8c5d7af1a2" kindref="member">sephone_friend_new_with_address</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="135" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__buddy__list_1gac675e6625da3cb8ef8e523160ff2eb7b" prot="public" static="no">
+        <name>sephone_friend_set_addr</name>
+        <initializer><ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> for this friend <xrefsect id="deprecated_1_deprecated000074"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="155" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__buddy__list_1gacf7ef2ca5b6c48cd56534e87dd4bb7cb" prot="public" static="no">
+        <name>sephone_friend_get_send_subscribe</name>
+        <initializer><ref refid="group__buddy__list_1gad478070e96beffe8a8197ded86332e64" kindref="member">sephone_friend_subscribes_enabled</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="185" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__buddy__list_1gaff56a26033cbbf641c22b53538d7d1c7" prot="public" static="no">
+        <name>sephone_friend_send_subscribe</name>
+        <initializer><ref refid="group__buddy__list_1ga3155f520c95b024ddb6f2918c0763857" kindref="member">sephone_friend_enable_subscribes</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="194" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__buddy__list_1ga2839a15fda61daa92ba614e68bd0662a" prot="public" static="no">
+        <name>_SephoneSubscribePolicy</name>
+        <enumvalue id="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa60dd7354d0d092ce7b55acb8da75e866" prot="public">
+          <name>SephoneSPWait</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Does not automatically accept an incoming subscription request. This policy implies that a decision has to be taken for each incoming subscription request notified by callback <ref refid="struct__SephoneCoreVTable_1a9cd2735f74f880d56275423344742d9a" kindref="member">SephoneCoreVTable.new_subscription_requested</ref> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa6142e5bdbb5d9409b6585043db122576" prot="public">
+          <name>SephoneSPDeny</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Rejects incoming subscription request. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa2199de9d8d5138e2ad5537068d94838a" prot="public">
+          <name>SephoneSPAccept</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Automatically accepts a subscription request. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum controlling behavior for incoming subscription request. <linebreak/>
+ Use by <ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">sephone_friend_set_inc_subscribe_policy()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="37" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="37" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__buddy__list_1ga7d8d36be33ebac1ef82e55a06d6f0bf5" prot="public" static="no">
+        <name>_SephoneOnlineStatus</name>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ae218d739af22565632105aa805f2f0f5" prot="public">
+          <name>SephoneStatusOffline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Offline </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5aa3f34eb8311e2c07d774b4211e27a640" prot="public">
+          <name>SephoneStatusOnline</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Online </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5af727dbd3079926a115b70fca7bcc8bef" prot="public">
+          <name>SephoneStatusBusy</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Busy </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a82f11dc225e1eee499c9a9db33da26eb" prot="public">
+          <name>SephoneStatusBeRightBack</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Be right back </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ac453ea75e9922af1054e31bbdb14261a" prot="public">
+          <name>SephoneStatusAway</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Away </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5abcea37fc14d890ed7ce2d82c59dc5c45" prot="public">
+          <name>SephoneStatusOnThePhone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>On the phone </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a4bfb5eed599144e6a1c521db5bd5b56c" prot="public">
+          <name>SephoneStatusOutToLunch</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Out to lunch </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ab5c684ac2645d7a6c05be24ca0d87a47" prot="public">
+          <name>SephoneStatusDoNotDisturb</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Do not disturb </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a8d19e63aaeb4f15e7b12ca587bffefd5" prot="public">
+          <name>SephoneStatusMoved</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Moved in this sate, call can be redirected if an alternate contact address has been set using function <ref refid="group__buddy__list_1ga8cf747b3fd25205784ffebd8ae00de41" kindref="member">sephone_core_set_presence_info()</ref> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a2d186d3744fe8b8efd9f7b378c97dca1" prot="public">
+          <name>SephoneStatusAltService</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Using another messaging service </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ae60011a12dda1e73aab5481115b9b09c" prot="public">
+          <name>SephoneStatusPending</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pending </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a165a53c795910a788a3aa0efc6f28275" prot="public">
+          <name>SephoneStatusVacation</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Vacation </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a829f429fe83fe059d5c6aa8333631bb2" prot="public">
+          <name>SephoneStatusEnd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing remote friend status <xrefsect id="deprecated_1_deprecated000071"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> and <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="58" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="58" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" prot="public" static="no">
+        <type>enum <ref refid="group__buddy__list_1ga2839a15fda61daa92ba614e68bd0662a" kindref="member">_SephoneSubscribePolicy</ref></type>
+        <definition>typedef enum _SephoneSubscribePolicy  SephoneSubscribePolicy</definition>
+        <argsstring></argsstring>
+        <name>SephoneSubscribePolicy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum controlling behavior for incoming subscription request. <linebreak/>
+ Use by <ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">sephone_friend_set_inc_subscribe_policy()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" prot="public" static="no">
+        <type>enum <ref refid="group__buddy__list_1ga7d8d36be33ebac1ef82e55a06d6f0bf5" kindref="member">_SephoneOnlineStatus</ref></type>
+        <definition>typedef enum _SephoneOnlineStatus SephoneOnlineStatus</definition>
+        <argsstring></argsstring>
+        <name>SephoneOnlineStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing remote friend status <xrefsect id="deprecated_1_deprecated000071"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> and <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" prot="public" static="no">
+        <type>struct _SephoneFriend</type>
+        <definition>typedef struct _SephoneFriend SephoneFriend</definition>
+        <argsstring></argsstring>
+        <name>SephoneFriend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Represents a buddy, all presence actions like subscription and status change notification are performed on this object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="106" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__buddy__list_1ga55657aa5ea2ecfb3b387061869028e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_friend_new</definition>
+        <argsstring>(void)</argsstring>
+        <name>sephone_friend_new</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor <simplesect kind="return"><para>a new empty <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="122" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="130" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gac799b73ca9a88fcf685fad8c5d7af1a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_friend_new_with_address</definition>
+        <argsstring>(const char *addr)</argsstring>
+        <name>sephone_friend_new_with_address</name>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contructor same as <ref refid="group__buddy__list_1ga55657aa5ea2ecfb3b387061869028e89" kindref="member">sephone_friend_new()</ref> + <ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address()</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a buddy address, must be a sip uri like sip:<ulink url="mailto:joe@sip.linphone.org">joe@sip.linphone.org</ulink> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> with <ref refid="group__buddy__list_1ga6e40fe5bfee602b8cedb37a62f3052cb" kindref="member">address initialized </ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="129" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="138" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga6d35c0b7b22234d84cd22594ecd6e6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_destroy</definition>
+        <argsstring>(SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_destroy</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a SephoneFriend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneFriend object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000073"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1gad938f868371c2c5bafdadf9165342039" kindref="member">sephone_friend_unref()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="142" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="697" bodyend="699"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_friend_set_address</definition>
+        <argsstring>(SephoneFriend *fr, const SephoneAddress *address)</argsstring>
+        <name>sephone_friend_set_address</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> for this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="149" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="200" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga6e40fe5bfee602b8cedb37a62f3052cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SEPHONE_PUBLIC const SephoneAddress* sephone_friend_get_address</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_address</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get address of this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="162" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="283" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga68cbe064b48316810a5fb251d45cd5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_friend_set_name</definition>
+        <argsstring>(SephoneFriend *lf, const char *name)</argsstring>
+        <name>sephone_friend_set_name</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the display name for this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="169" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="208" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga1c7453d9bc03bcca109e4a03857dc36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_friend_get_name</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_name</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the display name for this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The display name of this friend </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="176" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="287" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gad478070e96beffe8a8197ded86332e64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_friend_subscribes_enabled</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_subscribes_enabled</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get subscription flag value <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>returns true is subscription is activated for this friend </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="184" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="293" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga3155f520c95b024ddb6f2918c0763857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_friend_enable_subscribes</definition>
+        <argsstring>(SephoneFriend *fr, bool_t val)</argsstring>
+        <name>sephone_friend_enable_subscribes</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configure <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> to subscribe to presence information <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if TRUE this friend will receive subscription message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="193" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_friend_set_inc_subscribe_policy</definition>
+        <argsstring>(SephoneFriend *fr, SephoneSubscribePolicy pol)</argsstring>
+        <name>sephone_friend_set_inc_subscribe_policy</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" kindref="member">SephoneSubscribePolicy</ref></type>
+          <declname>pol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configure incoming subscription policy for this friend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" kindref="member">SephoneSubscribePolicy</ref> policy to apply. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="201" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="223" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga5e21e1a8382337e4604b9d745605d866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" kindref="member">SephoneSubscribePolicy</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneSubscribePolicy sephone_friend_get_inc_subscribe_policy</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_inc_subscribe_policy</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get current subscription policy for this <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" kindref="member">SephoneSubscribePolicy</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="209" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="297" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaa816e1ffe0e2021e05e72e12f7356b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_edit</definition>
+        <argsstring>(SephoneFriend *fr)</argsstring>
+        <name>sephone_friend_edit</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts editing a friend configuration.</para><para>Because friend configuration must be consistent, applications MUST call <ref refid="group__buddy__list_1gaa816e1ffe0e2021e05e72e12f7356b0a" kindref="member">sephone_friend_edit()</ref> before doing any attempts to modify friend configuration (such as <ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">address </ref> or <ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">subscription policy</ref> and so on). Once the modifications are done, then the application must call <ref refid="group__buddy__list_1ga862cf6dbecb8284ad1ea5d249e955180" kindref="member">sephone_friend_done()</ref> to commit the changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="220" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="454" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga862cf6dbecb8284ad1ea5d249e955180" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_done</definition>
+        <argsstring>(SephoneFriend *fr)</argsstring>
+        <name>sephone_friend_done</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Commits modification made to the friend configuration. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="226" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="457" bodyend="461"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gae04082c3d1e32e22bc58bea2ba8a08d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneOnlineStatus sephone_friend_get_status</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_status</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the status of a friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref> </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000075"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga6e132b8f2c29525e24365ae946d8be6a" kindref="member">sephone_friend_get_presence_model()</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="234" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="301" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga6e132b8f2c29525e24365ae946d8be6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> *</type>
+        <definition>SEPHONE_PUBLIC const SephonePresenceModel* sephone_friend_get_presence_model</definition>
+        <argsstring>(SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_presence_model</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the presence model of a friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> object, or NULL if the friend do not have presence information (in which case he is considered offline) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="241" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="381" bodyend="383"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gafc7b6450bec5d85668363db0bb0f6560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_set_user_data</definition>
+        <argsstring>(SephoneFriend *lf, void *data)</argsstring>
+        <name>sephone_friend_set_user_data</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store user pointer to friend object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="246" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaac5cbbcd154c06ae0dfb2242c36c37b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void *</type>
+        <definition>SEPHONE_PUBLIC void* sephone_friend_get_user_data</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieve user data associated with friend. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="251" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga38952b5cdc45a8590193f1579591991c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC BuddyInfo *</type>
+        <definition>SEPHONE_PUBLIC BuddyInfo* sephone_friend_get_info</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_info</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="253" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="385" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaf30225f59fa38a143f7d838219ce6e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_set_ref_key</definition>
+        <argsstring>(SephoneFriend *lf, const char *key)</argsstring>
+        <name>sephone_friend_set_ref_key</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the reference key of a friend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference key to use for the friend. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="260" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="528" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaf44896268a3c8e9ed2941cf6ea27b981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_friend_get_ref_key</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_get_ref_key</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the reference key of a friend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The reference key of the friend. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="267" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="539" bodyend="541"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gadf95ab03a87a9df7719f0d742b5e9d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_friend_in_list</definition>
+        <argsstring>(const SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_in_list</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check that the given friend is in a friend list. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TRUE if the friend is in a friend list, FALSE otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="274" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga0dda27574e0a28535203c79c73209060" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_online_status_to_string</definition>
+        <argsstring>(SephoneOnlineStatus ss)</argsstring>
+        <name>sephone_online_status_to_string</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref></type>
+          <declname>ss</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return humain readable presence status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000076"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref>, <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> and <ref refid="group__buddy__list_1ga27ed08602cbebfb8d433b48d1170b161" kindref="member">sephone_presence_activity_to_string()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="282" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="29" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga0b5cb590a6b6c57c9a45dc26f314d8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_core_create_friend</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_create_friend</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a default SephoneFriend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The created <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="290" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="463" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gadf04ea88cdcac931a728fdbe94adae79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_core_create_friend_with_address</definition>
+        <argsstring>(SephoneCore *lc, const char *address)</argsstring>
+        <name>sephone_core_create_friend_with_address</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a SephoneFriend from the given address. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the address to create the SephoneFriend from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The created <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="298" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="467" bodyend="469"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga8cf747b3fd25205784ffebd8ae00de41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_set_presence_info</definition>
+        <argsstring>(SephoneCore *lc, int minutes_away, const char *alternative_contact, SephoneOnlineStatus os)</argsstring>
+        <name>sephone_core_set_presence_info</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minutes_away</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>alternative_contact</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref></type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set my presence status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">minutes_away</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how long in away </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">alternative_contact</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sip uri used to redirect call in state <ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a8d19e63aaeb4f15e7b12ca587bffefd5" kindref="member">SephoneStatusMoved</ref> </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000077"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga8ac83c463951d171f333aa94e8d60cb6" kindref="member">sephone_core_set_presence_model()</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="308" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4301" bodyend="4355"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga8ac83c463951d171f333aa94e8d60cb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_set_presence_model</definition>
+        <argsstring>(SephoneCore *lc, SephonePresenceModel *presence)</argsstring>
+        <name>sephone_core_set_presence_model</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> *</type>
+          <declname>presence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set my presence model <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">presence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="315" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4362" bodyend="4369"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga64e7168e5f3a4b01f9f7e807b73dbd94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneOnlineStatus sephone_core_get_presence_info</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_presence_info</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get my presence status <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref> </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000078"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__buddy__list_1ga0a14bed4dcdc57f779f900489f8f3439" kindref="member">sephone_core_get_presence_model()</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="323" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4371" bodyend="4419"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga0a14bed4dcdc57f779f900489f8f3439" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephonePresenceModel* sephone_core_get_presence_model</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_presence_model</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get my presence model <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> object, or NULL if no presence model has been set. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="330" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4421" bodyend="4423"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga5780c6f6dda94c3962f2a5344d90447e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_interpret_friend_uri</definition>
+        <argsstring>(SephoneCore *lc, const char *uri, char **result)</argsstring>
+        <name>sephone_core_interpret_friend_uri</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>uri</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000079"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__control_1gaeb30ce2d92edcbcdbc42e3c61a7b7240" kindref="member">sephone_core_interpret_url()</ref> instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="335" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="164" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga13b8aa7cb3599dbcbd6bb796def3c9ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_add_friend</definition>
+        <argsstring>(SephoneCore *lc, SephoneFriend *fr)</argsstring>
+        <name>sephone_core_add_friend</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a friend to the current buddy list, if <ref refid="group__buddy__list_1ga3155f520c95b024ddb6f2918c0763857" kindref="member">subscription attribute </ref> is set, a SIP SUBSCRIBE message is sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="342" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="471" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gabaedfc6ebdcc23d1068d25e1b4c01a2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_remove_friend</definition>
+        <argsstring>(SephoneCore *lc, SephoneFriend *fr)</argsstring>
+        <name>sephone_core_remove_friend</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>remove a friend from the buddy list <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="349" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="490" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga880ab9b7a6b834dde4ce16d430e4ca4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_reject_subscriber</definition>
+        <argsstring>(SephoneCore *lc, SephoneFriend *lf)</argsstring>
+        <name>sephone_core_reject_subscriber</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Black list a friend. same as <ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">sephone_friend_set_inc_subscribe_policy()</ref> with <ref refid="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa6142e5bdbb5d9409b6585043db122576" kindref="member">SephoneSPDeny</ref> policy; <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> to add </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="356" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="1449" bodyend="1451"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga283d163c57a101cff7e828237a81d587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const MSList *</type>
+        <definition>SEPHONE_PUBLIC const MSList* sephone_core_get_friend_list</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_friend_list</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Buddy list of SephoneFriend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> objects. <mslist>SephoneFriend</mslist>  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="363" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1973" bodyend="1976"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaad02e2fa65f91c8717f6c6694d845c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_core_notify_all_friends</definition>
+        <argsstring>(SephoneCore *lc, SephonePresenceModel *presence)</argsstring>
+        <name>sephone_core_notify_all_friends</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> *</type>
+          <declname>presence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Notify all friends that have subscribed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>presence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> to notify </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="370" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="1453" bodyend="1465"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga02b14243ec4dbc68d5c3fd3d2517133a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_core_get_friend_by_address</definition>
+        <argsstring>(const SephoneCore *lc, const char *addr)</argsstring>
+        <name>sephone_core_get_friend_by_address</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Search a SephoneFriend by its address. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to use to search the friend. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object corresponding to the given address. </para></simplesect>
+<xrefsect id="deprecated_1_deprecated000080"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__buddy__list_1ga5db709107c46cff4601be65ed9543a4a" kindref="member">sephone_core_find_friend()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="379" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="555" bodyend="560"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga5db709107c46cff4601be65ed9543a4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_core_find_friend</definition>
+        <argsstring>(const SephoneCore *lc, const SephoneAddress *addr)</argsstring>
+        <name>sephone_core_find_friend</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Search a SephoneFriend by its address. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address to use to search the friend. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object corresponding to the given address. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="387" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="543" bodyend="553"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gac68438dfa1663d5f49d610592972020e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_core_get_friend_by_ref_key</definition>
+        <argsstring>(const SephoneCore *lc, const char *key)</argsstring>
+        <name>sephone_core_get_friend_by_ref_key</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Search a SephoneFriend by its reference key. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference key to use to search the friend. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> object corresponding to the given reference key. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="395" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="562" bodyend="572"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1ga20ae101ca5f5bd64b8e9f12860a2521e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneFriend* sephone_friend_ref</definition>
+        <argsstring>(SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_ref</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the sephone friend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneFriend object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same SephoneFriend object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="402" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="687" bodyend="690"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gad938f868371c2c5bafdadf9165342039" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_friend_unref</definition>
+        <argsstring>(SephoneFriend *lf)</argsstring>
+        <name>sephone_friend_unref</name>
+        <param>
+          <type><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>lf</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release a reference to the sephone friend. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>LinohoneFriend object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="408" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="692" bodyend="694"/>
+      </memberdef>
+      <memberdef kind="function" id="group__buddy__list_1gaf5d3d64ed3a9d203b6dd7e665d539eca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneCore* sephone_friend_get_core</definition>
+        <argsstring>(const SephoneFriend *fr)</argsstring>
+        <name>sephone_friend_get_core</name>
+        <param>
+          <type>const <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> *</type>
+          <declname>fr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the SephoneCore object managing this friend, if any. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h" line="413" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/friend.c" bodystart="683" bodyend="685"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">sephonefriend.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SEPHONEFRIEND_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEPHONEFRIEND_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephonepresence.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga2839a15fda61daa92ba614e68bd0662a" kindref="member">_SephoneSubscribePolicy</ref><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa60dd7354d0d092ce7b55acb8da75e866" kindref="member">SephoneSPWait</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa6142e5bdbb5d9409b6585043db122576" kindref="member">SephoneSPDeny</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga2839a15fda61daa92ba614e68bd0662aa2199de9d8d5138e2ad5537068d94838a" kindref="member">SephoneSPAccept</ref></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}<sp/><ref refid="group__buddy__list_1ga913a5506d8bd5d530d8a5ad92d5fd75c" kindref="member">SephoneSubscribePolicy</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga7d8d36be33ebac1ef82e55a06d6f0bf5" kindref="member">_SephoneOnlineStatus</ref>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ae218d739af22565632105aa805f2f0f5" kindref="member">SephoneStatusOffline</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5aa3f34eb8311e2c07d774b4211e27a640" kindref="member">SephoneStatusOnline</ref>,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5af727dbd3079926a115b70fca7bcc8bef" kindref="member">SephoneStatusBusy</ref>,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a82f11dc225e1eee499c9a9db33da26eb" kindref="member">SephoneStatusBeRightBack</ref>,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ac453ea75e9922af1054e31bbdb14261a" kindref="member">SephoneStatusAway</ref>,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5abcea37fc14d890ed7ce2d82c59dc5c45" kindref="member">SephoneStatusOnThePhone</ref>,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a4bfb5eed599144e6a1c521db5bd5b56c" kindref="member">SephoneStatusOutToLunch</ref>,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ab5c684ac2645d7a6c05be24ca0d87a47" kindref="member">SephoneStatusDoNotDisturb</ref>,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a8d19e63aaeb4f15e7b12ca587bffefd5" kindref="member">SephoneStatusMoved</ref>,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a2d186d3744fe8b8efd9f7b378c97dca1" kindref="member">SephoneStatusAltService</ref>,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5ae60011a12dda1e73aab5481115b9b09c" kindref="member">SephoneStatusPending</ref>,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__buddy__list_1gga7d8d36be33ebac1ef82e55a06d6f0bf5a165a53c795910a788a3aa0efc6f28275" kindref="member">SephoneStatusVacation</ref>,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneStatusEnd</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}<ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneFriend;</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneFriend<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<sp/><ref refid="group__buddy__list_1ga55657aa5ea2ecfb3b387061869028e89" kindref="member">sephone_friend_new</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<ref refid="group__buddy__list_1gac799b73ca9a88fcf685fad8c5d7af1a2" kindref="member">sephone_friend_new_with_address</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*addr);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="preprocessor">#define<sp/>sephone_friend_new_with_addr<sp/>sephone_friend_new_with_address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga6d35c0b7b22234d84cd22594ecd6e6a1" kindref="member">sephone_friend_destroy</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref>*<sp/>address);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor">#define<sp/>sephone_friend_set_addr<sp/>sephone_friend_set_address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*<ref refid="group__buddy__list_1ga6e40fe5bfee602b8cedb37a62f3052cb" kindref="member">sephone_friend_get_address</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga68cbe064b48316810a5fb251d45cd5f8" kindref="member">sephone_friend_set_name</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group__buddy__list_1ga1c7453d9bc03bcca109e4a03857dc36e" kindref="member">sephone_friend_get_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__buddy__list_1gad478070e96beffe8a8197ded86332e64" kindref="member">sephone_friend_subscribes_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sephone_friend_get_send_subscribe<sp/>sephone_friend_subscribes_enabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga3155f520c95b024ddb6f2918c0763857" kindref="member">sephone_friend_enable_subscribes</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr,<sp/>bool_t<sp/>val);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>sephone_friend_send_subscribe<sp/>sephone_friend_enable_subscribes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">sephone_friend_set_inc_subscribe_policy</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr,<sp/>SephoneSubscribePolicy<sp/>pol);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal">SEPHONE_PUBLIC<sp/>SephoneSubscribePolicy<sp/><ref refid="group__buddy__list_1ga5e21e1a8382337e4604b9d745605d866" kindref="member">sephone_friend_get_inc_subscribe_policy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gaa816e1ffe0e2021e05e72e12f7356b0a" kindref="member">sephone_friend_edit</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga862cf6dbecb8284ad1ea5d249e955180" kindref="member">sephone_friend_done</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">SEPHONE_PUBLIC<sp/>SephoneOnlineStatus<sp/><ref refid="group__buddy__list_1gae04082c3d1e32e22bc58bea2ba8a08d2" kindref="member">sephone_friend_get_status</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct__SephonePresenceModel" kindref="compound">SephonePresenceModel</ref><sp/>*<sp/><ref refid="group__buddy__list_1ga6e132b8f2c29525e24365ae946d8be6a" kindref="member">sephone_friend_get_presence_model</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gafc7b6450bec5d85668363db0bb0f6560" kindref="member">sephone_friend_set_user_data</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="group__buddy__list_1gaac5cbbcd154c06ae0dfb2242c36c37b9" kindref="member">sephone_friend_get_user_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">SEPHONE_PUBLIC<sp/>BuddyInfo<sp/>*<sp/>sephone_friend_get_info(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gaf30225f59fa38a143f7d838219ce6e7f" kindref="member">sephone_friend_set_ref_key</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__buddy__list_1gaf44896268a3c8e9ed2941cf6ea27b981" kindref="member">sephone_friend_get_ref_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__buddy__list_1gadf95ab03a87a9df7719f0d742b5e9d33" kindref="member">sephone_friend_in_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__buddy__list_1ga0dda27574e0a28535203c79c73209060" kindref="member">sephone_online_status_to_string</ref>(SephoneOnlineStatus<sp/>ss);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<sp/><ref refid="group__buddy__list_1ga0b5cb590a6b6c57c9a45dc26f314d8c3" kindref="member">sephone_core_create_friend</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<sp/><ref refid="group__buddy__list_1gadf04ea88cdcac931a728fdbe94adae79" kindref="member">sephone_core_create_friend_with_address</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*address);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga8cf747b3fd25205784ffebd8ae00de41" kindref="member">sephone_core_set_presence_info</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minutes_away,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*alternative_contact,SephoneOnlineStatus<sp/>os);</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga8ac83c463951d171f333aa94e8d60cb6" kindref="member">sephone_core_set_presence_model</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="struct__SephonePresenceModel" kindref="compound">SephonePresenceModel</ref><sp/>*presence);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal">SEPHONE_PUBLIC<sp/>SephoneOnlineStatus<sp/><ref refid="group__buddy__list_1ga64e7168e5f3a4b01f9f7e807b73dbd94" kindref="member">sephone_core_get_presence_info</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="struct__SephonePresenceModel" kindref="compound">SephonePresenceModel</ref><sp/>*<sp/><ref refid="group__buddy__list_1ga0a14bed4dcdc57f779f900489f8f3439" kindref="member">sephone_core_get_presence_model</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga5780c6f6dda94c3962f2a5344d90447e" kindref="member">sephone_core_interpret_friend_uri</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*uri,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**result);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga13b8aa7cb3599dbcbd6bb796def3c9ee" kindref="member">sephone_core_add_friend</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr);</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gabaedfc6ebdcc23d1068d25e1b4c01a2c" kindref="member">sephone_core_remove_friend</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga880ab9b7a6b834dde4ce16d430e4ca4d" kindref="member">sephone_core_reject_subscriber</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MSList<sp/>*<sp/><ref refid="group__buddy__list_1ga283d163c57a101cff7e828237a81d587" kindref="member">sephone_core_get_friend_list</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gaad02e2fa65f91c8717f6c6694d845c14" kindref="member">sephone_core_notify_all_friends</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="struct__SephonePresenceModel" kindref="compound">SephonePresenceModel</ref><sp/>*presence);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<ref refid="group__buddy__list_1ga02b14243ec4dbc68d5c3fd3d2517133a" kindref="member">sephone_core_get_friend_by_address</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*addr);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<ref refid="group__buddy__list_1ga5db709107c46cff4601be65ed9543a4a" kindref="member">sephone_core_find_friend</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*addr);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<ref refid="group__buddy__list_1gac68438dfa1663d5f49d610592972020e" kindref="member">sephone_core_get_friend_by_ref_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*key);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*<sp/><ref refid="group__buddy__list_1ga20ae101ca5f5bd64b8e9f12860a2521e" kindref="member">sephone_friend_ref</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1gad938f868371c2c5bafdadf9165342039" kindref="member">sephone_friend_unref</ref>(<ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*lf);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*<ref refid="group__buddy__list_1gaf5d3d64ed3a9d203b6dd7e665d539eca" kindref="member">sephone_friend_get_core</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref><sp/>*fr);</highlight></codeline>
+<codeline lineno="418"><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="419"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SEPHONEFRIEND_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonefriend.h"/>
+  </compounddef>
+</doxygen>

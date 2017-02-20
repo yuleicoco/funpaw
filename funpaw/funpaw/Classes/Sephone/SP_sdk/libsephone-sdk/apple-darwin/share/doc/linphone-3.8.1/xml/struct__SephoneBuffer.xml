@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneBuffer" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneBuffer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneBuffer_1a3b240d585e7565577e1a8090696f2109" prot="public" static="no" mutable="no">
+        <type>belle_sip_object_t</type>
+        <definition>belle_sip_object_t _SephoneBuffer::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="981" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="981" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneBuffer_1abadb05e335161dfa8cee45bf94ec04d4" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephoneBuffer::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="982" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="982" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneBuffer_1a64d31206c56452dc654c7e52cdebe805" prot="public" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* _SephoneBuffer::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A pointer to the buffer content </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="983" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="983" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneBuffer_1a14a829db1dbd77af1720a476ae648106" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _SephoneBuffer::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The size of the buffer content </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="984" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="984" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="980" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="980" bodyend="985"/>
+    <listofallmembers>
+      <member refid="struct__SephoneBuffer_1a3b240d585e7565577e1a8090696f2109" prot="public" virt="non-virtual"><scope>_SephoneBuffer</scope><name>base</name></member>
+      <member refid="struct__SephoneBuffer_1a64d31206c56452dc654c7e52cdebe805" prot="public" virt="non-virtual"><scope>_SephoneBuffer</scope><name>content</name></member>
+      <member refid="struct__SephoneBuffer_1a14a829db1dbd77af1720a476ae648106" prot="public" virt="non-virtual"><scope>_SephoneBuffer</scope><name>size</name></member>
+      <member refid="struct__SephoneBuffer_1abadb05e335161dfa8cee45bf94ec04d4" prot="public" virt="non-virtual"><scope>_SephoneBuffer</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

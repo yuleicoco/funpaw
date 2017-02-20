@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneQualityReporting" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneQualityReporting</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneQualityReporting_1af44e4ff5986458becbfbd6a0ec1aa074" prot="public" static="no" mutable="no">
+        <type><ref refid="structreporting__session__report" kindref="compound">reporting_session_report_t</ref> *</type>
+        <definition>reporting_session_report_t* _SephoneQualityReporting::reports[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>reports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="122" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneQualityReporting_1a34ebae9e7577c3f69bf88db8eadc7e38" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneQualityReporting::was_video_running</definition>
+        <argsstring></argsstring>
+        <name>was_video_running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Store information on audio and video media streams (RFC 6035) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="123" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneQualityReporting_1aecd0f60dde4c37371beeb0b9d768065c" prot="public" static="no" mutable="no">
+        <type>SephoneQualityReportingReportSendCb</type>
+        <definition>SephoneQualityReportingReportSendCb _SephoneQualityReporting::on_report_sent</definition>
+        <argsstring></argsstring>
+        <name>on_report_sent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="124" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="103">
+        <label>_SephoneQualityReporting</label>
+        <childnode refid="104" relation="usage">
+          <edgelabel>reports</edgelabel>
+        </childnode>
+      </node>
+      <node id="105">
+        <label>reporting_content_metrics</label>
+        <link refid="structreporting__content__metrics"/>
+      </node>
+      <node id="106">
+        <label>reporting_addr</label>
+        <link refid="structreporting__addr"/>
+      </node>
+      <node id="104">
+        <label>reporting_session_report</label>
+        <link refid="structreporting__session__report"/>
+        <childnode refid="105" relation="usage">
+          <edgelabel>local_metrics</edgelabel>
+          <edgelabel>remote_metrics</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>remote_addr</edgelabel>
+          <edgelabel>local_addr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="121" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="121" bodyend="125"/>
+    <listofallmembers>
+      <member refid="struct__SephoneQualityReporting_1aecd0f60dde4c37371beeb0b9d768065c" prot="public" virt="non-virtual"><scope>_SephoneQualityReporting</scope><name>on_report_sent</name></member>
+      <member refid="struct__SephoneQualityReporting_1af44e4ff5986458becbfbd6a0ec1aa074" prot="public" virt="non-virtual"><scope>_SephoneQualityReporting</scope><name>reports</name></member>
+      <member refid="struct__SephoneQualityReporting_1a34ebae9e7577c3f69bf88db8eadc7e38" prot="public" virt="non-virtual"><scope>_SephoneQualityReporting</scope><name>was_video_running</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

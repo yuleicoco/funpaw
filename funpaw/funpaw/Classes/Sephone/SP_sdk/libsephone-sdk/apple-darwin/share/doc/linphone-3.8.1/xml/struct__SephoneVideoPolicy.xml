@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneVideoPolicy" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneVideoPolicy</compoundname>
+    <includes local="no">sephonecore.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneVideoPolicy_1a6a300de988eb0cb838ee7a0541ac4d82" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneVideoPolicy::automatically_initiate</definition>
+        <argsstring></argsstring>
+        <name>automatically_initiate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether video shall be automatically proposed for outgoing calls. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="449" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneVideoPolicy_1add4a79b9173b6b6d94b1595d2fd2dc6b" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneVideoPolicy::automatically_accept</definition>
+        <argsstring></argsstring>
+        <name>automatically_accept</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whether video shall be automatically accepted for incoming calls </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="450" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneVideoPolicy_1ae66a060524f21b5b05510ee12b1ffada" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneVideoPolicy::unused[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>unused</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="451" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Structure describing policy regarding video streams establishments. </para>    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="448" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="448" bodyend="452"/>
+    <listofallmembers>
+      <member refid="struct__SephoneVideoPolicy_1add4a79b9173b6b6d94b1595d2fd2dc6b" prot="public" virt="non-virtual"><scope>_SephoneVideoPolicy</scope><name>automatically_accept</name></member>
+      <member refid="struct__SephoneVideoPolicy_1a6a300de988eb0cb838ee7a0541ac4d82" prot="public" virt="non-virtual"><scope>_SephoneVideoPolicy</scope><name>automatically_initiate</name></member>
+      <member refid="struct__SephoneVideoPolicy_1ae66a060524f21b5b05510ee12b1ffada" prot="public" virt="non-virtual"><scope>_SephoneVideoPolicy</scope><name>unused</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

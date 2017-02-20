@@ -266,6 +266,8 @@ typedef enum _MSRecorderState MSRecorderState;
 	MS_FILTER_METHOD(MSFilterVideoEncoderInterface, 8, bool_t)
 #define MS_VIDEO_ENCODER_ENABLE_DFC \
 	MS_FILTER_METHOD(MSFilterVideoEncoderInterface, 9, bool_t)
+#define MS_VIDEO_ENCODER_NOTIFY_DECREASE_VSIZE \
+	MS_FILTER_METHOD(MSFilterVideoEncoderInterface, 10, int)
 
 /** Interface definitions for audio capture */
 /* Start numbering from the end for hacks */

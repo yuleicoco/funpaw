@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneAccountCreator" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneAccountCreator</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1ab8f9af925d8850b3928226cab40416aa" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+        <definition>SephoneCore* _SephoneAccountCreator::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1185" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1abc9b7d72fe98807b5e079cfe9204da8e" prot="public" static="no" mutable="no">
+        <type>struct _SipSetupContext *</type>
+        <definition>struct _SipSetupContext* _SephoneAccountCreator::ssctx</definition>
+        <argsstring></argsstring>
+        <name>ssctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1186" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1a4b311b07efa4f603f5fc73205468d454" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneAccountCreator::username</definition>
+        <argsstring></argsstring>
+        <name>username</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1187" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1a859a5d612e1bbca61a32f334c81eefc5" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneAccountCreator::password</definition>
+        <argsstring></argsstring>
+        <name>password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1188" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1a53705fd0df6ac9ce3d82b9f430d0e1a3" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneAccountCreator::domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1189" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1a219a0cbbd00c1f174f6eb69307d24f66" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneAccountCreator::route</definition>
+        <argsstring></argsstring>
+        <name>route</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1190" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1aa4e6adac1f607e25153204b47970f517" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneAccountCreator::email</definition>
+        <argsstring></argsstring>
+        <name>email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1191" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1abdbf9116d14a10e7b02feca5d69fba1c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephoneAccountCreator::suscribe</definition>
+        <argsstring></argsstring>
+        <name>suscribe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1192" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneAccountCreator_1a5be6db107a243c29223c35896a87abb9" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneAccountCreator::succeeded</definition>
+        <argsstring></argsstring>
+        <name>succeeded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1193" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1184" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1184" bodyend="1194"/>
+    <listofallmembers>
+      <member refid="struct__SephoneAccountCreator_1a53705fd0df6ac9ce3d82b9f430d0e1a3" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>domain</name></member>
+      <member refid="struct__SephoneAccountCreator_1aa4e6adac1f607e25153204b47970f517" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>email</name></member>
+      <member refid="struct__SephoneAccountCreator_1ab8f9af925d8850b3928226cab40416aa" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>lc</name></member>
+      <member refid="struct__SephoneAccountCreator_1a859a5d612e1bbca61a32f334c81eefc5" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>password</name></member>
+      <member refid="struct__SephoneAccountCreator_1a219a0cbbd00c1f174f6eb69307d24f66" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>route</name></member>
+      <member refid="struct__SephoneAccountCreator_1abc9b7d72fe98807b5e079cfe9204da8e" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>ssctx</name></member>
+      <member refid="struct__SephoneAccountCreator_1a5be6db107a243c29223c35896a87abb9" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>succeeded</name></member>
+      <member refid="struct__SephoneAccountCreator_1abdbf9116d14a10e7b02feca5d69fba1c" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>suscribe</name></member>
+      <member refid="struct__SephoneAccountCreator_1a4b311b07efa4f603f5fc73205468d454" prot="public" virt="non-virtual"><scope>_SephoneAccountCreator</scope><name>username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

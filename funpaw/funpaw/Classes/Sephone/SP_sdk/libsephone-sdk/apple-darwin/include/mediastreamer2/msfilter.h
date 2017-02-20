@@ -497,6 +497,8 @@ MS2_PUBLIC bool_t ms_filter_desc_implements_interface(MSFilterDesc *desc, MSFilt
  */
 MS2_PUBLIC void ms_filter_add_notify_callback(MSFilter *f, MSFilterNotifyFunc fn, void *userdata, bool_t synchronous);
 
+MS2_PUBLIC void ms_filter_set_notify_callback(MSFilter *f, MSFilterNotifyFunc fn, void *ud);
+
 /**
  * Remove a notify callback previously entered with ms_filter_add_notify_callback()
  *

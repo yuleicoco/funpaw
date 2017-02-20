@@ -370,7 +370,7 @@ typedef struct rtcp_fb_rpsi_fci {
 
 typedef struct rtcp_fec_info {
 	uint16_t seq_start;
-	uint16_t intra_pkt_num;
+	uint16_t pkt_num;
 	uint16_t fec_len;
 	uint16_t fec_data_len;
 } rtcp_fec_info_t;
@@ -401,7 +401,7 @@ ORTP_PUBLIC void rtp_session_rtcp_process_send(struct _RtpSession *s);
 ORTP_PUBLIC void rtp_session_rtcp_process_recv(struct _RtpSession *s);
 
 // 与LOSS_RATE_MIN_INTERVAL同步，原值5000
-#define RTCP_DEFAULT_REPORT_INTERVAL 3000 /* in milliseconds */
+#define RTCP_DEFAULT_REPORT_INTERVAL 1500 /* in milliseconds */
 
 
 /* packet parsing api */

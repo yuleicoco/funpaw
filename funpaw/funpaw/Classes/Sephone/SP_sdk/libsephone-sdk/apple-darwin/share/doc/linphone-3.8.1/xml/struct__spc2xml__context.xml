@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__spc2xml__context" kind="struct" language="C++" prot="public">
+    <compoundname>_spc2xml_context</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__spc2xml__context_1ac7fec11e05fcab3a94469eaffd4a27ad" prot="public" static="no" mutable="no">
+        <type>const <ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref> *</type>
+        <definition>const SpConfig* _spc2xml_context::lpc</definition>
+        <argsstring></argsstring>
+        <name>lpc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="29" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__spc2xml__context_1ad37193fedac50b0059f5e5d6d388d906" prot="public" static="no" mutable="no">
+        <type>spc2xml_function</type>
+        <definition>spc2xml_function _spc2xml_context::cbf</definition>
+        <argsstring></argsstring>
+        <name>cbf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="30" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__spc2xml__context_1a73e845f965bbd5f6e1902d09a10c28d2" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _spc2xml_context::ctx</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="31" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__spc2xml__context_1aee0fe9d3b3f7864736055860c0ac3331" prot="public" static="no" mutable="no">
+        <type>xmlDoc *</type>
+        <definition>xmlDoc* _spc2xml_context::doc</definition>
+        <argsstring></argsstring>
+        <name>doc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="33" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__spc2xml__context_1aaa03831584b53f75b6b11237f0a03271" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _spc2xml_context::errorBuffer[2048]</definition>
+        <argsstring>[2048]</argsstring>
+        <name>errorBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="34" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__spc2xml__context_1aa44a9c03eeceb34188aee733aef1953e" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _spc2xml_context::warningBuffer[2048]</definition>
+        <argsstring>[2048]</argsstring>
+        <name>warningBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" line="28" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spc2xml.c" bodystart="28" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct__spc2xml__context_1ad37193fedac50b0059f5e5d6d388d906" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>cbf</name></member>
+      <member refid="struct__spc2xml__context_1a73e845f965bbd5f6e1902d09a10c28d2" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>ctx</name></member>
+      <member refid="struct__spc2xml__context_1aee0fe9d3b3f7864736055860c0ac3331" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>doc</name></member>
+      <member refid="struct__spc2xml__context_1aaa03831584b53f75b6b11237f0a03271" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>errorBuffer</name></member>
+      <member refid="struct__spc2xml__context_1ac7fec11e05fcab3a94469eaffd4a27ad" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>lpc</name></member>
+      <member refid="struct__spc2xml__context_1aa44a9c03eeceb34188aee733aef1953e" prot="public" virt="non-virtual"><scope>_spc2xml_context</scope><name>warningBuffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

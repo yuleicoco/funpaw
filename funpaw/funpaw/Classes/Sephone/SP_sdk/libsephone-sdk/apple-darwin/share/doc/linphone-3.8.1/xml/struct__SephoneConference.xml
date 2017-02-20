@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneConference" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneConference</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneConference_1acd66913028bfa0fdc3a2b47cc55cda65" prot="public" static="no" mutable="no">
+        <type>MSAudioConference *</type>
+        <definition>MSAudioConference* _SephoneConference::conf</definition>
+        <argsstring></argsstring>
+        <name>conf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="707" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="707" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1a30c02c30f2048cbad360d4a0c3a8b4da" prot="public" static="no" mutable="no">
+        <type>AudioStream *</type>
+        <definition>AudioStream* _SephoneConference::local_participant</definition>
+        <argsstring></argsstring>
+        <name>local_participant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="708" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="708" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1a7ffa90e76c31ebbc993803d909ee0abf" prot="public" static="no" mutable="no">
+        <type>MSAudioEndpoint *</type>
+        <definition>MSAudioEndpoint* _SephoneConference::local_endpoint</definition>
+        <argsstring></argsstring>
+        <name>local_endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="709" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1a2e344e8e1cf290d8123e9d3ea28a3858" prot="public" static="no" mutable="no">
+        <type>MSAudioEndpoint *</type>
+        <definition>MSAudioEndpoint* _SephoneConference::record_endpoint</definition>
+        <argsstring></argsstring>
+        <name>record_endpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="710" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="710" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1af552a87f6a82c63b02503cc94fb0521f" prot="public" static="no" mutable="no">
+        <type>RtpProfile *</type>
+        <definition>RtpProfile* _SephoneConference::local_dummy_profile</definition>
+        <argsstring></argsstring>
+        <name>local_dummy_profile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="711" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="711" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1a3d1f9fff5d22140fb9c8a3ee2c7965e2" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneConference::local_muted</definition>
+        <argsstring></argsstring>
+        <name>local_muted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="712" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneConference_1a72b288da61123770be40177900a55850" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneConference::terminated</definition>
+        <argsstring></argsstring>
+        <name>terminated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="713" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="713" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="706" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="706" bodyend="714"/>
+    <listofallmembers>
+      <member refid="struct__SephoneConference_1acd66913028bfa0fdc3a2b47cc55cda65" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>conf</name></member>
+      <member refid="struct__SephoneConference_1af552a87f6a82c63b02503cc94fb0521f" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>local_dummy_profile</name></member>
+      <member refid="struct__SephoneConference_1a7ffa90e76c31ebbc993803d909ee0abf" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>local_endpoint</name></member>
+      <member refid="struct__SephoneConference_1a3d1f9fff5d22140fb9c8a3ee2c7965e2" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>local_muted</name></member>
+      <member refid="struct__SephoneConference_1a30c02c30f2048cbad360d4a0c3a8b4da" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>local_participant</name></member>
+      <member refid="struct__SephoneConference_1a2e344e8e1cf290d8123e9d3ea28a3858" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>record_endpoint</name></member>
+      <member refid="struct__SephoneConference_1a72b288da61123770be40177900a55850" prot="public" virt="non-virtual"><scope>_SephoneConference</scope><name>terminated</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

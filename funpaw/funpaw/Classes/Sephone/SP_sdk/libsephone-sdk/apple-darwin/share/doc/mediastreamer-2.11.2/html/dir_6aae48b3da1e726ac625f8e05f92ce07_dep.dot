@@ -1,0 +1,11 @@
+digraph "videofilters" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_02e21cf937e125384e83ee42026f49df {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_02e21cf937e125384e83ee42026f49df.html"]
+  dir_6aae48b3da1e726ac625f8e05f92ce07 [shape=box, label="videofilters", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_6aae48b3da1e726ac625f8e05f92ce07.html"];
+  }
+  dir_8ba90eec4f10c2a8f0f395775144a80c [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_8ba90eec4f10c2a8f0f395775144a80c.html"];
+  dir_6aae48b3da1e726ac625f8e05f92ce07->dir_8ba90eec4f10c2a8f0f395775144a80c [headlabel="37", labeldistance=1.5 headhref="dir_000008_000004.html"];
+}

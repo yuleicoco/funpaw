@@ -1,0 +1,11 @@
+digraph "audiofilters" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_02e21cf937e125384e83ee42026f49df {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_02e21cf937e125384e83ee42026f49df.html"]
+  dir_a1dec5b2d3a615a4d57ba4fca4979bfe [shape=box, label="audiofilters", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_a1dec5b2d3a615a4d57ba4fca4979bfe.html"];
+  }
+  dir_8ba90eec4f10c2a8f0f395775144a80c [shape=box label="include" fillcolor="white" style="filled" color="red" URL="dir_8ba90eec4f10c2a8f0f395775144a80c.html"];
+  dir_a1dec5b2d3a615a4d57ba4fca4979bfe->dir_8ba90eec4f10c2a8f0f395775144a80c [headlabel="54", labeldistance=1.5 headhref="dir_000003_000004.html"];
+}

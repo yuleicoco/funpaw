@@ -56,7 +56,7 @@ ORTP_PUBLIC void ortp_set_log_handler(OrtpLogFunc func);
 //ORTP_PUBLIC OrtpLogFunc ortp_get_log_handler();
 //ORTP_VAR_PUBLIC OrtpLogFunc ortp_logv_out;
 
-#define ortp_log_level_enabled(level)	(ortp_get_log_level() >= (level))
+#define ortp_log_level_enabled(level)	((level) >= ortp_get_log_level())
 
 /**
  * Flushes the log output queue.
@@ -87,6 +87,8 @@ ORTP_PUBLIC int ortp_hex_snprintf(char *buff, size_t bufflen, char *data, size_t
 #endif
 
 #ifdef HAVE_SLOG3
+
+#define ortp_logv(level, fmt, args)		WriteLogVG(__FILE__, __LINE__, (level), (fmt), (args))
 
 //#ifdef ORTP_DEBUG_MODE
 #define ortp_debug(...)		DebugLogG(__FILE__, __LINE__, __VA_ARGS__)

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SCSipTransports" kind="struct" language="C++" prot="public">
+    <compoundname>_SCSipTransports</compoundname>
+    <includes local="no">sephonecore.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SCSipTransports_1a68c33c3956b43a47a7a43659f35f8b8f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SCSipTransports::udp_port</definition>
+        <argsstring></argsstring>
+        <name>udp_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>udp port to listening on, negative value if not set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="78" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SCSipTransports_1a0fa1f2509501382d191382ac4b4d75ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SCSipTransports::tcp_port</definition>
+        <argsstring></argsstring>
+        <name>tcp_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tcp port to listening on, negative value if not set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="82" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SCSipTransports_1af25b142e230570ba0bdb2c5809f0d195" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SCSipTransports::dtls_port</definition>
+        <argsstring></argsstring>
+        <name>dtls_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dtls port to listening on, negative value if not set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="86" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SCSipTransports_1ac338ac408b7338104aa2f14e5024eaab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SCSipTransports::tls_port</definition>
+        <argsstring></argsstring>
+        <name>tls_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>tls port to listening on, negative value if not set </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="90" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Sephone core SIP transport ports. Use with <ref refid="group__network__parameters_1ga3867eb163d519cca831648afc9981331" kindref="member">sephone_core_set_sip_transports</ref> </para>    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="74" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="74" bodyend="91"/>
+    <listofallmembers>
+      <member refid="struct__SCSipTransports_1af25b142e230570ba0bdb2c5809f0d195" prot="public" virt="non-virtual"><scope>_SCSipTransports</scope><name>dtls_port</name></member>
+      <member refid="struct__SCSipTransports_1a0fa1f2509501382d191382ac4b4d75ca" prot="public" virt="non-virtual"><scope>_SCSipTransports</scope><name>tcp_port</name></member>
+      <member refid="struct__SCSipTransports_1ac338ac408b7338104aa2f14e5024eaab" prot="public" virt="non-virtual"><scope>_SCSipTransports</scope><name>tls_port</name></member>
+      <member refid="struct__SCSipTransports_1a68c33c3956b43a47a7a43659f35f8b8f" prot="public" virt="non-virtual"><scope>_SCSipTransports</scope><name>udp_port</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

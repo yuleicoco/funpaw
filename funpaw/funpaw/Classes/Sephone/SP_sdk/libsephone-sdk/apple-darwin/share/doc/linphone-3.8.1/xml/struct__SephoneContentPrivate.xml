@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneContentPrivate" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneContentPrivate</compoundname>
+    <includes local="no">content.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1ae5e625c458503bc5ff5041d8efb65a63" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneContentPrivate::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mime type for the data, for example &quot;application&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="47" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1af3c026a3c8c6fe5a11dcf873be61dce6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneContentPrivate::subtype</definition>
+        <argsstring></argsstring>
+        <name>subtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>mime subtype for the data, for example &quot;html&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="48" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1ad3d7e7bc1a83acc56b9093fb13e351b1" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephoneContentPrivate::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the actual data buffer, usually a string. Null when provided by callbacks <ref refid="group__initializing_1ga8707e834c5875b5fcf029523029f29e7" kindref="member">SephoneCoreFileTransferSendCb</ref> or <ref refid="group__initializing_1ga933a9be4685f907a8b255e7341bc470d" kindref="member">SephoneCoreFileTransferRecvCb</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="49" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1ae40d530e55274e16bcfe9c622eb6b6b6" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _SephoneContentPrivate::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the size of the data buffer, excluding null character despite null character is always set for convenience. When provided by callback <ref refid="group__initializing_1ga8707e834c5875b5fcf029523029f29e7" kindref="member">SephoneCoreFileTransferSendCb</ref> or <ref refid="group__initializing_1ga933a9be4685f907a8b255e7341bc470d" kindref="member">SephoneCoreFileTransferRecvCb</ref>, it states the total number of bytes of the transfered file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="50" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1a8a42cedf647f70cd27fd1d885f4a10ea" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneContentPrivate::encoding</definition>
+        <argsstring></argsstring>
+        <name>encoding</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The encoding of the data buffer, for example &quot;gzip&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="52" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1a7442aaa569a16285c5938c2ff62d0270" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneContentPrivate::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used by RCS File transfer messages to store the original filename of the file to be downloaded from server </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="53" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneContentPrivate::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used by RCS File transfer messages to store the key to encrypt file if needed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="54" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1ac327dd962bf5a3c2d35f0bf64474dc4b" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t _SephoneContentPrivate::keyLength</definition>
+        <argsstring></argsstring>
+        <name>keyLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Length of key in bytes </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="55" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneContentPrivate_1a5c6e41b3f1d5396f9f649befdec7199d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephoneContentPrivate::cryptoContext</definition>
+        <argsstring></argsstring>
+        <name>cryptoContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>crypto context used to encrypt file for RCS file transfer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="56" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000017"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use SephoneContent objects instead of this structure. </para></xrefdescription></xrefsect></para>    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" line="46" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/content.h" bodystart="46" bodyend="57"/>
+    <listofallmembers>
+      <member refid="struct__SephoneContentPrivate_1a5c6e41b3f1d5396f9f649befdec7199d" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>cryptoContext</name></member>
+      <member refid="struct__SephoneContentPrivate_1ad3d7e7bc1a83acc56b9093fb13e351b1" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>data</name></member>
+      <member refid="struct__SephoneContentPrivate_1a8a42cedf647f70cd27fd1d885f4a10ea" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>encoding</name></member>
+      <member refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>key</name></member>
+      <member refid="struct__SephoneContentPrivate_1ac327dd962bf5a3c2d35f0bf64474dc4b" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>keyLength</name></member>
+      <member refid="struct__SephoneContentPrivate_1a7442aaa569a16285c5938c2ff62d0270" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>name</name></member>
+      <member refid="struct__SephoneContentPrivate_1ae40d530e55274e16bcfe9c622eb6b6b6" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>size</name></member>
+      <member refid="struct__SephoneContentPrivate_1af3c026a3c8c6fe5a11dcf873be61dce6" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>subtype</name></member>
+      <member refid="struct__SephoneContentPrivate_1ae5e625c458503bc5ff5041d8efb65a63" prot="public" virt="non-virtual"><scope>_SephoneContentPrivate</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

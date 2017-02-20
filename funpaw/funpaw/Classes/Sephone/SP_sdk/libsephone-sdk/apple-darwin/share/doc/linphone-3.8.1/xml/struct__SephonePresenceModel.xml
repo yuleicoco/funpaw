@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephonePresenceModel" kind="struct" language="C++" prot="public">
+    <compoundname>_SephonePresenceModel</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephonePresenceModel_1af1b190a74da7c24ed77203dd0cc926c8" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephonePresenceModel::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="70" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceModel_1ab153188f71b1a442e4cf869dd28dc15e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephonePresenceModel::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="71" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceModel_1a8c3e2713a6a44c71d56b7106a01f523f" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _SephonePresenceModel::services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of _SephonePresenceService structures. Also named tuples in the RFC. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="72" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceModel_1a357e7141d1586227fb32c367882f73cb" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _SephonePresenceModel::persons</definition>
+        <argsstring></argsstring>
+        <name>persons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of _SephonePresencePerson structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="73" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceModel_1a662ba4f15ba280a5f6643320c0796643" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _SephonePresenceModel::notes</definition>
+        <argsstring></argsstring>
+        <name>notes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A list of _SephonePresenceNote structures. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="74" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents the presence model as defined in RFC 4479 and RFC 4480. This model is not complete. For example, it does not handle devices. </para>    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="69" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="69" bodyend="75"/>
+    <listofallmembers>
+      <member refid="struct__SephonePresenceModel_1a662ba4f15ba280a5f6643320c0796643" prot="public" virt="non-virtual"><scope>_SephonePresenceModel</scope><name>notes</name></member>
+      <member refid="struct__SephonePresenceModel_1a357e7141d1586227fb32c367882f73cb" prot="public" virt="non-virtual"><scope>_SephonePresenceModel</scope><name>persons</name></member>
+      <member refid="struct__SephonePresenceModel_1ab153188f71b1a442e4cf869dd28dc15e" prot="public" virt="non-virtual"><scope>_SephonePresenceModel</scope><name>refcnt</name></member>
+      <member refid="struct__SephonePresenceModel_1a8c3e2713a6a44c71d56b7106a01f523f" prot="public" virt="non-virtual"><scope>_SephonePresenceModel</scope><name>services</name></member>
+      <member refid="struct__SephonePresenceModel_1af1b190a74da7c24ed77203dd0cc926c8" prot="public" virt="non-virtual"><scope>_SephonePresenceModel</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

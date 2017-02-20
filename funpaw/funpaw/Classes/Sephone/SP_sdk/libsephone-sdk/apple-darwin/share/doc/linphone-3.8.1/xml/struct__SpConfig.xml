@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SpConfig" kind="struct" language="C++" prot="public">
+    <compoundname>_SpConfig</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SpConfig_1af53954012d70321783f44803d24a304d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SpConfig::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="79" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1ab266d90eba69a4915fd1b3b4fb55d7eb" prot="public" static="no" mutable="no">
+        <type>FILE *</type>
+        <definition>FILE* _SpConfig::file</definition>
+        <argsstring></argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="80" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1a5b7a9d88625aa717462d2ef24677474b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SpConfig::filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="81" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1a86f3538b119486f974908435fd90ce8c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SpConfig::tmpfilename</definition>
+        <argsstring></argsstring>
+        <name>tmpfilename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="82" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1a7a5603993a78bfb17f42ae84b20e42eb" prot="public" static="no" mutable="no">
+        <type>MSList *</type>
+        <definition>MSList* _SpConfig::sections</definition>
+        <argsstring></argsstring>
+        <name>sections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="83" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1a137e4ba52e1fc1247392e45d6c2bd35c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SpConfig::modified</definition>
+        <argsstring></argsstring>
+        <name>modified</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="84" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpConfig_1af2056228b88a164f99fb7a5dc3157ca5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SpConfig::readonly</definition>
+        <argsstring></argsstring>
+        <name>readonly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="85" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="78" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="78" bodyend="86"/>
+    <listofallmembers>
+      <member refid="struct__SpConfig_1ab266d90eba69a4915fd1b3b4fb55d7eb" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>file</name></member>
+      <member refid="struct__SpConfig_1a5b7a9d88625aa717462d2ef24677474b" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>filename</name></member>
+      <member refid="struct__SpConfig_1a137e4ba52e1fc1247392e45d6c2bd35c" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>modified</name></member>
+      <member refid="struct__SpConfig_1af2056228b88a164f99fb7a5dc3157ca5" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>readonly</name></member>
+      <member refid="struct__SpConfig_1af53954012d70321783f44803d24a304d" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>refcnt</name></member>
+      <member refid="struct__SpConfig_1a7a5603993a78bfb17f42ae84b20e42eb" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>sections</name></member>
+      <member refid="struct__SpConfig_1a86f3538b119486f974908435fd90ce8c" prot="public" virt="non-virtual"><scope>_SpConfig</scope><name>tmpfilename</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

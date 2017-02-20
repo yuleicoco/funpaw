@@ -1,0 +1,1074 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="call__log_8c" kind="file" language="C++">
+    <compoundname>call_log.c</compoundname>
+    <includes local="no">time.h</includes>
+    <includes refid="private_8h" local="yes">private.h</includes>
+    <incdepgraph>
+      <node id="13">
+        <label>time.h</label>
+      </node>
+      <node id="12">
+        <label>call_log.c</label>
+        <link refid="call__log_8c"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="call__log_8c_1a78c99ffd76a7bb3c8c74db76207e9ab4" prot="public" static="no">
+        <name>_XOPEN_SOURCE</name>
+        <initializer>700 /*required for strptime of GNU libc*/</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="20" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="call__log_8c_1a8618e723fdaed2bb3a96872c6c7f1752" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t my_strftime</definition>
+        <argsstring>(char *s, size_t max, const char *fmt, const struct tm *tm)</argsstring>
+        <name>my_strftime</name>
+        <param>
+          <type>char *</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>const struct tm *</type>
+          <declname>tm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="31" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1aaf8d851b226f7c2e5c3315b60c7ff45f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>static time_t string_to_time</definition>
+        <argsstring>(const char *date)</argsstring>
+        <name>string_to_time</name>
+        <param>
+          <type>const char *</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="35" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1ab304ec25fa476ed5100fe8bcd3d14c33" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void set_call_log_date</definition>
+        <argsstring>(SephoneCallLog *cl, time_t start_time)</argsstring>
+        <name>set_call_log_date</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>time_t</type>
+          <declname>start_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="45" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="45" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1a1a5f59ee29d6389e026a01acedb5ef24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void call_logs_write_to_config_file</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>call_logs_write_to_config_file</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="62" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="62" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1abf32b65f1190fdf9a98063e934e1be6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void call_logs_read_from_config_file</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>call_logs_read_from_config_file</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="100" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="100" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gace64f5bebd4e181c3a6703b3f4d31819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_call_log_get_call_id</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_call_id</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the call ID used by the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The call ID used by the call as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="148" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga1767b9c594b906a25fb10e1249e663f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref></type>
+        <definition>SephoneCallDir sephone_call_log_get_dir</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_dir</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the direction of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The direction of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="152" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga3df79188875c76c99b9454f5f98ef70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_call_log_get_duration</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_duration</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the duration of the call since connected. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The duration of the call in seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="156" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* sephone_call_log_get_from_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_from_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the origin address (ie from) of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The origin address (ie from) of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="160" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gafb6171ded06dfe9f4836b82bd1f6dafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const rtp_stats_t *</type>
+        <definition>const rtp_stats_t* sephone_call_log_get_local_stats</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_local_stats</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP statistics computed locally regarding the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP statistics that have been computed locally for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="164" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaa539c17e55d6870425ceb01b74de0c41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sephone_call_log_get_quality</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_quality</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the overall quality indication of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The overall quality indication of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="168" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaf31223a13cc6989e26a421fb44662db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_call_log_get_ref_key</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_ref_key</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the persistent reference key associated to the call log.</para><para>The reference key can be for example an id to an external database. It is stored in the config file, thus can survive to process exits/restarts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The reference key string that has been associated to the call log, or NULL if none has been associated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="172" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga0497b61ef52b965aedf5e86a18131692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* sephone_call_log_get_remote_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_remote_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the remote address (that is from or to depending on call direction). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The remote address of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="176" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gac265dbaa80168b02a3681ddd6047426e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const rtp_stats_t *</type>
+        <definition>const rtp_stats_t* sephone_call_log_get_remote_stats</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_remote_stats</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP statistics computed by the remote end and sent back via RTCP. <simplesect kind="note"><para>Not implemented yet. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP statistics that have been computed by the remote end for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="180" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga585641ba4824043ba17e4400d2f755aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>time_t sephone_call_log_get_start_date</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_start_date</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the start date of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The date of the beginning of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="184" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga51bb079b3b79096e49a1f83e268dfef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__logs_1ga05f051bb8884e90c5d3ea57ea0e1b55c" kindref="member">SephoneCallStatus</ref></type>
+        <definition>SephoneCallStatus sephone_call_log_get_status</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_status</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the status of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The status of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="188" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* sephone_call_log_get_to_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_to_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the destination address (ie to) of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The destination address (ie to) of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="192" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga7b7be99bbae9d9db408ef51980cd0e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_call_log_set_ref_key</definition>
+        <argsstring>(SephoneCallLog *cl, const char *refkey)</argsstring>
+        <name>sephone_call_log_set_ref_key</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>refkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate a persistent reference key to the call log.</para><para>The reference key can be for example an id to an external database. It is stored in the config file, thus can survive to process exits/restarts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">refkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference key string to associate to the call log. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="196" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="196" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gafe9b3c1347bf8350303f4f418665a966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* sephone_call_log_to_str</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_to_str</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a human readable string describing the call. <simplesect kind="note"><para>: the returned string must be freed by the application (use ms_free()). </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A human readable string describing the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="204" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="204" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gac896beaa47a0e9bbb496112afc8f7a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_call_log_video_enabled</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_video_enabled</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether video was enabled at the end of the call or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether video was enabled at the end of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="235" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sephone_call_log_get_user_data</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user data associated with the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user data associated with the call log. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="244" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_call_log_set_user_data</definition>
+        <argsstring>(SephoneCallLog *cl, void *ud)</argsstring>
+        <name>sephone_call_log_set_user_data</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user data to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user data to associate with the call log. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="248" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga2d61bc5a07b29cf8889958da66f73230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+        <definition>SephoneCallLog* sephone_call_log_ref</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_ref</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same SephoneCallLog object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="252" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_call_log_unref</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_unref</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release a reference to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="257" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="257" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1ad6262a493504727103b224b838279185" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void _sephone_call_log_destroy</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>_sephone_call_log_destroy</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="265" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="265" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1aaa7216bf5602a00aa57db2278cd91a9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+        <definition>SephoneCallLog* sephone_call_log_new</definition>
+        <argsstring>(SephoneCallDir dir, SephoneAddress *from, SephoneAddress *to)</argsstring>
+        <name>sephone_call_log_new</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref></type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="274" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="274" bodyend="288"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga480920911fb24ae5ab70494cfe7dec4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_call_log_destroy</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_destroy</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a SephoneCallLog. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" kindref="member">sephone_call_log_unref()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="291" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="291" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1a3b0e190da90d01ce3ac4bea307a08e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</definition>
+        <argsstring>(SephoneCallLog)</argsstring>
+        <name>BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="295" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="call__log_8c_1ad00844004ed0efa59abe50d2a9d807f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BELLE_SIP_INSTANCIATE_VPTR</definition>
+        <argsstring>(SephoneCallLog, belle_sip_object_t,(belle_sip_object_destroy_t) _sephone_call_log_destroy, NULL, NULL, FALSE)</argsstring>
+        <name>BELLE_SIP_INSTANCIATE_VPTR</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref></type>
+        </param>
+        <param>
+          <type>belle_sip_object_t</type>
+        </param>
+        <param>
+          <type>(belle_sip_object_destroy_t)</type>
+          <declname>_sephone_call_log_destroy</declname>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>NULL</type>
+        </param>
+        <param>
+          <type>FALSE</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" line="297" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">call_log.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010-2014<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_XOPEN_SOURCE<sp/>700<sp/></highlight><highlight class="comment">/*required<sp/>for<sp/>strptime<sp/>of<sp/>GNU<sp/>libc*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;private.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/>Internal<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">/*prevent<sp/>a<sp/>gcc<sp/>bug<sp/>with<sp/>%c*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>my_strftime(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*s,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/>*fmt,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>tm<sp/>*tm){</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>strftime(s,<sp/>max,<sp/>fmt,<sp/>tm);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>time_t<sp/>string_to_time(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*date){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>tmtime={0};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strptime(date,</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,&amp;tmtime);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mktime(&amp;tmtime);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set_call_log_date(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl,<sp/>time_t<sp/>start_time){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">tm<sp/>loctime;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(_WIN32_WCE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loctime=*localtime(&amp;start_time);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*FIXME*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*_WIN32_WCE*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>localtime_r(&amp;start_time,&amp;loctime);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>my_strftime(cl-&gt;start_date,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cl-&gt;start_date),</highlight><highlight class="stringliteral">&quot;%c&quot;</highlight><highlight class="normal">,&amp;loctime);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/>*<sp/>Private<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_logs_write_to_config_file(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSList<sp/>*elem;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>logsection[32];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tmp;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref><sp/>*cfg=lc-&gt;config;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sephone_core_get_global_state<sp/>(lc)==SephoneGlobalStartup)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>不保存呼叫日志。</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lc-&gt;max_call_logs<sp/>==<sp/>0)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0,elem=lc-&gt;call_logs;elem!=NULL;elem=elem-&gt;next,++i){</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl=(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref>*)elem-&gt;data;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(logsection,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(logsection),</highlight><highlight class="stringliteral">&quot;call_log_%i&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga433e2e6ccd61949f7a7014edcf146d34" kindref="member">sp_config_clean_section</ref>(cfg,logsection);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga87891a504455bab6245575a9e01ab86a" kindref="member">sp_config_set_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;dir&quot;</highlight><highlight class="normal">,cl-&gt;dir);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga87891a504455bab6245575a9e01ab86a" kindref="member">sp_config_set_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;status&quot;</highlight><highlight class="normal">,cl-&gt;status);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__sephone__address_1gaaaff8fab60951d670b48afe2ea015e5f" kindref="member">sephone_address_as_string</ref>(cl-&gt;from);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;from&quot;</highlight><highlight class="normal">,tmp);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(tmp);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__sephone__address_1gaaaff8fab60951d670b48afe2ea015e5f" kindref="member">sephone_address_as_string</ref>(cl-&gt;to);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;to&quot;</highlight><highlight class="normal">,tmp);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(tmp);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;start_date_time)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga94c47f17dfd718bde07af6610c6deed0" kindref="member">sp_config_set_int64</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;start_date_time&quot;</highlight><highlight class="normal">,(int64_t)cl-&gt;start_date_time);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;start_date&quot;</highlight><highlight class="normal">,cl-&gt;start_date);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga87891a504455bab6245575a9e01ab86a" kindref="member">sp_config_set_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;duration&quot;</highlight><highlight class="normal">,cl-&gt;duration);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;refkey)<sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;refkey&quot;</highlight><highlight class="normal">,cl-&gt;refkey);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gacaee06f197aec98e95ae2247809eea03" kindref="member">sp_config_set_float</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;quality&quot;</highlight><highlight class="normal">,cl-&gt;quality);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga87891a504455bab6245575a9e01ab86a" kindref="member">sp_config_set_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;video_enabled&quot;</highlight><highlight class="normal">,<sp/>cl-&gt;video_enabled);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;call_id&quot;</highlight><highlight class="normal">,cl-&gt;call_id);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(;i&lt;lc-&gt;max_call_logs;++i){</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(logsection,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(logsection),</highlight><highlight class="stringliteral">&quot;call_log_%i&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga433e2e6ccd61949f7a7014edcf146d34" kindref="member">sp_config_clean_section</ref>(cfg,logsection);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>call_logs_read_from_config_file(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>logsection[32];</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tmp;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>sec;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref><sp/>*cfg=lc-&gt;config;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;;++i){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snprintf(logsection,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(logsection),</highlight><highlight class="stringliteral">&quot;call_log_%i&quot;</highlight><highlight class="normal">,i);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="group__misc_1ga78dfaae90ffb724dcfe2c0d7f86f88c2" kindref="member">sp_config_has_section</ref>(cfg,logsection)){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*from=NULL,*to=NULL;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;from&quot;</highlight><highlight class="normal">,NULL);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp)<sp/>from=<ref refid="group__sephone__address_1ga96400e0c163c83900928f01aa13df7a6" kindref="member">sephone_address_new</ref>(tmp);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;to&quot;</highlight><highlight class="normal">,NULL);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp)<sp/>to=<ref refid="group__sephone__address_1ga96400e0c163c83900928f01aa13df7a6" kindref="member">sephone_address_new</ref>(tmp);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!from<sp/>||<sp/>!to)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl=sephone_call_log_new(<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;dir&quot;</highlight><highlight class="normal">,0),from,to);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;status=<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;status&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sec=<ref refid="group__misc_1ga34da9945b671496f331ec94c9e5d9b03" kindref="member">sp_config_get_int64</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;start_date_time&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sec)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*new<sp/>call<sp/>log<sp/>format<sp/>with<sp/>date<sp/>expressed<sp/>in<sp/>seconds<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;start_date_time=(time_t)sec;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_call_log_date(cl,cl-&gt;start_date_time);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;start_date&quot;</highlight><highlight class="normal">,NULL);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>strncpy(cl-&gt;start_date,tmp,</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(cl-&gt;start_date));</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;start_date_time=string_to_time(cl-&gt;start_date);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;duration=<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;duration&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;refkey&quot;</highlight><highlight class="normal">,NULL);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp)<sp/>cl-&gt;refkey=ms_strdup(tmp);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;quality=<ref refid="group__misc_1ga189a14dc1516843a8ab145e10dfbb5a5" kindref="member">sp_config_get_float</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;quality&quot;</highlight><highlight class="normal">,-1);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;video_enabled=<ref refid="group__misc_1ga3d31ae0b188509173833ba6216499759" kindref="member">sp_config_get_int</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;video_enabled&quot;</highlight><highlight class="normal">,0);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=<ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(cfg,logsection,</highlight><highlight class="stringliteral">&quot;call_id&quot;</highlight><highlight class="normal">,NULL);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tmp)<sp/>cl-&gt;call_id=ms_strdup(tmp);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc-&gt;call_logs=ms_list_append(lc-&gt;call_logs,cl);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/>*<sp/>Public<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__logs_1gace64f5bebd4e181c3a6703b3f4d31819" kindref="member">sephone_call_log_get_call_id</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;call_id;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref><sp/><ref refid="group__call__logs_1ga1767b9c594b906a25fb10e1249e663f1" kindref="member">sephone_call_log_get_dir</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;dir;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga3df79188875c76c99b9454f5f98ef70e" kindref="member">sephone_call_log_get_duration</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;duration;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*<ref refid="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" kindref="member">sephone_call_log_get_from_address</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;from;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rtp_stats_t<sp/>*<ref refid="group__call__logs_1gafb6171ded06dfe9f4836b82bd1f6dafc" kindref="member">sephone_call_log_get_local_stats</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;cl-&gt;local_stats;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1gaa539c17e55d6870425ceb01b74de0c41" kindref="member">sephone_call_log_get_quality</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;quality;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__logs_1gaf31223a13cc6989e26a421fb44662db4" kindref="member">sephone_call_log_get_ref_key</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;refkey;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*<ref refid="group__call__logs_1ga0497b61ef52b965aedf5e86a18131692" kindref="member">sephone_call_log_get_remote_address</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(cl-&gt;dir<sp/>==<sp/><ref refid="group__call__logs_1ggadea5a585af32867aa212d9647d1602f4a0051dbbd4dd65b7d2a6acc96b334878c" kindref="member">SephoneCallIncoming</ref>)<sp/>?<sp/>cl-&gt;from<sp/>:<sp/>cl-&gt;to;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rtp_stats_t<sp/>*<ref refid="group__call__logs_1gac265dbaa80168b02a3681ddd6047426e" kindref="member">sephone_call_log_get_remote_stats</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;cl-&gt;remote_stats;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal">time_t<sp/><ref refid="group__call__logs_1ga585641ba4824043ba17e4400d2f755aa" kindref="member">sephone_call_log_get_start_date</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;start_date_time;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><ref refid="group__call__logs_1ga05f051bb8884e90c5d3ea57ea0e1b55c" kindref="member">SephoneCallStatus</ref><sp/><ref refid="group__call__logs_1ga51bb079b3b79096e49a1f83e268dfef1" kindref="member">sephone_call_log_get_status</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;status;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*<ref refid="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" kindref="member">sephone_call_log_get_to_address</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;to;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga7b7be99bbae9d9db408ef51980cd0e62" kindref="member">sephone_call_log_set_ref_key</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*refkey){</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;refkey!=NULL){</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(cl-&gt;refkey);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;refkey=NULL;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(refkey)<sp/>cl-&gt;refkey=ms_strdup(refkey);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group__call__logs_1gafe9b3c1347bf8350303f4f418665a966" kindref="member">sephone_call_log_to_str</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*status;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*tmp;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*from=<ref refid="group__sephone__address_1gaaaff8fab60951d670b48afe2ea015e5f" kindref="member">sephone_address_as_string</ref><sp/>(cl-&gt;from);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*to=<ref refid="group__sephone__address_1gaaaff8fab60951d670b48afe2ea015e5f" kindref="member">sephone_address_as_string</ref><sp/>(cl-&gt;to);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(cl-&gt;status){</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ggab3a24983dbb17007538702063fc99605ad9df95a55e49721ecdc6fc2f24ab02ea" kindref="member">SephoneCallAborted</ref>:</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status=_(</highlight><highlight class="stringliteral">&quot;aborted&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ggab3a24983dbb17007538702063fc99605a8b16b4a49187a15cfdef7d12abfc8238" kindref="member">SephoneCallSuccess</ref>:</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status=_(</highlight><highlight class="stringliteral">&quot;completed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ggab3a24983dbb17007538702063fc99605a055cfc069041ea4b9d954b8fcbbaa798" kindref="member">SephoneCallMissed</ref>:</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status=_(</highlight><highlight class="stringliteral">&quot;missed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status=_(</highlight><highlight class="stringliteral">&quot;unknown&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp=ms_strdup_printf(_(</highlight><highlight class="stringliteral">&quot;%s<sp/>at<sp/>%s\nFrom:<sp/>%s\nTo:<sp/>%s\nStatus:<sp/>%s\nDuration:<sp/>%i<sp/>mn<sp/>%i<sp/>sec\n&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(cl-&gt;dir==<ref refid="group__call__logs_1ggadea5a585af32867aa212d9647d1602f4a0051dbbd4dd65b7d2a6acc96b334878c" kindref="member">SephoneCallIncoming</ref>)<sp/>?<sp/>_(</highlight><highlight class="stringliteral">&quot;Incoming<sp/>call&quot;</highlight><highlight class="normal">)<sp/>:<sp/>_(</highlight><highlight class="stringliteral">&quot;Outgoing<sp/>call&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;start_date,</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>from,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>to,</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>status,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;duration/60,</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;duration%60);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(from);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_free(to);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tmp;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">bool_t<sp/><ref refid="group__call__logs_1gac896beaa47a0e9bbb496112afc8f7a90" kindref="member">sephone_call_log_video_enabled</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;video_enabled;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/>*<sp/>Reference<sp/>and<sp/>user<sp/>data<sp/>handling<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="242"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" kindref="member">sephone_call_log_get_user_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl-&gt;user_data;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" kindref="member">sephone_call_log_set_user_data</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ud)<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;user_data<sp/>=<sp/>ud;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*<sp/><ref refid="group__call__logs_1ga2d61bc5a07b29cf8889958da66f73230" kindref="member">sephone_call_log_ref</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_object_ref(cl);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" kindref="member">sephone_call_log_unref</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_object_unref(cl);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="262"><highlight class="comment"><sp/>*<sp/>Constructor<sp/>and<sp/>destructor<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="263"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_sephone_call_log_destroy(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl){</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;from!=NULL)<sp/><ref refid="group__sephone__address_1ga3fe5d8eb9c373045efe9ae9e15458459" kindref="member">sephone_address_destroy</ref>(cl-&gt;from);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;to!=NULL)<sp/><ref refid="group__sephone__address_1ga3fe5d8eb9c373045efe9ae9e15458459" kindref="member">sephone_address_destroy</ref>(cl-&gt;to);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;refkey!=NULL)<sp/>ms_free(cl-&gt;refkey);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;call_id)<sp/>ms_free(cl-&gt;call_id);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;reporting.reports[SEPHONE_CALL_STATS_AUDIO]!=NULL)<sp/>sephone_reporting_destroy(cl-&gt;reporting.reports[SEPHONE_CALL_STATS_AUDIO]);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cl-&gt;reporting.reports[SEPHONE_CALL_STATS_VIDEO]!=NULL)<sp/>sephone_reporting_destroy(cl-&gt;reporting.reports[SEPHONE_CALL_STATS_VIDEO]);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*<sp/>sephone_call_log_new(<ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref><sp/>dir,<sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*from,<sp/><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref><sp/>*to){</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl=belle_sip_object_new(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;dir=dir;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;start_date_time=time(NULL);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>set_call_log_date(cl,cl-&gt;start_date_time);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;from=from;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;to=to;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;status=<ref refid="group__call__logs_1ggab3a24983dbb17007538702063fc99605ad9df95a55e49721ecdc6fc2f24ab02ea" kindref="member">SephoneCallAborted</ref>;<sp/></highlight><highlight class="comment">/*default<sp/>status*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;quality=-1;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;reporting.reports[SEPHONE_CALL_STATS_AUDIO]=sephone_reporting_new();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;reporting.reports[SEPHONE_CALL_STATS_VIDEO]=sephone_reporting_new();</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl-&gt;connected_date_time=0;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cl;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>DEPRECATED<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__logs_1ga480920911fb24ae5ab70494cfe7dec4f" kindref="member">sephone_call_log_destroy</ref>(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref><sp/>*cl)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_object_unref(cl);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal">BELLE_SIP_DECLARE_NO_IMPLEMENTED_INTERFACES(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref>);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">BELLE_SIP_INSTANCIATE_VPTR(<ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref>,<sp/>belle_sip_object_t,</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(belle_sip_object_destroy_t)_sephone_call_log_destroy,</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/></highlight><highlight class="comment">//<sp/>clone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,<sp/></highlight><highlight class="comment">//<sp/>marshal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FALSE</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">);</highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c"/>
+  </compounddef>
+</doxygen>
