@@ -83,6 +83,8 @@
 @synthesize pullBtn;
 @synthesize Lcoin;
 @synthesize Scoin;
+@synthesize pullSbtn;
+
 
 
 
@@ -267,10 +269,16 @@
     pullBtn =[UIButton new];
     pullBtn.userInteractionEnabled = YES;
     [pullBtn setImage:[UIImage imageNamed:@"take_off"] forState:UIControlStateNormal];
-    [pullBtn setImage:[UIImage imageNamed:@"take_on"] forState:UIControlStateSelected];
     [pullBtn addTarget:self action:@selector(pullBtn:) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.view addSubview:pullBtn];
+    
+    pullSbtn =[UIButton new];
+    [pullSbtn setImage:[UIImage imageNamed:@"take_on"] forState:UIControlStateNormal];
+    pullSbtn.hidden = YES;
+    [pullSbtn addTarget:self action:@selector(pullBtnS:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pullSbtn];
+    
+    
     
     
     
@@ -482,6 +490,15 @@
         
     }];
     
+    [pullSbtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.right.equalTo(self.view.mas_right).offset(0);
+        make.size.mas_equalTo(CGSizeMake(15, 22));
+        make.bottom.equalTo(self.view.mas_bottom).offset(-184);
+        
+        
+    }];
+    
     
     
     
@@ -670,39 +687,24 @@
 
 - (void)pullBtn:(UIButton *)sender
 {
-    
-    sender.selected =!sender.selected;
-    
-    if (sender.selected) {
+
         // 移动view
         FiveView.hidden = YES;
-    
-        [UIView animateWithDuration:0.5 animations:^{
-            pullBtn.center = CGPointMake(pullBtn.center.x+55, 180);
-        } completion:^(BOOL finished) {
-            //平移结束
-          
-            
-        }];
-    }else
-    {
-         FiveView.hidden = NO;
-        [UIView animateWithDuration:0.5 animations:^{
-            pullBtn.center = CGPointMake(597.5,180);
-        } completion:^(BOOL finished) {
-            //平移结束
-            
-            
-        }];
-        
-        
-    }
-    
-    
-    
-    
+        pullBtn.hidden = YES;
+        pullSbtn.hidden = NO;
     
 }
+
+- (void)pullBtnS:(UIButton *)sender
+{
+    
+    // 移动view
+    FiveView.hidden = NO;
+    pullBtn.hidden = NO;
+    pullSbtn.hidden = YES;
+    
+}
+
 
 
 
