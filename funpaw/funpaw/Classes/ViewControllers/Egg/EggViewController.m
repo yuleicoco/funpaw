@@ -699,9 +699,9 @@
  */
 - (void)sipCall:(NSString*)dialerNumber sipName:(NSString *)sipName
 {
-    
     NSString *  displayName  =nil;
     [[SephoneManager instance] call:dialerNumber displayName:displayName transfer:FALSE];
+    
     
 }
 
