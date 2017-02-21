@@ -396,11 +396,12 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     [[ShareWork sharedManager]uploadVideoWithMid:Mid_S deviceno:Mid_D termid:Mid_T filename:filenameString complete:^(BaseModel *model) {
         if ([model.retCode isEqualToString:@"0000"]) {
             NSString *date = [AppUtil getNowTime];
+            //存起来的数据，用作下一次进来的时候查询
              _standDefus = [NSUserDefaults standardUserDefaults];
             [_standDefus setObject:date forKey:@"dateTimeee"];
             [_standDefus setObject:model.content forKey:@"videocontent"];
             [_standDefus synchronize];
-            
+            //请求次数，12次，5秒一次
             timeee = 12;
             timer =  [NSTimer scheduledTimerWithTimeInterval:5.0f target:self selector:@selector(checkVideoStats:) userInfo:model.content repeats:YES];
             [timer setFireDate:[NSDate distantPast]];

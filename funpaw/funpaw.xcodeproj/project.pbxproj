@@ -411,6 +411,7 @@
 		7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */; };
 		7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */; };
 		7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */; };
+		7D58EC411E55854000C9F0DE /* backk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D58EC401E55854000C9F0DE /* backk@2x.png */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1306,6 +1307,7 @@
 		7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Morephotovideo.m"; sourceTree = "<group>"; };
 		7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGrapgModel.h; sourceTree = "<group>"; };
 		7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGrapgModel.m; sourceTree = "<group>"; };
+		7D58EC401E55854000C9F0DE /* backk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backk@2x.png"; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1437,6 +1439,7 @@
 		348A2D761E52B24700B85D7B /* eggImage */ = {
 			isa = PBXGroup;
 			children = (
+				7D58EC401E55854000C9F0DE /* backk@2x.png */,
 				340DE9E91E55531C00B7B258 /* loginBackkk.png */,
 				340DE9EA1E55531C00B7B258 /* selecttt.png */,
 				340DE9E01E54531700B7B258 /* feed_r.png */,
@@ -3052,7 +3055,7 @@
 				TargetAttributes = {
 					3496F9BF1E04DF8E00744A1E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 4UKEB375ND;
+						DevelopmentTeam = ZMFX8728A9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3215,6 +3218,7 @@
 				34E1658E1E050B19004A65AB /* timeLIst.png in Resources */,
 				34C102F11E52D89300FFB241 /* ikonw.png in Resources */,
 				34E164891E050B18004A65AB /* notok.png in Resources */,
+				7D58EC411E55854000C9F0DE /* backk@2x.png in Resources */,
 				34E1654C1E050B19004A65AB /* behand_off.png in Resources */,
 				34E1654A1E050B19004A65AB /* before_off.png in Resources */,
 				34E165AD1E050B19004A65AB /* egg_eye.png in Resources */,
@@ -3605,7 +3609,7 @@
 			baseConfigurationReference = D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4UKEB375ND;
+				DEVELOPMENT_TEAM = ZMFX8728A9;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3650,7 +3654,7 @@
 			baseConfigurationReference = 3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4UKEB375ND;
+				DEVELOPMENT_TEAM = ZMFX8728A9;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
