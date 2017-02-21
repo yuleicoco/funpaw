@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="deprecated" kind="page">
+    <compoundname>deprecated</compoundname>
+    <title>Deprecated List</title>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term><anchor id="deprecated_1_deprecated000017"/>Class <ref refid="struct__SephoneContentPrivate" kindref="compound">_SephoneContentPrivate</ref>  </term></varlistentry>
+<listitem><para>Use SephoneContent objects instead of this structure.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000063"/>Global <ref refid="struct__SephoneCoreVTable_1a26e7593be64031b328c4554de5e7c4a5" kindref="member">_SephoneCoreVTable::display_message</ref>  </term></varlistentry>
+<listitem><para>Callback to display a message to the user  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000062"/>Global <ref refid="struct__SephoneCoreVTable_1ab0f1fd235e5ed5a35096ee11ff6d9d58" kindref="member">_SephoneCoreVTable::display_status</ref>  </term></varlistentry>
+<listitem><para>Callback that notifies various events with human readable text.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000065"/>Global <ref refid="struct__SephoneCoreVTable_1a6657556bf13bad46fcc3df4beaffa094" kindref="member">_SephoneCoreVTable::display_url</ref>  </term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000064"/>Global <ref refid="struct__SephoneCoreVTable_1a1690db2817e0ebb765705ebc3204b9a7" kindref="member">_SephoneCoreVTable::display_warning</ref>  </term></varlistentry>
+<listitem><para>Callback to display a warning to the user  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000070"/>Global <ref refid="struct__SephoneCoreVTable_1a3afeb30573b425ea859a93e84bdb5c00" kindref="member">_SephoneCoreVTable::file_transfer_progress_indication</ref>  </term></varlistentry>
+<listitem><para>Callback to indicate file transfer progress  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000068"/>Global <ref refid="struct__SephoneCoreVTable_1aee9a7a48694fa51969dfd52d16ab20d9" kindref="member">_SephoneCoreVTable::file_transfer_recv</ref>  </term></varlistentry>
+<listitem><para>Callback to store file received attached to a <ref refid="group__chatroom_1ga9664d5e7896eea0597deb5c496200834" kindref="member">SephoneChatMessage</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000069"/>Global <ref refid="struct__SephoneCoreVTable_1a388f0894c79847ea3e15ee2cf9e47f3c" kindref="member">_SephoneCoreVTable::file_transfer_send</ref>  </term></varlistentry>
+<listitem><para>Callback to collect file chunk to be sent for a <ref refid="group__chatroom_1ga9664d5e7896eea0597deb5c496200834" kindref="member">SephoneChatMessage</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000066"/>Global <ref refid="struct__SephoneCoreVTable_1ad2053969b50c92a2c80cbfedb73a25dc" kindref="member">_SephoneCoreVTable::show</ref>  </term></varlistentry>
+<listitem><para>Notifies the application that it should show up  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000067"/>Global <ref refid="struct__SephoneCoreVTable_1a252407a7815a3560bc3f386e0e74af6d" kindref="member">_SephoneCoreVTable::text_received</ref>  </term></varlistentry>
+<listitem><para>, use <ref refid="struct__SephoneCoreVTable_1abbcc67d6181a9fa86ee5dd9f0c9da6dd" kindref="member">message_received</ref> instead <linebreak/>
+ A text message has been received  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000047"/>Global <ref refid="group__initializing_1gae6aceae413a17ecf3b7a8390589002e3" kindref="member">DisplayMessageCb</ref>  )(SephoneCore *lc, const char *message)</term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000046"/>Global <ref refid="group__initializing_1ga0953c9765c1425bf71259a792627babe" kindref="member">DisplayStatusCb</ref>  )(SephoneCore *lc, const char *message)</term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000048"/>Global <ref refid="group__initializing_1ga983314f43e94caa066754c12a97efcbe" kindref="member">DisplayUrlCb</ref>  )(SephoneCore *lc, const char *message, const char *url)</term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000002"/>Global <ref refid="group__sephone__address_1ga3fe5d8eb9c373045efe9ae9e15458459" kindref="member">sephone_address_destroy</ref>  (SephoneAddress *u)</term></varlistentry>
+<listitem><para>Use <ref refid="group__sephone__address_1gac00d05a6314b7b98bec41261f1e18a9f" kindref="member">sephone_address_unref()</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000001"/>Global <ref refid="group__sephone__address_1ga51bfbe290eae977fc331466aac5b66ae" kindref="member">sephone_address_is_secure</ref>  (const SephoneAddress *uri)</term></varlistentry>
+<listitem><para>use <ref refid="group__sephone__address_1gacf87e0f46eea0e1fa322a4ce23bf29b8" kindref="member">sephone_address_get_secure()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000038"/>Global <ref refid="group__call__control_1gae5b397daf3c42da3d67b41111cb17d7b" kindref="member">sephone_call_is_in_conference</ref>  (const SephoneCall *call)</term></varlistentry>
+<listitem><para></para><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000007"/>Global <ref refid="group__call__logs_1ga480920911fb24ae5ab70494cfe7dec4f" kindref="member">sephone_call_log_destroy</ref>  (SephoneCallLog *cl)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" kindref="member">sephone_call_log_unref()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000003"/>Global <ref refid="group__call__logs_1ga2f01e3e0202d50157ed676c8a88411cf" kindref="member">sephone_call_log_get_from</ref>  (cl)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" kindref="member">sephone_call_log_get_from_address()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000004"/>Global <ref refid="group__call__logs_1gae61efcb49785d6477a3ffad5c80108b6" kindref="member">sephone_call_log_get_to</ref>  (cl)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" kindref="member">sephone_call_log_get_to_address()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000006"/>Global <ref refid="group__call__logs_1ga3afd541a31861f9e925586f3d5b247b2" kindref="member">sephone_call_log_get_user_pointer</ref>  (cl)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" kindref="member">sephone_call_log_get_user_data()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000005"/>Global <ref refid="group__call__logs_1ga599dd42fca64f1af4861ef381a567266" kindref="member">sephone_call_log_set_user_pointer</ref>  (cl, ud)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" kindref="member">sephone_call_log_set_user_data()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000009"/>Global <ref refid="group__call__control_1gad07de945411a718fd0061e0cf1024c02" kindref="member">sephone_call_params_destroy</ref>  (SephoneCallParams *cp)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__control_1gae7c8fa8ba8eee61e979e87727004457d" kindref="member">sephone_call_params_unref()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000008"/>Global <ref refid="group__call__control_1ga594bbea8c96c5719e071d5f319736756" kindref="member">sephone_call_params_local_conference_mode</ref>  </term></varlistentry>
+<listitem><para>Use <ref refid="group__call__control_1gae0f027489e7fc7e2af003100d6a109f5" kindref="member">sephone_call_params_get_local_conference_mode()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000043"/>Global <ref refid="group__chatroom_1ga759d9376b69ffcd7ccbb1b271f4a6967" kindref="member">sephone_chat_message_get_from</ref>  (msg)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1gae5eeedd85ae51a5ad746cab67ae226c3" kindref="member">sephone_chat_message_get_from_address()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000044"/>Global <ref refid="group__chatroom_1ga170ada0a27146783240285ca3e2ea778" kindref="member">sephone_chat_message_get_to</ref>  (msg)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1ga9bc00680222831f1c7db920f10380d8a" kindref="member">sephone_chat_message_get_to_address()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000042"/>Global <ref refid="group__chatroom_1ga5a0af87e7af54b68ac5213bf99825b0a" kindref="member">sephone_chat_message_set_from</ref>  (msg, addr)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1ga5aec0bbb4ad15c48d2eab1e2fe5670ec" kindref="member">sephone_chat_message_set_from_address()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000016"/>Global <ref refid="group__chatroom_1gafa8432d880b8b88aca6ce9d2358c337a" kindref="member">sephone_chat_message_start_file_download</ref>  (SephoneChatMessage *message, SephoneChatMessageStateChangedCb status_cb, void *ud)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1gae57bc30b48449133c4d4071e19331a1f" kindref="member">sephone_chat_message_download_file()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000012"/>Global <ref refid="group__chatroom_1ga0af656284eedb64b727ecb4f8907bdd2" kindref="member">sephone_chat_room_destroy</ref>  (SephoneChatRoom *cr)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1gafbf0d0121ad80a6a884457db74e543e9" kindref="member">sephone_chat_room_unref()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000014"/>Global <ref refid="group__chatroom_1ga591e48b8fd90994f55eadf30992cef61" kindref="member">sephone_chat_room_get_lc</ref>  (SephoneChatRoom *cr)</term></varlistentry>
+<listitem><para>use <ref refid="group__chatroom_1ga25e1583e4ace3995d81a0d63a253389a" kindref="member">sephone_chat_room_get_core()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000013"/>Global <ref refid="group__chatroom_1gae3e13ee5c8a51caef0acf99b5f68936f" kindref="member">sephone_chat_room_send_message</ref>  (SephoneChatRoom *cr, const char *msg)</term></varlistentry>
+<listitem><para><ref refid="group__chatroom_1ga024a633d71f7db7d557466e3fe6ec397" kindref="member">sephone_chat_room_send_message2()</ref> gives more control on the message expedition.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000015"/>Global <ref refid="group__chatroom_1ga024a633d71f7db7d557466e3fe6ec397" kindref="member">sephone_chat_room_send_message2</ref>  (SephoneChatRoom *cr, SephoneChatMessage *msg, SephoneChatMessageStateChangedCb status_cb, void *ud)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1ga78eaccc1a67ae610d0951e2188b5cdf8" kindref="member">sephone_chat_room_send_chat_message()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000019"/>Global <ref refid="group__misc_1ga5533d9502043a9da8c7a8059a8fc9adc" kindref="member">SEPHONE_CONTENT</ref>  (lcp)</term></varlistentry>
+<listitem><para>Utility macro to ease porting existing code from SephoneContentPrivate structure (old SephoneContent structure) to new SephoneContent object.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000021"/>Global <ref refid="group__misc_1ga92905059ca526e6fcb309d233d2aff53" kindref="member">SEPHONE_CONTENT_PRIVATE</ref>  (lc)</term></varlistentry>
+<listitem><para>Utility macro to ease porting existing code from SephoneContentPrivate structure (old SephoneContent structure) to new SephoneContent object.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000020"/>Global <ref refid="group__misc_1ga38be2671b237ad7705218ac658bbf633" kindref="member">sephone_content_private_to_sephone_content</ref>  (const SephoneContentPrivate *lcp)</term></varlistentry>
+<listitem><para>Utility function to ease porting existing code from SephoneContentPrivate structure (old SephoneContent structure) to new SephoneContent object.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000022"/>Global <ref refid="group__misc_1ga519aa26d290b5218d13b1db80039428a" kindref="member">sephone_content_to_sephone_content_private</ref>  (const SephoneContent *content)</term></varlistentry>
+<listitem><para>Utility function to ease porting existing code from SephoneContentPrivate structure (old SephoneContent structure) to new SephoneContent object.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000011"/>Global <ref refid="group__chatroom_1ga1843a4092b05261bb8301a3ad9f810a5" kindref="member">sephone_core_create_chat_room</ref>  (SephoneCore *lc, const char *to)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1gac4533931b30d69aefc93e45cd7b80c78" kindref="member">sephone_core_get_chat_room()</ref> or <ref refid="group__chatroom_1ga7595e76dd981a916cc173577c5572abd" kindref="member">sephone_core_get_chat_room_from_uri()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000054"/>Global <ref refid="group__media__parameters_1ga6d908cbb6524d442152e08b53002e1ae" kindref="member">sephone_core_create_default_call_parameters</ref>  (SephoneCore *lc)</term></varlistentry>
+<listitem><para>use <ref refid="group__call__control_1ga22a3feff5c945ca9b0a28f34ccf94283" kindref="member">sephone_core_create_call_params()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000033"/>Global <ref refid="group__misc_1ga352dd1fa14912e15755afdefd75ca671" kindref="member">sephone_core_disable_logs</ref>  (void)</term></varlistentry>
+<listitem><para>Use #sephone_core_set_log_level instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000031"/>Global <ref refid="group__misc_1ga569970642a1972497d79b6ad8f512a25" kindref="member">sephone_core_enable_logs</ref>  (FILE *file)</term></varlistentry>
+<listitem><para>Use <ref refid="group__misc_1gaaf3ac669563718eddd7111f961a7a777" kindref="member">sephone_core_set_log_file</ref> and #sephone_core_set_log_level instead. </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000032"/>Global <ref refid="group__misc_1ga7685f8644041f864808abd625c528701" kindref="member">sephone_core_enable_logs_with_cb</ref>  (OrtpLogFunc logfunc)</term></varlistentry>
+<listitem><para>Use <ref refid="group__misc_1ga313dec3489e0256824341e10c80a1f34" kindref="member">sephone_core_set_log_handler</ref> and #sephone_core_set_log_level instead. </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000059"/>Global <ref refid="group__media__parameters_1ga774c0552503ac63462428c178113e547" kindref="member">sephone_core_enable_video</ref>  (SephoneCore *lc, bool_t vcap_enabled, bool_t display_enabled)</term></varlistentry>
+<listitem><para>Use <ref refid="group__media__parameters_1ga7ac0a5ee1bc9444f25aeddcd8d83a0d6" kindref="member">sephone_core_enable_video_capture</ref> and <ref refid="group__media__parameters_1ga1c24fa85b5ba5d761ff16feb6120ddf7" kindref="member">sephone_core_enable_video_display</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000026"/>Global <ref refid="group__proxies_1ga180ce647ddb1d24137159ae89d49c0e1" kindref="member">sephone_core_get_default_proxy</ref>  (SephoneCore *lc, SephoneProxyConfig **config)</term></varlistentry>
+<listitem><para>Use <ref refid="group__proxies_1gabb72cd3fc00912808e8b2222c517538a" kindref="member">sephone_core_get_default_proxy_config()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000080"/>Global <ref refid="group__buddy__list_1ga02b14243ec4dbc68d5c3fd3d2517133a" kindref="member">sephone_core_get_friend_by_address</ref>  (const SephoneCore *lc, const char *addr)</term></varlistentry>
+<listitem><para>use <ref refid="group__buddy__list_1ga5db709107c46cff4601be65ed9543a4a" kindref="member">sephone_core_find_friend()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000010"/>Global <ref refid="group__chatroom_1ga58c9361c45644aea854f3e1618a19759" kindref="member">sephone_core_get_or_create_chat_room</ref>  (SephoneCore *lc, const char *to)</term></varlistentry>
+<listitem><para>Use <ref refid="group__chatroom_1gac4533931b30d69aefc93e45cd7b80c78" kindref="member">sephone_core_get_chat_room()</ref> or <ref refid="group__chatroom_1ga7595e76dd981a916cc173577c5572abd" kindref="member">sephone_core_get_chat_room_from_uri()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000078"/>Global <ref refid="group__buddy__list_1ga64e7168e5f3a4b01f9f7e807b73dbd94" kindref="member">sephone_core_get_presence_info</ref>  (const SephoneCore *lc)</term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga0a14bed4dcdc57f779f900489f8f3439" kindref="member">sephone_core_get_presence_model()</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000034"/>Global <ref refid="group__network__parameters_1ga8e91dd791c81a2212b3bf3941525a958" kindref="member">sephone_core_get_sip_port</ref>  (SephoneCore *lc)</term></varlistentry>
+<listitem><para>use <ref refid="group__network__parameters_1ga0e52ef9b085d49657322ad05890c1b4f" kindref="member">sephone_core_get_sip_transports()</ref> instead.</para><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000079"/>Global <ref refid="group__buddy__list_1ga5780c6f6dda94c3962f2a5344d90447e" kindref="member">sephone_core_interpret_friend_uri</ref>  (SephoneCore *lc, const char *uri, char **result)</term></varlistentry>
+<listitem><para>Use <ref refid="group__call__control_1gaeb30ce2d92edcbcdbc42e3c61a7b7240" kindref="member">sephone_core_interpret_url()</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000055"/>Global <ref refid="group__media__parameters_1ga8a92dfc97fc6d233d44c9cdaa02f9fe3" kindref="member">sephone_core_send_dtmf</ref>  (SephoneCore *lc, char dtmf)</term></varlistentry>
+<listitem><para>Use #sephone_call_send_dtmf instead. This function only works during calls. The dtmf is automatically played to the user.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000077"/>Global <ref refid="group__buddy__list_1ga8cf747b3fd25205784ffebd8ae00de41" kindref="member">sephone_core_set_presence_info</ref>  (SephoneCore *lc, int minutes_away, const char *alternative_contact, SephoneOnlineStatus os)</term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga8ac83c463951d171f333aa94e8d60cb6" kindref="member">sephone_core_set_presence_model()</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000035"/>Global <ref refid="group__network__parameters_1ga972f435e7349d26a73f74a1aa9c20627" kindref="member">sephone_core_set_sip_port</ref>  (SephoneCore *lc, int port)</term></varlistentry>
+<listitem><para>use <ref refid="group__network__parameters_1ga3867eb163d519cca831648afc9981331" kindref="member">sephone_core_set_sip_transports()</ref> instead.</para><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000060"/>Global <ref refid="group__media__parameters_1ga092e40c6c49897fdc5269d461e2c02e1" kindref="member">sephone_core_video_enabled</ref>  (SephoneCore *lc)</term></varlistentry>
+<listitem><para>Use <ref refid="group__media__parameters_1gad148018609eb8cf66ea3b907b0b07cbf" kindref="member">sephone_core_video_capture_enabled</ref> and <ref refid="group__media__parameters_1ga24fb9e4341d2b702199f0d58906a879e" kindref="member">sephone_core_video_display_enabled</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000073"/>Global <ref refid="group__buddy__list_1ga6d35c0b7b22234d84cd22594ecd6e6a1" kindref="member">sephone_friend_destroy</ref>  (SephoneFriend *lf)</term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1gad938f868371c2c5bafdadf9165342039" kindref="member">sephone_friend_unref()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000075"/>Global <ref refid="group__buddy__list_1gae04082c3d1e32e22bc58bea2ba8a08d2" kindref="member">sephone_friend_get_status</ref>  (const SephoneFriend *lf)</term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga6e132b8f2c29525e24365ae946d8be6a" kindref="member">sephone_friend_get_presence_model()</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000072"/>Global <ref refid="group__buddy__list_1ga1699c01138e6478da9c68e08f687393d" kindref="member">sephone_friend_new_with_addr</ref>  </term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1gac799b73ca9a88fcf685fad8c5d7af1a2" kindref="member">sephone_friend_new_with_address</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000074"/>Global <ref refid="group__buddy__list_1gac675e6625da3cb8ef8e523160ff2eb7b" kindref="member">sephone_friend_set_addr</ref>  </term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga8e27f1bdf5b188381e923ef5a264ffcb" kindref="member">sephone_friend_set_address</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000076"/>Global <ref refid="group__buddy__list_1ga0dda27574e0a28535203c79c73209060" kindref="member">sephone_online_status_to_string</ref>  (SephoneOnlineStatus ss)</term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref>, <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> and <ref refid="group__buddy__list_1ga27ed08602cbebfb8d433b48d1170b161" kindref="member">sephone_presence_activity_to_string()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000040"/>Global <ref refid="group__proxies_1ga4c5d066d8dc0b27c52a06b617ea29382" kindref="member">sephone_proxy_config_avpf_enabled</ref>  (SephoneProxyConfig *cfg)</term></varlistentry>
+<listitem><para>use <ref refid="group__proxies_1ga01c2bba558ea113db42573cb3d1529fc" kindref="member">sephone_proxy_config_set_avpf_mode()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000024"/>Global <ref refid="group__proxies_1ga0fcdf2e4fc8b069a6aba37c9cb32828e" kindref="member">sephone_proxy_config_destroy</ref>  (SephoneProxyConfig *cfg)</term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000039"/>Global <ref refid="group__proxies_1ga04a15b5bc05d21b9eeb36b003a3b3ffc" kindref="member">sephone_proxy_config_enable_avpf</ref>  (SephoneProxyConfig *cfg, bool_t enable)</term></varlistentry>
+<listitem><para>use <ref refid="group__proxies_1ga01c2bba558ea113db42573cb3d1529fc" kindref="member">sephone_proxy_config_set_avpf_mode()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000025"/>Global <ref refid="group__proxies_1ga12031da8c53328b674922f0ae4c4443f" kindref="member">sephone_proxy_config_is_registered</ref>  (const SephoneProxyConfig *obj)</term></varlistentry>
+<listitem><para>Use <ref refid="group__proxies_1ga3f58f4075cb1fba4fdae21a4aebd4466" kindref="member">sephone_proxy_config_get_state()</ref> instead.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000023"/>Global <ref refid="group__proxies_1ga11df8ddb6fd45b3ec37a25ce3aef397e" kindref="member">sephone_proxy_config_new</ref>  ()</term></varlistentry>
+<listitem><para>, use <ref refid="group__proxies_1gaa2e1f98023a604ba9ef6afcc7e8860ac" kindref="member">sephone_core_create_proxy_config</ref> instead Creates an empty proxy config.  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000029"/>Global <ref refid="group__tunnel_1gaf084d66d1181721eaf4b7ad035d72276" kindref="member">sephone_tunnel_auto_detect</ref>  (SephoneTunnel *tunnel)</term></varlistentry>
+<listitem><para>Replaced by sephone_tunnel_set_mode(SephoneTunnelModeAuto)  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000030"/>Global <ref refid="group__tunnel_1ga9ab433364ca3c23a516d23d439c010da" kindref="member">sephone_tunnel_auto_detect_enabled</ref>  (SephoneTunnel *tunnel)</term></varlistentry>
+<listitem><para>Replaced by <ref refid="group__tunnel_1ga6ee1bc46587807822aa7280ba92506a2" kindref="member">sephone_tunnel_get_mode()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000027"/>Global <ref refid="group__tunnel_1gaee9519e441737d8ae751212a2a2c6b11" kindref="member">sephone_tunnel_enable</ref>  (SephoneTunnel *tunnel, bool_t enabled)</term></varlistentry>
+<listitem><para>Replaced by <ref refid="group__tunnel_1gaeab232e3b55cb63ca66771b7029d7047" kindref="member">sephone_tunnel_set_mode()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000028"/>Global <ref refid="group__tunnel_1ga01c8e6bb5a8039de9b8d0bf8f32a4dc0" kindref="member">sephone_tunnel_enabled</ref>  (const SephoneTunnel *tunnel)</term></varlistentry>
+<listitem><para>Replaced by <ref refid="group__tunnel_1ga6ee1bc46587807822aa7280ba92506a2" kindref="member">sephone_tunnel_get_mode()</ref>  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000041"/>Global <ref refid="group__chatroom_1ga484668ea3836fbaf1d2e98cf0604bf21" kindref="member">SephoneChatMessageStateChangedCb</ref>  )(SephoneChatMessage *msg, SephoneChatMessageState state, void *ud)</term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000018"/>Global <ref refid="group__misc_1ga2ca11fe9210627baade47d723eee1ea9" kindref="member">SephoneContentPrivate</ref>  </term></varlistentry>
+<listitem><para></para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000049"/>Global <ref refid="group__initializing_1gae92cd983640993693fd7f8aa43dcad66" kindref="member">SephoneCoreTextMessageReceivedCb</ref>  )(SephoneCore *lc, SephoneChatRoom *room, const SephoneAddress *from, const char *message)</term></varlistentry>
+<listitem><para>use <ref refid="group__initializing_1gaace22b58108c2757e79fee11e9b02374" kindref="member">SephoneCoreMessageReceivedCb</ref> instead. </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000071"/>Global <ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref>  </term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> and <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000071"/>Global <ref refid="group__buddy__list_1ga751cee710246d233b3a4e0ebd2840298" kindref="member">SephoneOnlineStatus</ref>  </term></varlistentry>
+<listitem><para>Use <ref refid="group__buddy__list_1ga30c3cda73719ed6ed548d1888f26cea6" kindref="member">SephonePresenceModel</ref> and <ref refid="group__buddy__list_1ga5a4f2d24bb7a1dcfee6cfe41ee5d2d88" kindref="member">SephonePresenceActivity</ref> instead  </para></listitem>
+<varlistentry><term><anchor id="deprecated_1_deprecated000045"/>Global <ref refid="group__initializing_1gaed93d277220b8b4b9d9bc98d0e49a19c" kindref="member">ShowInterfaceCb</ref>  )(SephoneCore *lc)</term></varlistentry>
+<listitem><para></para></listitem>
+</variablelist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

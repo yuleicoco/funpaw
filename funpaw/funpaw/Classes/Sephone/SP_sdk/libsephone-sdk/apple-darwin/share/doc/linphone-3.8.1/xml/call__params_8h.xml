@@ -1,0 +1,1274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="call__params_8h" kind="file" language="C++">
+    <compoundname>call_params.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__call__control_1ga594bbea8c96c5719e071d5f319736756" prot="public" static="no">
+        <name>sephone_call_params_local_conference_mode</name>
+        <initializer><ref refid="group__call__control_1gae0f027489e7fc7e2af003100d6a109f5" kindref="member">sephone_call_params_get_local_conference_mode</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000008"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__control_1gae0f027489e7fc7e2af003100d6a109f5" kindref="member">sephone_call_params_get_local_conference_mode()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="330" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__call__control_1ga00d211fb0507786c57f8952044eba79e" prot="public" static="no">
+        <name>_SephoneMediaDirection</name>
+        <enumvalue id="group__call__control_1gga00d211fb0507786c57f8952044eba79eabb67eb0d3979325f688a35974fc08c54" prot="public">
+          <name>SephoneMediaDirectionInactive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__control_1gga00d211fb0507786c57f8952044eba79ea42bbbfd3ba50b6c6cd073e97e93d4c25" prot="public">
+          <name>SephoneMediaDirectionSendOnly</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>No active media not supported yet </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__control_1gga00d211fb0507786c57f8952044eba79eaa5de509fe265863ac177cb6ff236ed10" prot="public">
+          <name>SephoneMediaDirectionRecvOnly</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Send only mode </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__control_1gga00d211fb0507786c57f8952044eba79ead4df0977384f749a081c5635c0ac1a28" prot="public">
+          <name>SephoneMediaDirectionSendRecv</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>recv only mode </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicates for a given media the stream direction </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="36" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" bodystart="36" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" prot="public" static="no">
+        <type>enum <ref refid="group__call__control_1ga00d211fb0507786c57f8952044eba79e" kindref="member">_SephoneMediaDirection</ref></type>
+        <definition>typedef enum _SephoneMediaDirection SephoneMediaDirection</definition>
+        <argsstring></argsstring>
+        <name>SephoneMediaDirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedef for enum </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="261" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" prot="public" static="no">
+        <type>struct _SephoneCallParams</type>
+        <definition>typedef struct _SephoneCallParams SephoneCallParams</definition>
+        <argsstring></argsstring>
+        <name>SephoneCallParams</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The SephoneCallParams is an object containing various call related parameters. It can be used to retrieve parameters from a currently running call or modify the call&apos;s characteristics dynamically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="261" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__call__control_1ga0c728991d044a4297970267ad3ffb2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_add_custom_header</definition>
+        <argsstring>(SephoneCallParams *cp, const char *header_name, const char *header_value)</argsstring>
+        <name>sephone_call_params_add_custom_header</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a custom SIP header in the INVITE for a call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> to add a custom SIP header to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the header to add. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content of the header to add. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="71" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga8f3f8f15b6e812d03bf416e09576910a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneCallParams* sephone_call_params_copy</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_copy</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy an existing SephoneCallParams object to a new SephoneCallParams object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SephoneCallParams object to copy. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A copy of the SephoneCallParams object. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="78" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="81" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga343f30064bae67b864028873c8228197" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_call_params_early_media_sending_enabled</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_early_media_sending_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicate whether sending of early media was enabled. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether sending of early media was enabled. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="85" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga40e9b2ec7c564086332eee966a5bd9c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_enable_early_media_sending</definition>
+        <argsstring>(SephoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>sephone_call_params_enable_early_media_sending</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable sending of real early media (during outgoing calls). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to enable early media sending or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="92" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gad2541c4f286dccba33c0f4dd0c08b4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_enable_low_bandwidth</definition>
+        <argsstring>(SephoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>sephone_call_params_enable_low_bandwidth</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Indicate low bandwith mode. Configuring a call to low bandwidth mode will result in the core to activate several settings for the call in order to ensure that bitrate usage is lowered to the minimum possible. Typically, ptime (packetization time) will be increased, audio codec&apos;s output bitrate will be targetted to 20kbit/s provided that it is achievable by the codec selected after SDP handshake. Video is automatically disabled. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to activate the low bandwidth mode or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="102" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga9984ed816d3e2fb691ecd6aa5dee7b71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_enable_video</definition>
+        <argsstring>(SephoneCallParams *cp, bool_t enabled)</argsstring>
+        <name>sephone_call_params_enable_video</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable video stream. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enabled</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A boolean value telling whether to enable video or not. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="109" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="106" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gab3416a4e3f395ca0ceca05e0da54e7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_params_get_custom_header</definition>
+        <argsstring>(const SephoneCallParams *cp, const char *header_name)</argsstring>
+        <name>sephone_call_params_get_custom_header</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>header_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a custom SIP header. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> to get the custom SIP header from. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">header_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the header to get. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The content of the header or NULL if not found. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="117" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae0f027489e7fc7e2af003100d6a109f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_call_params_get_local_conference_mode</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_local_conference_mode</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether the call is part of the locally managed conference. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether the call is part of the locally managed conference. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="124" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="116" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga079e42c995c6d1324f624634f9f23013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__media__parameters_1ga29e11c9d4075ab45652dab98237485d7" kindref="member">SephoneMediaEncryption</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneMediaEncryption sephone_call_params_get_media_encryption</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_media_encryption</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the kind of media encryption selected for the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The kind of media encryption selected for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="131" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="120" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae7202ccaf464d8523c93c9bfc0bbf469" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC SephonePrivacyMask</type>
+        <definition>SEPHONE_PUBLIC SephonePrivacyMask sephone_call_params_get_privacy</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_privacy</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get requested level of privacy for the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The privacy mode used for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="138" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga5deed8fbdf4a64bd21b1bf106e0c288f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC float</type>
+        <definition>SEPHONE_PUBLIC float sephone_call_params_get_received_framerate</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_received_framerate</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the framerate of the video that is received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual received framerate in frames per seconds, 0 if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="145" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="128" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaf0a7b31e67c6c479a8de6391ee514fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC MSVideoSize</type>
+        <definition>SEPHONE_PUBLIC MSVideoSize sephone_call_params_get_received_video_size</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_received_video_size</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the size of the video that is received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The received video size or MS_VIDEO_SIZE_UNKNOWN if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="152" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gad4772ce8ece966f444a7effcc3b47dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_params_get_record_file</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_record_file</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the path for the audio recording of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path to the audio recording of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="159" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="136" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga4dc3e28715640de40fb49e5a13cfc35e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_params_get_rtp_profile</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_rtp_profile</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP profile being used. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP profile. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="166" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="140" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga52067aae128c79e3113e1d094eee0421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC float</type>
+        <definition>SEPHONE_PUBLIC float sephone_call_params_get_sent_framerate</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_sent_framerate</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the framerate of the video that is sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The actual sent framerate in frames per seconds, 0 if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="173" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="144" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga86a8b217fa14089f760fa3e5e5437286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC MSVideoSize</type>
+        <definition>SEPHONE_PUBLIC MSVideoSize sephone_call_params_get_sent_video_size</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_sent_video_size</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the size of the video that is sent. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCalParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sent video size or MS_VIDEO_SIZE_UNKNOWN if not available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="180" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga964fd0986cb1da50e838e826f066af0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_params_get_session_name</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_session_name</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the session name of the media session (ie in SDP). Subject from the SIP message can be retrieved using <ref refid="group__call__control_1gab3416a4e3f395ca0ceca05e0da54e7e0" kindref="member">sephone_call_params_get_custom_header()</ref> and is different. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The session name of the media session. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="188" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga6275caff2e47901202c44241f794fd29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const <ref refid="group__media__parameters_1ga38321b6d7ec007ef93279ef9ee5cae78" kindref="member">SephonePayloadType</ref> *</type>
+        <definition>SEPHONE_PUBLIC const SephonePayloadType* sephone_call_params_get_used_audio_codec</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_used_audio_codec</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the audio codec used in the call, described as a SephonePayloadType object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The SephonePayloadType object corresponding to the audio codec being used in the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="195" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaad71d75460ced446ad60cbaaac218888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const <ref refid="group__media__parameters_1ga38321b6d7ec007ef93279ef9ee5cae78" kindref="member">SephonePayloadType</ref> *</type>
+        <definition>SEPHONE_PUBLIC const SephonePayloadType* sephone_call_params_get_used_video_codec</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_used_video_codec</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the video codec used in the call, described as a SephonePayloadType structure. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The SephonePayloadType object corresponding to the video codec being used in the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="202" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga8201465d94f236ae30602d5398173f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_call_params_low_bandwidth_enabled</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_low_bandwidth_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether the call has been configured in low bandwidth mode or not. This mode can be automatically discovered thanks to a stun server when activate_edge_workarounds=1 in section [net] of configuration file. An application that would have reliable way to know network capacity may not use activate_edge_workarounds=1 but instead manually configure low bandwidth mode with <ref refid="group__call__control_1gad2541c4f286dccba33c0f4dd0c08b4e8" kindref="member">sephone_call_params_enable_low_bandwidth()</ref>. When enabled, this param may transform a call request with video in audio only mode. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether the low bandwidth mode has been configured/detected. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="213" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga629dc9f976175e30a45ee00dee944186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_audio_bandwidth_limit</definition>
+        <argsstring>(SephoneCallParams *cp, int bw)</argsstring>
+        <name>sephone_call_params_set_audio_bandwidth_limit</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Refine bandwidth settings for this call by setting a bandwidth limit for audio streams. As a consequence, codecs whose bitrates are not compatible with this limit won&apos;t be used. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bw</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The audio bandwidth limit to set in kbit/s. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="221" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga6742e72cf6996c8b4270fd3e5c194422" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_media_encryption</definition>
+        <argsstring>(SephoneCallParams *cp, SephoneMediaEncryption enc)</argsstring>
+        <name>sephone_call_params_set_media_encryption</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type><ref refid="group__media__parameters_1ga29e11c9d4075ab45652dab98237485d7" kindref="member">SephoneMediaEncryption</ref></type>
+          <declname>enc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set requested media encryption for a call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">enc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The media encryption to use for the call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="228" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga7d3bdb6ddd80e9d0c52a44e37d9e65c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_privacy</definition>
+        <argsstring>(SephoneCallParams *params, SephonePrivacyMask privacy)</argsstring>
+        <name>sephone_call_params_set_privacy</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>SephonePrivacyMask</type>
+          <declname>privacy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set requested level of privacy for the call.  <language-tags>javascript</language-tags>  <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">privacy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The privacy mode to used for the call. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="236" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga885463eb825a75de4cc5c5835daf9e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_record_file</definition>
+        <argsstring>(SephoneCallParams *cp, const char *path)</argsstring>
+        <name>sephone_call_params_set_record_file</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable recording of the call. This function must be used before the call parameters are assigned to the call. The call recording can be started and paused after the call is established with <ref refid="group__call__misc_1gafe73207455c50945718abb84b3baf950" kindref="member">sephone_call_start_recording()</ref> and sephone_call_pause_recording(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string containing the path and filename of the file where audio/video streams are to be written. The filename must have either .mkv or .wav extention. The video stream will be written only if a MKV file is given. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="247" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="180" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga311c5a9fdda1e6bcceb2365e72cc92a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_session_name</definition>
+        <argsstring>(SephoneCallParams *cp, const char *name)</argsstring>
+        <name>sephone_call_params_set_session_name</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the session name of the media session (ie in SDP). Subject from the SIP message (which is different) can be set using sephone_call_params_set_custom_header(). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The session name to be used. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="255" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga745912b664143fcb1df7d6aa628619d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_call_params_video_enabled</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_video_enabled</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether video is enabled or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether video is enabled or not. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="262" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="196" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga3844befc6d1bd3be4f75bc70b8d77660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneMediaDirection sephone_call_params_get_audio_direction</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_audio_direction</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the audio stream direction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The audio stream direction associated with the call params. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="269" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="200" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga650fa9ab0f9d0cc8bdfd5613c6a29cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneMediaDirection sephone_call_params_get_video_direction</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_video_direction</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the video stream direction. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The video stream direction associated with the call params. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="276" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="204" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga88f9329e6ee46008ae11c1822b46be35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_audio_direction</definition>
+        <argsstring>(SephoneCallParams *cp, SephoneMediaDirection dir)</argsstring>
+        <name>sephone_call_params_set_audio_direction</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref></type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the audio stream direction. Only relevant for multicast <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>audio stream direction associated with this call params. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="283" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gaa5b6cc3fa807def644b3de1e2742e9a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_video_direction</definition>
+        <argsstring>(SephoneCallParams *cp, SephoneMediaDirection dir)</argsstring>
+        <name>sephone_call_params_set_video_direction</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref></type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the video stream direction. Only relevant for multicast <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>video stream direction associated with this call params. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="290" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="212" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga93d77bda92d8379e29cb63578e611465" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void *</type>
+        <definition>SEPHONE_PUBLIC void* sephone_call_params_get_user_data</definition>
+        <argsstring>(const SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user data associated with the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user data associated with the call params. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="302" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="221" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1ga5427c8786567f8ac0f1a5322d7fe5213" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_set_user_data</definition>
+        <argsstring>(SephoneCallParams *cp, void *ud)</argsstring>
+        <name>sephone_call_params_set_user_data</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user data to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user data to associate with the call params. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="309" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="225" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae6f4a728112c98712d25b1623f9cfab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneCallParams* sephone_call_params_ref</definition>
+        <argsstring>(SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_ref</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same SephoneCallParams object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="316" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="229" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gae7c8fa8ba8eee61e979e87727004457d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_unref</definition>
+        <argsstring>(SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_unref</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release a reference to the call params. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="322" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="234" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__control_1gad07de945411a718fd0061e0cf1024c02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_params_destroy</definition>
+        <argsstring>(SephoneCallParams *cp)</argsstring>
+        <name>sephone_call_params_destroy</name>
+        <param>
+          <type><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref> *</type>
+          <declname>cp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a SephoneCallParams object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallParams object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000009"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__control_1gae7c8fa8ba8eee61e979e87727004457d" kindref="member">sephone_call_params_unref()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h" line="337" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.c" bodystart="255" bodyend="257"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">call_params.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010-2014<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__SEPHONE_CALL_PARAMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SEPHONE_CALL_PARAMS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Structures<sp/>and<sp/>enums<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>******************************************************************************/</highlight></codeline>
+<codeline lineno="36"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga00d211fb0507786c57f8952044eba79e" kindref="member">_SephoneMediaDirection</ref><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneMediaDirectionInactive,<sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__control_1gga00d211fb0507786c57f8952044eba79ea42bbbfd3ba50b6c6cd073e97e93d4c25" kindref="member">SephoneMediaDirectionSendOnly</ref>,<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__control_1gga00d211fb0507786c57f8952044eba79eaa5de509fe265863ac177cb6ff236ed10" kindref="member">SephoneMediaDirectionRecvOnly</ref>,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__call__control_1gga00d211fb0507786c57f8952044eba79ead4df0977384f749a081c5635c0ac1a28" kindref="member">SephoneMediaDirectionSendRecv</ref>,<sp/></highlight><highlight class="comment">/*send<sp/>receive<sp/>mode<sp/>not<sp/>supported<sp/>yet*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga00d211fb0507786c57f8952044eba79e" kindref="member">_SephoneMediaDirection</ref><sp/><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneCallParams;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneCallParams<sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/>*<sp/>Public<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga0c728991d044a4297970267ad3ffb2ab" kindref="member">sephone_call_params_add_custom_header</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_value);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*<sp/><ref refid="group__call__control_1ga8f3f8f15b6e812d03bf416e09576910a" kindref="member">sephone_call_params_copy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga343f30064bae67b864028873c8228197" kindref="member">sephone_call_params_early_media_sending_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga40e9b2ec7c564086332eee966a5bd9c4" kindref="member">sephone_call_params_enable_early_media_sending</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gad2541c4f286dccba33c0f4dd0c08b4e8" kindref="member">sephone_call_params_enable_low_bandwidth</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga9984ed816d3e2fb691ecd6aa5dee7b71" kindref="member">sephone_call_params_enable_video</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/>bool_t<sp/>enabled);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1gab3416a4e3f395ca0ceca05e0da54e7e0" kindref="member">sephone_call_params_get_custom_header</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*header_name);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1gae0f027489e7fc7e2af003100d6a109f5" kindref="member">sephone_call_params_get_local_conference_mode</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__media__parameters_1ga29e11c9d4075ab45652dab98237485d7" kindref="member">SephoneMediaEncryption</ref><sp/><ref refid="group__call__control_1ga079e42c995c6d1324f624634f9f23013" kindref="member">sephone_call_params_get_media_encryption</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">SEPHONE_PUBLIC<sp/>SephonePrivacyMask<sp/><ref refid="group__call__control_1gae7202ccaf464d8523c93c9bfc0bbf469" kindref="member">sephone_call_params_get_privacy</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga5deed8fbdf4a64bd21b1bf106e0c288f" kindref="member">sephone_call_params_get_received_framerate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">SEPHONE_PUBLIC<sp/>MSVideoSize<sp/><ref refid="group__call__control_1gaf0a7b31e67c6c479a8de6391ee514fd5" kindref="member">sephone_call_params_get_received_video_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1gad4772ce8ece966f444a7effcc3b47dab" kindref="member">sephone_call_params_get_record_file</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/><ref refid="group__call__control_1ga4dc3e28715640de40fb49e5a13cfc35e" kindref="member">sephone_call_params_get_rtp_profile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga52067aae128c79e3113e1d094eee0421" kindref="member">sephone_call_params_get_sent_framerate</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">SEPHONE_PUBLIC<sp/>MSVideoSize<sp/><ref refid="group__call__control_1ga86a8b217fa14089f760fa3e5e5437286" kindref="member">sephone_call_params_get_sent_video_size</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga964fd0986cb1da50e838e826f066af0c" kindref="member">sephone_call_params_get_session_name</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__media__parameters_1ga38321b6d7ec007ef93279ef9ee5cae78" kindref="member">SephonePayloadType</ref>*<sp/><ref refid="group__call__control_1ga6275caff2e47901202c44241f794fd29" kindref="member">sephone_call_params_get_used_audio_codec</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__media__parameters_1ga38321b6d7ec007ef93279ef9ee5cae78" kindref="member">SephonePayloadType</ref>*<sp/><ref refid="group__call__control_1gaad71d75460ced446ad60cbaaac218888" kindref="member">sephone_call_params_get_used_video_codec</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga8201465d94f236ae30602d5398173f3d" kindref="member">sephone_call_params_low_bandwidth_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga629dc9f976175e30a45ee00dee944186" kindref="member">sephone_call_params_set_audio_bandwidth_limit</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bw);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga6742e72cf6996c8b4270fd3e5c194422" kindref="member">sephone_call_params_set_media_encryption</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/><ref refid="group__media__parameters_1ga29e11c9d4075ab45652dab98237485d7" kindref="member">SephoneMediaEncryption</ref><sp/>enc);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga7d3bdb6ddd80e9d0c52a44e37d9e65c4" kindref="member">sephone_call_params_set_privacy</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*params,<sp/>SephonePrivacyMask<sp/>privacy);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga885463eb825a75de4cc5c5835daf9e4f" kindref="member">sephone_call_params_set_record_file</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*path);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga311c5a9fdda1e6bcceb2365e72cc92a8" kindref="member">sephone_call_params_set_session_name</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">SEPHONE_PUBLIC<sp/>bool_t<sp/><ref refid="group__call__control_1ga745912b664143fcb1df7d6aa628619d6" kindref="member">sephone_call_params_video_enabled</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref><sp/><ref refid="group__call__control_1ga3844befc6d1bd3be4f75bc70b8d77660" kindref="member">sephone_call_params_get_audio_direction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref><sp/><ref refid="group__call__control_1ga650fa9ab0f9d0cc8bdfd5613c6a29cdf" kindref="member">sephone_call_params_get_video_direction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga88f9329e6ee46008ae11c1822b46be35" kindref="member">sephone_call_params_set_audio_direction</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref><sp/>dir);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa5b6cc3fa807def644b3de1e2742e9a7" kindref="member">sephone_call_params_set_video_direction</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/><ref refid="group__call__control_1gad0dbd125b276575c3be3b53bbe9f6fa7" kindref="member">SephoneMediaDirection</ref><sp/>dir);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="294"><highlight class="comment"><sp/>*<sp/>Reference<sp/>and<sp/>user<sp/>data<sp/>handling<sp/>functions<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="295"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="group__call__control_1ga93d77bda92d8379e29cb63578e611465" kindref="member">sephone_call_params_get_user_data</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1ga5427c8786567f8ac0f1a5322d7fe5213" kindref="member">sephone_call_params_set_user_data</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ud);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal">SEPHONE_PUBLIC<sp/><ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*<sp/><ref refid="group__call__control_1gae6f4a728112c98712d25b1623f9cfab3" kindref="member">sephone_call_params_ref</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gae7c8fa8ba8eee61e979e87727004457d" kindref="member">sephone_call_params_unref</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment">/*******************************************************************************</highlight></codeline>
+<codeline lineno="326"><highlight class="comment"><sp/>*<sp/>DEPRECATED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="327"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="preprocessor">#define<sp/>sephone_call_params_local_conference_mode<sp/>sephone_call_params_get_local_conference_mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="337"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__call__control_1gad07de945411a718fd0061e0cf1024c02" kindref="member">sephone_call_params_destroy</ref>(<ref refid="group__call__control_1gaa1f74ac09492bb829b243ea1d0f356b7" kindref="member">SephoneCallParams</ref><sp/>*cp);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>__SEPHONE_CALL_PARAMS_H__<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_params.h"/>
+  </compounddef>
+</doxygen>

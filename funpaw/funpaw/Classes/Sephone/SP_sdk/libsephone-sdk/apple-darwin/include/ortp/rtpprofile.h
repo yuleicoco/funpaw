@@ -72,7 +72,7 @@ ORTP_PUBLIC void rtp_profile_set_payload(RtpProfile *prof, int idx, PayloadType 
  *@return the payload description (a PayloadType object)
 **/
 static ORTP_INLINE PayloadType * rtp_profile_get_payload(const RtpProfile *prof, int idx){
-	if (idx<0 || idx>=RTP_PROFILE_MAX_PAYLOADS) {
+	if (prof == NULL || idx<0 || idx>=RTP_PROFILE_MAX_PAYLOADS) {
 		return NULL;
 	}
 	return prof->payload[idx];

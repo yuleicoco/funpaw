@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="group__linphone__address" kind="group">
+    <compoundname>linphone_address</compoundname>
+    <title>SIP address parser API.</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This api is useful for manipulating SIP addresses (&apos;from&apos; or &apos;to&apos; headers). </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

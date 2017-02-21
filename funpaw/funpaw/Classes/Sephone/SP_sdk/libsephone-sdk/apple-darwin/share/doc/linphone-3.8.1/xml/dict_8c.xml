@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="dict_8c" kind="file" language="C++">
+    <compoundname>dict.c</compoundname>
+    <includes refid="sephonecore_8h" local="yes">sephonecore.h</includes>
+    <includes refid="spconfig_8h" local="yes">spconfig.h</includes>
+    <includes refid="private_8h" local="yes">private.h</includes>
+    <includes local="no">belle-sip/belle-sip.h</includes>
+    <includes local="no">belle-sip/object.h</includes>
+    <includes local="no">belle-sip/dict.h</includes>
+    <incdepgraph>
+      <node id="55">
+        <label>belle-sip/dict.h</label>
+      </node>
+      <node id="53">
+        <label>belle-sip/belle-sip.h</label>
+      </node>
+      <node id="52">
+        <label>dict.c</label>
+        <link refid="dict_8c"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>belle-sip/object.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structsp__config__to__dict" prot="public">sp_config_to_dict</innerclass>
+    <innerclass refid="structsp__config__from__dict" prot="public">sp_config_from_dict</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__misc_1ga9208744e8cc6b4580b75f66b5c043351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneDictionary *</type>
+        <definition>SephoneDictionary* sephone_dictionary_new</definition>
+        <argsstring>()</argsstring>
+        <name>sephone_dictionary_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga20776add457db4a8c5397ab6f01634a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneDictionary *</type>
+        <definition>SephoneDictionary* sephone_dictionary_clone</definition>
+        <argsstring>(const SephoneDictionary *src)</argsstring>
+        <name>sephone_dictionary_clone</name>
+        <param>
+          <type>const SephoneDictionary *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="40" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga38c7ff2f2a3a08203726b17dce2a2ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneDictionary *</type>
+        <definition>SephoneDictionary* sephone_dictionary_ref</definition>
+        <argsstring>(SephoneDictionary *obj)</argsstring>
+        <name>sephone_dictionary_ref</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="49" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="49" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga89c7b13aa603e44ef3cef017a4524988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_unref</definition>
+        <argsstring>(SephoneDictionary *obj)</argsstring>
+        <name>sephone_dictionary_unref</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="54" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga2b4c42652b04b87284906aabc7fdac42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_set_int</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, int value)</argsstring>
+        <name>sephone_dictionary_set_int</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="59" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga5e99643fa9608b4b4b3459b4f059dfcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_dictionary_get_int</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, int default_value)</argsstring>
+        <name>sephone_dictionary_get_int</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="64" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gaa9a5a20565c3c0834572c4a73546f88f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_set_string</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, const char *value)</argsstring>
+        <name>sephone_dictionary_set_string</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="69" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga484294aff564d600d47b46979b242309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_dictionary_get_string</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, const char *default_value)</argsstring>
+        <name>sephone_dictionary_get_string</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="74" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga231d56a0d46391b6e503df4cc2205800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_set_int64</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, int64_t value)</argsstring>
+        <name>sephone_dictionary_set_int64</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="79" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga0cb088e93825a4aef70b4319577cb5e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t sephone_dictionary_get_int64</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key, int64_t default_value)</argsstring>
+        <name>sephone_dictionary_get_int64</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>default_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="84" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga131a449c49e35baad70f2a884d5c9f39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_dictionary_remove</definition>
+        <argsstring>(SephoneDictionary *obj, const char *key)</argsstring>
+        <name>sephone_dictionary_remove</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="89" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gaee8aa02cd5f3462d89e1ad03f5b79669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_clear</definition>
+        <argsstring>(SephoneDictionary *obj)</argsstring>
+        <name>sephone_dictionary_clear</name>
+        <param>
+          <type>SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="94" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga1a0a9dcda10ced6d995759f265335c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_dictionary_haskey</definition>
+        <argsstring>(const SephoneDictionary *obj, const char *key)</argsstring>
+        <name>sephone_dictionary_haskey</name>
+        <param>
+          <type>const SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="99" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga0473dc86f9692d5f1d77ca59d1eadb65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_dictionary_foreach</definition>
+        <argsstring>(const SephoneDictionary *obj, void(*apply_func)(const char *, void *, void *), void *userdata)</argsstring>
+        <name>sephone_dictionary_foreach</name>
+        <param>
+          <type>const SephoneDictionary *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>void(*)(const char *, void *, void *)</type>
+          <declname>apply_func</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="104" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga04c6ccfdfb9bdff3c0a89c924f23b1f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sp_config_section_to_dict_cb</definition>
+        <argsstring>(const char *key, struct sp_config_to_dict *userdata)</argsstring>
+        <name>sp_config_section_to_dict_cb</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>struct sp_config_to_dict *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="115" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gaeb2253d5f7395ddda7b41fa1a38dfe9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneDictionary *</type>
+        <definition>SephoneDictionary * sp_config_section_to_dict</definition>
+        <argsstring>(const SpConfig *lpconfig, const char *section)</argsstring>
+        <name>sp_config_section_to_dict</name>
+        <param>
+          <type>const <ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref> *</type>
+          <declname>spconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a config section into a dictionary. <simplesect kind="return"><para>a #SephoneDictionary with all the keys from a section, or NULL if the section doesn&apos;t exist </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="121" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="121" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga74d0cf739737164eec031c8a69f51e79" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void sp_config_dict_dump_cb</definition>
+        <argsstring>(const char *key, void *value, void *userdata)</argsstring>
+        <name>sp_config_dict_dump_cb</name>
+        <param>
+          <type>const char *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="143" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="143" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1ga50aa476c02963813f7f45a8a216fe8e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sp_config_load_dict_to_section</definition>
+        <argsstring>(SpConfig *lpconfig, const char *section, const SephoneDictionary *dict)</argsstring>
+        <name>sp_config_load_dict_to_section</name>
+        <param>
+          <type><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref> *</type>
+          <declname>spconfig</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>section</declname>
+        </param>
+        <param>
+          <type>const SephoneDictionary *</type>
+          <declname>dict</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Loads a dictionary into a section of the spconfig. If the section doesn&apos;t exist it is created. Overwrites existing keys, creates non-existing keys. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" line="149" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c" bodystart="149" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">linphone</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2009<sp/><sp/>Simon<sp/>MORLAT<sp/>(simon.morlat@linphone.org)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;spconfig.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;private.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;belle-sip/belle-sip.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;belle-sip/object.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;belle-sip/dict.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">SephoneDictionary*<sp/>sephone_dictionary_new()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_create();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">SephoneDictionary*<sp/>sephone_dictionary_clone(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SephoneDictionary*<sp/>src)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneDictionary*<sp/>cloned<sp/>=<sp/>sephone_dictionary_new();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>cloned<sp/>){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_dict_clone(src,<sp/>cloned);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cloned;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">SephoneDictionary*<sp/>sephone_dictionary_ref(SephoneDictionary*<sp/>obj)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>BELLE_SIP_DICT(belle_sip_object_ref(obj));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_unref(SephoneDictionary<sp/>*obj)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_object_unref(obj);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_set_int(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_dict_set_int(obj,<sp/>key,<sp/>value);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_dictionary_get_int(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>default_value)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_get_int(obj,<sp/>key,<sp/>default_value);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_set_string(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*value)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_dict_set_string(obj,<sp/>key,<sp/>value);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>sephone_dictionary_get_string(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>default_value)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_get_string(obj,<sp/>key,<sp/>default_value);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_set_int64(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/>int64_t<sp/>value)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_dict_set_int64(obj,<sp/>key,<sp/>value);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">int64_t<sp/>sephone_dictionary_get_int64(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>,<sp/>int64_t<sp/>default_value)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_get_int64(obj,<sp/>key,<sp/>default_value);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_dictionary_remove(SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_remove(obj,<sp/>key);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_clear(SephoneDictionary*<sp/>obj)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>belle_sip_dict_clear(obj);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_dictionary_haskey(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="struct__SephoneContentPrivate_1a915c89884c880f09016a28976463dae9" kindref="member">key</ref>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_haskey(obj,<sp/>key);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_dictionary_foreach(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SephoneDictionary*<sp/>obj,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*apply_func)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>belle_sip_dict_foreach(obj,<sp/>apply_func,<sp/>userdata);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_to_dict<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>section;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref>*<sp/><sp/><sp/><sp/><sp/>config;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneDictionary*<sp/>dict;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sp_config_section_to_dict_cb(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*key,<sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/>sp_config_to_dict*<sp/>userdata)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>value<sp/>=<sp/><ref refid="group__misc_1ga5a32540697fb696aa4f306d9dbc844c5" kindref="member">sp_config_get_string</ref>(userdata-&gt;config,<sp/>userdata-&gt;section,<sp/>key,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sephone_dictionary_set_string(userdata-&gt;dict,<sp/>key,<sp/>value);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">SephoneDictionary*<sp/><ref refid="group__misc_1gaeb2253d5f7395ddda7b41fa1a38dfe9a" kindref="member">sp_config_section_to_dict</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref>*<sp/>lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>section)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneDictionary*<sp/>dict<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_to_dict<sp/>fd;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.config<sp/>=<sp/>lpconfig;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.section<sp/>=<sp/>section;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dict<sp/>=<sp/>sephone_dictionary_new();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fd.dict<sp/>=<sp/>dict;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga5f660e88cf35f4fe10858d51d6dac334" kindref="member">sp_config_for_each_entry</ref>(lpconfig,<sp/>section,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*))sp_config_section_to_dict_cb,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;fd);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dict;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_from_dict<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>section;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref>*<sp/><sp/><sp/>config;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sp_config_dict_dump_cb(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>userdata)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_from_dict*<sp/>fd=<sp/>(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_from_dict*)userdata;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__misc_1gabdc99c184ea0d3a27899d221e0aa8d7a" kindref="member">sp_config_set_string</ref>(fd-&gt;config,<sp/>fd-&gt;section,<sp/>key,<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)value);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__misc_1ga50aa476c02963813f7f45a8a216fe8e7" kindref="member">sp_config_load_dict_to_section</ref>(<ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref>*<sp/>lpconfig,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>section,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SephoneDictionary*<sp/>dict)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">sp_config_from_dict<sp/>pvdata<sp/>=<sp/>{<sp/>section,<sp/>lpconfig<sp/>};</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sephone_dictionary_foreach(dict,sp_config_dict_dump_cb,<sp/>&amp;pvdata);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/dict.c"/>
+  </compounddef>
+</doxygen>

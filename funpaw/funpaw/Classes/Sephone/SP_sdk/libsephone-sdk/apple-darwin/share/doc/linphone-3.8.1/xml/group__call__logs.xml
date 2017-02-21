@@ -1,0 +1,847 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="group__call__logs" kind="group">
+    <compoundname>call_logs</compoundname>
+    <title>Managing call logs</title>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__call__logs_1gadea5a585af32867aa212d9647d1602f4" prot="public" static="no">
+        <name>_SephoneCallDir</name>
+        <enumvalue id="group__call__logs_1ggadea5a585af32867aa212d9647d1602f4afaf6213246f0c942cf50424e37382862" prot="public">
+          <name>SephoneCallOutgoing</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>outgoing calls </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__logs_1ggadea5a585af32867aa212d9647d1602f4a0051dbbd4dd65b7d2a6acc96b334878c" prot="public">
+          <name>SephoneCallIncoming</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>incoming calls </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum representing the direction of a call. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="37" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__call__logs_1gab3a24983dbb17007538702063fc99605" prot="public" static="no">
+        <name>_SephoneCallStatus</name>
+        <enumvalue id="group__call__logs_1ggab3a24983dbb17007538702063fc99605a8b16b4a49187a15cfdef7d12abfc8238" prot="public">
+          <name>SephoneCallSuccess</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The call was sucessful </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__logs_1ggab3a24983dbb17007538702063fc99605ad9df95a55e49721ecdc6fc2f24ab02ea" prot="public">
+          <name>SephoneCallAborted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The call was aborted </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__logs_1ggab3a24983dbb17007538702063fc99605a055cfc069041ea4b9d954b8fcbbaa798" prot="public">
+          <name>SephoneCallMissed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The call was missed (unanswered) </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__call__logs_1ggab3a24983dbb17007538702063fc99605a1fa0e8c15df07be70b825de69e23496b" prot="public">
+          <name>SephoneCallDeclined</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The call was declined, either locally or by remote end </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum representing the status of a call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="50" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="50" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" prot="public" static="no">
+        <type>enum <ref refid="group__call__logs_1gadea5a585af32867aa212d9647d1602f4" kindref="member">_SephoneCallDir</ref></type>
+        <definition>typedef enum _SephoneCallDir SephoneCallDir</definition>
+        <argsstring></argsstring>
+        <name>SephoneCallDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Typedef for enum </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="297" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__call__logs_1ga05f051bb8884e90c5d3ea57ea0e1b55c" prot="public" static="no">
+        <type>enum <ref refid="group__call__logs_1gab3a24983dbb17007538702063fc99605" kindref="member">_SephoneCallStatus</ref></type>
+        <definition>typedef enum _SephoneCallStatus  SephoneCallStatus</definition>
+        <argsstring></argsstring>
+        <name>SephoneCallStatus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum representing the status of a call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__call__logs_1ga971dacd835550830e6ced30185f11c46" prot="public" static="no">
+        <type>struct _SephoneCallLog</type>
+        <definition>typedef struct _SephoneCallLog SephoneCallLog</definition>
+        <argsstring></argsstring>
+        <name>SephoneCallLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Structure representing a call log. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="297" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__call__logs_1gace64f5bebd4e181c3a6703b3f4d31819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_log_get_call_id</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_call_id</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the call ID used by the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The call ID used by the call as a string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="72" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="148" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga1767b9c594b906a25fb10e1249e663f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneCallDir sephone_call_log_get_dir</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_dir</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the direction of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The direction of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="79" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="152" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga3df79188875c76c99b9454f5f98ef70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_call_log_get_duration</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_duration</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the duration of the call since connected. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The duration of the call in seconds. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="86" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="156" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneAddress* sephone_call_log_get_from_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_from_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the origin address (ie from) of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The origin address (ie from) of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="93" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="160" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gafb6171ded06dfe9f4836b82bd1f6dafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const rtp_stats_t *</type>
+        <definition>SEPHONE_PUBLIC const rtp_stats_t* sephone_call_log_get_local_stats</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_local_stats</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP statistics computed locally regarding the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP statistics that have been computed locally for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="100" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaa539c17e55d6870425ceb01b74de0c41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC float</type>
+        <definition>SEPHONE_PUBLIC float sephone_call_log_get_quality</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_quality</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the overall quality indication of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The overall quality indication of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="107" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="168" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaf31223a13cc6989e26a421fb44662db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const char *</type>
+        <definition>SEPHONE_PUBLIC const char* sephone_call_log_get_ref_key</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_ref_key</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the persistent reference key associated to the call log.</para><para>The reference key can be for example an id to an external database. It is stored in the config file, thus can survive to process exits/restarts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The reference key string that has been associated to the call log, or NULL if none has been associated. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="118" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="172" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga0497b61ef52b965aedf5e86a18131692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneAddress* sephone_call_log_get_remote_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_remote_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the remote address (that is from or to depending on call direction). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The remote address of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="125" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gac265dbaa80168b02a3681ddd6047426e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC const rtp_stats_t *</type>
+        <definition>SEPHONE_PUBLIC const rtp_stats_t* sephone_call_log_get_remote_stats</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_remote_stats</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the RTP statistics computed by the remote end and sent back via RTCP. <simplesect kind="note"><para>Not implemented yet. </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The RTP statistics that have been computed by the remote end for the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="133" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="180" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga585641ba4824043ba17e4400d2f755aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC time_t</type>
+        <definition>SEPHONE_PUBLIC time_t sephone_call_log_get_start_date</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_start_date</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the start date of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The date of the beginning of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="140" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="184" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga51bb079b3b79096e49a1f83e268dfef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__logs_1ga05f051bb8884e90c5d3ea57ea0e1b55c" kindref="member">SephoneCallStatus</ref></type>
+        <definition>SEPHONE_PUBLIC SephoneCallStatus sephone_call_log_get_status</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_status</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the status of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The status of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="147" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="188" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneAddress* sephone_call_log_get_to_address</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_to_address</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the destination address (ie to) of the call. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The destination address (ie to) of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="154" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="192" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga7b7be99bbae9d9db408ef51980cd0e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_log_set_ref_key</definition>
+        <argsstring>(SephoneCallLog *cl, const char *refkey)</argsstring>
+        <name>sephone_call_log_set_ref_key</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>refkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate a persistent reference key to the call log.</para><para>The reference key can be for example an id to an external database. It is stored in the config file, thus can survive to process exits/restarts.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">refkey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The reference key string to associate to the call log. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="165" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="196" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gac896beaa47a0e9bbb496112afc8f7a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC bool_t</type>
+        <definition>SEPHONE_PUBLIC bool_t sephone_call_log_video_enabled</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_video_enabled</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tell whether video was enabled at the end of the call or not. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A boolean value telling whether video was enabled at the end of the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="172" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gafe9b3c1347bf8350303f4f418665a966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC char *</type>
+        <definition>SEPHONE_PUBLIC char* sephone_call_log_to_str</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_to_str</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a human readable string describing the call. <simplesect kind="note"><para>: the returned string must be freed by the application (use ms_free()). </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A human readable string describing the call. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="180" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="204" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void *</type>
+        <definition>SEPHONE_PUBLIC void* sephone_call_log_get_user_data</definition>
+        <argsstring>(const SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the user data associated with the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The user data associated with the call log. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="192" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_log_set_user_data</definition>
+        <argsstring>(SephoneCallLog *cl, void *ud)</argsstring>
+        <name>sephone_call_log_set_user_data</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ud</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a user data to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user data to associate with the call log. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="199" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga2d61bc5a07b29cf8889958da66f73230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+        <definition>SEPHONE_PUBLIC SephoneCallLog* sephone_call_log_ref</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_ref</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Acquire a reference to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The same SephoneCallLog object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="206" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="252" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_log_unref</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_unref</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release a reference to the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="212" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="257" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga480920911fb24ae5ab70494cfe7dec4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC void</type>
+        <definition>SEPHONE_PUBLIC void sephone_call_log_destroy</definition>
+        <argsstring>(SephoneCallLog *cl)</argsstring>
+        <name>sephone_call_log_destroy</name>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>cl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a SephoneCallLog. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCallLog object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<xrefsect id="deprecated_1_deprecated000007"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1ga0d9a7e7e2acc07acf85e2aac5874b26e" kindref="member">sephone_call_log_unref()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="236" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.c" bodystart="291" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga5e48369f99d9dbacf77d0b4e4a01ce44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const MSList *</type>
+        <definition>const MSList* sephone_core_get_call_logs</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_call_logs</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the list of call logs (past calls). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of <ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> objects. <mslist>SephoneCallLog</mslist>  </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2809" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="5211" bodyend="5213"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga0ff2bfc86f0c5562f8242817e80e189e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_clear_call_logs</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_clear_call_logs</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Erase the call log. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2815" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="5215" bodyend="5220"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga726e8e3f14ee9082658583d2ee38a887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_get_missed_calls_count</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_missed_calls_count</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the number of missed calls. Once checked, this counter can be reset with <ref refid="group__call__logs_1gac182f190f702434904c5fc4352f96770" kindref="member">sephone_core_reset_missed_calls_count()</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of missed calls. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2823" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="5222" bodyend="5224"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1gac182f190f702434904c5fc4352f96770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_reset_missed_calls_count</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_reset_missed_calls_count</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset the counter of missed calls. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2829" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="5226" bodyend="5228"/>
+      </memberdef>
+      <memberdef kind="function" id="group__call__logs_1ga90c09fff3f327d435b423f59b0fca819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_remove_call_log</definition>
+        <argsstring>(SephoneCore *lc, SephoneCallLog *call_log)</argsstring>
+        <name>sephone_core_remove_call_log</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> *</type>
+          <declname>call_log</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a specific call log from call history list. This function destroys the call log object. It must not be accessed anymore by the application after calling this function. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">call_log</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__call__logs_1ga971dacd835550830e6ced30185f11c46" kindref="member">SephoneCallLog</ref> object to remove. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2837" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="5230" bodyend="5234"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__call__logs_1ga2f01e3e0202d50157ed676c8a88411cf" prot="public" static="no">
+        <name>sephone_call_log_get_from</name>
+        <param><defname>cl</defname></param>
+        <initializer><ref refid="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" kindref="member">sephone_call_log_get_from_address</ref>(cl)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000003"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1gadb547aa0c7054c9f0de28fd2df2063f3" kindref="member">sephone_call_log_get_from_address()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="220" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__call__logs_1gae61efcb49785d6477a3ffad5c80108b6" prot="public" static="no">
+        <name>sephone_call_log_get_to</name>
+        <param><defname>cl</defname></param>
+        <initializer><ref refid="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" kindref="member">sephone_call_log_get_to_address</ref>(cl)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000004"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1ga5c04f0a8ba7fd30a01675a4639bada43" kindref="member">sephone_call_log_get_to_address()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="223" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__call__logs_1ga599dd42fca64f1af4861ef381a567266" prot="public" static="no">
+        <name>sephone_call_log_set_user_pointer</name>
+        <param><defname>cl</defname></param>
+        <param><defname>ud</defname></param>
+        <initializer><ref refid="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" kindref="member">sephone_call_log_set_user_data</ref>(cl, ud)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000005"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1gab73648fe90f3ae3ee2012e2ec3a833d2" kindref="member">sephone_call_log_set_user_data()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="226" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__call__logs_1ga3afd541a31861f9e925586f3d5b247b2" prot="public" static="no">
+        <name>sephone_call_log_get_user_pointer</name>
+        <param><defname>cl</defname></param>
+        <initializer><ref refid="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" kindref="member">sephone_call_log_get_user_data</ref>(cl)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000006"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__call__logs_1gaae212329c7a26079e36592cb6ba4b005" kindref="member">sephone_call_log_get_user_data()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" line="229" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/call_log.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

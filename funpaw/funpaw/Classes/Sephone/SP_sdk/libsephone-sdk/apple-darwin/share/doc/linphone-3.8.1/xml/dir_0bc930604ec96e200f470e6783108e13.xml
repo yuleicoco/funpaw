@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="dir_0bc930604ec96e200f470e6783108e13" kind="dir">
+    <compoundname>sephone</compoundname>
+    <innerdir refid="dir_559520028c4c2a70737b53133dc9cc99">coreapi</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/"/>
+  </compounddef>
+</doxygen>

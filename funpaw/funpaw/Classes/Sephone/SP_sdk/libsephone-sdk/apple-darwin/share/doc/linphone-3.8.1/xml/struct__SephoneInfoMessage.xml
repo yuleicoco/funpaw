@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneInfoMessage" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneInfoMessage</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneInfoMessage_1a9fc873c114aabb9a8140b41098207066" prot="public" static="no" mutable="no">
+        <type><ref refid="group__misc_1ga5fb7d3a264e5cd9b191ebb25e6d54930" kindref="member">SephoneContent</ref> *</type>
+        <definition>SephoneContent* _SephoneInfoMessage::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" line="32" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneInfoMessage_1a2a00cbc7b54180d558b00ce20f02b629" prot="public" static="no" mutable="no">
+        <type>SalCustomHeader *</type>
+        <definition>SalCustomHeader* _SephoneInfoMessage::headers</definition>
+        <argsstring></argsstring>
+        <name>headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" line="33" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" line="31" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/info.c" bodystart="31" bodyend="34"/>
+    <listofallmembers>
+      <member refid="struct__SephoneInfoMessage_1a9fc873c114aabb9a8140b41098207066" prot="public" virt="non-virtual"><scope>_SephoneInfoMessage</scope><name>content</name></member>
+      <member refid="struct__SephoneInfoMessage_1a2a00cbc7b54180d558b00ce20f02b629" prot="public" virt="non-virtual"><scope>_SephoneInfoMessage</scope><name>headers</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

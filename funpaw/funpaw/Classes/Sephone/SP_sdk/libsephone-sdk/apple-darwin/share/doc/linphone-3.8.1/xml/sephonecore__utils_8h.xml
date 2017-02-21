@@ -1,0 +1,727 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="sephonecore__utils_8h" kind="file" language="C++">
+    <compoundname>sephonecore_utils.h</compoundname>
+    <includes local="yes">sephone/sephonecore.h</includes>
+    <includedby refid="private_8h" local="yes">private.h</includedby>
+    <includedby refid="lsd_8c" local="yes">lsd.c</includedby>
+    <includedby refid="test__ecc_8c" local="yes">test_ecc.c</includedby>
+    <includedby refid="test__lsd_8c" local="yes">test_lsd.c</includedby>
+    <includedby refid="test__numbers_8c" local="yes">test_numbers.c</includedby>
+    <incdepgraph>
+      <node id="222">
+        <label>sephone/sephonecore.h</label>
+      </node>
+      <node id="221">
+        <label>sephonecore_utils.h</label>
+        <link refid="sephonecore__utils_8h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sephonecore__utils_8h_1a9219a585d156598bb8169aee534fe2cc" prot="public" static="no">
+        <name>SephoneEcCalibratorStatus</name>
+        <enumvalue id="sephonecore__utils_8h_1a9219a585d156598bb8169aee534fe2cca7fb53d9b8bfaaf9bf976da3820e46961" prot="public">
+          <name>SephoneEcCalibratorInProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The echo canceller calibration process is on going. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sephonecore__utils_8h_1a9219a585d156598bb8169aee534fe2cca6bd2570e059b1aa918d92257902ee60f" prot="public">
+          <name>SephoneEcCalibratorDone</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The echo canceller calibration has been performed and produced an echo delay measure. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sephonecore__utils_8h_1a9219a585d156598bb8169aee534fe2cca5ad17acdf1b24d3e309851944b665150" prot="public">
+          <name>SephoneEcCalibratorFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The echo canceller calibration process has failed. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sephonecore__utils_8h_1a9219a585d156598bb8169aee534fe2cca59e5c2fc25def1a5ca1294dc6329fe24" prot="public">
+          <name>SephoneEcCalibratorDoneNoEcho</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>The echo canceller calibration has been performed and no echo has been detected. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing the result of the echo canceller calibration process. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="58" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="58" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1a1d739eca19c94cec73e66b49c49ae060" prot="public" static="no">
+        <type>struct _SsdPlayer</type>
+        <definition>typedef struct _SsdPlayer SsdPlayer</definition>
+        <argsstring></argsstring>
+        <name>SsdPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="3136" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1aad7aeccf1950ca5e4378ecd381157a2a" prot="public" static="no">
+        <type>struct _SephoneSoundDaemon</type>
+        <definition>typedef struct _SephoneSoundDaemon SephoneSoundDaemon</definition>
+        <argsstring></argsstring>
+        <name>SephoneSoundDaemon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="3136" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1a36e4ea6efa1ad18c4451649e53f1ba56" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* LsdEndOfPlayCallback) (SsdPlayer *p)</definition>
+        <argsstring>)(SsdPlayer *p)</argsstring>
+        <name>LsdEndOfPlayCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1a28c5df9d0846281de682add51e8d4fa0" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneEcCalibrationCallback) (SephoneCore *lc, SephoneEcCalibratorStatus status, int delay_ms, void *data)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneEcCalibratorStatus status, int delay_ms, void *data)</argsstring>
+        <name>SephoneEcCalibrationCallback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="66" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1a5bce487b1c5da1b13132e07f7439a86d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneEcCalibrationAudioInit) (void *data)</definition>
+        <argsstring>)(void *data)</argsstring>
+        <name>SephoneEcCalibrationAudioInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="67" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1a175c75e976cc80f55d7695614bfa6dc3" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneEcCalibrationAudioUninit) (void *data)</definition>
+        <argsstring>)(void *data)</argsstring>
+        <name>SephoneEcCalibrationAudioUninit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="68" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sephonecore__utils_8h_1afd44c7b904fec0dab7dcf2b2c89c9689" prot="public" static="no">
+        <type>bool_t(*</type>
+        <definition>typedef bool_t(* SephoneCoreIterateHook) (void *data)</definition>
+        <argsstring>)(void *data)</argsstring>
+        <name>SephoneCoreIterateHook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="88" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sephonecore__utils_8h_1af7bc35c5ebb41648235ec29e0c07b2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_callback</definition>
+        <argsstring>(SsdPlayer *p, LsdEndOfPlayCallback cb)</argsstring>
+        <name>ssd_player_set_callback</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>LsdEndOfPlayCallback</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="37" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1aad3b6dedd93808e52fe64c11b4911b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_user_pointer</definition>
+        <argsstring>(SsdPlayer *p, void *up)</argsstring>
+        <name>ssd_player_set_user_pointer</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="38" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1aabe8e60e412f9b5767e19c0ded1323ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ssd_player_get_user_pointer</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_get_user_pointer</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="39" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a487ced090209c52bae09d8b52044605f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssd_player_play</definition>
+        <argsstring>(SsdPlayer *p, const char *filename)</argsstring>
+        <name>ssd_player_play</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="40" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="185" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a1b0d109172f6ead30cd8c82153c8c8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssd_player_stop</definition>
+        <argsstring>(SsdPlayer *p)</argsstring>
+        <name>ssd_player_stop</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="41" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a88ee4a3d853bc203c354a6a1cd435835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_enable_loop</definition>
+        <argsstring>(SsdPlayer *p, bool_t loopmode)</argsstring>
+        <name>ssd_player_enable_loop</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>loopmode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="42" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="203" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a339be43fad168802c79462a6ca09a729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t ssd_player_loop_enabled</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_loop_enabled</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="43" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a660b8255c1c2aea968db21bde2156074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_gain</definition>
+        <argsstring>(SsdPlayer *p, float gain)</argsstring>
+        <name>ssd_player_set_gain</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="44" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="215" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a9231a3f8eede965b5f5beea4631ccba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneSoundDaemon *</type>
+        <definition>SephoneSoundDaemon* ssd_player_get_daemon</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_get_daemon</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="45" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a404b44547ea891a55894ff0f3aa4bd13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneSoundDaemon *</type>
+        <definition>SephoneSoundDaemon* sephone_sound_daemon_new</definition>
+        <argsstring>(const char *cardname, int rate, int nchannels)</argsstring>
+        <name>sephone_sound_daemon_new</name>
+        <param>
+          <type>const char *</type>
+          <declname>cardname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nchannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="47" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="222" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a5478ca145fed8664ac3d0b4d83f56a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SsdPlayer *</type>
+        <definition>SsdPlayer* sephone_sound_daemon_get_player</definition>
+        <argsstring>(SephoneSoundDaemon *lsd)</argsstring>
+        <name>sephone_sound_daemon_get_player</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>lsd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="48" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="83" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a7ac86112aea29274435e887ea7002450" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_release_player</definition>
+        <argsstring>(SephoneSoundDaemon *lsd, SsdPlayer *lsdplayer)</argsstring>
+        <name>sephone_sound_daemon_release_player</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>lsd</declname>
+        </param>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>lsdplayer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="49" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1ab2caf10a839581bcdb99011ecaa18671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_stop_all_players</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_stop_all_players</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="50" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="267" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1ad2cb49dde589bd02d0402e6d901299e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_release_all_players</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_release_all_players</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="51" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="274" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1ad83d1914f464a05dadb6ee48abced4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_use_sound_daemon</definition>
+        <argsstring>(SephoneCore *lc, SephoneSoundDaemon *lsd)</argsstring>
+        <name>sephone_core_use_sound_daemon</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>lsd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="52" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="301" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a3e2bbc444944151b4179133a461ee39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_destroy</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_destroy</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="53" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="281" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a9d16a5567993f33e39b152b2ee880059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_core_start_echo_calibration</definition>
+        <argsstring>(SephoneCore *lc, SephoneEcCalibrationCallback cb, SephoneEcCalibrationAudioInit audio_init_cb, SephoneEcCalibrationAudioUninit audio_uninit_cb, void *cb_data)</argsstring>
+        <name>sephone_core_start_echo_calibration</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SephoneEcCalibrationCallback</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>SephoneEcCalibrationAudioInit</type>
+          <declname>audio_init_cb</declname>
+        </param>
+        <param>
+          <type>SephoneEcCalibrationAudioUninit</type>
+          <declname>audio_uninit_cb</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>cb_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start an echo calibration of the sound devices, in order to find adequate settings for the echo canceller automatically. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="74" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/ec-calibrator.c" bodystart="266" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="group__IOS_1ga2f4ebfa2806988716e442da29ae8f4ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_start_dtmf_stream</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_start_dtmf_stream</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Special function to warm up dtmf feeback stream. <ref refid="group__IOS_1gabc118125dbff7e76be80bf9801e925d0" kindref="member">sephone_core_stop_dtmf_stream</ref> must() be called before entering FG mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="80" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6874" bodyend="6877"/>
+      </memberdef>
+      <memberdef kind="function" id="group__IOS_1gabc118125dbff7e76be80bf9801e925d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_stop_dtmf_stream</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_stop_dtmf_stream</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Special function to stop dtmf feed back function. Must be called before entering BG mode </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="85" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6901" bodyend="6905"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a9df03b55d9df80fe6860342fe4033fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_add_iterate_hook</definition>
+        <argsstring>(SephoneCore *lc, SephoneCoreIterateHook hook, void *hook_data)</argsstring>
+        <name>sephone_core_add_iterate_hook</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SephoneCoreIterateHook</type>
+          <declname>hook</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>hook_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="90" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6930" bodyend="6932"/>
+      </memberdef>
+      <memberdef kind="function" id="sephonecore__utils_8h_1a40d105105ca5de68aee24ac1a5848e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_remove_iterate_hook</definition>
+        <argsstring>(SephoneCore *lc, SephoneCoreIterateHook hook, void *hook_data)</argsstring>
+        <name>sephone_core_remove_iterate_hook</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SephoneCoreIterateHook</type>
+          <declname>hook</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>hook_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="92" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6944" bodyend="6955"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gac30273ee1cc52e07f82fdcea67df4508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_dial_plan_lookup_ccc_from_iso</definition>
+        <argsstring>(const char *iso)</argsstring>
+        <name>sephone_dial_plan_lookup_ccc_from_iso</name>
+        <param>
+          <type>const char *</type>
+          <declname>iso</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from ISO 3166-1 alpha-2 code, ex: FR returns 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iso</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>country code alpha2 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="99" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="860" bodyend="868"/>
+      </memberdef>
+      <memberdef kind="function" id="group__misc_1gacf9cbdf7ce93760629fc6e5f77b40378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SEPHONE_PUBLIC int</type>
+        <definition>SEPHONE_PUBLIC int sephone_dial_plan_lookup_ccc_from_e164</definition>
+        <argsstring>(const char *e164)</argsstring>
+        <name>sephone_dial_plan_lookup_ccc_from_e164</name>
+        <param>
+          <type>const char *</type>
+          <declname>e164</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function to get call country code from an e164 number, ex: +33952650121 will return 33 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>e164</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>phone number </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>call country code or -1 if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h" line="106" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/proxy.c" bodystart="834" bodyend="859"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">sephonecore_utils.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010<sp/>Simon<sp/>MORLAT<sp/>(simon.morlat@linphone.org)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SEPHONECORE_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEPHONECORE_UTILS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>IN_SEPHONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephone/sephonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SsdPlayer<sp/>SsdPlayer;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneSoundDaemon<sp/>SephoneSoundDaemon;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*LsdEndOfPlayCallback)(SsdPlayer<sp/>*p);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_callback(SsdPlayer<sp/>*p,<sp/>LsdEndOfPlayCallback<sp/>cb);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_user_pointer(SsdPlayer<sp/>*p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*up);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ssd_player_get_user_pointer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssd_player_play(SsdPlayer<sp/>*p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssd_player_stop(SsdPlayer<sp/>*p);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_enable_loop(SsdPlayer<sp/>*p,<sp/>bool_t<sp/>loopmode);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">bool_t<sp/>ssd_player_loop_enabled(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_gain(SsdPlayer<sp/>*p,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">SephoneSoundDaemon<sp/>*ssd_player_get_daemon(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">SephoneSoundDaemon<sp/>*<sp/>sephone_sound_daemon_new(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cardname,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rate,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nchannels);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">SsdPlayer<sp/>*<sp/>sephone_sound_daemon_get_player(SephoneSoundDaemon<sp/>*lsd);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_release_player(SephoneSoundDaemon<sp/>*lsd,<sp/>SsdPlayer<sp/>*lsdplayer);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_stop_all_players(SephoneSoundDaemon<sp/>*obj);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_release_all_players(SephoneSoundDaemon<sp/>*obj);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_core_use_sound_daemon(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneSoundDaemon<sp/>*lsd);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_destroy(SephoneSoundDaemon<sp/>*obj);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneEcCalibratorInProgress,<sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneEcCalibratorDone,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneEcCalibratorFailed,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneEcCalibratorDoneNoEcho<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}SephoneEcCalibratorStatus;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*SephoneEcCalibrationCallback)(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneEcCalibratorStatus<sp/>status,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delay_ms,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*SephoneEcCalibrationAudioInit)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*SephoneEcCalibrationAudioUninit)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal">SEPHONE_PUBLIC<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_core_start_echo_calibration(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneEcCalibrationCallback<sp/>cb,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneEcCalibrationAudioInit<sp/>audio_init_cb,<sp/>SephoneEcCalibrationAudioUninit<sp/>audio_uninit_cb,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*cb_data);</highlight></codeline>
+<codeline lineno="80"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__IOS_1ga2f4ebfa2806988716e442da29ae8f4ea" kindref="member">sephone_core_start_dtmf_stream</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref>*<sp/>lc);</highlight></codeline>
+<codeline lineno="85"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__IOS_1gabc118125dbff7e76be80bf9801e925d0" kindref="member">sephone_core_stop_dtmf_stream</ref>(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref>*<sp/>lc);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>bool_t<sp/>(*SephoneCoreIterateHook)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_core_add_iterate_hook(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneCoreIterateHook<sp/>hook,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*hook_data);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_core_remove_iterate_hook(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneCoreIterateHook<sp/>hook,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*hook_data);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gac30273ee1cc52e07f82fdcea67df4508" kindref="member">sephone_dial_plan_lookup_ccc_from_iso</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>iso);<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">SEPHONE_PUBLIC<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group__misc_1gacf9cbdf7ce93760629fc6e5f77b40378" kindref="member">sephone_dial_plan_lookup_ccc_from_e164</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>e164);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore_utils.h"/>
+  </compounddef>
+</doxygen>

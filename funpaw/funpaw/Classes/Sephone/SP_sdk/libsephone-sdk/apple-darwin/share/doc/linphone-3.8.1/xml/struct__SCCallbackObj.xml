@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SCCallbackObj" kind="struct" language="C++" prot="public">
+    <compoundname>_SCCallbackObj</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SCCallbackObj_1ad86e6df674fa8cf886efa593911a90f3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1ga6353e34e517c45cfc835489643f27d0d" kindref="member">SephoneCoreCbFunc</ref></type>
+        <definition>SephoneCoreCbFunc _SCCallbackObj::_func</definition>
+        <argsstring></argsstring>
+        <name>_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1946" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SCCallbackObj_1a007782d12fb98cbd5bbccd1e05c65678" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SCCallbackObj::_user_data</definition>
+        <argsstring></argsstring>
+        <name>_user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1947" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1947" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1945" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1944" bodyend="1948"/>
+    <listofallmembers>
+      <member refid="struct__SCCallbackObj_1ad86e6df674fa8cf886efa593911a90f3" prot="public" virt="non-virtual"><scope>_SCCallbackObj</scope><name>_func</name></member>
+      <member refid="struct__SCCallbackObj_1a007782d12fb98cbd5bbccd1e05c65678" prot="public" virt="non-virtual"><scope>_SCCallbackObj</scope><name>_user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,847 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="lsd_8c" kind="file" language="C++">
+    <compoundname>lsd.c</compoundname>
+    <includes refid="sephonecore__utils_8h" local="yes">sephonecore_utils.h</includes>
+    <includes refid="private_8h" local="yes">private.h</includes>
+    <includes local="yes">mediastreamer2/msticker.h</includes>
+    <includes local="yes">mediastreamer2/mssndcard.h</includes>
+    <includes local="yes">mediastreamer2/msaudiomixer.h</includes>
+    <includes local="yes">mediastreamer2/mschanadapter.h</includes>
+    <includes local="yes">mediastreamer2/msfileplayer.h</includes>
+    <includes local="yes">mediastreamer2/msitc.h</includes>
+    <incdepgraph>
+      <node id="101">
+        <label>lsd.c</label>
+        <link refid="lsd_8c"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>mediastreamer2/msticker.h</label>
+      </node>
+      <node id="103">
+        <label>mediastreamer2/mssndcard.h</label>
+      </node>
+      <node id="106">
+        <label>mediastreamer2/msfileplayer.h</label>
+      </node>
+      <node id="104">
+        <label>mediastreamer2/msaudiomixer.h</label>
+      </node>
+      <node id="105">
+        <label>mediastreamer2/mschanadapter.h</label>
+      </node>
+      <node id="107">
+        <label>mediastreamer2/msitc.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct__SsdPlayer" prot="public">_SsdPlayer</innerclass>
+    <innerclass refid="struct__SephoneSoundDaemon" prot="public">_SephoneSoundDaemon</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lsd_8c_1a33d4bf0118147ac61bf7338681ef2afa" prot="public" static="no">
+        <name>MAX_BRANCHES</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="37" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="lsd_8c_1a92b08d36d6b631c2bd0fb21ce59058ae" prot="public" static="yes" mutable="no">
+        <type>MSSndCardDesc</type>
+        <definition>MSSndCardDesc proxycard</definition>
+        <argsstring></argsstring>
+        <name>proxycard</name>
+        <initializer>={
+	&quot;Sephone Sound Daemon&quot;,
+	 NULL,
+	 NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	 NULL,
+	create_writer,
+	
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="69" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lsd_8c_1aafbf74945f472567c11cab957a7ccf7f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct _MSSndCard *</type>
+        <definition>MSSndCard * sephone_sound_daemon_get_proxy_card</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_get_proxy_card</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="297" bodyend="299"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1aaa29277787b275a393ad0777e39f70fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>MSFilter *</type>
+        <definition>static MSFilter* create_writer</definition>
+        <argsstring>(MSSndCard *c)</argsstring>
+        <name>create_writer</name>
+        <param>
+          <type>MSSndCard *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="62" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a2837f547679a04a44fb9836586ece4a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SsdPlayer *</type>
+        <definition>SsdPlayer* sephone_sound_daemon_get_player</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_get_player</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="83" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="83" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a3bdaf117765d4b08b3f6785543e8f5fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_release_player</definition>
+        <argsstring>(SephoneSoundDaemon *obj, SsdPlayer *player)</argsstring>
+        <name>sephone_sound_daemon_release_player</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="100" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a9231a3f8eede965b5f5beea4631ccba8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneSoundDaemon *</type>
+        <definition>SephoneSoundDaemon* ssd_player_get_daemon</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_get_daemon</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="108" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="108" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a1b0d109172f6ead30cd8c82153c8c8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssd_player_stop</definition>
+        <argsstring>(SsdPlayer *p)</argsstring>
+        <name>ssd_player_stop</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="112" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a3971fcfa1c19cff06b51f33fc05a1ab2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssd_player_init</definition>
+        <argsstring>(SsdPlayer *p, MSConnectionPoint mixer, MSFilterId playerid, SephoneSoundDaemon *lsd)</argsstring>
+        <name>ssd_player_init</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>MSConnectionPoint</type>
+          <declname>mixer</declname>
+        </param>
+        <param>
+          <type>MSFilterId</type>
+          <declname>playerid</declname>
+        </param>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>lsd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="117" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="117" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1ae5c1a261eb64d0a774fd44a36091c675" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssd_player_uninit</definition>
+        <argsstring>(SsdPlayer *p, MSConnectionPoint mixer)</argsstring>
+        <name>ssd_player_uninit</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>MSConnectionPoint</type>
+          <declname>mixer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="133" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="133" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1af7bc35c5ebb41648235ec29e0c07b2c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_callback</definition>
+        <argsstring>(SsdPlayer *p, LsdEndOfPlayCallback cb)</argsstring>
+        <name>ssd_player_set_callback</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>LsdEndOfPlayCallback</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="147" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1aad3b6dedd93808e52fe64c11b4911b14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_user_pointer</definition>
+        <argsstring>(SsdPlayer *p, void *up)</argsstring>
+        <name>ssd_player_set_user_pointer</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="151" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1aabe8e60e412f9b5767e19c0ded1323ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* ssd_player_get_user_pointer</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_get_user_pointer</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="155" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1af52c84e61ec23859e857ff1a33bc3ab3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssd_player_on_eop</definition>
+        <argsstring>(void *userdata, MSFilter *f, unsigned int id, void *arg)</argsstring>
+        <name>ssd_player_on_eop</name>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <param>
+          <type>MSFilter *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="159" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1ad5e2fbdd43e451aa95fc8ae13aceca67" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void ssd_player_configure</definition>
+        <argsstring>(SsdPlayer *b)</argsstring>
+        <name>ssd_player_configure</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="165" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="165" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a5894014e5faaae0fc43e3f33f287ffe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ssd_player_play</definition>
+        <argsstring>(SsdPlayer *b, const char *filename)</argsstring>
+        <name>ssd_player_play</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="185" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="185" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a88ee4a3d853bc203c354a6a1cd435835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_enable_loop</definition>
+        <argsstring>(SsdPlayer *p, bool_t loopmode)</argsstring>
+        <name>ssd_player_enable_loop</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>loopmode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="203" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="203" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a339be43fad168802c79462a6ca09a729" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t ssd_player_loop_enabled</definition>
+        <argsstring>(const SsdPlayer *p)</argsstring>
+        <name>ssd_player_loop_enabled</name>
+        <param>
+          <type>const SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="211" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a660b8255c1c2aea968db21bde2156074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ssd_player_set_gain</definition>
+        <argsstring>(SsdPlayer *p, float gain)</argsstring>
+        <name>ssd_player_set_gain</name>
+        <param>
+          <type>SsdPlayer *</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="215" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="215" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a404b44547ea891a55894ff0f3aa4bd13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>SephoneSoundDaemon *</type>
+        <definition>SephoneSoundDaemon* sephone_sound_daemon_new</definition>
+        <argsstring>(const char *cardname, int rate, int nchannels)</argsstring>
+        <name>sephone_sound_daemon_new</name>
+        <param>
+          <type>const char *</type>
+          <declname>cardname</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rate</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nchannels</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="222" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="222" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1ab2caf10a839581bcdb99011ecaa18671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_stop_all_players</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_stop_all_players</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="267" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="267" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1ad2cb49dde589bd02d0402e6d901299e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_release_all_players</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_release_all_players</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="274" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="274" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1a3e2bbc444944151b4179133a461ee39a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_sound_daemon_destroy</definition>
+        <argsstring>(SephoneSoundDaemon *obj)</argsstring>
+        <name>sephone_sound_daemon_destroy</name>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="281" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="281" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="lsd_8c_1ad83d1914f464a05dadb6ee48abced4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_use_sound_daemon</definition>
+        <argsstring>(SephoneCore *lc, SephoneSoundDaemon *lsd)</argsstring>
+        <name>sephone_core_use_sound_daemon</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>SephoneSoundDaemon *</type>
+          <declname>lsd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" line="301" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c" bodystart="301" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">lsd.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2010<sp/>Simon<sp/>MORLAT<sp/>(simon.morlat@linphone.org)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sephone<sp/>Sound<sp/>Daemon:<sp/>is<sp/>a<sp/>lightweight<sp/>utility<sp/>to<sp/>play<sp/>sounds<sp/>to<sp/>speaker<sp/>during<sp/>a<sp/>conversation.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>This<sp/>is<sp/>useful<sp/>for<sp/>embedded<sp/>platforms,<sp/>where<sp/>sound<sp/>apis<sp/>are<sp/>not<sp/>performant<sp/>enough<sp/>to<sp/>allow</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>simultaneous<sp/>sound<sp/>access.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephonecore_utils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;private.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/msticker.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/mssndcard.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/msaudiomixer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/mschanadapter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/msfileplayer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/msitc.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_MSSndCard<sp/>*sephone_sound_daemon_get_proxy_card(SephoneSoundDaemon<sp/>*obj);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_BRANCHES<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SsdPlayer{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneSoundDaemon<sp/>*lsd;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*player;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*rateconv;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*chanadapter;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LsdEndOfPlayCallback<sp/>eop_cb;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mixer_pin;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*user_data;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>loop;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool_t<sp/>pad[3];</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_SephoneSoundDaemon<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>out_rate;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>out_nchans;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*mixer;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*soundout;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSTicker<sp/>*ticker;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSSndCard<sp/>*proxycard;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SsdPlayer<sp/>branches[MAX_BRANCHES];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>MSFilter<sp/>*create_writer(MSSndCard<sp/>*c){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneSoundDaemon<sp/>*lsd=(SephoneSoundDaemon*)c-&gt;data;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*itcsink=ms_filter_new(MS_ITC_SINK_ID);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(itcsink,MS_ITC_SINK_CONNECT,lsd-&gt;branches[0].player);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>itcsink;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>MSSndCardDesc<sp/>proxycard={</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Sephone<sp/>Sound<sp/>Daemon&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*detect*/</highlight><highlight class="normal"><sp/>NULL,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*init*/</highlight><highlight class="normal"><sp/>NULL,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*create_reader*/</highlight><highlight class="normal"><sp/>NULL,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>create_writer,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*uninit,*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">SsdPlayer<sp/>*sephone_sound_daemon_get_player(SephoneSoundDaemon<sp/>*obj){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=1;i&lt;MAX_BRANCHES;++i){</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SsdPlayer<sp/>*b=&amp;obj-&gt;branches[i];</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSFilter<sp/>*p=b-&gt;player;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(p,MS_PLAYER_GET_STATE,&amp;state);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state==MSPlayerClosed){</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_set_gain(b,1);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_enable_loop<sp/>(b,FALSE);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_warning(</highlight><highlight class="stringliteral">&quot;No<sp/>more<sp/>free<sp/>players<sp/>!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_release_player(SephoneSoundDaemon<sp/>*obj,<sp/>SsdPlayer<sp/>*<sp/>player){</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(player-&gt;player,MS_PLAYER_GET_STATE,&amp;state);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state!=MSPlayerClosed){</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(player-&gt;player,MS_PLAYER_CLOSE,&amp;state);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">SephoneSoundDaemon<sp/>*ssd_player_get_daemon(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p){</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p-&gt;lsd;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssd_player_stop(SsdPlayer<sp/>*p){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method_noarg(p-&gt;player,MS_PLAYER_PAUSE);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_init(SsdPlayer<sp/>*p,<sp/>MSConnectionPoint<sp/>mixer,<sp/>MSFilterId<sp/>playerid,<sp/>SephoneSoundDaemon<sp/>*lsd){</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSConnectionHelper<sp/>h;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;player=ms_filter_new(playerid);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;rateconv=ms_filter_new(MS_RESAMPLE_ID);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;chanadapter=ms_filter_new(MS_CHANNEL_ADAPTER_ID);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_start(&amp;h);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_link(&amp;h,p-&gt;player,-1,0);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_link(&amp;h,p-&gt;rateconv,0,0);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_link(&amp;h,p-&gt;chanadapter,0,0);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_link(&amp;h,mixer.filter,mixer.pin,-1);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;mixer_pin=mixer.pin;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;loop=FALSE;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;lsd=lsd;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_uninit(SsdPlayer<sp/>*p,<sp/>MSConnectionPoint<sp/>mixer){</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSConnectionHelper<sp/>h;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_start(&amp;h);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_unlink<sp/>(&amp;h,p-&gt;player,-1,0);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_unlink(&amp;h,p-&gt;rateconv,0,0);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_unlink(&amp;h,p-&gt;chanadapter,0,0);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_connection_helper_unlink(&amp;h,mixer.filter,mixer.pin,-1);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_destroy(p-&gt;player);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_destroy(p-&gt;rateconv);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_destroy(p-&gt;chanadapter);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_callback(SsdPlayer<sp/>*p,<sp/>LsdEndOfPlayCallback<sp/>cb){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;eop_cb=cb;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_user_pointer(SsdPlayer<sp/>*p,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*up){</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;user_data=up;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*ssd_player_get_user_pointer(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p){</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p-&gt;user_data;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_on_eop(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>userdata,<sp/>MSFilter<sp/>*f,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*arg){</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SsdPlayer<sp/>*p=(SsdPlayer<sp/>*)userdata;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p-&gt;eop_cb!=NULL)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;eop_cb(p);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_configure(SsdPlayer<sp/>*b){</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rate,chans;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneSoundDaemon<sp/>*lsd=b-&gt;lsd;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ms_filter_get_id(b-&gt;player)==MS_ITC_SOURCE_ID)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_message(</highlight><highlight class="stringliteral">&quot;Configuring<sp/>branch<sp/>coming<sp/>from<sp/>audio<sp/>call...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;player,MS_FILTER_GET_SAMPLE_RATE,&amp;rate);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;player,MS_FILTER_GET_NCHANNELS,&amp;chans);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;rateconv,MS_FILTER_SET_SAMPLE_RATE,&amp;rate);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;rateconv,MS_FILTER_SET_NCHANNELS,&amp;chans);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;rateconv,MS_FILTER_SET_OUTPUT_SAMPLE_RATE,&amp;lsd-&gt;out_rate);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;chanadapter,MS_FILTER_SET_NCHANNELS,&amp;chans);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;chanadapter,MS_CHANNEL_ADAPTER_SET_OUTPUT_NCHANNELS,&amp;lsd-&gt;out_nchans);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_message(</highlight><highlight class="stringliteral">&quot;player<sp/>configured<sp/>for<sp/>rate=%i,<sp/>channels=%i&quot;</highlight><highlight class="normal">,rate,chans);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ssd_player_play(SsdPlayer<sp/>*b,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*filename<sp/>){</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(b-&gt;player,MS_PLAYER_GET_STATE,&amp;state);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state!=MSPlayerClosed){</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method_noarg(b-&gt;player,MS_PLAYER_CLOSE);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ms_filter_call_method(b-&gt;player,MS_PLAYER_OPEN,(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)filename)!=0){</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_warning(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>play<sp/>%s&quot;</highlight><highlight class="normal">,filename);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_add_notify_callback<sp/>(b-&gt;player,ssd_player_on_eop,b,FALSE);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_configure(b);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method_noarg<sp/>(b-&gt;player,MS_PLAYER_START);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_enable_loop(SsdPlayer<sp/>*p,<sp/>bool_t<sp/>loopmode){</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ms_filter_get_id(p-&gt;player)==MS_FILE_PLAYER_ID){</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arg=loopmode<sp/>?<sp/>0<sp/>:<sp/>-1;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(p-&gt;player,MS_FILE_PLAYER_LOOP,&amp;arg);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p-&gt;loop=loopmode;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">bool_t<sp/>ssd_player_loop_enabled(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SsdPlayer<sp/>*p){</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p-&gt;loop;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ssd_player_set_gain(SsdPlayer<sp/>*p,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gain){</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSAudioMixerCtl<sp/>gainctl;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gainctl.pin=p-&gt;mixer_pin;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gainctl.param.gain=gain;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(p-&gt;lsd-&gt;mixer,MS_AUDIO_MIXER_SET_INPUT_GAIN,&amp;gainctl);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">SephoneSoundDaemon<sp/>*<sp/>sephone_sound_daemon_new(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*cardname,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rate,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nchannels){</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSConnectionPoint<sp/>mp;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SephoneSoundDaemon<sp/>*lsd;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSSndCard<sp/>*card=ms_snd_card_manager_get_card(</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_snd_card_manager_get(),</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardname);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(card==NULL){</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>card=ms_snd_card_manager_get_default_playback_card<sp/>(</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_snd_card_manager_get());</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(card==NULL){</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_error(</highlight><highlight class="stringliteral">&quot;sephone_sound_daemon_new():<sp/>No<sp/>playback<sp/>soundcard<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd=ms_new0(SephoneSoundDaemon,1);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;soundout=ms_snd_card_create_writer(card);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;mixer=ms_filter_new(MS_AUDIO_MIXER_ID);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;out_rate=rate;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;out_nchans=nchannels;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(lsd-&gt;soundout,MS_FILTER_SET_SAMPLE_RATE,&amp;lsd-&gt;out_rate);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(lsd-&gt;soundout,MS_FILTER_SET_NCHANNELS,&amp;lsd-&gt;out_nchans);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(lsd-&gt;mixer,MS_FILTER_SET_SAMPLE_RATE,&amp;lsd-&gt;out_rate);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_call_method(lsd-&gt;mixer,MS_FILTER_SET_NCHANNELS,&amp;lsd-&gt;out_nchans);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp.filter=lsd-&gt;mixer;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp.pin=0;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_init(&amp;lsd-&gt;branches[0],mp,MS_ITC_SOURCE_ID,lsd);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_add_notify_callback(lsd-&gt;branches[0].player,(MSFilterNotifyFunc)ssd_player_configure,&amp;lsd-&gt;branches[0],FALSE);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=1;i&lt;MAX_BRANCHES;++i){</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp.pin=i;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_init(&amp;lsd-&gt;branches[i],mp,MS_FILE_PLAYER_ID,lsd);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_link(lsd-&gt;mixer,0,lsd-&gt;soundout,0);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;ticker=ms_ticker_new();</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_ticker_attach(lsd-&gt;ticker,lsd-&gt;soundout);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;proxycard=ms_snd_card_new(&amp;proxycard);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsd-&gt;proxycard-&gt;data=lsd;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_message(</highlight><highlight class="stringliteral">&quot;SephoneSoundDaemon<sp/>started<sp/>with<sp/>rate=%i,<sp/>nchannels=%i&quot;</highlight><highlight class="normal">,rate,nchannels);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lsd;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_stop_all_players(SephoneSoundDaemon<sp/>*obj){</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=1;i&lt;MAX_BRANCHES;++i){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_stop(&amp;obj-&gt;branches[i]);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_release_all_players(SephoneSoundDaemon<sp/>*obj){</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=1;i&lt;MAX_BRANCHES;++i){</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sephone_sound_daemon_release_player(obj,&amp;obj-&gt;branches[i]);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_sound_daemon_destroy(SephoneSoundDaemon<sp/>*obj){</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MSConnectionPoint<sp/>mp;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_ticker_detach(obj-&gt;ticker,obj-&gt;soundout);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp.filter=obj-&gt;mixer;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;MAX_BRANCHES;++i){</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mp.pin=i;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i!=0)<sp/>sephone_sound_daemon_release_player(obj,&amp;obj-&gt;branches[i]);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ssd_player_uninit<sp/>(&amp;obj-&gt;branches[i],mp);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_unlink(obj-&gt;mixer,0,obj-&gt;soundout,0);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_ticker_destroy(obj-&gt;ticker);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_destroy(obj-&gt;soundout);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ms_filter_destroy(obj-&gt;mixer);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal">MSSndCard<sp/>*sephone_sound_daemon_get_proxy_card(SephoneSoundDaemon<sp/>*lsd){</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>lsd-&gt;proxycard;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_core_use_sound_daemon(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/>SephoneSoundDaemon<sp/>*lsd){</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lsd!=NULL){</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc-&gt;sound_conf.ssd_card=sephone_sound_daemon_get_proxy_card<sp/>(lsd);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lc-&gt;sound_conf.ssd_card=NULL;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/lsd.c"/>
+  </compounddef>
+</doxygen>

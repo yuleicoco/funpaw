@@ -1,0 +1,15 @@
+digraph "mediastreamer2" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fe6eb5064d42f9f773e90d3512fafa25 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="submodules" fontname="Helvetica", fontsize="10", URL="dir_fe6eb5064d42f9f773e90d3512fafa25.html"]
+  subgraph clusterdir_4c579c369a75b3398bff4cb64dd8aed1 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_4c579c369a75b3398bff4cb64dd8aed1.html"];
+    dir_4c579c369a75b3398bff4cb64dd8aed1 [shape=plaintext label="mediastreamer2"];
+    dir_8ba90eec4f10c2a8f0f395775144a80c [shape=box label="include" color="red" fillcolor="white" style="filled" URL="dir_8ba90eec4f10c2a8f0f395775144a80c.html"];
+    dir_02e21cf937e125384e83ee42026f49df [shape=box label="src" color="red" fillcolor="white" style="filled" URL="dir_02e21cf937e125384e83ee42026f49df.html"];
+  }
+  }
+  dir_02e21cf937e125384e83ee42026f49df->dir_8ba90eec4f10c2a8f0f395775144a80c [headlabel="123", labeldistance=1.5 headhref="dir_000002_000004.html"];
+}

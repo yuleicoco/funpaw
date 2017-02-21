@@ -2103,7 +2103,7 @@ SEPHONE_PUBLIC void sephone_core_enable_logs(FILE *file);
 SEPHONE_PUBLIC void sephone_core_enable_logs_with_cb(OrtpLogFunc logfunc);
 SEPHONE_PUBLIC void sephone_core_disable_logs(void);
 
-SEPHONE_PUBLIC int sephone_core_enable_slog3(bool_t enable);
+SEPHONE_PUBLIC int sephone_core_enable_slog3(bool_t enable, bool_t test);
 
 /**
  * Enable logs serialization (output logs from either the thread that creates the sephone core or the thread that calls sephone_core_iterate()).

@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneEvent" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneEvent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneEvent_1aeb78512f5536147ce87a741ee5475391" prot="public" static="no" mutable="no">
+        <type><ref refid="group__event__api_1gad3efae13f9bdc27f1711cfe2cd1f09ec" kindref="member">SephoneSubscriptionDir</ref></type>
+        <definition>SephoneSubscriptionDir _SephoneEvent::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="836" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1ad5c07739b721121bd17fc711b1a90b35" prot="public" static="no" mutable="no">
+        <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+        <definition>SephoneCore* _SephoneEvent::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="837" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="837" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1a9d0ee2fde45ee96931ce24c94e027df5" prot="public" static="no" mutable="no">
+        <type>SalOp *</type>
+        <definition>SalOp* _SephoneEvent::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="838" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="838" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1a5089f540570d0b1135e11030e4a63fe8" prot="public" static="no" mutable="no">
+        <type>SalCustomHeader *</type>
+        <definition>SalCustomHeader* _SephoneEvent::send_custom_headers</definition>
+        <argsstring></argsstring>
+        <name>send_custom_headers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="839" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="839" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1aa2fb74512a886c619bc646d9d68b4eb9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__event__api_1ga53c552ca8a166b79ac47ee8ccc520859" kindref="member">SephoneSubscriptionState</ref></type>
+        <definition>SephoneSubscriptionState _SephoneEvent::subscription_state</definition>
+        <argsstring></argsstring>
+        <name>subscription_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="840" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="840" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1ac5fbcbfdec54742d35636ad589ecfced" prot="public" static="no" mutable="no">
+        <type><ref refid="group__event__api_1gaa1f363f83ad2ab380619ade2de688e08" kindref="member">SephonePublishState</ref></type>
+        <definition>SephonePublishState _SephoneEvent::publish_state</definition>
+        <argsstring></argsstring>
+        <name>publish_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="841" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1a677cba109865a4996ab7ccb33a46670d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephoneEvent::userdata</definition>
+        <argsstring></argsstring>
+        <name>userdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="842" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="842" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1ac32ae4def104be20b35b5e84daa9fb70" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephoneEvent::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="843" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="843" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1abae3ae5f2b0ad17f9fe4f923e5566e78" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneEvent::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="844" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="844" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1a7e056cac8e9b6f19b1359b7f8fb909cf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephoneEvent::expires</definition>
+        <argsstring></argsstring>
+        <name>expires</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="845" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="845" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1ac151585caf2b9fc20094f982bf23bccc" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneEvent::terminating</definition>
+        <argsstring></argsstring>
+        <name>terminating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="846" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="846" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneEvent_1afa7db9c2ae5cacdb5cb2793af67b4794" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneEvent::is_out_of_dialog_op</definition>
+        <argsstring></argsstring>
+        <name>is_out_of_dialog_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="847" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="847" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="835" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="835" bodyend="848"/>
+    <listofallmembers>
+      <member refid="struct__SephoneEvent_1aeb78512f5536147ce87a741ee5475391" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>dir</name></member>
+      <member refid="struct__SephoneEvent_1a7e056cac8e9b6f19b1359b7f8fb909cf" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>expires</name></member>
+      <member refid="struct__SephoneEvent_1afa7db9c2ae5cacdb5cb2793af67b4794" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>is_out_of_dialog_op</name></member>
+      <member refid="struct__SephoneEvent_1ad5c07739b721121bd17fc711b1a90b35" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>lc</name></member>
+      <member refid="struct__SephoneEvent_1abae3ae5f2b0ad17f9fe4f923e5566e78" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>name</name></member>
+      <member refid="struct__SephoneEvent_1a9d0ee2fde45ee96931ce24c94e027df5" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>op</name></member>
+      <member refid="struct__SephoneEvent_1ac5fbcbfdec54742d35636ad589ecfced" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>publish_state</name></member>
+      <member refid="struct__SephoneEvent_1ac32ae4def104be20b35b5e84daa9fb70" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>refcnt</name></member>
+      <member refid="struct__SephoneEvent_1a5089f540570d0b1135e11030e4a63fe8" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>send_custom_headers</name></member>
+      <member refid="struct__SephoneEvent_1aa2fb74512a886c619bc646d9d68b4eb9" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>subscription_state</name></member>
+      <member refid="struct__SephoneEvent_1ac151585caf2b9fc20094f982bf23bccc" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>terminating</name></member>
+      <member refid="struct__SephoneEvent_1a677cba109865a4996ab7ccb33a46670d" prot="public" virt="non-virtual"><scope>_SephoneEvent</scope><name>userdata</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

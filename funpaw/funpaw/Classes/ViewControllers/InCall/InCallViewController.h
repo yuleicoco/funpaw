@@ -26,5 +26,7 @@
 @property (nonatomic,strong)UIImageView * pointTouch;
 @property (nonatomic,strong)UILabel * timeLable;
 @property (nonatomic,strong)UIButton * pullBtn;
+@property (nonatomic,strong)UIButton * pullSbtn;
+
 
 @end

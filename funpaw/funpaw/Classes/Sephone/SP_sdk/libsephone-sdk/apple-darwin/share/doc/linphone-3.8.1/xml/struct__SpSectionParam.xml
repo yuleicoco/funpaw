@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SpSectionParam" kind="struct" language="C++" prot="public">
+    <compoundname>_SpSectionParam</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SpSectionParam_1a28fb0dae43bc37d28f2644929bb9cec2" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SpSectionParam::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="68" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SpSectionParam_1af16e5f5f7d70137a5c1956743a726b6d" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SpSectionParam::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="69" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" line="67" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/spconfig.c" bodystart="67" bodyend="70"/>
+    <listofallmembers>
+      <member refid="struct__SpSectionParam_1a28fb0dae43bc37d28f2644929bb9cec2" prot="public" virt="non-virtual"><scope>_SpSectionParam</scope><name>key</name></member>
+      <member refid="struct__SpSectionParam_1af16e5f5f7d70137a5c1956743a726b6d" prot="public" virt="non-virtual"><scope>_SpSectionParam</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

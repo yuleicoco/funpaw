@@ -634,9 +634,6 @@
 - (void)OpenVideo:(UIButton *)sender
 {
     
-
-
-    
     
     NSString * strDevicenume =[Defaluts objectForKey:PREF_DEVICE_NUMBER];
     
@@ -673,6 +670,7 @@
     
     
     
+    
 }
 
 
@@ -701,9 +699,9 @@
  */
 - (void)sipCall:(NSString*)dialerNumber sipName:(NSString *)sipName
 {
-    
     NSString *  displayName  =nil;
     [[SephoneManager instance] call:dialerNumber displayName:displayName transfer:FALSE];
+    
     
 }
 

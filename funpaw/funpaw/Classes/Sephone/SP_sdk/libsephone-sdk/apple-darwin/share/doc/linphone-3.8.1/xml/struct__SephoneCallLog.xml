@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephoneCallLog" kind="struct" language="C++" prot="public">
+    <compoundname>_SephoneCallLog</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a8bf0ddf0edade9a125fac80453651af9" prot="public" static="no" mutable="no">
+        <type>belle_sip_object_t</type>
+        <definition>belle_sip_object_t _SephoneCallLog::base</definition>
+        <argsstring></argsstring>
+        <name>base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="128" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ac3185326fa2ab0cd642468834f8aa769" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephoneCallLog::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="129" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a47af7478ba2252189ca5eaaa5b7aac19" prot="public" static="no" mutable="no">
+        <type>struct _SephoneCore *</type>
+        <definition>struct _SephoneCore* _SephoneCallLog::lc</definition>
+        <argsstring></argsstring>
+        <name>lc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="130" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1aa00874fc8cd9afcd41a11108ae72100c" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__logs_1ga4159f13b5c527bfc44d62e37d5ac3959" kindref="member">SephoneCallDir</ref></type>
+        <definition>SephoneCallDir _SephoneCallLog::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The direction of the call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="131" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a064e41727e667cde26260a86196ad00f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__call__logs_1ga05f051bb8884e90c5d3ea57ea0e1b55c" kindref="member">SephoneCallStatus</ref></type>
+        <definition>SephoneCallStatus _SephoneCallLog::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The status of the call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="132" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a55ea23eed76213e55bc7fa744ad4b707" prot="public" static="no" mutable="no">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* _SephoneCallLog::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Originator of the call as a SephoneAddress object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="133" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a23455cb3538d2c102ef2b40dd789cd2f" prot="public" static="no" mutable="no">
+        <type><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> *</type>
+        <definition>SephoneAddress* _SephoneCallLog::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destination of the call as a SephoneAddress object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="134" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ac907c22d2894fde30105efccc82e3e03" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char _SephoneCallLog::start_date[128]</definition>
+        <argsstring>[128]</argsstring>
+        <name>start_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Human readable string containing the start date </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="135" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a7217aa50f2a4c263549c53a0c4449bcf" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephoneCallLog::duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Duration of the call starting in connected state in seconds </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="136" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ad3a5f48e9b19484491c908d9e4d20cf7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneCallLog::refkey</definition>
+        <argsstring></argsstring>
+        <name>refkey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="137" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a74b328e2e7f6047dadb8b41cec22e253" prot="public" static="no" mutable="no">
+        <type>rtp_stats_t</type>
+        <definition>rtp_stats_t _SephoneCallLog::local_stats</definition>
+        <argsstring></argsstring>
+        <name>local_stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="138" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ac9dbb0dbb18537c715793a4be52e4def" prot="public" static="no" mutable="no">
+        <type>rtp_stats_t</type>
+        <definition>rtp_stats_t _SephoneCallLog::remote_stats</definition>
+        <argsstring></argsstring>
+        <name>remote_stats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="139" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ab3657f0a32df5ee2390e8bc13b4b8204" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float _SephoneCallLog::quality</definition>
+        <argsstring></argsstring>
+        <name>quality</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="140" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a3aff67c43faf901d88a8fa75359dd87f" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _SephoneCallLog::start_date_time</definition>
+        <argsstring></argsstring>
+        <name>start_date_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="141" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ad6ce4b4710ae60dfac93527996ab1a37" prot="public" static="no" mutable="no">
+        <type>time_t</type>
+        <definition>time_t _SephoneCallLog::connected_date_time</definition>
+        <argsstring></argsstring>
+        <name>connected_date_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start date of the call in seconds as expressed in a time_t </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="142" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1af8e1a6da1d2683a7c8f5117640775c8c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephoneCallLog::call_id</definition>
+        <argsstring></argsstring>
+        <name>call_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Connecting date of the call in seconds as expressed in a time_t </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="143" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1ad31d27faa56cce0c07d3799721a0396d" prot="public" static="no" mutable="no">
+        <type>struct _SephoneQualityReporting</type>
+        <definition>struct _SephoneQualityReporting _SephoneCallLog::reporting</definition>
+        <argsstring></argsstring>
+        <name>reporting</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>unique id of a call </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="143" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephoneCallLog_1a61df7382ae5af6ddb57ba9a058617369" prot="public" static="no" mutable="no">
+        <type>bool_t</type>
+        <definition>bool_t _SephoneCallLog::video_enabled</definition>
+        <argsstring></argsstring>
+        <name>video_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="145" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" line="127" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/private.h" bodystart="127" bodyend="146"/>
+    <listofallmembers>
+      <member refid="struct__SephoneCallLog_1a8bf0ddf0edade9a125fac80453651af9" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>base</name></member>
+      <member refid="struct__SephoneCallLog_1af8e1a6da1d2683a7c8f5117640775c8c" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>call_id</name></member>
+      <member refid="struct__SephoneCallLog_1ad6ce4b4710ae60dfac93527996ab1a37" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>connected_date_time</name></member>
+      <member refid="struct__SephoneCallLog_1aa00874fc8cd9afcd41a11108ae72100c" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>dir</name></member>
+      <member refid="struct__SephoneCallLog_1a7217aa50f2a4c263549c53a0c4449bcf" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>duration</name></member>
+      <member refid="struct__SephoneCallLog_1a55ea23eed76213e55bc7fa744ad4b707" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>from</name></member>
+      <member refid="struct__SephoneCallLog_1a47af7478ba2252189ca5eaaa5b7aac19" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>lc</name></member>
+      <member refid="struct__SephoneCallLog_1a74b328e2e7f6047dadb8b41cec22e253" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>local_stats</name></member>
+      <member refid="struct__SephoneCallLog_1ab3657f0a32df5ee2390e8bc13b4b8204" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>quality</name></member>
+      <member refid="struct__SephoneCallLog_1ad3a5f48e9b19484491c908d9e4d20cf7" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>refkey</name></member>
+      <member refid="struct__SephoneCallLog_1ac9dbb0dbb18537c715793a4be52e4def" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>remote_stats</name></member>
+      <member refid="struct__SephoneCallLog_1ad31d27faa56cce0c07d3799721a0396d" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>reporting</name></member>
+      <member refid="struct__SephoneCallLog_1ac907c22d2894fde30105efccc82e3e03" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>start_date</name></member>
+      <member refid="struct__SephoneCallLog_1a3aff67c43faf901d88a8fa75359dd87f" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>start_date_time</name></member>
+      <member refid="struct__SephoneCallLog_1a064e41727e667cde26260a86196ad00f" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>status</name></member>
+      <member refid="struct__SephoneCallLog_1a23455cb3538d2c102ef2b40dd789cd2f" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>to</name></member>
+      <member refid="struct__SephoneCallLog_1ac3185326fa2ab0cd642468834f8aa769" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>user_data</name></member>
+      <member refid="struct__SephoneCallLog_1a61df7382ae5af6ddb57ba9a058617369" prot="public" virt="non-virtual"><scope>_SephoneCallLog</scope><name>video_enabled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

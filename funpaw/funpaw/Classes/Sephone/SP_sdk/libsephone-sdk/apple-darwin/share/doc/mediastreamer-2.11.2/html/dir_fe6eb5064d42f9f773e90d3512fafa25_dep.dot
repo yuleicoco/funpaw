@@ -1,0 +1,10 @@
+digraph "submodules" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_fe6eb5064d42f9f773e90d3512fafa25 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_fe6eb5064d42f9f773e90d3512fafa25.html"];
+    dir_fe6eb5064d42f9f773e90d3512fafa25 [shape=plaintext label="submodules"];
+    dir_4c579c369a75b3398bff4cb64dd8aed1 [shape=box label="mediastreamer2" color="red" fillcolor="white" style="filled" URL="dir_4c579c369a75b3398bff4cb64dd8aed1.html"];
+  }
+}

@@ -688,6 +688,8 @@ struct _VideoStream
 	bool_t player_active;
 	bool_t staticimage_webcam_fps_optimization; /* if TRUE, the StaticImage webcam will ignore the fps target in order to save CPU time. Default is TRUE */
 	bool_t dynamic_framerate_control_enabled;
+	int mirror; // 视频镜像变化
+	uint64_t last_decrease_vsize_time;
 };
 
 typedef struct _VideoStream VideoStream;
@@ -728,6 +730,9 @@ MS2_PUBLIC bool_t video_stream_alive(VideoStream *stream, int timeout);
 MS2_PUBLIC void video_stream_record_set_video_source(VideoStream *stream, bool_t local);
 MS2_PUBLIC int video_stream_record_start(VideoStream *stream, const char *filename);
 MS2_PUBLIC int video_stream_record_stop(VideoStream *stream);
+
+/* 设置视频的镜像变化 */
+MS2_PUBLIC void video_stream_set_mirror(VideoStream *stream, int mirror);
 
 
 MS2_PUBLIC void video_stream_set_relay_session_id(VideoStream *stream, const char *relay_session_id);
@@ -885,6 +890,10 @@ MS2_PUBLIC void video_stream_decoding_error_reported(VideoStream *stream);
  * @param[in] stream The VideoStream object.
  */
 MS2_PUBLIC void video_stream_decoding_error_recovered(VideoStream *stream);
+
+MS2_PUBLIC bool_t video_stream_is_vsize_decreased(VideoStream *stream, uint32_t ms);
+
+MS2_PUBLIC void video_stream_vsize_decreased(VideoStream *stream);
 
 
 /**

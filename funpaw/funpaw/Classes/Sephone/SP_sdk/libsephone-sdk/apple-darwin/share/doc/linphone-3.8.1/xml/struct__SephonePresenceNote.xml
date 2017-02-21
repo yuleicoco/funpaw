@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="struct__SephonePresenceNote" kind="struct" language="C++" prot="public">
+    <compoundname>_SephonePresenceNote</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__SephonePresenceNote_1a36377ebff7f6d5c11ab9d542093df85c" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* _SephonePresenceNote::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="32" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceNote_1a8336b3871f3ce84691cba01aaf855ccb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _SephonePresenceNote::refcnt</definition>
+        <argsstring></argsstring>
+        <name>refcnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="33" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceNote_1af1e6fe6470c5f60cd95f3bba8d83c948" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephonePresenceNote::lang</definition>
+        <argsstring></argsstring>
+        <name>lang</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="34" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__SephonePresenceNote_1a58c5e1ea029b5bd39f0beeffcc6ac0b7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* _SephonePresenceNote::content</definition>
+        <argsstring></argsstring>
+        <name>content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" line="31" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/presence.c" bodystart="31" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct__SephonePresenceNote_1a58c5e1ea029b5bd39f0beeffcc6ac0b7" prot="public" virt="non-virtual"><scope>_SephonePresenceNote</scope><name>content</name></member>
+      <member refid="struct__SephonePresenceNote_1af1e6fe6470c5f60cd95f3bba8d83c948" prot="public" virt="non-virtual"><scope>_SephonePresenceNote</scope><name>lang</name></member>
+      <member refid="struct__SephonePresenceNote_1a8336b3871f3ce84691cba01aaf855ccb" prot="public" virt="non-virtual"><scope>_SephonePresenceNote</scope><name>refcnt</name></member>
+      <member refid="struct__SephonePresenceNote_1a36377ebff7f6d5c11ab9d542093df85c" prot="public" virt="non-virtual"><scope>_SephonePresenceNote</scope><name>user_data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

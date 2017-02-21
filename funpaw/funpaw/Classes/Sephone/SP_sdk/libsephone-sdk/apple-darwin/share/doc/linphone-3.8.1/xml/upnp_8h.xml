@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="upnp_8h" kind="file" language="C++">
+    <compoundname>upnp.h</compoundname>
+    <includes local="yes">mediastreamer2/upnp_igd.h</includes>
+    <includes refid="sephonecore_8h" local="yes">sephonecore.h</includes>
+    <includes local="yes">sal/sal.h</includes>
+    <includedby refid="upnp_8c" local="yes">upnp.c</includedby>
+    <incdepgraph>
+      <node id="271">
+        <label>upnp.h</label>
+        <link refid="upnp_8h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+      </node>
+      <node id="272">
+        <label>mediastreamer2/upnp_igd.h</label>
+      </node>
+      <node id="273">
+        <label>sal/sal.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="upnp_8h_1a33581db4f68b3f22c5923a3a9591131d" prot="public" static="no">
+        <type>struct _UpnpSession</type>
+        <definition>typedef struct _UpnpSession UpnpSession</definition>
+        <argsstring></argsstring>
+        <name>UpnpSession</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="1461" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="upnp_8h_1af311a7828744b576eb8feec7dcb0a0a4" prot="public" static="no">
+        <type>struct _UpnpContext</type>
+        <definition>typedef struct _UpnpContext UpnpContext</definition>
+        <argsstring></argsstring>
+        <name>UpnpContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="1461" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="upnp_8h_1a247d9d8fdf2d950525c8460201e8f9b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_update_local_media_description_from_upnp</definition>
+        <argsstring>(SalMediaDescription *desc, UpnpSession *session)</argsstring>
+        <name>sephone_core_update_local_media_description_from_upnp</name>
+        <param>
+          <type>SalMediaDescription *</type>
+          <declname>desc</declname>
+        </param>
+        <param>
+          <type>UpnpSession *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="30" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="1078" bodyend="1110"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1aa82b8e8e39641d6922d1722a75ff94c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_update_upnp_from_remote_media_description</definition>
+        <argsstring>(SephoneCall *call, const SalMediaDescription *md)</argsstring>
+        <name>sephone_core_update_upnp_from_remote_media_description</name>
+        <param>
+          <type><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type>const SalMediaDescription *</type>
+          <declname>md</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="31" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="738" bodyend="754"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1ac9354d59eb71b77c2be31154158bc074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_update_upnp</definition>
+        <argsstring>(SephoneCore *lc, SephoneCall *call)</argsstring>
+        <name>sephone_core_update_upnp</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="32" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="756" bodyend="758"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a87be2ce15b0767be97b2b5f3e99e4611" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_upnp_call_process</definition>
+        <argsstring>(SephoneCall *call)</argsstring>
+        <name>sephone_upnp_call_process</name>
+        <param>
+          <type><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="34" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="782" bodyend="867"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a22628705c4d25a305c7682a48b10bfc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UpnpSession *</type>
+        <definition>UpnpSession* sephone_upnp_session_new</definition>
+        <argsstring>(SephoneCall *call)</argsstring>
+        <name>sephone_upnp_session_new</name>
+        <param>
+          <type><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="35" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="1411" bodyend="1419"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a9ade06d7163d798426d61e77d9c1c1bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_upnp_session_destroy</definition>
+        <argsstring>(UpnpSession *session)</argsstring>
+        <name>sephone_upnp_session_destroy</name>
+        <param>
+          <type>UpnpSession *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="36" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="1421" bodyend="1447"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a5f1d62f594340b0c3d9398291f2cf346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaa8e9e1a6c47e4489119f978b7f3ebc11" kindref="member">SephoneUpnpState</ref></type>
+        <definition>SephoneUpnpState sephone_upnp_session_get_state</definition>
+        <argsstring>(UpnpSession *session)</argsstring>
+        <name>sephone_upnp_session_get_state</name>
+        <param>
+          <type>UpnpSession *</type>
+          <declname>session</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="37" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="1449" bodyend="1451"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a48603fd3fc25e2cd7c931b8f0e0779f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>UpnpContext *</type>
+        <definition>UpnpContext* sephone_upnp_context_new</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_upnp_context_new</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>uPnP Context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="39" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="329" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a3894f669e5da0551f5bf20e4d67aaeeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_upnp_context_destroy</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_context_destroy</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="40" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="371" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1affbc43f83fb1f80a0584974c8bfd3201" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_upnp_refresh</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_refresh</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="41" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="554" bodyend="556"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a46333f18a22fdc0e132e348d60e0c5e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaa8e9e1a6c47e4489119f978b7f3ebc11" kindref="member">SephoneUpnpState</ref></type>
+        <definition>SephoneUpnpState sephone_upnp_context_get_state</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_context_get_state</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="42" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="436" bodyend="444"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a18b88082377d67f4ab64ceda3daa3fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_upnp_context_get_external_ipaddress</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_context_get_external_ipaddress</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="43" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="558" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a807df88bb8ab99c0dcbae08901cfd526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_upnp_context_get_external_port</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_context_get_external_port</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="44" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="491" bodyend="513"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a06e00700c5c24bba079180426fc2c9ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_upnp_context_is_ready_for_register</definition>
+        <argsstring>(UpnpContext *ctx)</argsstring>
+        <name>sephone_upnp_context_is_ready_for_register</name>
+        <param>
+          <type>UpnpContext *</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="45" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="481" bodyend="489"/>
+      </memberdef>
+      <memberdef kind="function" id="upnp_8h_1a1184635fcd9e3b9846562051d2317a61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_update_upnp_state_in_call_stats</definition>
+        <argsstring>(SephoneCall *call)</argsstring>
+        <name>sephone_core_update_upnp_state_in_call_stats</name>
+        <param>
+          <type><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref> *</type>
+          <declname>call</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h" line="46" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.c" bodystart="760" bodyend="763"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">upnp.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Copyright<sp/>(C)<sp/>2012<sp/><sp/>Belledonne<sp/>Communications<sp/>SARL</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>2</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">along<sp/>with<sp/>this<sp/>program;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,<sp/>Boston,<sp/>MA<sp/><sp/>02111-1307,<sp/>USA.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SEPHONE_UPNP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SEPHONE_UPNP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;mediastreamer2/upnp_igd.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sephonecore.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sal/sal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_UpnpSession<sp/>UpnpSession;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">_UpnpContext<sp/>UpnpContext;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_core_update_local_media_description_from_upnp(SalMediaDescription<sp/>*desc,<sp/>UpnpSession<sp/>*session);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_core_update_upnp_from_remote_media_description(<ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref><sp/>*call,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SalMediaDescription<sp/>*md);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_core_update_upnp(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc,<sp/><ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref><sp/>*call);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_upnp_call_process(<ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref><sp/>*call);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">UpnpSession*<sp/>sephone_upnp_session_new(<ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref><sp/>*call);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_upnp_session_destroy(UpnpSession*<sp/>session);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><ref refid="group__initializing_1gaa8e9e1a6c47e4489119f978b7f3ebc11" kindref="member">SephoneUpnpState</ref><sp/>sephone_upnp_session_get_state(UpnpSession<sp/>*session);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">UpnpContext<sp/>*sephone_upnp_context_new(<ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref><sp/>*lc);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_upnp_context_destroy(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_upnp_refresh(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="group__initializing_1gaa8e9e1a6c47e4489119f978b7f3ebc11" kindref="member">SephoneUpnpState</ref><sp/>sephone_upnp_context_get_state(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sephone_upnp_context_get_external_ipaddress(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sephone_upnp_context_get_external_port(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">bool_t<sp/>sephone_upnp_context_is_ready_for_register(UpnpContext<sp/>*ctx);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sephone_core_update_upnp_state_in_call_stats(<ref refid="group__call__control_1gac08107239d1cb38f1d07e515a1d9f98a" kindref="member">SephoneCall</ref><sp/>*call);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//SEPHONE_UPNP_H</highlight></codeline>
+    </programlisting>
+    <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/upnp.h"/>
+  </compounddef>
+</doxygen>

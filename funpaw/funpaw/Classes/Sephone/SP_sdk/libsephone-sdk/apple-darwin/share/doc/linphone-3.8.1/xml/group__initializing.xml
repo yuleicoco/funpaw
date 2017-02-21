@@ -1,0 +1,2180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="group__initializing" kind="group">
+    <compoundname>initializing</compoundname>
+    <title>Initializing liblinphone</title>
+    <innerclass refid="struct__SCSipTransports" prot="public">_SCSipTransports</innerclass>
+    <innerclass refid="struct__SephoneCoreVTable" prot="public">_SephoneCoreVTable</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group__initializing_1ga37b5342342456e28960d4b9780354202" prot="public" static="no">
+        <name>_SephoneIceState</name>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202a781154163579149dbe257718dbdb46d9" prot="public">
+          <name>SephoneIceStateNotActivated</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has not been activated for this call or stream </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202a8b1fbb1ef4f674ef957260a0e037f4f0" prot="public">
+          <name>SephoneIceStateFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE processing has failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202a43e97d6ce59dafe67fa0095780f9aa11" prot="public">
+          <name>SephoneIceStateInProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE process is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202afdb13003d482fb9d8ff6f0a594e391c0" prot="public">
+          <name>SephoneIceStateHostConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a direct connection to the remote host </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202a9919cf0e23db3d8d40a19ab5a493ff1d" prot="public">
+          <name>SephoneIceStateReflexiveConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a connection to the remote host through one or several NATs </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga37b5342342456e28960d4b9780354202aa83a17a16328a588ac46ae0e13230e7e" prot="public">
+          <name>SephoneIceStateRelayConnection</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>ICE has established a connection through a relay </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing ICE states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="475" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="475" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1ga7ef68f48d783d6faaeed4c8cb60cc181" prot="public" static="no">
+        <name>_SephoneUpnpState</name>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181a39342d9152ae2569ba6f6df10d3dbe1b" prot="public">
+          <name>SephoneUpnpStateIdle</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is not activate </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181aa5d9b81c008d8e095449f6658cef15f7" prot="public">
+          <name>SephoneUpnpStatePending</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP process is in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181a514b5ec177d81178d08dd0fe880c779e" prot="public">
+          <name>SephoneUpnpStateAdding</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Internal use: Only used by port binding </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181a35be7764e09febb0f82e3fb269aebdb5" prot="public">
+          <name>SephoneUpnpStateRemoving</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Internal use: Only used by port binding </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181aee30cc8b65fe9e43d6f3ba45c71360e3" prot="public">
+          <name>SephoneUpnpStateNotAvailable</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is not available </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181ab59f711c7924ef8d39a9ad33bf5e2e03" prot="public">
+          <name>SephoneUpnpStateOk</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP is enabled </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181a6bcd354aad977c68803208b37d3e966a" prot="public">
+          <name>SephoneUpnpStateKo</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>uPnP processing has failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga7ef68f48d783d6faaeed4c8cb60cc181a6c5da56ea06c1448fb9d1e18d865146b" prot="public">
+          <name>SephoneUpnpStateBlacklisted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>IGD router is blacklisted </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing uPnP states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="496" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="496" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1gab0b9b8cdc5bf5906a39ad9fb0989d42e" prot="public" static="no">
+        <name>_SephoneGlobalState</name>
+        <enumvalue id="group__initializing_1ggab0b9b8cdc5bf5906a39ad9fb0989d42ead6bee1c026fa6633ee10d54385bc0a83" prot="public">
+          <name>SephoneGlobalOff</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1ggab0b9b8cdc5bf5906a39ad9fb0989d42eae7a0c7d5d9757ff9807c74ff1fcdcb61" prot="public">
+          <name>SephoneGlobalStartup</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1ggab0b9b8cdc5bf5906a39ad9fb0989d42ea65f3e7164f1e1c5e3824a10000f8e5d4" prot="public">
+          <name>SephoneGlobalOn</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1ggab0b9b8cdc5bf5906a39ad9fb0989d42ea91679a3fd6009e0ef79d1f44d6b0dfd6" prot="public">
+          <name>SephoneGlobalShutdown</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1ggab0b9b8cdc5bf5906a39ad9fb0989d42ea87a16120f80c60e21b46c435f0f868b0" prot="public">
+          <name>SephoneGlobalConfiguring</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneGlobalState describes the global state of the SephoneCore object. It is notified via the <ref refid="struct__SephoneCoreVTable_1abcf407766c364984cb9dab2f3adbf3c5" kindref="member">SephoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1624" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1624" bodyend="1630"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1ga88537852c4a0a0addc0d92119e15b8ce" prot="public" static="no">
+        <name>_SephoneCoreLogCollectionUploadState</name>
+        <enumvalue id="group__initializing_1gga88537852c4a0a0addc0d92119e15b8cea03d1eb0d2328eb24261ede22b4a039bb" prot="public">
+          <name>SephoneCoreLogCollectionUploadStateInProgress</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Delivery in progress </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga88537852c4a0a0addc0d92119e15b8cea074102def882d8028c8b01a87625a164" prot="public">
+          <name>SephoneCoreLogCollectionUploadStateDelivered</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Log collection upload successfully delivered and acknowledged by remote end point </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga88537852c4a0a0addc0d92119e15b8ceaebfcb69737924df8446595e49be9b151" prot="public">
+          <name>SephoneCoreLogCollectionUploadStateNotDelivered</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Log collection upload was not delivered </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneCoreLogCollectionUploadState is used to notify if log collection upload have been succesfully delivered or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1637" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1637" bodyend="1641"/>
+      </memberdef>
+      <memberdef kind="enum" id="group__initializing_1ga0e8f02715ad0eff191a3b5e08b4ecc6d" prot="public" static="no">
+        <name>_SephoneConfiguringState</name>
+        <enumvalue id="group__initializing_1gga0e8f02715ad0eff191a3b5e08b4ecc6da330efec9542cba7bcda195191c8057ab" prot="public">
+          <name>SephoneConfiguringSuccessful</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga0e8f02715ad0eff191a3b5e08b4ecc6dac99540c95cae47aa3dba0c41eebadf5a" prot="public">
+          <name>SephoneConfiguringFailed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group__initializing_1gga0e8f02715ad0eff191a3b5e08b4ecc6da2a5f35474c112ea93924725702ff00d8" prot="public">
+          <name>SephoneConfiguringSkipped</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneGlobalState describes the global state of the SephoneCore object. It is notified via the <ref refid="struct__SephoneCoreVTable_1abcf407766c364984cb9dab2f3adbf3c5" kindref="member">SephoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1830" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1830" bodyend="1834"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" prot="public" static="no">
+        <type>struct _SephoneCore</type>
+        <definition>typedef struct _SephoneCore SephoneCore</definition>
+        <argsstring></argsstring>
+        <name>SephoneCore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sephone core main object created by function <ref refid="group__initializing_1gaf6ea0ded4186e23f39d9a60c2a461cf4" kindref="member">sephone_core_new()</ref> . </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="6916" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga6e888501e2e641439198d8331c85bdd0" prot="public" static="no">
+        <type>struct <ref refid="struct__SCSipTransports" kindref="compound">_SCSipTransports</ref></type>
+        <definition>typedef struct _SCSipTransports  SCSipTransports</definition>
+        <argsstring></argsstring>
+        <name>SCSipTransports</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sephone core SIP transport ports. Use with <ref refid="group__network__parameters_1ga3867eb163d519cca831648afc9981331" kindref="member">sephone_core_set_sip_transports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga532b825cacd9626b10dae44daa01e6cd" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga37b5342342456e28960d4b9780354202" kindref="member">_SephoneIceState</ref></type>
+        <definition>typedef enum _SephoneIceState SephoneIceState</definition>
+        <argsstring></argsstring>
+        <name>SephoneIceState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing Ice states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="440" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaa8e9e1a6c47e4489119f978b7f3ebc11" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga7ef68f48d783d6faaeed4c8cb60cc181" kindref="member">_SephoneUpnpState</ref></type>
+        <definition>typedef enum _SephoneUpnpState SephoneUpnpState</definition>
+        <argsstring></argsstring>
+        <name>SephoneUpnpState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enum describing uPnP states. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="490" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="511" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga84c56b7be40cdb5c19f8fdaa6bbf10d9" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1gab0b9b8cdc5bf5906a39ad9fb0989d42e" kindref="member">_SephoneGlobalState</ref></type>
+        <definition>typedef enum _SephoneGlobalState SephoneGlobalState</definition>
+        <argsstring></argsstring>
+        <name>SephoneGlobalState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneGlobalState describes the global state of the SephoneCore object. It is notified via the <ref refid="struct__SephoneCoreVTable_1abcf407766c364984cb9dab2f3adbf3c5" kindref="member">SephoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1630" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaf7bcb5213c6dc4774e5b9601524bfc72" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga88537852c4a0a0addc0d92119e15b8ce" kindref="member">_SephoneCoreLogCollectionUploadState</ref></type>
+        <definition>typedef enum _SephoneCoreLogCollectionUploadState  SephoneCoreLogCollectionUploadState</definition>
+        <argsstring></argsstring>
+        <name>SephoneCoreLogCollectionUploadState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneCoreLogCollectionUploadState is used to notify if log collection upload have been succesfully delivered or not. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1641" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga1c2c09247ee148b90b8b9e190509c5c2" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreGlobalStateChangedCb) (SephoneCore *lc, SephoneGlobalState gstate, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneGlobalState gstate, const char *message)</argsstring>
+        <name>SephoneCoreGlobalStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Global state notification callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gstate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the global state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>informational message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1649" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga63a10ec3caef0bdf7e95f1f51f78431c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreCallStateChangedCb) (SephoneCore *lc, SephoneCall *call, SephoneCallState cstate, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, SephoneCallState cstate, const char *message)</argsstring>
+        <name>SephoneCoreCallStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call state notification callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call object whose state is changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cstate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new state of the call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an informational message about the state. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1657" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gada5675c40129ec289e447a6e82012814" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreCallEncryptionChangedCb) (SephoneCore *lc, SephoneCall *call, bool_t on, const char *authentication_token)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, bool_t on, const char *authentication_token)</argsstring>
+        <name>SephoneCoreCallEncryptionChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call encryption changed callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call on which encryption is changed. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>on</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>whether encryption is activated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>authentication_token</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an authentication_token, currently set for ZRTP kind of encryption only. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1666" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga65295226ae82a0ed2cf0a42d1b61eaf6" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreRegistrationStateChangedCb) (SephoneCore *lc, SephoneProxyConfig *cfg, SephoneRegistrationState cstate, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneProxyConfig *cfg, SephoneRegistrationState cstate, const char *message)</argsstring>
+        <name>SephoneCoreRegistrationStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Registration state notification callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1671" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaed93d277220b8b4b9d9bc98d0e49a19c" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ShowInterfaceCb) (SephoneCore *lc)</definition>
+        <argsstring>)(SephoneCore *lc)</argsstring>
+        <name>ShowInterfaceCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000045"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1675" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga0953c9765c1425bf71259a792627babe" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayStatusCb) (SephoneCore *lc, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, const char *message)</argsstring>
+        <name>DisplayStatusCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000046"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1679" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae6aceae413a17ecf3b7a8390589002e3" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayMessageCb) (SephoneCore *lc, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, const char *message)</argsstring>
+        <name>DisplayMessageCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000047"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1683" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1683" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga983314f43e94caa066754c12a97efcbe" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* DisplayUrlCb) (SephoneCore *lc, const char *message, const char *url)</definition>
+        <argsstring>)(SephoneCore *lc, const char *message, const char *url)</argsstring>
+        <name>DisplayUrlCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000048"><xreftitle>Deprecated</xreftitle><xrefdescription></xrefdescription></xrefsect></para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1687" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga6353e34e517c45cfc835489643f27d0d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreCbFunc) (SephoneCore *lc, void *user_data)</definition>
+        <argsstring>)(SephoneCore *lc, void *user_data)</argsstring>
+        <name>SephoneCoreCbFunc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1690" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1690" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae2919b85f1f8780dc8dcd84b0dfebfbe" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreNotifyPresenceReceivedCb) (SephoneCore *lc, SephoneFriend *lf)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneFriend *lf)</argsstring>
+        <name>SephoneCoreNotifyPresenceReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report status change for a friend previously <ref refid="group__buddy__list_1ga13b8aa7cb3599dbcbd6bb796def3c9ee" kindref="member">added </ref> to <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object . </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Updated <ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> . </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1696" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1696" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga4ac0a7137bd754e397ae2cfa6ef84663" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreNewSubscriptionRequestedCb) (SephoneCore *lc, SephoneFriend *lf, const char *url)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneFriend *lf, const char *url)</argsstring>
+        <name>SephoneCoreNewSubscriptionRequestedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reports that a new subscription request has been received and wait for a decision. Status on this subscription request is notified by <ref refid="group__buddy__list_1ga2a06db1ee3bb318d911f3b7c8fa9c5d4" kindref="member">changing policy </ref> for this friend <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__buddy__list_1ga10719a6bde8f550602b683cb577077c9" kindref="member">SephoneFriend</ref> corresponding to the subscriber </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>url</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the subscriber Callback prototype </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1705" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1705" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga3be06771472e841a417351f66c56f552" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreAuthInfoRequestedCb) (SephoneCore *lc, const char *realm, const char *username, const char *domain)</definition>
+        <argsstring>)(SephoneCore *lc, const char *realm, const char *username, const char *domain)</argsstring>
+        <name>SephoneCoreAuthInfoRequestedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for requesting authentication information to application or user. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>realm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the realm (domain) on which authentication is required. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the username that needs to be authenticated. Application shall reply to this callback using <ref refid="group__authentication_1ga74d58ece68b70865ccb1a27accb40b12" kindref="member">sephone_core_add_auth_info()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1713" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1713" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga91ab32dabd72f1fa6e6d1deabb7b40a6" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreCallLogUpdatedCb) (SephoneCore *lc, SephoneCallLog *newcl)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCallLog *newcl)</argsstring>
+        <name>SephoneCoreCallLogUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback to notify a new call-log entry has been added. This is done typically when a call terminates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newcl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new call log entry added. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1721" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1721" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae92cd983640993693fd7f8aa43dcad66" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreTextMessageReceivedCb) (SephoneCore *lc, SephoneChatRoom *room, const SephoneAddress *from, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatRoom *room, const SephoneAddress *from, const char *message)</argsstring>
+        <name>SephoneCoreTextMessageReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype <xrefsect id="deprecated_1_deprecated000049"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use <ref refid="group__initializing_1gaace22b58108c2757e79fee11e9b02374" kindref="member">SephoneCoreMessageReceivedCb</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>room</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1gad313f776746c65859fce604c4fc8a538" kindref="member">SephoneChatRoom</ref> involved in this conversation. Can be be created by the framework in case <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">the from </ref> is not present in any chat room. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">SephoneAddress</ref> from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incoming message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1732" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1732" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaace22b58108c2757e79fee11e9b02374" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreMessageReceivedCb) (SephoneCore *lc, SephoneChatRoom *room, SephoneChatMessage *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatRoom *room, SephoneChatMessage *message)</argsstring>
+        <name>SephoneCoreMessageReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Chat message callback prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>room</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1gad313f776746c65859fce604c4fc8a538" kindref="member">SephoneChatRoom</ref> involved in this conversation. Can be be created by the framework in case <ref refid="group__sephone__address_1ga55f07568eee2ed418e36ed9781cf2e23" kindref="member">the from </ref> is not present in any chat room. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>SephoneChatMessage</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>incoming message </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1741" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1741" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga933a9be4685f907a8b255e7341bc470d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreFileTransferRecvCb) (SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, const char *buff, size_t size)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, const char *buff, size_t size)</argsstring>
+        <name>SephoneCoreFileTransferRecvCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File transfer receive callback prototype. This function is called by the core upon an incoming File transfer is started. This function may be call several time for the same file in case of large file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1ga9664d5e7896eea0597deb5c496200834" kindref="member">SephoneChatMessage</ref> message from which the body is received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__misc_1ga5fb7d3a264e5cd9b191ebb25e6d54930" kindref="member">SephoneContent</ref> incoming content information </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the received data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to be read from buff. 0 means end of file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1754" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1754" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga8707e834c5875b5fcf029523029f29e7" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreFileTransferSendCb) (SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, char *buff, size_t *size)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, char *buff, size_t *size)</argsstring>
+        <name>SephoneCoreFileTransferSendCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File transfer send callback prototype. This function is called by the core upon an outgoing File transfer is started. This function is called until size is set to 0. <linebreak/>
+ a <ref refid="group__misc_1ga5fb7d3a264e5cd9b191ebb25e6d54930" kindref="member">SephoneContent</ref> with a size equal zero</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1ga9664d5e7896eea0597deb5c496200834" kindref="member">SephoneChatMessage</ref> message from which the body is received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__misc_1ga5fb7d3a264e5cd9b191ebb25e6d54930" kindref="member">SephoneContent</ref> outgoing content </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the buffer where data chunk shall be written by the app </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>as input value, it represents the number of bytes expected by the framework. As output value, it means the number of bytes wrote by the application in the buffer. 0 means end of file. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1767" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga9e04b43164d36341baa78c7fece5ca1d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreFileTransferProgressIndicationCb) (SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, size_t offset, size_t total)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatMessage *message, const SephoneContent *content, size_t offset, size_t total)</argsstring>
+        <name>SephoneCoreFileTransferProgressIndicationCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>File transfer progress indication callback prototype.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1ga9664d5e7896eea0597deb5c496200834" kindref="member">SephoneChatMessage</ref> message from which the body is received. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__misc_1ga5fb7d3a264e5cd9b191ebb25e6d54930" kindref="member">SephoneContent</ref> incoming content information </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes sent/received since the beginning of the transfer. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of bytes to be sent/received. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1778" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae751d89ad4e294c5d4612641da45b74b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreIsComposingReceivedCb) (SephoneCore *lc, SephoneChatRoom *room)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneChatRoom *room)</argsstring>
+        <name>SephoneCoreIsComposingReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Is composing notification callback prototype.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">room</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__chatroom_1gad313f776746c65859fce604c4fc8a538" kindref="member">SephoneChatRoom</ref> involved in the conversation. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1786" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1786" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga9f9285aac54c45a6a9d95ba33bb6e69d" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreUmsgMessageReceivedCb) (SephoneCore *lc, SephoneCall *call, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, const char *message)</argsstring>
+        <name>SephoneCoreUmsgMessageReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1788" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1788" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga14dd7516a69962664348bc4fe19e7fa1" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreDtmfReceivedCb) (SephoneCore *lc, SephoneCall *call, int dtmf)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, int dtmf)</argsstring>
+        <name>SephoneCoreDtmfReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for being notified of DTMFs received. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephone core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call that received the dtmf </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dtmf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the ascii code of the dtmf </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1796" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1796" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga3f41c2036e6d8394e619c6d667bd0d99" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreReferReceivedCb) (SephoneCore *lc, const char *refer_to)</definition>
+        <argsstring>)(SephoneCore *lc, const char *refer_to)</argsstring>
+        <name>SephoneCoreReferReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1799" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1799" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga833560404d5b92f9e35899659eb91b28" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreBuddyInfoUpdatedCb) (SephoneCore *lc, SephoneFriend *lf)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneFriend *lf)</argsstring>
+        <name>SephoneCoreBuddyInfoUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1801" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1801" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gae4dc0aa2f05f3de1b15a05f60d0c3d7a" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreTransferStateChangedCb) (SephoneCore *lc, SephoneCall *transfered, SephoneCallState new_call_state)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *transfered, SephoneCallState new_call_state)</argsstring>
+        <name>SephoneCoreTransferStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for notifying progresses of transfers. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>transfered</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call that was transfered </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_call_state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the state of the call to transfer target at the far end. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1808" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1808" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gad2e46aa14ae25de70475dfd6e089f1ca" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreCallStatsUpdatedCb) (SephoneCore *lc, SephoneCall *call, const SephoneCallStats *stats)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, const SephoneCallStats *stats)</argsstring>
+        <name>SephoneCoreCallStatsUpdatedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for receiving quality statistics for calls. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stats</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call statistics. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1816" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1816" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga67f9e67937e1c95f873b4909824ed07f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreInfoReceivedCb) (SephoneCore *lc, SephoneCall *call, const SephoneInfoMessage *msg)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCall *call, const SephoneInfoMessage *msg)</argsstring>
+        <name>SephoneCoreInfoReceivedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for receiving info messages. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>call</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the call whose info message belongs to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the info message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1824" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga326b643cf91db43a611dec0ba18fc37b" prot="public" static="no">
+        <type>enum <ref refid="group__initializing_1ga0e8f02715ad0eff191a3b5e08b4ecc6d" kindref="member">_SephoneConfiguringState</ref></type>
+        <definition>typedef enum _SephoneConfiguringState  SephoneConfiguringState</definition>
+        <argsstring></argsstring>
+        <name>SephoneConfiguringState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SephoneGlobalState describes the global state of the SephoneCore object. It is notified via the <ref refid="struct__SephoneCoreVTable_1abcf407766c364984cb9dab2f3adbf3c5" kindref="member">SephoneCoreVTable::global_state_changed</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1834" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaee8f4a33ab434ad4e5cd47748d23de92" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreConfiguringStatusCb) (SephoneCore *lc, SephoneConfiguringState status, const char *message)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneConfiguringState status, const char *message)</argsstring>
+        <name>SephoneCoreConfiguringStatusCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for configuring status changes notification <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>informational message. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1841" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1841" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1ga8dd2bd5979bf9a09fdcf067203e3096f" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreNetworkReachableCb) (SephoneCore *lc, bool_t reachable)</definition>
+        <argsstring>)(SephoneCore *lc, bool_t reachable)</argsstring>
+        <name>SephoneCoreNetworkReachableCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for reporting network change either automatically detected or notified by <ref refid="group__network__parameters_1gafd634b04f6d20949eddf5fdf744aa130" kindref="member">sephone_core_set_network_reachable</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reachable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if network is reachable. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1848" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1848" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaa21a466ec4287b6b2542fc8a3965c349" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreLogCollectionUploadStateChangedCb) (SephoneCore *lc, SephoneCoreLogCollectionUploadState state, const char *info)</definition>
+        <argsstring>)(SephoneCore *lc, SephoneCoreLogCollectionUploadState state, const char *info)</argsstring>
+        <name>SephoneCoreLogCollectionUploadStateChangedCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for reporting log collection upload state change. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The state of the log collection upload </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional information: error message in case of error state, URL of uploaded file in case of success. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1856" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gab8e32c6d380e3205f70343707f825fb5" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* SephoneCoreLogCollectionUploadProgressIndicationCb) (SephoneCore *lc, size_t offset, size_t total)</definition>
+        <argsstring>)(SephoneCore *lc, size_t offset, size_t total)</argsstring>
+        <name>SephoneCoreLogCollectionUploadProgressIndicationCb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback prototype for reporting log collection upload progress indication. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneCore object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">progress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Percentage of the file size of the log collection already uploaded. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1863" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="1863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" prot="public" static="no">
+        <type>struct <ref refid="struct__SephoneCoreVTable" kindref="compound">_SephoneCoreVTable</ref></type>
+        <definition>typedef struct _SephoneCoreVTable  SephoneCoreVTable</definition>
+        <argsstring></argsstring>
+        <name>SephoneCoreVTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This structure holds all callbacks that the application should implement. None is mandatory. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1904" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__initializing_1ga3a383e11d0749063b8711b0a5a0d5c88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_migrate_to_multi_transport</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_migrate_to_multi_transport</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Migrate configuration so that all SIP transports are enabled. Versions of sephone &lt; 3.7 did not support using multiple SIP transport simultaneously. This function helps application to migrate the configuration so that all transports are enabled. Existing proxy configuration are added a transport parameter so that they continue using the unique transport that was set previously. This function must be used just after creating the core, before any call to <ref refid="group__initializing_1gaa650e847d1583a8cfd8c7f9cacd25190" kindref="member">sephone_core_iterate()</ref> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephone core </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if migration was done, 0 if not done because unnecessary or already done, -1 in case of error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/misc.c" line="1713" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/misc.c" bodystart="1713" bodyend="1733"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaf6ea0ded4186e23f39d9a60c2a461cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+        <definition>SephoneCore* sephone_core_new</definition>
+        <argsstring>(const SephoneCoreVTable *vtable, const char *config_path, const char *factory_config_path, void *userdata)</argsstring>
+        <name>sephone_core_new</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>config_path</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>factory_config_path</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instanciates a SephoneCore object.</para><para>The SephoneCore object is the primary handle for doing all phone actions. It should be unique within your application. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a SephoneCoreVTable structure holding your application callbacks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a path to a config file. If it does not exists it will be created. The config file is used to store all settings, call logs, friends, proxies... so that all these settings become persistent over the life of the SephoneCore object. It is allowed to set a NULL config file. In that case SephoneCore will not store any settings. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory_config_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a path to a read-only config file that can be used to to store hard-coded preference such as proxy settings or internal preferences. The settings in this factory file always override the one in the normal config file. It is OPTIONAL, use NULL if unneeded. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque user pointer that can be retrieved at any time (for example in callbacks) using <ref refid="group__initializing_1ga85b93dd701e555a89d32284c23ddf257" kindref="member">sephone_core_get_user_data()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__initializing_1ga276ce2ed77634484c41790523190d69f" kindref="member">sephone_core_new_with_config</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="1748" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1748" bodyend="1756"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaa650e847d1583a8cfd8c7f9cacd25190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_iterate</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_iterate</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Main loop function. It is crucial that your application call it periodically.</para><para><ref refid="group__initializing_1gaa650e847d1583a8cfd8c7f9cacd25190" kindref="member">sephone_core_iterate()</ref> performs various backgrounds tasks:<itemizedlist>
+<listitem><para>receiving of SIP messages</para></listitem><listitem><para>handles timers and timeout</para></listitem><listitem><para>performs registration to proxies</para></listitem><listitem><para>authentication retries The application MUST call this function periodically, in its main loop. Be careful that this function must be called from the same thread as other libsephone methods. If it is not the case make sure all libsephone calls are serialized with a mutex. </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="2585" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="2585" bodyend="2740"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga2f47f729df5bc41e73d2929fb50dae7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_root_ca</definition>
+        <argsstring>(SephoneCore *lc, const char *path)</argsstring>
+        <name>sephone_core_set_root_ca</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the path to a file or folder containing trusted root CAs (PEM format)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="4822" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4822" bodyend="4828"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga648b387d19da414e2f6334f8c6a60c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_root_ca</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_root_ca</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the path to a file or folder containing the trusted root CAs (PEM format)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The SephoneCore object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="4837" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4837" bodyend="4839"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaecda2859a6a36c019fa39ddf121ab94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_verify_server_certificates</definition>
+        <argsstring>(SephoneCore *lc, bool_t yesno)</argsstring>
+        <name>sephone_core_verify_server_certificates</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>yesno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify whether the tls server certificate must be verified when connecting to a SIP/TLS server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="4846" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4846" bodyend="4852"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gae50f53b2b18ad596b01a9e867d82229f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_verify_server_cn</definition>
+        <argsstring>(SephoneCore *lc, bool_t yesno)</argsstring>
+        <name>sephone_core_verify_server_cn</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>bool_t</type>
+          <declname>yesno</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Specify whether the tls server certificate common name must be verified when connecting to a SIP/TLS server. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="4858" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="4858" bodyend="4864"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga85b93dd701e555a89d32284c23ddf257" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sephone_core_get_user_data</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_user_data</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the user pointer that was given to <ref refid="group__initializing_1gaf6ea0ded4186e23f39d9a60c2a461cf4" kindref="member">sephone_core_new()</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="6161" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6161" bodyend="6163"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaf47f48a005db4f0d8c5caf6e84b44146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_user_data</definition>
+        <argsstring>(SephoneCore *lc, void *userdata)</argsstring>
+        <name>sephone_core_set_user_data</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Associate a user pointer to the sephone core. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="6171" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6171" bodyend="6173"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga9076d3c2d3fb89f009c4249b8a0a66a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_destroy</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_destroy</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroys a SephoneCore </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="6636" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6636" bodyend="6639"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga87d11a31ac351868a430ad88cf018fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_chat_database_path</definition>
+        <argsstring>(SephoneCore *lc, const char *path)</argsstring>
+        <name>sephone_core_set_chat_database_path</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the database filename where chat messages will be stored. If the file does not exist, it will be created.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephone core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>filesystem path </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="7216" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="7216" bodyend="7225"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gab6f066b5cee38142592e53991ae26384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_add_supported_tag</definition>
+        <argsstring>(SephoneCore *lc, const char *tag)</argsstring>
+        <name>sephone_core_add_supported_tag</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function controls signaling features supported by the core. They are typically included in a SIP Supported header. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the feature tag name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="7248" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="7248" bodyend="7251"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga01d60bfa81f3b9a82e53f75e309a79d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_remove_supported_tag</definition>
+        <argsstring>(SephoneCore *lc, const char *tag)</argsstring>
+        <name>sephone_core_remove_supported_tag</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a supported tag. <simplesect kind="see"><para><ref refid="group__initializing_1gab6f066b5cee38142592e53991ae26384" kindref="member">sephone_core_add_supported_tag()</ref> </para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the SephoneCore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the tag to remove </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" line="7259" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="7259" bodyend="7262"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga59abfad8e6a1231b529d744b08be02a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_global_state_to_string</definition>
+        <argsstring>(SephoneGlobalState gs)</argsstring>
+        <name>sephone_global_state_to_string</name>
+        <param>
+          <type><ref refid="group__initializing_1ga84c56b7be40cdb5c19f8fdaa6bbf10d9" kindref="member">SephoneGlobalState</ref></type>
+          <declname>gs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1632" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6756" bodyend="6774"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaa412d63bfa76a31df3536e01eefc1bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+        <definition>SephoneCoreVTable* sephone_core_v_table_new</definition>
+        <argsstring>()</argsstring>
+        <name>sephone_core_v_table_new</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiate a vtable with all arguments set to NULL <simplesect kind="return"><para>newly allocated vtable </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1910" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="24" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga8f9e50636649dcd4892bb76087ff49ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_v_table_set_user_data</definition>
+        <argsstring>(SephoneCoreVTable *table, void *data)</argsstring>
+        <name>sephone_core_v_table_set_user_data</name>
+        <param>
+          <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets a user data pointer in the vtable. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vtable </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the user data to attach </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1917" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga5c18bb24284c880a6c5dad8aa7251776" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sephone_core_v_table_get_user_data</definition>
+        <argsstring>(SephoneCoreVTable *table)</argsstring>
+        <name>sephone_core_v_table_get_user_data</name>
+        <param>
+          <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets a user data pointer in the vtable. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>table</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the vtable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the data attached to the vtable </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1924" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga348b810e62690e5ebd94a8380cad51df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+        <definition>SephoneCoreVTable* sephone_core_get_current_vtable</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_current_vtable</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Gets the current VTable. This is meant only to be called from a callback to be able to get the user_data associated with the vtable that called the callback. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephonecore </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the vtable that called the last callback </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1932" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga0d6601c9712d764cf21756753ded1459" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_v_table_destroy</definition>
+        <argsstring>(SephoneCoreVTable *table)</argsstring>
+        <name>sephone_core_v_table_destroy</name>
+        <param>
+          <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Destroy a vtable. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>to be destroyed </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="1938" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="36" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga276ce2ed77634484c41790523190d69f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+        <definition>SephoneCore* sephone_core_new_with_config</definition>
+        <argsstring>(const SephoneCoreVTable *vtable, SpConfig *config, void *userdata)</argsstring>
+        <name>sephone_core_new_with_config</name>
+        <param>
+          <type>const <ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <param>
+          <type><ref refid="group__misc_1ga224933b87fd3d0bbcb9b61850ddfa3fb" kindref="member">SpConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>userdata</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instantiates a SephoneCore object with a given SpConfig.</para><para>The SephoneCore object is the primary handle for doing all phone actions. It should be unique within your application. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a SephoneCoreVTable structure holding your application callbacks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a pointer to an SpConfig object holding the configuration of the SephoneCore to be instantiated. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>userdata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>an opaque user pointer that can be retrieved at any time (for example in callbacks) using <ref refid="group__initializing_1ga85b93dd701e555a89d32284c23ddf257" kindref="member">sephone_core_get_user_data()</ref>. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="group__initializing_1gaf6ea0ded4186e23f39d9a60c2a461cf4" kindref="member">sephone_core_new</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2141" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="1758" bodyend="1763"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaaaec5234ba833b572e5dcf3fee6884a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_add_listener</definition>
+        <argsstring>(SephoneCore *lc, SephoneCoreVTable *vtable)</argsstring>
+        <name>sephone_core_add_listener</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add a listener to be notified of sephone core events. Once events are received, registered vtable are invoked in order. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a SephoneCoreVTable structure holding your application callbacks. Object is owned by sephone core until sephone_core_remove_listener. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifying the device, can be EMEI or UDID </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2155" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="267" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gad99bf493e26d807e740e8fdfc266e214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_remove_listener</definition>
+        <argsstring>(SephoneCore *lc, const SephoneCoreVTable *vtable)</argsstring>
+        <name>sephone_core_remove_listener</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__initializing_1gaab8bfc64f0a23ff5cc72d623873d732a" kindref="member">SephoneCoreVTable</ref> *</type>
+          <declname>vtable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>remove a listener registred by sephone_core_add_listener. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vtable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a SephoneCoreVTable structure holding your application callbacks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>identifying the device, can be EMEI or UDID </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="2164" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/vtables.c" bodystart="271" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga88de45e8cd2ae2060c679e9d1cc997da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_zrtp_secrets_file</definition>
+        <argsstring>(SephoneCore *lc, const char *file)</argsstring>
+        <name>sephone_core_set_zrtp_secrets_file</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the path to the file storing the zrtp secrets cache. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the file to use to store the zrtp secrets cache. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3161" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6957" bodyend="6962"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga24a5c970a6517a2c8f217b31d342ba87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_zrtp_secrets_file</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_zrtp_secrets_file</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the path to the file storing the zrtp secrets cache. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path to the file storing the zrtp secrets cache. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3169" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6964" bodyend="6966"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga864850d1ec182a7f51b732acd50aaa84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_user_certificates_path</definition>
+        <argsstring>(SephoneCore *lc, const char *path)</argsstring>
+        <name>sephone_core_set_user_certificates_path</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the path to the directory storing the user&apos;s x509 certificates (used by dtls) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to the directory to use to store the user&apos;s certificates. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3177" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6968" bodyend="6974"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga9ac2cc68b91d5d0d1e1c5f1dcef5e250" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_user_certificates_path</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_user_certificates_path</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the path to the directory storing the user&apos;s certificates. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The path to the directory storing the user&apos;s certificates. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3185" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6976" bodyend="6978"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga5bd37000f2a552167c5449e5eb45b2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int sephone_core_get_max_calls</definition>
+        <argsstring>(SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_max_calls</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the maximum number of simultaneous calls Sephone core can manage at a time. All new call above this limit are declined with a busy answer</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>core </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>max number of simultaneous calls </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3214" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6907" bodyend="6909"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gaa6c9de2743b6b4b0618a683913f6554f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_max_calls</definition>
+        <argsstring>(SephoneCore *lc, int max)</argsstring>
+        <name>sephone_core_set_max_calls</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the maximum number of simultaneous calls Sephone core can manage at a time. All new call above this limit are declined with a busy answer</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of simultaneous calls </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3221" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="6910" bodyend="6912"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gabd9b4ba37d4ca18ad52ab3f9b3ef0d67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t sephone_core_media_encryption_supported</definition>
+        <argsstring>(const SephoneCore *lc, SephoneMediaEncryption menc)</argsstring>
+        <name>sephone_core_media_encryption_supported</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type><ref refid="group__media__parameters_1ga29e11c9d4075ab45652dab98237485d7" kindref="member">SephoneMediaEncryption</ref></type>
+          <declname>menc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a media encryption type is supported <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>menc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>SephoneMediaEncryption </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>whether a media encryption scheme is supported by the SephoneCore engine </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3232" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.c" bodystart="7052" bodyend="7064"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1ga35fc862a930fe5214955ad950efb49e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sephone_core_set_provisioning_uri</definition>
+        <argsstring>(SephoneCore *lc, const char *uri)</argsstring>
+        <name>sephone_core_set_provisioning_uri</name>
+        <param>
+          <type><ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set URI where to download xml configuration file at startup. This can also be set from configuration file or factory config file, from [misc] section, item &quot;config-uri&quot;. Calling this function does not load the configuration. It will write the value into configuration so that configuration from remote URI will take place at next SephoneCore start. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephone core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the http or https uri to use in order to download the configuration. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3327" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/remote_provisioning.c" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="group__initializing_1gada999f74ae33a46ce7fd197e6d6eb281" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* sephone_core_get_provisioning_uri</definition>
+        <argsstring>(const SephoneCore *lc)</argsstring>
+        <name>sephone_core_get_provisioning_uri</name>
+        <param>
+          <type>const <ref refid="group__initializing_1ga1c39f5ce369d188892c11e63b93d66ca" kindref="member">SephoneCore</ref> *</type>
+          <declname>lc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get provisioning URI. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the sephone core </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the provisioning URI. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="3335" column="1" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/remote_provisioning.c" bodystart="136" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__initializing_1ga735b4f08acd416c740f7ddd6a9791358" prot="public" static="no">
+        <name>LC_SIP_TRANSPORT_DISABLED</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable a sip transport Use with <ref refid="group__initializing_1ga6e888501e2e641439198d8331c85bdd0" kindref="member">SCSipTransports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="61" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__initializing_1gadc507b9a498d5ce572fd219e385ad1f4" prot="public" static="no">
+        <name>LC_SIP_TRANSPORT_RANDOM</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Randomly chose a sip port for this transport Use with <ref refid="group__initializing_1ga6e888501e2e641439198d8331c85bdd0" kindref="member">SCSipTransports</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" line="67" column="9" bodyfile="/users/andrew/workspaces/linphone/submodules/sephone/coreapi/sephonecore.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>
