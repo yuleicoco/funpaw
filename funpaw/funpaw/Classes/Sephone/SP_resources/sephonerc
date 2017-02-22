@@ -42,7 +42,7 @@ automatically_accept=1
 
 [net]
 firewall_policy=0
-download_bw=250
+download_bw=380
 upload_bw=250
 
 [sound]

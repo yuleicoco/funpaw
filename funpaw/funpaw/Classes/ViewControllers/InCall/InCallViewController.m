@@ -516,7 +516,7 @@
     [btnList mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(FiveView.mas_left).offset(28);
         make.right.equalTo(self.view.mas_right).offset(-13);
-        make.height.equalTo(@50);
+        make.height.mas_equalTo(50);
         
         
         
@@ -532,8 +532,10 @@
      *
      */
     
+    // 50 22 22
+    
     [btnList mas_distributeViewsAlongAxis:MASAxisTypeVertical
-                      withFixedItemLength:50 leadSpacing:22 tailSpacing:22];
+                      withFixedItemLength:50 leadSpacing:15 tailSpacing:15];
     
     
     
@@ -880,7 +882,7 @@
 }
 
 
-
+//4上 3下 2左 1右
 
 
 // 上
@@ -948,24 +950,22 @@
 
 - (void)moveRobot:(NSString *)str
 {
-
-    
-    
+    //4上 3下 2左 1右
     NSInteger i = [str integerValue];
     switch (i) {
         case 1:
-            topBtn.userInteractionEnabled = YES;
+            topBtn.userInteractionEnabled = NO;
             downBtn.userInteractionEnabled =NO;
             leftBtn.userInteractionEnabled =NO;
-            rightBtn.userInteractionEnabled =NO;
+            rightBtn.userInteractionEnabled =YES;
 
             break;
             
         case 2:
            
             topBtn.userInteractionEnabled = NO;
-            downBtn.userInteractionEnabled =YES;
-            leftBtn.userInteractionEnabled =NO;
+            downBtn.userInteractionEnabled =NO;
+            leftBtn.userInteractionEnabled =YES;
             rightBtn.userInteractionEnabled =NO;
 
             
@@ -974,24 +974,30 @@
         case 3:
            
             topBtn.userInteractionEnabled = NO;
-            downBtn.userInteractionEnabled =NO;
-            leftBtn.userInteractionEnabled =YES;
+            downBtn.userInteractionEnabled =YES;
+            leftBtn.userInteractionEnabled =NO;
             rightBtn.userInteractionEnabled =NO;
             
             
             break;
         case 4:
             
-            topBtn.userInteractionEnabled = NO;
+            topBtn.userInteractionEnabled = YES;
             downBtn.userInteractionEnabled =NO;
             leftBtn.userInteractionEnabled =NO;
-            rightBtn.userInteractionEnabled =YES;
+            rightBtn.userInteractionEnabled =NO;
             
            
             break;
             
         default:
             break;
+    }
+    
+    if ((topBtn.userInteractionEnabled || downBtn.userInteractionEnabled)
+        && (topBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled)  && (topBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) && (downBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled)&& (downBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled) && (rightBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) ) {
+        
+        return;
     }
     
     
