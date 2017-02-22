@@ -9,6 +9,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 
 //蓝色
 #define GREEN_COLOR RGB(73, 195, 241)
