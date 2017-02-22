@@ -3049,7 +3049,7 @@
 				TargetAttributes = {
 					3496F9BF1E04DF8E00744A1E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ZMFX8728A9;
+						DevelopmentTeam = HPKQAF34Z3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3601,7 +3601,7 @@
 			baseConfigurationReference = D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZMFX8728A9;
+				DEVELOPMENT_TEAM = HPKQAF34Z3;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3636,7 +3636,7 @@
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib",
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -3646,7 +3646,7 @@
 			baseConfigurationReference = 3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZMFX8728A9;
+				DEVELOPMENT_TEAM = HPKQAF34Z3;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3681,7 +3681,7 @@
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib",
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
