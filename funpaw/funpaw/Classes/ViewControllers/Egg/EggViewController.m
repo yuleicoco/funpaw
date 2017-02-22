@@ -52,7 +52,7 @@
     [self setNavTitle:NSLocalizedString(@"tabEgg_title",nil)];
     
     // sephone
-    [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"www.segosip001.cn"];
+    [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"sip.smartsuoo.com:6060"];
     
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (status) {
@@ -151,7 +151,7 @@
 - (void)callUpdate:(NSNotification *)notif {
     SephoneCall *call = [[notif.userInfo objectForKey:@"call"] pointerValue];
     SephoneCallState state = [[notif.userInfo objectForKey:@"state"] intValue];
-    
+
     switch (state) {
         case SephoneCallOutgoingInit:{
             // 成功
@@ -653,6 +653,7 @@
     
      if ([strState isEqualToString:@"ds001"]) {
      [[ShareWork sharedManager]DeviceUseMember:Mid_S object:@"self" deviceno:Mid_D belong:Mid_S starttime:locationString complete:^(BaseModel * model) {
+         
         [Defaluts setObject:model.content forKey:@"selfID"];
         [Defaluts synchronize];
 
