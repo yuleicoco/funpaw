@@ -49,6 +49,7 @@
 }
 
 -(void)chectUpload{
+    //查询是否还在上传的东西
     NSUserDefaults *standDefus = [NSUserDefaults standardUserDefaults];
     NSString * endtime = [standDefus objectForKey:@"dateTimeee"];
     if ([AppUtil isBlankString:endtime]) {
@@ -124,14 +125,7 @@
            
         
         }
-        
 
-        
-        
-        
-        
-        
-        
     }];
 
 
