@@ -536,7 +536,7 @@
     // 50 22 22
     
     [btnList mas_distributeViewsAlongAxis:MASAxisTypeVertical
-                      withFixedItemLength:50 leadSpacing:15 tailSpacing:15];
+                      withFixedItemLength:50 leadSpacing:20 tailSpacing:20];
     
     
     
