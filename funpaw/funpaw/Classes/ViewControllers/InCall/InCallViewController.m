@@ -953,46 +953,50 @@
     
     NSInteger i = [str integerValue];
     switch (i) {
+            
         case 1:
-            topBtn.userInteractionEnabled = YES;
+            topBtn.userInteractionEnabled = NO;
             downBtn.userInteractionEnabled =NO;
             leftBtn.userInteractionEnabled =NO;
-            rightBtn.userInteractionEnabled =NO;
-
+            rightBtn.userInteractionEnabled =YES;
+            
             break;
             
         case 2:
-           
-            topBtn.userInteractionEnabled = NO;
-            downBtn.userInteractionEnabled =YES;
-            leftBtn.userInteractionEnabled =NO;
-            rightBtn.userInteractionEnabled =NO;
-
             
-            
-            break;
-        case 3:
-           
             topBtn.userInteractionEnabled = NO;
             downBtn.userInteractionEnabled =NO;
             leftBtn.userInteractionEnabled =YES;
             rightBtn.userInteractionEnabled =NO;
             
             
+            
+            break;
+        case 3:
+            
+            topBtn.userInteractionEnabled = NO;
+            downBtn.userInteractionEnabled =YES;
+            leftBtn.userInteractionEnabled =NO;
+            rightBtn.userInteractionEnabled =NO;
+            
+            
             break;
         case 4:
             
-            topBtn.userInteractionEnabled = NO;
+            topBtn.userInteractionEnabled = YES;
             downBtn.userInteractionEnabled =NO;
             leftBtn.userInteractionEnabled =NO;
-            rightBtn.userInteractionEnabled =YES;
-            
-           
-            break;
-            
+            rightBtn.userInteractionEnabled =NO;
         default:
             break;
     }
+    
+    if ((topBtn.userInteractionEnabled || downBtn.userInteractionEnabled)
+        && (topBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled)  && (topBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) && (downBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled)&& (downBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled) && (rightBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled) ) {
+        
+        return;
+    }
+    
     
     
     moveTimer = [HWWeakTimer scheduledTimerWithTimeInterval:1.0*0.2 block:^(id userInfo) {
