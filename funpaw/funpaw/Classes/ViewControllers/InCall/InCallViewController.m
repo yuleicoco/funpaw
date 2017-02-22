@@ -169,10 +169,11 @@
     [videoView addSubview:flowUI];
     
     [flowUI mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(45, 45));
+       // make.size.mas_equalTo(CGSizeMake(45, 45));
         make.center.mas_equalTo(videoView.center);
         
     }];
+    
     
     // 点
     pointTouch =[UIImageView new];
@@ -995,7 +996,7 @@
     }
     
     if ((topBtn.userInteractionEnabled || downBtn.userInteractionEnabled)
-        && (topBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled)  && (topBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) && (downBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled)&& (downBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled) && (rightBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) ) {
+        && (topBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled)  && (topBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) && (downBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled)&& (downBtn.userInteractionEnabled ||leftBtn.userInteractionEnabled) && (leftBtn.userInteractionEnabled ||rightBtn.userInteractionEnabled) ) {
         
         return;
     }

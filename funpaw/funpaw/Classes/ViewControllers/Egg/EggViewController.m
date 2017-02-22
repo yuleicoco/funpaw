@@ -580,10 +580,13 @@
 -(void)btn_add:(UIButton *)sender
 {
     
-    BindingViewController * bindVC =[[BindingViewController alloc]init];
-    [self.navigationController pushViewController:bindVC animated:NO];
+  //  BindingViewController * bindVC =[[BindingViewController alloc]init];
+  //  [self.navigationController pushViewController:bindVC animated:NO];
    
 
+    FeedViewController * view =[[FeedViewController alloc]init];
+    
+    [self.navigationController pushViewController:view animated:YES];
     
     
     

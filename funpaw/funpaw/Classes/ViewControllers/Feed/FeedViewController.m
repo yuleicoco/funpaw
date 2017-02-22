@@ -84,7 +84,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self.view addSubview:RbgImage];
     
     [RbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(375, 350));
+        make.height.mas_equalTo(350);
+        make.width.equalTo(self.view.mas_width);
         
         
     }];
@@ -272,7 +273,10 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [bgViewTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(self.view.mas_top).offset(350);
-        make.size.mas_equalTo(CGSizeMake(375, 120));
+        make.width.equalTo(self.view.mas_width);
+        make.height.mas_equalTo(120);
+        
+        
         
                           
     }];
@@ -324,7 +328,9 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     [bgViewOne mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(350);
-        make.size.mas_equalTo(CGSizeMake(375, 240));
+       
+        make.width.equalTo(self.view.mas_width);
+        make.height.mas_equalTo(240);
         
     }];
     for ( int i = 0; i<4; i++) {
