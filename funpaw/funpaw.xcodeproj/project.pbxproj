@@ -194,7 +194,6 @@
 		34E1653E1E050B19004A65AB /* egg_calling.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637A1E050B17004A65AB /* egg_calling.png */; };
 		34E1653F1E050B19004A65AB /* egg_login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637B1E050B17004A65AB /* egg_login.jpg */; };
 		34E165401E050B19004A65AB /* egg_offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637C1E050B17004A65AB /* egg_offline.png */; };
-		34E165411E050B19004A65AB /* egg_online.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637D1E050B17004A65AB /* egg_online.png */; };
 		34E165421E050B19004A65AB /* egg_upload.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637E1E050B17004A65AB /* egg_upload.png */; };
 		34E165431E050B19004A65AB /* noDevice.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E1637F1E050B17004A65AB /* noDevice.png */; };
 		34E165471E050B19004A65AB /* add_guize.png in Resources */ = {isa = PBXBuildFile; fileRef = 34E163841E050B17004A65AB /* add_guize.png */; };
@@ -3049,7 +3048,7 @@
 				TargetAttributes = {
 					3496F9BF1E04DF8E00744A1E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ZMFX8728A9;
+						DevelopmentTeam = HPKQAF34Z3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -3283,7 +3282,6 @@
 				34E166691E0520F1004A65AB /* rool_off.png in Resources */,
 				34E1657A1E050B19004A65AB /* person_balance.png.png in Resources */,
 				34E1658B1E050B19004A65AB /* snap_on.png in Resources */,
-				34E165411E050B19004A65AB /* egg_online.png in Resources */,
 				34E165661E050B19004A65AB /* launcher_icon@2x.png in Resources */,
 				348A2D981E52B24700B85D7B /* v_left@2x.png in Resources */,
 				34E1657F1E050B19004A65AB /* person_pw.png in Resources */,
@@ -3601,7 +3599,7 @@
 			baseConfigurationReference = D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZMFX8728A9;
+				DEVELOPMENT_TEAM = HPKQAF34Z3;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3636,8 +3634,9 @@
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib",
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -3646,7 +3645,7 @@
 			baseConfigurationReference = 3AC2930639E43591051DDADA /* Pods-funpaw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = ZMFX8728A9;
+				DEVELOPMENT_TEAM = HPKQAF34Z3;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/funpaw/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -3681,8 +3680,9 @@
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib",
 					"$(PROJECT_DIR)/funpaw/Classes/Sephone/SP_sdk/libsephone-sdk/apple-darwin/lib/mediastreamer/plugins",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sego.funpaw;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sg.funpaw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

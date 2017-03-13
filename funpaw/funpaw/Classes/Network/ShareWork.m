@@ -86,9 +86,11 @@
             break;
         }
         case POST:{
+     
+            //http://app.smartsuoo.com:15102/ web服务器域名和端口
+            // app=sip sip服务器的地址
             
-//            params[@"classes"] = @"appinterface";
-//            params[@"method"] = @"json";
+            
             
             path =[NSString  stringWithFormat:@"http://app.smartsuoo.com:15102/clientAction.do?method=json&classes=appinterface&%@",path];
         
