@@ -2322,6 +2322,8 @@ static void audioRouteChangeListenerCallback (
         sephone_proxy_config_set_server_addr(proxyCfg, [domain UTF8String]);
     }
     
+    
+    
     // tcp
      sephone_address_set_transport(address, SephoneTransportTcp);
     // 设置在使用的STUN服务器地址 去掉后面的端口号
@@ -2335,6 +2337,10 @@ static void audioRouteChangeListenerCallback (
         NSLog(@"hh");
         
     }
+    
+    
+    
+    
     identity = sephone_address_as_string_uri_only(address);
     sephone_proxy_config_set_identity(proxyCfg, identity);
 

@@ -51,61 +51,48 @@
     [super viewDidLoad];
     [self setNavTitle:NSLocalizedString(@"tabEgg_title",nil)];
     
-    // sephone
-    [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"sip.smartsuoo.com:6060"];
-        
-    
-    
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (status) {
         case AVAuthorizationStatusNotDetermined:{
             // 许可对话没有出现，发起授权许可
-            
             [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-                
                 if (granted) {
                     //第一次用户接受
                 }else{
                     //用户拒绝
                     return ;
-                    
                 }
             }];
             break;
         }
         case AVAuthorizationStatusAuthorized:{
             // 已经开启授权，可继续
-            
             break;
         }
         case AVAuthorizationStatusDenied:
         case AVAuthorizationStatusRestricted:
             // 用户明确地拒绝授权，或者相机设备无法访问
-            
             break;
         default:
             break;
     }
-    
-    
-    
     //麦克风
-    
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
-        
         if (granted) {
-            
             // 用户同意获取麦克风
             NSLog(@"用户同意获取麦克风");
-            
         } else {
-            
             // 用户不同意获取麦克风
             NSLog(@"用户不同意");
-            
         }
         
     }];
+
+    
+    // sephone
+    [SephoneManager addProxyConfig:[AccountManager sharedAccountManager].loginModel.sipno password:[AccountManager sharedAccountManager].loginModel.sippw domain:@"sip.smartsuoo.com:6060"];
+    
+    
 
     
 }
@@ -122,11 +109,8 @@
      CGRect rectTab2  = self.navigationController.navigationBar.frame;//44
      CGRect  rectTab3 = [[UIApplication sharedApplication] statusBarFrame];//20
    */
-    
-    
-    
-    
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callUpdate:) name:kSephoneCallUpdate object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registrationUpdate:) name:kSephoneRegistrationUpdate object:nil];
    
     
     
@@ -160,7 +144,6 @@
             [self presentViewController:_incallVC animated:YES completion:nil];
             break;
         }
-            
         case SephoneCallStreamsRunning: {
             break;
         }
