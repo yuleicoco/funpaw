@@ -371,6 +371,8 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
             if (model) {
                 //[self initRefreshView];
                 _isSelect = NO;
+                [self showBarButton:NAV_RIGHT title:@"select" fontColor:[UIColor whiteColor] hide:NO];
+                _deleteBtn.hidden = YES;
                 // [self loadDataSourceWithPage:0];
                 [self initRefreshView];
                 
