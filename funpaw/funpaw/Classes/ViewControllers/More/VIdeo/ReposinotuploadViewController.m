@@ -388,7 +388,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
     
     NSString * devinoce = [Defaluts objectForKey:@"deviceNumber"];
     if ([AppUtil isBlankString:devinoce]&&[AppUtil isBlankString:Mid_D]) {
-        [[AppUtil appTopViewController]showHint:@"You have not bound a FunPaw Q"];
+        [[AppUtil appTopViewController]showHint:@"You have not bound a Playbot Q"];
         return;
     }
     
