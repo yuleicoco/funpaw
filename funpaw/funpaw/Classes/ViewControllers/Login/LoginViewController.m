@@ -29,6 +29,8 @@
 -(void)dowewerwfwafa{
 
     [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@YES];
+    
+    //dadada
 
 }
 
