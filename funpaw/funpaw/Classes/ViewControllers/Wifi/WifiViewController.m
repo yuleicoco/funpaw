@@ -28,6 +28,9 @@
     BOOL isAccecptOk;        // 是否接收结果成功
     NSTimer * timer;
     NSInteger  timeEnd;
+    NSString * Ps_wifi;
+    UILabel * wifips;
+    
     
     
     
@@ -147,7 +150,7 @@
     
     UILabel * deveLB= [UILabel new];
     UILabel * wifiLB =[UILabel new];
-    UILabel * wifips =[UILabel new];
+    wifips =[UILabel new];
     
     deveLB.text =NSLocalizedString(@"deviceNum", nil);
     deveLB.textColor =YELLOW_COLOR;
@@ -204,7 +207,7 @@
     wifiPsTF.delegate = self;
     
     deviceTF.enabled = NO;
-    incodeTF.enabled = NO;
+    incodeTF.enabled = YES;
     wifips.userInteractionEnabled = YES;
     deviceTF.borderStyle = UITextBorderStyleNone;
     incodeTF.borderStyle =UITextBorderStyleNone;
@@ -686,15 +689,25 @@
     // 更新选择按钮的文本。
     // OPEN
     if (indexPath.row == 0) {
-        [btn setTitle:@"Public" forState:UIControlStateNormal];
+        [btn setTitle:@"      Public" forState:UIControlStateNormal];
+        wifiPsTF.enabled = NO;
+        wifips.textColor =GRAY_COLOR;
+        Ps_wifi = wifiPsTF.text;
+        wifiPsTF.text =@"";
     }
     // WPA/WPA2
     else if (indexPath.row == 1) {
         [btn setTitle:@"WPA/WAP2" forState:UIControlStateNormal];
+        wifiPsTF.enabled = YES;
+        wifiPsTF.text = Ps_wifi;
+        wifips.textColor =YELLOW_COLOR;
     }
     // WEP
     else if (indexPath.row == 2) {
-        [btn setTitle:@"WEP" forState:UIControlStateNormal];
+        [btn setTitle:@"      WEP" forState:UIControlStateNormal];
+        wifiPsTF.enabled = YES;
+        wifips.textColor =YELLOW_COLOR;
+        wifiPsTF.text = Ps_wifi;
     }
     
     // 隐藏加密方式列表。

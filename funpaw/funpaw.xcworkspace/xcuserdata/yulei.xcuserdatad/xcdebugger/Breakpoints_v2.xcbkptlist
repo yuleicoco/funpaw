@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "funpaw/Classes/Sephone/SP_resources/SephoneManager.m"
-            timestampString = "511423607.426266"
+            timestampString = "513855968.381312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2459"
-            endingLineNumber = "2459">
+            startingLineNumber = "2457"
+            endingLineNumber = "2457">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

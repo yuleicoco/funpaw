@@ -6,6 +6,7 @@ edge_bw=10
 
 [sip]
 contact="Sephone iPhone" <sip:sephone.iphone@unknown-host>
+tcp_tls_keepalive=1
 keepalive_period=30000
 default_proxy=0
 sip_port=-1

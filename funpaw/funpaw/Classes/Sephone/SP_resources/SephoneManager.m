@@ -2313,22 +2313,20 @@ static void audioRouteChangeListenerCallback (
 
     SephoneAddress *address = sephone_address_new(identity);
     sephone_address_set_username(address, normalizedUserName);
-
-  
-    const char * server ="sip.smartsuoo.com";
+    
     
     if (domain && [domain length] != 0) {
-        sephone_address_set_domain(address, server);
-        sephone_proxy_config_set_server_addr(proxyCfg, [domain UTF8String]);
+        sephone_address_set_domain(address, [domain UTF8String]);
+        sephone_address_set_transport(address, SephoneTransportTcp);
+        sephone_address_set_port(address, 6060);
+        char *tmp_addr = sephone_address_as_string(address);
+        sephone_proxy_config_set_server_addr(proxyCfg, tmp_addr);
+        ms_free(tmp_addr);
     }
     
-    
-    
-    // tcp
-     sephone_address_set_transport(address, SephoneTransportTcp);
+
     // 设置在使用的STUN服务器地址 去掉后面的端口号
-    
-     sephone_core_set_stun_server(lc, server);
+     sephone_core_set_stun_server(lc, [domain UTF8String]);
     // 启用ice
     sephone_core_set_firewall_policy(lc, SephonePolicyUseIce);
     // _SephoneFirewallPolicy 用于获取_SephoneFirewallPolicy里的枚举

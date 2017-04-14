@@ -49,10 +49,10 @@
     centerView.alpha = 0.8;
     [self.view addSubview:centerView];
     [centerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(centerView.superview).offset(200);
-        make.left.equalTo(centerView.superview).offset(20);
-        make.right.equalTo(centerView.superview).offset(-20);
-        make.bottom.equalTo(centerView.superview).offset(-200);
+        make.left.equalTo(self.view).offset(20);
+        make.right.equalTo(self.view).offset(-20);
+        make.centerY.equalTo(self.view);
+        make.height.mas_equalTo(260);
         
         
     }];
