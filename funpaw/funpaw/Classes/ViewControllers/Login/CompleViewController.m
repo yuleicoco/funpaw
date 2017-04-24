@@ -195,7 +195,7 @@
 
 -(void)provied{
     [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"modifypassword" complete:^(BaseModel *model) {
-        
+
         if ([model.retCode isEqualToString:@"0000"]) {
             _achieveString = model.totalrecords;
             _codeNumber = model.content;
