@@ -49,15 +49,12 @@
     centerView.alpha = 0.8;
     [self.view addSubview:centerView];
     [centerView mas_makeConstraints:^(MASConstraintMaker *make) {
-       // make.top.equalTo(self.view).offset(200);
         make.left.equalTo(self.view).offset(20);
         make.right.equalTo(self.view).offset(-20);
         make.centerY.equalTo(self.view);
         make.height.mas_equalTo(260);
         
-       // make.bottom.equalTo(self.view).offset(-200);
-       // make.height.mas_equalTo(100)
-        ;
+        
     }];
     
     UIView * topKuang = [[UIView alloc]init];
@@ -219,14 +216,24 @@
     
     
     
+    
+    
+    
+    
+    
+
+
 }
+
+
+
+
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
 
-    }
-
+}
 
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
