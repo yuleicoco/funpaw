@@ -401,7 +401,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
     _datePicker.alpha = 1;
     
     [[UIApplication sharedApplication].keyWindow addSubview:_datePicker];
-    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];//设置   为中文显示
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];//设置   为中文显示
     _datePicker.locale = locale;
     
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged ];

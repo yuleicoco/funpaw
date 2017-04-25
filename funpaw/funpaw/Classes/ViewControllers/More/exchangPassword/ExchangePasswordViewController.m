@@ -9,7 +9,7 @@
 #import "ExchangePasswordViewController.h"
 #import "ShareWork+Login.h"
 
-@interface ExchangePasswordViewController ()
+@interface ExchangePasswordViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)UITextField * codeTextfield;
 @property (nonatomic,strong)UITextField * passwordTextfield;
 @property (nonatomic,strong)UITextField * surePasswordfield;
@@ -104,6 +104,8 @@
     _surePasswordfield.placeholder = @"Re-enter password";
     [_surePasswordfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _surePasswordfield.keyboardType = UIKeyboardTypeAlphabet;
+    _surePasswordfield.returnKeyType = UIReturnKeyDone;
+    _surePasswordfield.delegate = self;
     [surepassView addSubview:_surePasswordfield];
     [_surePasswordfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_surePasswordfield.superview.mas_left).offset(10);
@@ -192,6 +194,13 @@
     
     
 
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"点击了搜索");
+    [self regiestButtonTouch313];
+    return YES;
 }
 
 
