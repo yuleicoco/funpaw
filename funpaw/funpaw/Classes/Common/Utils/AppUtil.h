@@ -78,4 +78,9 @@
 
 +(NSString *)getCurrentTime;
 
+/**
+ *  机型
+ */
++ (NSString *)iphoneType;
+
 @end

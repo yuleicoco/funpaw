@@ -7,6 +7,7 @@
 //
 
 #import "AppUtil.h"
+#import <sys/utsname.h>
 
 
 @implementation AppUtil
@@ -137,6 +138,60 @@ static NSString * getServerTest1 = @"http://192.168.1.103:8080/sego_v3/";
     date = [formatter stringFromDate:[NSDate date]];
     return date;
     
+    
+}
+
++ (NSString *)iphoneType {
+    
+    
+    struct utsname systemInfo;
+    
+    uname(&systemInfo);
+    
+    NSString *platform = [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
+    
+    if ([platform isEqualToString:@"iPhone1,1"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone1,2"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone2,1"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone3,1"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone3,2"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone3,3"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone4,1"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone5,1"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone5,2"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone5,3"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone5,4"]) return @"1";
+    
+    if ([platform isEqualToString:@"iPhone6,1"]) return @"iPhone 5s";
+    
+    if ([platform isEqualToString:@"iPhone6,2"]) return @"iPhone 5s";
+    
+    if ([platform isEqualToString:@"iPhone7,1"]) return @"iPhone 6 Plus";
+    
+    if ([platform isEqualToString:@"iPhone7,2"]) return @"iPhone 6";
+    
+    if ([platform isEqualToString:@"iPhone8,1"]) return @"2";
+    
+    if ([platform isEqualToString:@"iPhone8,2"]) return @"iPhone 6s Plus";
+    
+    if ([platform isEqualToString:@"iPhone8,4"]) return @"iPhone SE";
+    
+    if ([platform isEqualToString:@"iPhone9,1"]) return @"iPhone 7";
+    
+    if ([platform isEqualToString:@"iPhone9,2"]) return @"iPhone 7 Plus";
+    
+    
+    return platform;
     
 }
 
