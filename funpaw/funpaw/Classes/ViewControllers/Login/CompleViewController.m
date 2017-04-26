@@ -8,7 +8,7 @@
 
 #import "CompleViewController.h"
 #import "ShareWork+Login.h"
-@interface CompleViewController ()
+@interface CompleViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)UIButton * codeBtn;
 @property (nonatomic,strong)UITextField * emailTextfield;
 @property (nonatomic,strong)UITextField * codeTextfield;
@@ -156,6 +156,8 @@
     _surePasswordfield.placeholder = @"Re-enter password";
     [_surePasswordfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _surePasswordfield.keyboardType =UIKeyboardTypeAlphabet;
+    _surePasswordfield.returnKeyType = UIReturnKeyDone;
+    _surePasswordfield.delegate = self;
     [surepassView addSubview:_surePasswordfield];
     [_surePasswordfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_surePasswordfield.superview.mas_left).offset(10);
@@ -313,4 +315,13 @@
     
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"点击了搜索");
+    [self regiestButtonTouch];
+    return YES;
+}
+
+
 @end

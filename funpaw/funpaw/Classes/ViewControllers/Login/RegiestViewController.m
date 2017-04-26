@@ -10,7 +10,7 @@
 #import "ShareWork+Login.h"
 #import "RegiestxieyiViewController.h"
 
-@interface RegiestViewController ()
+@interface RegiestViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)UIButton * codeBtn;
 @property (nonatomic,strong)UITextField * emailTextfield;
 @property (nonatomic,strong)UITextField * codeTextfield;
@@ -129,6 +129,7 @@
     _passwordTextfield.placeholder = @"Enter password(at least 6 digits)";
     [_passwordTextfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _passwordTextfield.keyboardType = UIKeyboardTypeAlphabet;
+   
     [passView addSubview:_passwordTextfield];
     [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_passwordTextfield.superview.mas_left).offset(10);
@@ -159,6 +160,8 @@
     _surePasswordfield.placeholder = @"Re-enter password";
     [_surePasswordfield setValue:YELLOW_COLOR forKeyPath:@"_placeholderLabel.textColor"];
     _surePasswordfield.keyboardType = UIKeyboardTypeAlphabet;
+    _surePasswordfield.returnKeyType = UIReturnKeyDone;
+    _surePasswordfield.delegate = self;
     [surepassView addSubview:_surePasswordfield];
     [_surePasswordfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(_surePasswordfield.superview.mas_left).offset(10);
@@ -184,7 +187,7 @@
     UILabel * downLabel = [[UILabel alloc]init];
     downLabel.text =@"By signing up you are indicating that you have read";
     downLabel.textColor = UIColorFromHex(333333);
-    downLabel.font = [UIFont systemFontOfSize:14];
+    downLabel.font = [UIFont systemFontOfSize:14 * W_Wide_Zoom];
 //    downLabel.numberOfLines = 2;
     [self.view addSubview:downLabel];
     [downLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -198,7 +201,7 @@
     UILabel * downLabel2 = [[UILabel alloc]init];
     downLabel2.text= @"the and agree to the ";
     downLabel2.textColor =  UIColorFromHex(333333);
-    downLabel2.font = [UIFont systemFontOfSize:14];
+    downLabel2.font = [UIFont systemFontOfSize:14 * W_Wide_Zoom];
     [self.view addSubview:downLabel2];
     [downLabel2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(downLabel2.superview.mas_left).offset(50);
@@ -210,7 +213,7 @@
     UILabel * xieyiLabel = [[UILabel alloc]init];
     xieyiLabel.text = @"Terms of Use";
     xieyiLabel.textColor = [UIColor redColor];
-    xieyiLabel.font = [UIFont systemFontOfSize:14];
+    xieyiLabel.font = [UIFont systemFontOfSize:14 * W_Wide_Zoom];
     [self.view addSubview:xieyiLabel];
     [xieyiLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(downLabel2.mas_right);
@@ -381,6 +384,12 @@
 
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"点击了搜索");
+    [self regiestButtonTouch];
+    return YES;
+}
 
 
 

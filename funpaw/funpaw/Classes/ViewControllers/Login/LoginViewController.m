@@ -12,7 +12,7 @@
 #import "ShareWork+Login.h"
 #import "LoginModel.h"
 
-@interface LoginViewController ()
+@interface LoginViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong)UITextField * accountTextfield;
 @property (nonatomic,strong)UITextField * passwordTextfield;
 @end
@@ -107,6 +107,8 @@
     _passwordTextfield.placeholder = @"PASSWORD";
     _passwordTextfield.keyboardType = UIKeyboardTypeAlphabet;
     [_passwordTextfield setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
+    _passwordTextfield.returnKeyType = UIReturnKeyJoin;
+    _passwordTextfield.delegate = self;
     [self.view addSubview:_passwordTextfield];
     [_passwordTextfield mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(downKuang.mas_left).offset(15);
@@ -215,16 +217,14 @@
     
     
     
-    
-    
-    
-    
-    
-    
-
-
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSLog(@"点击了搜索");
+    [self loginButtonTouch];
+    return YES;
+}
 
 
 
