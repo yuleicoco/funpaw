@@ -53,8 +53,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     _dataArray = [[NSMutableArray alloc]init];
     self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     arrWord =@[@"A",@"B",@"C",@"D"];
-    [self onedayView];
     [self twoDayView];
+    [self onedayView];
     [self querWeishi];
 }
 
@@ -84,7 +84,15 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self.view addSubview:RbgImage];
     
     [RbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(350);
+        //换了
+        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
+            make.height.mas_equalTo(315);
+        }else
+        {
+            make.height.mas_equalTo(350);
+            
+        }
+        
         make.width.equalTo(self.view.mas_width);
         
         
@@ -117,7 +125,6 @@ static NSString * cellId = @"fedseting2321232322313323231";
     wenziLabel.font = [UIFont systemFontOfSize:20];
     [RbgImage addSubview:wenziLabel];
     [wenziLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        
         make.left.equalTo(self.view.mas_left).offset(12);
         make.size.mas_equalTo(CGSizeMake(100, 28));
         make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
@@ -141,7 +148,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
         
         make.left.equalTo(self.view.mas_centerX).offset(30);
         make.size.mas_equalTo(CGSizeMake(17, 17));
-        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
         
     }];
     
@@ -157,7 +164,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [wenzi1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(oneDayButton.mas_right).offset(5);
         make.size.mas_equalTo(CGSizeMake(50, 30));
-        make.top.equalTo(bigBtn.mas_bottom).offset(32);
+        make.bottom.equalTo(RbgImage.mas_bottom).offset(-5
+                                                        );
         
     }];
     
@@ -172,9 +180,20 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     [twoDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(wenzi1.mas_right).offset(16);
+        //这里也换了
+        
+        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
+            make.left.equalTo(self.view.mas_centerX).offset(95);
+            
+        }else
+        {
+            
+            make.left.equalTo(wenzi1.mas_right).offset(16);
+            
+        }
+       
         make.size.mas_equalTo(CGSizeMake(17, 17));
-        make.top.equalTo(bigBtn.mas_bottom).offset(37);
+        make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
         
     }];
     // 第二个文字
@@ -187,7 +206,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [wenzi2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(twoDayButton.mas_right).offset(5);
         make.size.mas_equalTo(CGSizeMake(50, 30));
-        make.top.equalTo(bigBtn.mas_bottom).offset(32);
+        make.bottom.equalTo(RbgImage.mas_bottom).offset(-5);
         
     }];
     _isOneOrTwo = YES;
@@ -272,9 +291,16 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self.view addSubview:bgViewTwo];
     [bgViewTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).offset(350);
+        //这里已经换了
+        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
+            make.top.equalTo(RbgImage.mas_bottom).offset(0);
+        }else
+        {
+            make.top.equalTo(self.view.mas_top).offset(350);
+            
+        }
         make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(120);
+        make.height.mas_equalTo(100);
         
         
         
@@ -327,10 +353,18 @@ static NSString * cellId = @"fedseting2321232322313323231";
      [self.view addSubview:bgViewOne];
     
     [bgViewOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(350);
-       
+        
+        make.top.equalTo(RbgImage.mas_bottom).offset(0);
         make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(240);
+        //换了
+        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
+           make.height.mas_equalTo(203);
+        }else
+        {
+             make.height.mas_equalTo(350);
+            
+        }
+        
         
     }];
     for ( int i = 0; i<4; i++) {
@@ -363,7 +397,16 @@ static NSString * cellId = @"fedseting2321232322313323231";
         
     
     }];
-    [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
+    
+    //换了
+    if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
+    [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:30 leadSpacing:18 tailSpacing:18];
+    }else
+    {
+          [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
+       
+        
+    }
 
 
 }

@@ -258,12 +258,6 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     
     
     
-    
-    
-    
-    
-    
-    
 }
 
 
@@ -760,6 +754,12 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self stopOverService];
+}
+
 /**
  *  停止蓝牙和时间服务
  */
@@ -769,6 +769,8 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     [timerCheck setFireDate:[NSDate distantFuture]];
     [peripheralManager stopAdvertising];
     [peripheralManager removeAllServices];
+    peripheralManager = nil;
+    
     
     
 }

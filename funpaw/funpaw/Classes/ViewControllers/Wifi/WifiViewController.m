@@ -260,7 +260,7 @@
     
     
     btn =[UIButton new];
-    [btn setTitle:@"WAP/WAP2" forState:UIControlStateNormal];
+    [btn setTitle:@"WPA/WPA2" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.titleLabel.font =[UIFont systemFontOfSize:15];
     [btn addTarget:self action:@selector(openOrclose:) forControlEvents:UIControlEventTouchUpInside];
@@ -697,7 +697,7 @@
     }
     // WPA/WPA2
     else if (indexPath.row == 1) {
-        [btn setTitle:@"WPA/WAP2" forState:UIControlStateNormal];
+        [btn setTitle:@"WPA/WPA2" forState:UIControlStateNormal];
         wifiPsTF.enabled = YES;
         wifiPsTF.text = Ps_wifi;
         wifips.textColor =YELLOW_COLOR;
@@ -737,8 +737,15 @@
     [timer setFireDate:[NSDate distantFuture]];
     [peripheralManager stopAdvertising];
     [peripheralManager removeAllServices];
+    peripheralManager = nil;
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
     
-    
+    [super viewWillDisappear:animated];
+    [self stopSever];
     
 }
 
