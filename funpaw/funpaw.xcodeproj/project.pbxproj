@@ -408,6 +408,10 @@
 		7D5807851E4DBD5800D79D7E /* MyVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807841E4DBD5800D79D7E /* MyVideoCollectionViewCell.m */; };
 		7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */; };
 		7D58078B1E4DC09900D79D7E /* PhotoGrapgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */; };
+		7D652EAC1EE6943D0030840E /* Voiceguan.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652EAA1EE6943D0030840E /* Voiceguan.png */; };
+		7D652EAD1EE6943D0030840E /* VoiceUn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652EAB1EE6943D0030840E /* VoiceUn.png */; };
+		7D652EB01EE699410030840E /* v_Voice.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652EAE1EE699410030840E /* v_Voice.png */; };
+		7D652EB11EE699410030840E /* v_Voiceguan.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D652EAF1EE699410030840E /* v_Voiceguan.png */; };
 		7D7FF09C1E7BB868007BC336 /* qidongyeyeye.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D7FF09B1E7BB868007BC336 /* qidongyeyeye.png */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
@@ -1303,6 +1307,10 @@
 		7D5807871E4DBDA100D79D7E /* ShareWork+Morephotovideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Morephotovideo.m"; sourceTree = "<group>"; };
 		7D5807891E4DC09900D79D7E /* PhotoGrapgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoGrapgModel.h; sourceTree = "<group>"; };
 		7D58078A1E4DC09900D79D7E /* PhotoGrapgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoGrapgModel.m; sourceTree = "<group>"; };
+		7D652EAA1EE6943D0030840E /* Voiceguan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Voiceguan.png; sourceTree = "<group>"; };
+		7D652EAB1EE6943D0030840E /* VoiceUn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VoiceUn.png; sourceTree = "<group>"; };
+		7D652EAE1EE699410030840E /* v_Voice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v_Voice.png; sourceTree = "<group>"; };
+		7D652EAF1EE699410030840E /* v_Voiceguan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = v_Voiceguan.png; sourceTree = "<group>"; };
 		7D7FF09B1E7BB868007BC336 /* qidongyeyeye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qidongyeyeye.png; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1435,6 +1443,8 @@
 		348A2D761E52B24700B85D7B /* eggImage */ = {
 			isa = PBXGroup;
 			children = (
+				7D652EAE1EE699410030840E /* v_Voice.png */,
+				7D652EAF1EE699410030840E /* v_Voiceguan.png */,
 				34DEDC801E5D8A0F00D1BC29 /* v_feed_n.png */,
 				34DEDC811E5D8A0F00D1BC29 /* v_feed.png */,
 				34DEDC821E5D8A0F00D1BC29 /* v_rool_n.png */,
@@ -2805,6 +2815,8 @@
 				34E1661A1E0520F1004A65AB /* top_egg.png */,
 				34E1661B1E0520F1004A65AB /* 退出.png */,
 				7D7FF09B1E7BB868007BC336 /* qidongyeyeye.png */,
+				7D652EAA1EE6943D0030840E /* Voiceguan.png */,
+				7D652EAB1EE6943D0030840E /* VoiceUn.png */,
 			);
 			name = Horizontal;
 			path = ../device/Horizontal;
@@ -3093,6 +3105,7 @@
 				34CAC2251E5BEA1D00249BA9 /* chat.png in Resources */,
 				34E165BD1E050B19004A65AB /* jiluselect.png in Resources */,
 				34CAC2361E5BEA1D00249BA9 /* ok.png in Resources */,
+				7D652EB01EE699410030840E /* v_Voice.png in Resources */,
 				34E165871E050B19004A65AB /* searche.png in Resources */,
 				34E165581E050B19004A65AB /* feed_off.png in Resources */,
 				34E165B81E050B19004A65AB /* sego.png in Resources */,
@@ -3136,6 +3149,7 @@
 				34C102F51E52E2A300FFB241 /* egg_guide.png in Resources */,
 				34E165901E050B19004A65AB /* tubiaobiao.png in Resources */,
 				34E1657B1E050B19004A65AB /* person_bean.png in Resources */,
+				7D652EAD1EE6943D0030840E /* VoiceUn.png in Resources */,
 				348A2DA41E52B24700B85D7B /* 拉出2.png in Resources */,
 				34CAC2281E5BEA1D00249BA9 /* chat_message_not_delivered.png in Resources */,
 				34E166491E0520F1004A65AB /* left_egg.png in Resources */,
@@ -3211,6 +3225,7 @@
 				34E166661E0520F1004A65AB /* 圆角矩形.png in Resources */,
 				34CAC24E1E5BEA1D00249BA9 /* sweet.wav in Resources */,
 				34E165BB1E050B19004A65AB /* 评论.png in Resources */,
+				7D652EB11EE699410030840E /* v_Voiceguan.png in Resources */,
 				34E1654F1E050B19004A65AB /* blank_list.png in Resources */,
 				340DE9EC1E55531C00B7B258 /* selecttt.png in Resources */,
 				34E1658E1E050B19004A65AB /* timeLIst.png in Resources */,
@@ -3351,6 +3366,7 @@
 				34E1664C1E0520F1004A65AB /* Lnormal_photo.png in Resources */,
 				34E1657C1E050B19004A65AB /* person_code.png in Resources */,
 				34E165C51E050B19004A65AB /* tab_rank_press@3x.png in Resources */,
+				7D652EAC1EE6943D0030840E /* Voiceguan.png in Resources */,
 				34CAC2511E5BEA1D00249BA9 /* toy-mono.wav in Resources */,
 				348A2D941E52B24700B85D7B /* 半圆.png in Resources */,
 				34CAC22E1E5BEA1D00249BA9 /* dialer-orange.png in Resources */,

@@ -284,11 +284,13 @@
     
     
     // 5个按钮
+    UIButton * voicebtn =[UIButton new];
     UIButton * lightbtn =[UIButton new];
     UIButton * foodbtn =[UIButton new];
     UIButton * rollbtn =[UIButton new];
     UIButton * takephoto =[UIButton new];
     
+    [voicebtn addTarget:self action:@selector(VocieClick:) forControlEvents:UIControlEventTouchUpInside];
     
     [lightbtn addTarget:self action:@selector(LightClick:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -297,8 +299,8 @@
     [rollbtn addTarget:self action:@selector(FoodClick:) forControlEvents:UIControlEventTouchUpInside];
     [takephoto addTarget:self action:@selector(PhotoClick:) forControlEvents:UIControlEventTouchUpInside];
     
-    btnList =@[lightbtn,foodbtn,rollbtn,takephoto];
-    for (NSInteger i =0; i<4; i++) {
+    btnList =@[voicebtn,lightbtn,foodbtn,rollbtn,takephoto];
+    for (NSInteger i =0; i<5; i++) {
         
         [FiveView addSubview:btnList[i]];
     }
@@ -469,9 +471,9 @@
     }];
     
     // 5个按钮
-    NSArray * imageListS=@[@"v_light",@"v_rool",@"v_feed",@"v_photo"];
-    NSArray * imageListN=@[@"v_light_n",@"v_rool_n",@"v_feed_n",@"v_photo_n"];
-    for (NSInteger i =0; i<4; i++) {
+    NSArray * imageListS=@[@"v_Voiceguan",@"v_light",@"v_rool",@"v_feed",@"v_photo"];
+    NSArray * imageListN=@[@"v_Voice",@"v_light_n",@"v_rool_n",@"v_feed_n",@"v_photo_n"];
+    for (NSInteger i =0; i<5; i++) {
         [btnList[i] setImage:[UIImage imageNamed:imageListN[i]] forState:UIControlStateNormal];
         [btnList[i] setImage:[UIImage imageNamed:imageListS[i]] forState:UIControlStateSelected];
     }
@@ -818,6 +820,21 @@
     }];
     
 
+    
+    
+}
+
+
+// 声音
+- (void)VocieClick:(UIButton *)sender
+{
+    SephoneCore * lc = [SephoneManager getLc];
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+        sephone_core_enable_mic(lc, FALSE);
+    }else{
+        sephone_core_enable_mic(lc, TRUE);
+    }
     
     
 }
