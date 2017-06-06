@@ -296,11 +296,12 @@ static NSString * cellId = @"fedseting2321232322313323231";
             make.top.equalTo(RbgImage.mas_bottom).offset(0);
         }else
         {
-            make.top.equalTo(self.view.mas_top).offset(350);
+            //make.top.equalTo(self.view.mas_top).offset(350);
+             make.top.equalTo(RbgImage.mas_bottom).offset(0);
             
         }
         make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(100);
+        make.height.mas_equalTo(110 * W_Wide_Zoom);
         
         
         
@@ -361,7 +362,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
            make.height.mas_equalTo(203);
         }else
         {
-             make.height.mas_equalTo(350);
+             make.height.mas_equalTo(240);
             
         }
         
@@ -400,12 +401,14 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     //换了
     if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-    [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:30 leadSpacing:18 tailSpacing:18];
-    }else
-    {
-          [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
-       
         
+         [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
+        }else
+    {
+        
+       
+        [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:30 leadSpacing:18 tailSpacing:18];
+
     }
 
 
