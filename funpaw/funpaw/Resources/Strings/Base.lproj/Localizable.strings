@@ -23,7 +23,6 @@
 "setTitle" = "Setting";
 
 // wifi
-"wifiTitle" = "Set networ";
 "bindDevice" = "Binding device";
 "Wifi_done"="Done";
 
@@ -33,8 +32,8 @@
 "Cancel_bind_n" = "Cancel";
 "Sure_bind_n_" ="Done";
 "wifiTitle" = "Set WIFI";
-"INFO_NetNoReachable" = "当前网络不可用";
-"INFO_ReachableViaWWAN"= "当前非WIFI环境";
+"INFO_NetNoReachable" = "The network is not available";
+"INFO_ReachableViaWWAN"= "The current not WIFI environment";
 "bindDevice2" = "Pairing";
 "solveaBinding" ="Unpair";
 "deviceNum" ="Q NO/";
@@ -89,7 +88,7 @@
 "feed_stop"="Disable";
 "feed_start"="Enable";
 "feed_stoping"="Inactive...";
-"feed_surefeed"="Are you sure you want to disable auto-feeding??";
+"feed_surefeed"="Are you sure you want to disable auto-feeding?";
 "feed_over"="complete";
 "feed_setting"="Setting up...";
 "feed_tips"="Feeding cannot be scheduled at the same time!";

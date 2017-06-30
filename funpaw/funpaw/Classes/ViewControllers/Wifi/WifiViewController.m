@@ -48,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavTitle:NSLocalizedString(@"wifiTitle",nil)];
-    listArr = @[ @"Public", @"WPA/WPA2", @"WEP" ];
+    listArr = @[@"Public", @"WPA/WPA2", @"WEP" ];
     curEncryption = [NSString stringWithFormat:@"1"];
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -194,7 +194,7 @@
     UITextField *  deviceTF =[UITextField new];
     deviceTF.textColor =YELLOW_COLOR;
     incodeTF =[UITextField new];
-    incodeTF.textColor= YELLOW_COLOR;
+    incodeTF.textColor= [UIColor blackColor];
     
     wifiPsTF =[UITextField new];
     wifiPsTF.textColor= YELLOW_COLOR;
@@ -230,6 +230,7 @@
         
         make.left.equalTo(wifiLB.mas_right).with.offset(13);
         make.centerY.equalTo(wifiView.mas_centerY);
+        make.width.mas_equalTo(200);
         
     }];
     
