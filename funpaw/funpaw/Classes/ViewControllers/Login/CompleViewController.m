@@ -201,13 +201,13 @@
         if ([model.retCode isEqualToString:@"0000"]) {
             _achieveString = model.totalrecords;
             _codeNumber = model.content;
-            [self timeout];
+           
         }
         
         [[AppUtil appTopViewController] showHint:model.retDesc];
         
     }];
-    
+     [self timeout];
     
 }
 
