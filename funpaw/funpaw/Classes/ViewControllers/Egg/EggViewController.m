@@ -452,7 +452,7 @@
 {
     // 设备不存在
     if ([strState isEqualToString:@"ds000"]) {
-        [bgImage setImage:[UIImage imageNamed:@"iostippsss.png"]];
+        [bgImage setImage:[UIImage imageNamed:@"newnewtipssss.png"]];
         addBtn.hidden = NO;
         SbgImage.hidden = YES;
         [self showBarBtn:YES];
