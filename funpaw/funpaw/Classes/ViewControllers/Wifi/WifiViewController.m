@@ -194,7 +194,7 @@
     UITextField *  deviceTF =[UITextField new];
     deviceTF.textColor =YELLOW_COLOR;
     incodeTF =[UITextField new];
-    incodeTF.textColor= [UIColor blackColor];
+    incodeTF.textColor=YELLOW_COLOR;
     
     wifiPsTF =[UITextField new];
     wifiPsTF.textColor= YELLOW_COLOR;

@@ -417,6 +417,7 @@
 		7DF691C31F063AE400131C62 /* iostippsss.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF691C21F063AE400131C62 /* iostippsss.png */; };
 		7DF691C51F063C5300131C62 /* shenmejiergui.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF691C41F063C5300131C62 /* shenmejiergui.png */; };
 		7DF691C71F063C9E00131C62 /* oknimabi.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF691C61F063C9E00131C62 /* oknimabi.png */; };
+		7DF691C91F06588800131C62 /* newnewtipsss.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DF691C81F06588800131C62 /* newnewtipsss.png */; };
 		8E24109C189B9D404F3ECBE9 /* libPods-funpaw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 782952FC14463F99DF3112FF /* libPods-funpaw.a */; };
 /* End PBXBuildFile section */
 
@@ -1320,6 +1321,7 @@
 		7DF691C21F063AE400131C62 /* iostippsss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iostippsss.png; sourceTree = "<group>"; };
 		7DF691C41F063C5300131C62 /* shenmejiergui.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shenmejiergui.png; sourceTree = "<group>"; };
 		7DF691C61F063C9E00131C62 /* oknimabi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oknimabi.png; sourceTree = "<group>"; };
+		7DF691C81F06588800131C62 /* newnewtipsss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newnewtipsss.png; sourceTree = "<group>"; };
 		D73B91DE92C95DDCDFE60BB6 /* Pods-funpaw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funpaw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-funpaw/Pods-funpaw.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1495,6 +1497,7 @@
 				34C102E21E52CCED00FFB241 /* English_tips.png */,
 				7DF691C01F0639D000131C62 /* exchangetips.png */,
 				7DF691C21F063AE400131C62 /* iostippsss.png */,
+				7DF691C81F06588800131C62 /* newnewtipsss.png */,
 				7DF691C41F063C5300131C62 /* shenmejiergui.png */,
 				7DF691C61F063C9E00131C62 /* oknimabi.png */,
 				348A2D8B1E52B24700B85D7B /* egg_add_nav.png */,
@@ -3383,6 +3386,7 @@
 				34E1657C1E050B19004A65AB /* person_code.png in Resources */,
 				34E165C51E050B19004A65AB /* tab_rank_press@3x.png in Resources */,
 				7D652EAC1EE6943D0030840E /* Voiceguan.png in Resources */,
+				7DF691C91F06588800131C62 /* newnewtipsss.png in Resources */,
 				34CAC2511E5BEA1D00249BA9 /* toy-mono.wav in Resources */,
 				348A2D941E52B24700B85D7B /* 半圆.png in Resources */,
 				34CAC22E1E5BEA1D00249BA9 /* dialer-orange.png in Resources */,
