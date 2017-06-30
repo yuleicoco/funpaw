@@ -30,7 +30,7 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Please let me use the bluetooth</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Please let me use the camera</string>
+	<string>Would you like to allow this application to use the camera?</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Please let me use the microphone</string>
 	<key>NSPhotoLibraryUsageDescription</key>

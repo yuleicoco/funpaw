@@ -156,7 +156,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     btnBind.layer.cornerRadius = 4;
     btnBind.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     if ([AppUtil isBlankString:strTT]) {
-        [btnBind setTitle:NSLocalizedString(@"bindDevice",nil) forState:UIControlStateNormal];
+        [btnBind setTitle:NSLocalizedString(@"bindDevice2",nil) forState:UIControlStateNormal];
         btnBind.backgroundColor = GRAY_COLOR;
         btnBind.enabled = FALSE;
     }else
@@ -218,7 +218,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
    
         if ([AppUtil isBlankString:strTT]) {
             
-            [self setNavTitle:NSLocalizedString(@"bindDevice",nil)];
+            [self setNavTitle:NSLocalizedString(@"bindDevice2",nil)];
             deviceTF.text =@"";
             incodeTF.text =@"";
         }else{
@@ -321,7 +321,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
     }else
     {
         
-        UIAlertController * alert =[UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"Warning_Message", nil) preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController * alert =[UIAlertController alertControllerWithTitle:@"Warning!"message:NSLocalizedString(@"Warning_Message", nil) preferredStyle:UIAlertControllerStyleAlert];
         
         
         
@@ -330,7 +330,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
             
         }]];
         
-        [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind_n_", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert addAction:[UIAlertAction actionWithTitle:@"Unpair" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
             [self jiechuband];
             
@@ -540,7 +540,7 @@ NSString *const SEGOEGG_PREFIX = @"segoegg";
  *  显示打开蓝牙提示窗
  */
 - (void)showNeedBluetoothWaringDialog {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"no_turnon", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"I_kown", nil) otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Turn On Bluetooth"message:@"To connect the app and device,turn Bluetooth on." delegate:self cancelButtonTitle:NSLocalizedString(@"public_ok", nil) otherButtonTitles:nil, nil];
     [alert show];
 }
 

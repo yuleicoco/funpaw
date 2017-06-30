@@ -148,13 +148,13 @@
 
     }
     if (_passwordTextfield.text.length<6) {
-        [[AppUtil appTopViewController] showHint:@"Password at least 6 digits"];
+        [[AppUtil appTopViewController] showHint:@"Password must be at least 6 characters"];
         return;
 
     }
     
     if (![_passwordTextfield.text isEqualToString:_surePasswordfield.text]) {
-        [[AppUtil appTopViewController] showHint:@"password do not match"];
+        [[AppUtil appTopViewController] showHint:@"password do not match!"];
         return;
     }
 
@@ -163,9 +163,9 @@
     [[ShareWork sharedManager]modifyPasswordWithMid:[AccountManager sharedAccountManager].loginModel.mid password:_passwordTextfield.text complete:^(BaseModel *model) {
   //      [self hideHud];
         if (model) {
-            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Tips"message:@"Modify success, please login again" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Success!"message:@"App password changed.Please log in again" preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Sure" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+            UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@NO];
                 [[AccountManager sharedAccountManager]logout];
                 

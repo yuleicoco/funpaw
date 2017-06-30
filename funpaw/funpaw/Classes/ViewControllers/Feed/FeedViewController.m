@@ -114,12 +114,12 @@ static NSString * cellId = @"fedseting2321232322313323231";
     UILabel * wenziLabel = [UILabel new];
     wenziLabel.text = NSLocalizedString(@"feed_way", nil);
     wenziLabel.textColor =YELLOW_COLOR;
-    wenziLabel.font = [UIFont systemFontOfSize:20];
+    wenziLabel.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenziLabel];
     [wenziLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.equalTo(self.view.mas_left).offset(12);
-        make.size.mas_equalTo(CGSizeMake(100, 28));
+        make.size.mas_equalTo(CGSizeMake(150, 28));
         make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
         
     }];
@@ -139,7 +139,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [RbgImage  addSubview:oneDayButton];
     [oneDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(self.view.mas_centerX).offset(30);
+        make.left.equalTo(self.view.mas_centerX).offset(10);
         make.size.mas_equalTo(CGSizeMake(17, 17));
         make.top.equalTo(bigBtn.mas_bottom).offset(37);
         
@@ -152,11 +152,11 @@ static NSString * cellId = @"fedseting2321232322313323231";
     UILabel * wenzi1 =[UILabel new];
     wenzi1.text = NSLocalizedString(@"feed_two", nil);
     wenzi1.textColor = YELLOW_COLOR;
-    wenzi1.font = [UIFont systemFontOfSize:20];
+    wenzi1.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenzi1];
     [wenzi1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(oneDayButton.mas_right).offset(5);
-        make.size.mas_equalTo(CGSizeMake(50, 30));
+        make.size.mas_equalTo(CGSizeMake(70, 30));
         make.top.equalTo(bigBtn.mas_bottom).offset(32);
         
     }];
@@ -172,7 +172,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     [twoDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(wenzi1.mas_right).offset(16);
+        make.left.equalTo(wenzi1.mas_right).offset(5);
         make.size.mas_equalTo(CGSizeMake(17, 17));
         make.top.equalTo(bigBtn.mas_bottom).offset(37);
         
@@ -181,12 +181,12 @@ static NSString * cellId = @"fedseting2321232322313323231";
     UILabel * wenzi2 =[UILabel new];
     wenzi2.text = NSLocalizedString(@"feed_four", nil);
     wenzi2.textColor = YELLOW_COLOR;
-    wenzi2.font = [UIFont systemFontOfSize:20];
+    wenzi2.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenzi2];
     
     [wenzi2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(twoDayButton.mas_right).offset(5);
-        make.size.mas_equalTo(CGSizeMake(50, 30));
+        make.size.mas_equalTo(CGSizeMake(70, 30));
         make.top.equalTo(bigBtn.mas_bottom).offset(32);
         
     }];
@@ -233,10 +233,15 @@ static NSString * cellId = @"fedseting2321232322313323231";
 
 // 停止喂食
 -(void)StopFeed:(UIButton *)sender{
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"feed_surefeed", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Wait!" message:NSLocalizedString(@"feed_surefeed", nil) preferredStyle:UIAlertControllerStyleAlert];
     
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind_feed", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //  FeddingModel * model = self.dataSource[0];
+     
+        
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Disable" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSString * str  =  [Defaluts objectForKey:@"deviceNumber"];
         NSString * str1  =Mid_D;
         NSString * deviceNum = str.length>str1.length?str:str1;
@@ -254,9 +259,6 @@ static NSString * cellId = @"fedseting2321232322313323231";
             }
         }];
         
-    }]];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }]];
     

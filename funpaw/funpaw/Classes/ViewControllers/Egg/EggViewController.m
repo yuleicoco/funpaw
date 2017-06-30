@@ -282,7 +282,7 @@
   
     // 指导界面
     Guideview =[UIImageView new];
-    Guideview.image =[UIImage imageNamed:@"egg_guide"];
+    Guideview.image =[UIImage imageNamed:@"shenmejiergui.png"];
     Guideview.userInteractionEnabled = YES;
     Guideview.hidden = YES;
     
@@ -295,7 +295,7 @@
     }];
     
     IkonwBtn =[UIButton new];
-    [IkonwBtn setImage:[UIImage imageNamed:@"ikonw"] forState:UIControlStateNormal];
+    [IkonwBtn setImage:[UIImage imageNamed:@"oknimabi.png"] forState:UIControlStateNormal];
     [IkonwBtn addTarget:self action:@selector(disparrBtn:) forControlEvents:UIControlEventTouchUpInside];
     IkonwBtn.hidden = YES;
     
@@ -383,14 +383,17 @@
     // 三个buton
     
     [wifiBtn setTitle:NSLocalizedString(@"tab_wifi", nil) forState:UIControlStateNormal];
+    [wifiBtn setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
     [wifiBtn addTarget:self action:@selector(wifiTouch:) forControlEvents:UIControlEventTouchUpInside];
     
     
     [foodBtn addTarget:self action:@selector(foodTouch:) forControlEvents:UIControlEventTouchUpInside];
     [foodBtn setTitle:NSLocalizedString(@"tab_food", nil) forState:UIControlStateNormal];
+    [foodBtn setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
     
     [bdinBtn addTarget:self action:@selector(bdinTouch:) forControlEvents:UIControlEventTouchUpInside];
     [bdinBtn setTitle:NSLocalizedString(@"solveaBinding", nil) forState:UIControlStateNormal];
+    [bdinBtn setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
     [SbgImage addSubview:wifiBtn];
     [SbgImage addSubview:foodBtn];
     [SbgImage addSubview:bdinBtn];
@@ -449,7 +452,7 @@
 {
     // 设备不存在
     if ([strState isEqualToString:@"ds000"]) {
-        [bgImage setImage:[UIImage imageNamed:@"English_tips"]];
+        [bgImage setImage:[UIImage imageNamed:@"iostippsss.png"]];
         addBtn.hidden = NO;
         SbgImage.hidden = YES;
         [self showBarBtn:YES];

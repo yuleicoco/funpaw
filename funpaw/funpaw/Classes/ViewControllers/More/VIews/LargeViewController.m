@@ -178,7 +178,7 @@
     
     UIAlertController *  alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
 
-    [alert addAction:[UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSURL *url = [NSURL URLWithString:_dataArray[i]];
         
         NSData *resultData = [NSData dataWithContentsOfURL:url];
@@ -188,7 +188,7 @@
 
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }]];
     [self presentViewController:alert animated:YES completion:nil];
@@ -203,11 +203,11 @@
     
     if (!error) {
        
-        [self showSuccessHudWithHint:@"保存成功"];
+        [self showSuccessHudWithHint:@"Save Success"];
         
     }else
     {
-        [self showFailureHudWithHint:@"保存失败"];
+        [self showFailureHudWithHint:@"Save Fail"];
     }
 
     
