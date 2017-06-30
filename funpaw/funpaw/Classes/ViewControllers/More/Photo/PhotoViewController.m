@@ -338,14 +338,14 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
 
 -(void)deleteButtonTouch{
     
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"Are you sure to delete?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Wait!" message:@"Are you sure you want to delete this?" preferredStyle:UIAlertControllerStyleAlert];
     
     [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         
     }]];
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
         NSMutableString * filenameStr = [[NSMutableString alloc]init];
         

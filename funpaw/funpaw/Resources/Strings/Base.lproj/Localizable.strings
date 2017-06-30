@@ -9,6 +9,7 @@
 //tab
 "tabEgg" = "Egg";
 "tabPersonal" = "Personal Center";
+"public_ok" = "OK";
 
 //egg
 "openButton" = "Open";
@@ -34,8 +35,8 @@
 "wifiTitle" = "Set WIFI";
 "INFO_NetNoReachable" = "当前网络不可用";
 "INFO_ReachableViaWWAN"= "当前非WIFI环境";
-"bindDevice" = "Binding";
-"solveaBinding" ="Unbind";
+"bindDevice2" = "Pairing";
+"solveaBinding" ="Unpair";
 "deviceNum" ="Q NO/";
 "deviceIncode"="AccessCode/";
 "Warring_bing" ="The device number does not exist";
@@ -43,7 +44,7 @@
 "Warning" ="Tips";
 "Cancel_bind" = "Cancel";
 "Sure_bind" ="Bingding";
-"Warning_Message" ="Are you sure to unbind??";
+"Warning_Message" ="Are you sure you want to unpair the device from your phone?";
 "Solve_Success"="Unbundling success";
 "Find_device" ="Searching for devices...";
 "find_noway" ="The device is not found";
@@ -55,14 +56,14 @@
 "wif_code" ="Password/";
 "faile_net" ="The configuration fails. Please reset the network";
 "falie_bl"= "Configuration failed, please make sure device Bluetooth is turned on";
-"ing_net" ="Configuring...";
+"ing_net" ="Connecting...";
 
 // setting
 "settingViewTitle" = "Setting";
 "wifiViewTitle" = "Set Network";
 "INFO_NetNoReachable" = "The current network is not available";
 "INFO_ReachableViaWWAN"= "Current non WIFI environment";
-"bindDeviceViewTitle" = "Binding Device";
+"bindDeviceViewTitle" = "Pairing";
 
 "photograph" = "Photograph";
 "photoalbum" = "Photoalbum";
@@ -82,14 +83,14 @@
 
 "Sure_bind_feed"= "Done";
 "feed_model"="Feeding";
-"feed_way"="Mode";
-"feed_four"="Four";
-"feed_two"="Two";
-"feed_stop"="Stop";
+"feed_way"="Daily Feeding Times";
+"feed_four"="4x Daily";
+"feed_two"="2x Daily";
+"feed_stop"="Disable";
 "feed_start"="Enable";
 "feed_stoping"="Inactive...";
 "feed_surefeed"="Are you sure you want to disable auto-feeding??";
 "feed_over"="complete";
 "feed_setting"="Setting up...";
-"feed_tips"="Please do not select the same time!";
+"feed_tips"="Feeding cannot be scheduled at the same time!";
 

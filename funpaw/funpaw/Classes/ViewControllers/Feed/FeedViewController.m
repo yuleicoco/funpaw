@@ -53,8 +53,8 @@ static NSString * cellId = @"fedseting2321232322313323231";
     _dataArray = [[NSMutableArray alloc]init];
     self.view.backgroundColor = LIGHT_GRAYdcdc_COLOR;
     arrWord =@[@"A",@"B",@"C",@"D"];
-    [self twoDayView];
     [self onedayView];
+    [self twoDayView];
     [self querWeishi];
 }
 
@@ -84,15 +84,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self.view addSubview:RbgImage];
     
     [RbgImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        //换了
-        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-            make.height.mas_equalTo(315);
-        }else
-        {
-            make.height.mas_equalTo(350);
-            
-        }
-        
+        make.height.mas_equalTo(350);
         make.width.equalTo(self.view.mas_width);
         
         
@@ -122,11 +114,12 @@ static NSString * cellId = @"fedseting2321232322313323231";
     UILabel * wenziLabel = [UILabel new];
     wenziLabel.text = NSLocalizedString(@"feed_way", nil);
     wenziLabel.textColor =YELLOW_COLOR;
-    wenziLabel.font = [UIFont systemFontOfSize:20];
+    wenziLabel.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenziLabel];
     [wenziLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
         make.left.equalTo(self.view.mas_left).offset(12);
-        make.size.mas_equalTo(CGSizeMake(100, 28));
+        make.size.mas_equalTo(CGSizeMake(150, 28));
         make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
         
     }];
@@ -146,9 +139,9 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [RbgImage  addSubview:oneDayButton];
     [oneDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.equalTo(self.view.mas_centerX).offset(30);
+        make.left.equalTo(self.view.mas_centerX).offset(10);
         make.size.mas_equalTo(CGSizeMake(17, 17));
-        make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
         
     }];
     
@@ -159,13 +152,12 @@ static NSString * cellId = @"fedseting2321232322313323231";
     UILabel * wenzi1 =[UILabel new];
     wenzi1.text = NSLocalizedString(@"feed_two", nil);
     wenzi1.textColor = YELLOW_COLOR;
-    wenzi1.font = [UIFont systemFontOfSize:20];
+    wenzi1.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenzi1];
     [wenzi1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(oneDayButton.mas_right).offset(5);
-        make.size.mas_equalTo(CGSizeMake(50, 30));
-        make.bottom.equalTo(RbgImage.mas_bottom).offset(-5
-                                                        );
+        make.size.mas_equalTo(CGSizeMake(70, 30));
+        make.top.equalTo(bigBtn.mas_bottom).offset(32);
         
     }];
     
@@ -180,33 +172,22 @@ static NSString * cellId = @"fedseting2321232322313323231";
     
     [twoDayButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        //这里也换了
-        
-        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-            make.left.equalTo(self.view.mas_centerX).offset(95);
-            
-        }else
-        {
-            
-            make.left.equalTo(wenzi1.mas_right).offset(16);
-            
-        }
-       
+        make.left.equalTo(wenzi1.mas_right).offset(5);
         make.size.mas_equalTo(CGSizeMake(17, 17));
-        make.bottom.equalTo(RbgImage.mas_bottom).offset(-10);
+        make.top.equalTo(bigBtn.mas_bottom).offset(37);
         
     }];
     // 第二个文字
     UILabel * wenzi2 =[UILabel new];
     wenzi2.text = NSLocalizedString(@"feed_four", nil);
     wenzi2.textColor = YELLOW_COLOR;
-    wenzi2.font = [UIFont systemFontOfSize:20];
+    wenzi2.font = [UIFont systemFontOfSize:15];
     [RbgImage addSubview:wenzi2];
     
     [wenzi2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(twoDayButton.mas_right).offset(5);
-        make.size.mas_equalTo(CGSizeMake(50, 30));
-        make.bottom.equalTo(RbgImage.mas_bottom).offset(-5);
+        make.size.mas_equalTo(CGSizeMake(70, 30));
+        make.top.equalTo(bigBtn.mas_bottom).offset(32);
         
     }];
     _isOneOrTwo = YES;
@@ -252,10 +233,15 @@ static NSString * cellId = @"fedseting2321232322313323231";
 
 // 停止喂食
 -(void)StopFeed:(UIButton *)sender{
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:NSLocalizedString(@"feed_surefeed", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Wait!" message:NSLocalizedString(@"feed_surefeed", nil) preferredStyle:UIAlertControllerStyleAlert];
     
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Sure_bind_feed", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         //  FeddingModel * model = self.dataSource[0];
+     
+        
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"Disable" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSString * str  =  [Defaluts objectForKey:@"deviceNumber"];
         NSString * str1  =Mid_D;
         NSString * deviceNum = str.length>str1.length?str:str1;
@@ -273,9 +259,6 @@ static NSString * cellId = @"fedseting2321232322313323231";
             }
         }];
         
-    }]];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel_bind", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
     }]];
     
@@ -291,17 +274,9 @@ static NSString * cellId = @"fedseting2321232322313323231";
     [self.view addSubview:bgViewTwo];
     [bgViewTwo mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        //这里已经换了
-        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-            make.top.equalTo(RbgImage.mas_bottom).offset(0);
-        }else
-        {
-            //make.top.equalTo(self.view.mas_top).offset(350);
-             make.top.equalTo(RbgImage.mas_bottom).offset(0);
-            
-        }
+        make.top.equalTo(self.view.mas_top).offset(350);
         make.width.equalTo(self.view.mas_width);
-        make.height.mas_equalTo(110 * W_Wide_Zoom);
+        make.height.mas_equalTo(120);
         
         
         
@@ -354,18 +329,10 @@ static NSString * cellId = @"fedseting2321232322313323231";
      [self.view addSubview:bgViewOne];
     
     [bgViewOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.equalTo(RbgImage.mas_bottom).offset(0);
+        make.top.equalTo(self.view.mas_top).offset(350);
+       
         make.width.equalTo(self.view.mas_width);
-        //换了
-        if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-           make.height.mas_equalTo(203);
-        }else
-        {
-             make.height.mas_equalTo(240);
-            
-        }
-        
+        make.height.mas_equalTo(240);
         
     }];
     for ( int i = 0; i<4; i++) {
@@ -398,18 +365,7 @@ static NSString * cellId = @"fedseting2321232322313323231";
         
     
     }];
-    
-    //换了
-    if ([[AppUtil iphoneType] isEqualToString:@"1"]) {
-        
-         [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
-        }else
-    {
-        
-       
-        [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:30 leadSpacing:18 tailSpacing:18];
-
-    }
+    [OneArrlist mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:50 leadSpacing:18 tailSpacing:18];
 
 
 }

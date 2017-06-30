@@ -327,7 +327,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
             cell.rightBtn.selected = NO;
             [deleteOrUpdateArr removeObject:imageA[j]];//把要删除的图片从删除数组中删除
         }else{
-            [[AppUtil appTopViewController] showHint:@"Only select a video"];
+            [[AppUtil appTopViewController] showHint:@"Select only one video at a time!"];
             return;
         }
             
@@ -434,7 +434,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
          if ([model.retCode isEqualToString:@"0000"]) {
              if ([model.content isEqualToString:@"0"]) {
                  if (timeee == 0) {
-                      [[AppUtil appTopViewController]showHint:@"Overtime"];
+                      [[AppUtil appTopViewController]showHint:@"Command timed out.Try again."];
                      [self hideHud];
                      bigBtn.hidden = YES;
                         [timer setFireDate:[NSDate distantFuture]];
@@ -447,7 +447,7 @@ static NSString *kRecordheaderIdentifier = @"RecordHeaderIdentifier";
                      return ;
                  }
              }else if ([model.content isEqualToString:@"1"]){
-                   [[AppUtil appTopViewController]showHint:@"Success"];
+                   [[AppUtil appTopViewController]showHint:@"Uploaded Successfully"];
                  [self hideHud];
                   bigBtn.hidden = YES;
                  

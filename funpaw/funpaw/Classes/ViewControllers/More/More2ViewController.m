@@ -210,14 +210,14 @@
 -(void)siggnoutButtonTouch{
   //  FuckLog(@"退出登录");
 
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Warning", nil) message:@"Are you sure you want to quit?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Warning!"message:@"Are you sure you want to log out?" preferredStyle:UIAlertControllerStyleAlert];
 
     [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
 
     }]];
 
-    [alert addAction:[UIAlertAction actionWithTitle:@"Sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    [alert addAction:[UIAlertAction actionWithTitle:@"Log Out" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
         [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginStateChange object:@NO];
         [[AccountManager sharedAccountManager]logout];

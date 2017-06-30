@@ -70,11 +70,11 @@
     _codeBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     _codeBtn.layer.cornerRadius = 22;
     [_codeBtn addTarget:self action:@selector(codebuttontouch) forControlEvents:UIControlEventTouchUpInside];
-    [firstView addSubview:_codeBtn];
+    [self.view addSubview:_codeBtn];
     [_codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(_codeBtn.superview.mas_right).offset(-2.5);
-        make.top.equalTo(_codeBtn.superview.mas_top).offset(2.5);
-        make.bottom.equalTo(_codeBtn.superview.mas_bottom).offset(-2.5);
+        make.right.equalTo(firstView.mas_right).offset(-2.5);
+        make.top.equalTo(firstView.mas_top).offset(2.5);
+        make.bottom.equalTo(firstView.mas_bottom).offset(-2.5);
         make.width.mas_equalTo(65);
         
     }];
@@ -255,21 +255,23 @@
         return;
     }
     [self provied];
+   // [self timeout];
 }
 
 -(void)provied{
+  
     [[ShareWork sharedManager]checkWithPhone:_emailTextfield.text type:@"register" complete:^(BaseModel *model) {
       
         if ([model.retCode isEqualToString:@"0000"]) {
             _achieveString = model.totalrecords;
             _codeNumber = model.content;
-           
+            
         }
         
         [[AppUtil appTopViewController] showHint:model.retDesc];
         
     }];
-     [self timeout];
+      [self timeout];
     
 }
 
