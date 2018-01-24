@@ -10,6 +10,7 @@
 #import "ExchangePasswordViewController.h"
 #import "PhotoViewController.h"
 #import "RepositoryViewController.h"
+#import "FeedbackkViewController.h"
 @interface More2ViewController ()
 
 @end
@@ -125,7 +126,7 @@
     UIButton * changepassBtn = [[UIButton alloc]init];
     changepassBtn.backgroundColor = [UIColor clearColor];
     [changepassBtn addTarget:self action:@selector(changepassButtontouch) forControlEvents:UIControlEventTouchUpInside];
-    [changeView addSubview:changepassBtn];
+     [changeView addSubview:changepassBtn];
     [changepassBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(changepassBtn.superview);
         make.right.equalTo(changepassBtn.superview);
@@ -133,6 +134,47 @@
         make.bottom.equalTo(changepassBtn.superview);
         
     }];
+    
+    UIView * feedbackView = [[UIView alloc]init];
+    feedbackView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:feedbackView];
+    [feedbackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(changeView.superview);
+        make.right.equalTo(changeView.superview);
+        make.top.equalTo(changeView.mas_bottom).offset(12);
+        make.height.mas_equalTo(55);
+        
+    }];
+    
+    UILabel * feedbackLabel = [[UILabel alloc]init];
+    feedbackLabel.text = @"Feed Back";
+    feedbackLabel.font = [UIFont systemFontOfSize:18];
+    feedbackLabel.textColor = YELLOW_COLOR;
+    [feedbackView addSubview:feedbackLabel];
+    [feedbackLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(feedbackLabel.superview.mas_left).offset(12);
+        make.centerY.equalTo(feedbackLabel.superview);
+        
+    }];
+    
+    UIButton * feedBtn = [[UIButton alloc]init];
+    feedBtn.backgroundColor = [UIColor clearColor];
+    [feedbackView addSubview:feedBtn];
+    [feedBtn addTarget:self action:@selector(feedbuttonTouch) forControlEvents:UIControlEventTouchUpInside];
+    [feedBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(feedBtn.superview);
+        make.right.equalTo(feedBtn.superview);
+        make.top.equalTo(feedBtn.superview);
+        make.bottom.equalTo(feedBtn.superview);
+        
+    }];
+    
+    
+    
+    
+    
+    
+    
     
     UIView * logoutView = [[UIView alloc]init];
     logoutView.backgroundColor = [UIColor whiteColor];
@@ -169,12 +211,47 @@
     
     
     
+    //测试渐变色
+//    UIView * testview = [[UIView alloc]init];
+//    [self.view addSubview:testview];
+//    [testview mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(testview.superview.mas_left).offset(20);
+//        //make.right.equalTo(testview.superview.mas_right).offset(-20);
+//        make.height.mas_equalTo(50);
+//        make.width.mas_equalTo(200);
+//        make.bottom.equalTo(logoutView.mas_top).offset(-20);
+//       
+//    }];
+//    //获取视图frame
+//    [testview.superview layoutIfNeeded];
+//    
+//    CAGradientLayer *gradient = [CAGradientLayer layer];
+//    gradient.frame = testview.bounds;
+//    gradient.startPoint = CGPointMake(0, 0);
+//    gradient.endPoint = CGPointMake(1, 0);
+//    gradient.colors = [NSArray arrayWithObjects:
+//                       (id)[UIColor colorWithRed:1/255.0 green:202/255.0 blue:254/255.0 alpha:1.0].CGColor,
+//                       (id)[UIColor colorWithRed:2/255.0 green:137/255.0 blue:201/255.0 alpha:1.0].CGColor,nil];
+//    [testview.layer addSublayer:gradient];
+//    
+    
+    
+    
+    
     
     
     
     
     
 }
+
+
+-(void)feedbuttonTouch{
+    FeedbackkViewController * vc = [[FeedbackkViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:NO];
+    
+}
+
 
 
 -(void)photoButtonTouch{

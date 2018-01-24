@@ -26,12 +26,7 @@
         [self addSubview:_timeBtn];
         
         
-        
-        
-        
-        
-        
-        
+    
         _lineLabel = [[UILabel alloc]initWithFrame:CGRectMake(0 * W_Wide_Zoom, 59 * W_Hight_Zoom, 375 * W_Wide_Zoom, 1 * W_Hight_Zoom)];
         _lineLabel.backgroundColor = [UIColor lightGrayColor];
         _lineLabel.alpha = 0.6;

@@ -397,6 +397,7 @@
 		7D2D58401E49AB290086A823 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D583F1E49AB290086A823 /* LoginViewController.m */; };
 		7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D58451E49ABE80086A823 /* AccountManager.m */; };
 		7D2D584C1E49ADD70086A823 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D2D584B1E49ADD70086A823 /* LoginModel.m */; };
+		7D485C072017336600F9A05B /* FeedbackkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D485C062017336600F9A05B /* FeedbackkViewController.m */; };
 		7D4A009B1E4C100F00B5B40F /* ShareWork+Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */; };
 		7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A009D1E4C62B400B5B40F /* PopStartView.m */; };
 		7D4A00A11E4C674500B5B40F /* CompleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4A00A01E4C674500B5B40F /* CompleViewController.m */; };
@@ -1291,6 +1292,8 @@
 		7D2D58451E49ABE80086A823 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountManager.m; sourceTree = "<group>"; };
 		7D2D584A1E49ADD70086A823 /* LoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
 		7D2D584B1E49ADD70086A823 /* LoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		7D485C052017336600F9A05B /* FeedbackkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackkViewController.h; sourceTree = "<group>"; };
+		7D485C062017336600F9A05B /* FeedbackkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackkViewController.m; sourceTree = "<group>"; };
 		7D4A00991E4C100F00B5B40F /* ShareWork+Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShareWork+Login.h"; sourceTree = "<group>"; };
 		7D4A009A1E4C100F00B5B40F /* ShareWork+Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShareWork+Login.m"; sourceTree = "<group>"; };
 		7D4A009C1E4C62B400B5B40F /* PopStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopStartView.h; sourceTree = "<group>"; };
@@ -2981,6 +2984,7 @@
 			isa = PBXGroup;
 			children = (
 				7D5807821E4DBD4C00D79D7E /* VIews */,
+				7D485C042017334A00F9A05B /* Feedback */,
 				7D58077B1E4DB88700D79D7E /* Photo */,
 				7D4A00A61E4C755300B5B40F /* exchangPassword */,
 				7D4A00A21E4C752800B5B40F /* VIdeo */,
@@ -2988,6 +2992,15 @@
 				7D5807791E4DB4EB00D79D7E /* More2ViewController.m */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		7D485C042017334A00F9A05B /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				7D485C052017336600F9A05B /* FeedbackkViewController.h */,
+				7D485C062017336600F9A05B /* FeedbackkViewController.m */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		7D4A00A21E4C752800B5B40F /* VIdeo */ = {
@@ -3468,6 +3481,7 @@
 				7D2D58461E49ABE80086A823 /* AccountManager.m in Sources */,
 				7D4A009E1E4C62B400B5B40F /* PopStartView.m in Sources */,
 				7D5807811E4DBA8700D79D7E /* PhotoViewController.m in Sources */,
+				7D485C072017336600F9A05B /* FeedbackkViewController.m in Sources */,
 				7D5807881E4DBDA100D79D7E /* ShareWork+Morephotovideo.m in Sources */,
 				7D2D58341E49A3700086A823 /* BaseTabViewController.m in Sources */,
 				34E164141E050B18004A65AB /* UIView+TapBlocks.m in Sources */,
